@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +12,145 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iOS_Smatching" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ivLogo" translatesAutoresizingMaskIntoConstraints="NO" id="XqD-Ln-Q2h">
+                                <rect key="frame" x="111.5" y="120" width="152" height="74"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="74" id="DBg-Pp-s79"/>
+                                    <constraint firstAttribute="width" constant="152" id="gkM-zg-FCe"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="txtSmatching" translatesAutoresizingMaskIntoConstraints="NO" id="zk8-gj-YYe">
+                                <rect key="frame" x="64.5" y="206" width="246" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="5es-mq-Lx5"/>
+                                    <constraint firstAttribute="width" constant="246" id="Cfv-Tq-ZJS"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJh-cZ-fE9">
+                                <rect key="frame" x="54.5" y="273" width="266" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="266" id="0iL-Q7-mBC"/>
+                                    <constraint firstAttribute="height" constant="47" id="ZC9-T4-uuT"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="btnCreateaccountCanclick"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1UN-C2-50P">
+                                <rect key="frame" x="54.5" y="332" width="266" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="Gam-Uf-tSl"/>
+                                    <constraint firstAttribute="width" constant="266" id="RtP-3o-YTg"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="btnExperience"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="syF-EY-17h">
+                                <rect key="frame" x="128" y="391" width="119" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="B4P-WH-jra"/>
+                                    <constraint firstAttribute="width" constant="119" id="thw-ej-cm1"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="btnLogin"/>
+                                <connections>
+                                    <segue destination="waF-lA-qcH" kind="show" id="qzU-bA-t8u"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hJh-cZ-fE9" firstAttribute="top" secondItem="zk8-gj-YYe" secondAttribute="bottom" constant="51" id="0Y3-3o-bF4"/>
+                            <constraint firstItem="syF-EY-17h" firstAttribute="top" secondItem="1UN-C2-50P" secondAttribute="bottom" constant="11.800000000000001" id="3HH-A6-8XF"/>
+                            <constraint firstItem="XqD-Ln-Q2h" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="AXr-N5-dAM"/>
+                            <constraint firstItem="1UN-C2-50P" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="D0k-CX-ynd"/>
+                            <constraint firstItem="zk8-gj-YYe" firstAttribute="top" secondItem="XqD-Ln-Q2h" secondAttribute="bottom" constant="12" id="Gha-a4-sxW"/>
+                            <constraint firstItem="1UN-C2-50P" firstAttribute="top" secondItem="hJh-cZ-fE9" secondAttribute="bottom" constant="12" id="IOm-Gk-rza"/>
+                            <constraint firstItem="XqD-Ln-Q2h" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" multiplier="6" id="Jy5-Lq-UnD"/>
+                            <constraint firstItem="zk8-gj-YYe" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="MFJ-u4-dGv"/>
+                            <constraint firstItem="syF-EY-17h" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="TR2-Hq-AqJ"/>
+                            <constraint firstItem="hJh-cZ-fE9" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="eGw-pZ-XND"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-233" y="134"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="Z54-kX-JHu">
+            <objects>
+                <viewController id="waF-lA-qcH" customClass="LoginViewController" customModule="iOS_Smatching" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fmq-Gx-YuD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ivLogo" translatesAutoresizingMaskIntoConstraints="NO" id="0tZ-QD-yqE">
+                                <rect key="frame" x="111.5" y="120" width="152" height="74"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="152" id="9WR-yk-qyz"/>
+                                    <constraint firstAttribute="height" constant="74" id="PnB-ym-Lsb"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이메일 주소 입력" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="J8w-WV-tas">
+                                <rect key="frame" x="54.5" y="260" width="266" height="38.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38.5" id="1Ty-B9-WZv"/>
+                                    <constraint firstAttribute="width" constant="266" id="tvd-MY-2Yr"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="InputId:" destination="waF-lA-qcH" eventType="editingDidEnd" id="W7A-Te-YnY"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호 입력" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2dw-mF-Y9m">
+                                <rect key="frame" x="54.5" y="309.5" width="266" height="38.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="266" id="Xxl-4X-5uW"/>
+                                    <constraint firstAttribute="height" constant="38.5" id="plG-7z-xx1"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZY-fm-scC">
+                                <rect key="frame" x="54.5" y="373" width="266" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="hGg-17-XX8"/>
+                                    <constraint firstAttribute="width" constant="266" id="iPW-An-Iyg"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="btnLogin_1"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2dw-mF-Y9m" firstAttribute="top" secondItem="J8w-WV-tas" secondAttribute="bottom" constant="11" id="0hN-aA-5u2"/>
+                            <constraint firstItem="0tZ-QD-yqE" firstAttribute="centerX" secondItem="gFD-x8-Vi8" secondAttribute="centerX" id="4gn-V7-Wty"/>
+                            <constraint firstItem="gZY-fm-scC" firstAttribute="top" secondItem="2dw-mF-Y9m" secondAttribute="bottom" constant="25" id="CM8-rF-QeQ"/>
+                            <constraint firstItem="2dw-mF-Y9m" firstAttribute="centerX" secondItem="gFD-x8-Vi8" secondAttribute="centerX" id="KpV-gY-V90"/>
+                            <constraint firstItem="gZY-fm-scC" firstAttribute="centerX" secondItem="gFD-x8-Vi8" secondAttribute="centerX" id="YTP-8Z-NBV"/>
+                            <constraint firstItem="0tZ-QD-yqE" firstAttribute="top" secondItem="gFD-x8-Vi8" secondAttribute="top" multiplier="6" id="Z0K-Ti-Yxu"/>
+                            <constraint firstItem="J8w-WV-tas" firstAttribute="top" secondItem="0tZ-QD-yqE" secondAttribute="bottom" constant="66" id="na2-QZ-xNt"/>
+                            <constraint firstItem="J8w-WV-tas" firstAttribute="centerX" secondItem="gFD-x8-Vi8" secondAttribute="centerX" id="q9F-zF-DQK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gFD-x8-Vi8"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3PK-VP-Qch" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="850" y="134"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="btnCreateaccountCanclick" width="266" height="47"/>
+        <image name="btnExperience" width="266" height="47"/>
+        <image name="btnLogin" width="119" height="19"/>
+        <image name="btnLogin_1" width="266" height="47"/>
+        <image name="ivLogo" width="152" height="74"/>
+        <image name="txtSmatching" width="246" height="16"/>
+    </resources>
 </document>
