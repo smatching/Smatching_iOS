@@ -12,7 +12,7 @@ import Alamofire
 struct LoginService: APIManager, Requestable {
     
     typealias NetworkData = ResponseObject<Token>
-    static let shared = UserService()
+    static let shared = LoginService()
     let loginURL = url("/users/login")//url 상세주소
     let headers: HTTPHeaders = [
         "Content-Type" : "application/json"

@@ -16,6 +16,6 @@ struct User: Mappable {
     init? (map: Map) {}
     
     mutating func mapping(map: Map) {
-        nickname <- map["nickname"]
+        nickname <- map["data"]
     }
 }

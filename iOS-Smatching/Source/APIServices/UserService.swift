@@ -18,7 +18,7 @@ struct UserService: APIManager, Requestable {
         "Content-Type" : "application/json"
     ]
     
-    func signUp(nickname: String,email: String, password: String, completion: @escaping(User) -> Void) {
+    func signUp(nickname: String, email: String, password: String, completion: @escaping(User) -> Void) {
         
         let body = [
             "nickname" : nickname,
