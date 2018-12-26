@@ -204,7 +204,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호 재입력" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Gq-90-i01">
                                         <rect key="frame" x="0.0" y="147" width="266" height="38.5"/>
@@ -214,7 +214,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -229,8 +229,18 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="btn_createaccount"/>
                                 <connections>
-                                    <action selector="signup:" destination="kg9-rj-98b" eventType="touchUpInside" id="ONO-fb-re3"/>
                                     <segue destination="waF-lA-qcH" kind="show" identifier="signupSegue" id="ACH-Ba-gGw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="81r-Ja-0eh">
+                                <rect key="frame" x="54.5" y="546" width="266" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="266" id="cm3-5p-Jnj"/>
+                                    <constraint firstAttribute="height" constant="47" id="khi-sb-XLh"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="btnCreateaccountCanclick"/>
+                                <connections>
+                                    <action selector="signup:" destination="kg9-rj-98b" eventType="touchUpInside" id="ElF-vd-fvB"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ivLogo" translatesAutoresizingMaskIntoConstraints="NO" id="933-Oq-03F">
@@ -240,17 +250,22 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="qca-XU-ANh" firstAttribute="bottom" secondItem="HyG-UA-JbD" secondAttribute="bottom" constant="74" id="8FQ-HU-XmB"/>
+                            <constraint firstItem="81r-Ja-0eh" firstAttribute="centerX" secondItem="hqy-4J-C9S" secondAttribute="centerX" id="Gqz-mc-Lnc"/>
                             <constraint firstItem="HyG-UA-JbD" firstAttribute="top" secondItem="yCD-LB-CN6" secondAttribute="bottom" constant="28.5" id="K0j-3Y-el5"/>
                             <constraint firstItem="yCD-LB-CN6" firstAttribute="top" secondItem="933-Oq-03F" secondAttribute="bottom" constant="41" id="Sed-qO-n9P"/>
                             <constraint firstItem="yCD-LB-CN6" firstAttribute="centerX" secondItem="hqy-4J-C9S" secondAttribute="centerX" id="XXe-yC-b7H"/>
                             <constraint firstItem="HyG-UA-JbD" firstAttribute="centerX" secondItem="hqy-4J-C9S" secondAttribute="centerX" id="c8m-3t-ZCe"/>
                             <constraint firstItem="qca-XU-ANh" firstAttribute="trailing" secondItem="933-Oq-03F" secondAttribute="trailing" constant="113" id="lZI-nO-aJc"/>
+                            <constraint firstItem="81r-Ja-0eh" firstAttribute="top" secondItem="yCD-LB-CN6" secondAttribute="bottom" constant="28.5" id="mw6-zZ-NFc"/>
                             <constraint firstItem="933-Oq-03F" firstAttribute="leading" secondItem="qca-XU-ANh" secondAttribute="leading" constant="114" id="tlU-Xz-H7i"/>
                             <constraint firstItem="933-Oq-03F" firstAttribute="top" secondItem="qca-XU-ANh" secondAttribute="top" constant="199" id="vlR-IG-wW1"/>
+                            <constraint firstItem="qca-XU-ANh" firstAttribute="bottom" secondItem="81r-Ja-0eh" secondAttribute="bottom" constant="74" id="ykC-4n-pCx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qca-XU-ANh"/>
                     </view>
                     <connections>
+                        <outlet property="createActiveBtn" destination="81r-Ja-0eh" id="xDj-K3-tN1"/>
+                        <outlet property="createDeactiveBtn" destination="HyG-UA-JbD" id="45f-pg-E2K"/>
                         <outlet property="emailTxtField" destination="Ool-5b-bLm" id="VgY-3T-3k6"/>
                         <outlet property="nicknameTxtField" destination="njQ-iD-Us2" id="YUR-2h-Ehb"/>
                         <outlet property="passwdTxtField1" destination="UXr-aH-9Ic" id="U9u-hZ-iDD"/>
@@ -280,7 +295,7 @@
     <resources>
         <image name="btnCreateaccountCanclick" width="266" height="47"/>
         <image name="btnExperience" width="266" height="47"/>
-        <image name="btnLogin" width="119" height="19"/>
+        <image name="btnLogin" width="266" height="47"/>
         <image name="btnLoginCanclick" width="266" height="47"/>
         <image name="btnLogin_1" width="266" height="47"/>
         <image name="btn_createaccount" width="266" height="47"/>

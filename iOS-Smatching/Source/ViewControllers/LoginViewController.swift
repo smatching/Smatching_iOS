@@ -35,25 +35,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         return true
     }
 
-    func textFieldDidBeginEditing(textField: UITextField!) {    //delegate method
-        
-        
-        
-    }
-    func textFieldDidEndEditing(textField: UITextField) {
-        
-        
-    }
-
-    func textFieldShouldEndEditing(textField: UITextField!) -> Bool {  //delegate method
-        return false
-    }
-    
-    func textFieldShouldReturn(textField: UITextField!) -> Bool {   //delegate method
-        textField.resignFirstResponder()
-        
-        return true
-    }
     
     
     @IBAction func login(_ sender: Any) {
