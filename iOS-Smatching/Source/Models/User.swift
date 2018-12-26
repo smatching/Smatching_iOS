@@ -10,20 +10,12 @@ import Foundation
 import ObjectMapper
 
 struct User: Mappable {
-    var userIdx : Int?
-    var name : String?
-    var email : String?
-    var profileUrl : String?
-    var auth : Bool?
+    
+    var nickname : String?
     
     init? (map: Map) {}
     
     mutating func mapping(map: Map) {
-        userIdx <- map["userIdx"]
-        name <- map["name"]
-        email <- map["email"]
-        profileUrl <- map["profileUrl"]
-        auth <- map["auth"]
-        
+        nickname <- map["nickname"]
     }
 }

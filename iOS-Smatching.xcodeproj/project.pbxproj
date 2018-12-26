@@ -23,6 +23,7 @@
 		B6A3F4B021C49870000497BF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A3F4AF21C49870000497BF /* User.swift */; };
 		B6A3F4B221C499FB000497BF /* UIImage+imageFromURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A3F4B121C499FB000497BF /* UIImage+imageFromURL.swift */; };
 		B6A3F4B421C49A0D000497BF /* UIViewController+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A3F4B321C49A0D000497BF /* UIViewController+extensions.swift */; };
+		B6BB462021D39815003DB754 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BB461F21D39815003DB754 /* LoginService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		B6A3F4AF21C49870000497BF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B6A3F4B121C499FB000497BF /* UIImage+imageFromURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+imageFromURL.swift"; sourceTree = "<group>"; };
 		B6A3F4B321C49A0D000497BF /* UIViewController+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extensions.swift"; sourceTree = "<group>"; };
+		B6BB461F21D39815003DB754 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 				B6A3F4A121C4974C000497BF /* Requestable.swift */,
 				B6A3F4A321C4976F000497BF /* APIManager.swift */,
 				B6A3F4A521C49785000497BF /* NetworkResult.swift */,
+				B6BB461F21D39815003DB754 /* LoginService.swift */,
 			);
 			path = APIServices;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6A3F4A421C4976F000497BF /* APIManager.swift in Sources */,
+				B6BB462021D39815003DB754 /* LoginService.swift in Sources */,
 				B6A3F4AA21C497BA000497BF /* ResponseArray.swift in Sources */,
 				B6A3F4AE21C4983B000497BF /* UserService.swift in Sources */,
 				B6A3F4A821C497A5000497BF /* ResponseObject.swift in Sources */,
