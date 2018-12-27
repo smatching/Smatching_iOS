@@ -29,6 +29,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func dismissAction(_ sender: Any) {
+        dismiss(animated: true)
+    }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         loginActiveBtn.isHidden = false;
         loginDeactiveBtn.isHidden = true;
