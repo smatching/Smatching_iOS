@@ -49,6 +49,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBAction func login(_ sender: Any) {
         LoginService.shared.login(email : emailTxtField.text!, password : passwdTxtField.text! ) {(token) in
             print(self.gsno(token.token))
+            
             UserDefaults.standard.set(self.gsno(token.token), forKey: "token")
             
         }

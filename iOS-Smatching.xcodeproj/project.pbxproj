@@ -11,6 +11,8 @@
 		B632123621D3B11000087FA2 /* LoginOrSignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B632123521D3B11000087FA2 /* LoginOrSignupVC.swift */; };
 		B632123821D3B40800087FA2 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B632123721D3B40800087FA2 /* MainVC.swift */; };
 		B632123A21D3CE9300087FA2 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B632123921D3CE9300087FA2 /* SignupVC.swift */; };
+		B670933921D6068400472BB2 /* NoticeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B670933821D6068400472BB2 /* NoticeCell.swift */; };
+		B670933B21D652DB00472BB2 /* ChangeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B670933A21D652DB00472BB2 /* ChangeButton.swift */; };
 		B68AA6F621D4E2C1000E5549 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68AA6F521D4E2C1000E5549 /* HomeVC.swift */; };
 		B68AA6F821D4E2D0000E5549 /* CustomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68AA6F721D4E2D0000E5549 /* CustomVC.swift */; };
 		B68AA6FA21D4E2DD000E5549 /* TalkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68AA6F921D4E2DD000E5549 /* TalkVC.swift */; };
@@ -46,6 +48,8 @@
 		B632123721D3B40800087FA2 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		B632123921D3CE9300087FA2 /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		B65DE6A36435F97FF3F756DC /* Pods_iOS_Smatching.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Smatching.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B670933821D6068400472BB2 /* NoticeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeCell.swift; sourceTree = "<group>"; };
+		B670933A21D652DB00472BB2 /* ChangeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeButton.swift; sourceTree = "<group>"; };
 		B68AA6F521D4E2C1000E5549 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		B68AA6F721D4E2D0000E5549 /* CustomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomVC.swift; sourceTree = "<group>"; };
 		B68AA6F921D4E2DD000E5549 /* TalkVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkVC.swift; sourceTree = "<group>"; };
@@ -211,6 +215,8 @@
 		B6A3F49F21C4963A000497BF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B670933A21D652DB00472BB2 /* ChangeButton.swift */,
+				B670933821D6068400472BB2 /* NoticeCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -381,7 +387,9 @@
 				B68AA70221D4FADC000E5549 /* Main.swift in Sources */,
 				B6A3F4B221C499FB000497BF /* UIImage+imageFromURL.swift in Sources */,
 				B6A3F4B021C49870000497BF /* User.swift in Sources */,
+				B670933B21D652DB00472BB2 /* ChangeButton.swift in Sources */,
 				C0EE047121D36D810046E030 /* LoginViewController.swift in Sources */,
+				B670933921D6068400472BB2 /* NoticeCell.swift in Sources */,
 				B632123621D3B11000087FA2 /* LoginOrSignupVC.swift in Sources */,
 				B6A3F4AC21C497D0000497BF /* Token.swift in Sources */,
 			);

@@ -20,6 +20,7 @@ struct LoginService: APIManager, Requestable {
 
     func login(email: String, password: String, completion: @escaping(Token) -> Void) {
         
+        
         let body = [
             "email" : email,
             "password" : password,
