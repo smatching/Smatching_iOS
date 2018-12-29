@@ -27,18 +27,23 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         emailTxtField.delegate = self
         passwdTxtField.delegate = self
-        
-        // Do any additional setup after loading the view.
-    }
     
+        // 초기 TextField BorderColor 정하기
+        emailTxtField.layer.borderColor = UIColor.lightGray.cgColor
+        emailTxtField.layer.borderWidth = 1.0
+        passwdTxtField.layer.borderColor = UIColor.lightGray.cgColor
+        passwdTxtField.layer.borderWidth = 1.0
+        
+        
+    }
     @IBAction func dismissAction(_ sender: Any) {
         dismiss(animated: true)
     }
-    
+
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         guard emailTxtField.text?.isEmpty != true else {return false}
         guard passwdTxtField.text?.isEmpty != true else {return false}
-        
+
         loginActiveBtn.isHidden = false;
         loginDeactiveBtn.isHidden = true;
         return true
@@ -54,6 +59,26 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
         self.performSegue(withIdentifier: "loginSegue", sender: nil)
     }
+    // TextField borderColor 변경
+    // Text 입력 중엔 민트색, Text없을시 lightgray
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        textField.layer.borderColor = UIColor(red: 64/255, green: 178/255, blue: 204/255, alpha: 1).cgColor
+        textField.layer.borderWidth = 1.0
+        //textFieldDidEndEditing(emailTxtField)
+        return true;
+    }
+    func textFieldDidEndEditing(_ textField: UITextField) {
+
+        if textField.text?.isEmpty == true {
+            textField.layer.borderColor = UIColor.lightGray.cgColor
+            textField.layer.borderWidth = 1.0
+        } else {
+            textField.layer.borderColor = UIColor(red: 64/255, green: 178/255, blue: 204/255, alpha: 1).cgColor
+            textField.layer.borderWidth = 1.0
+
+        }
+    }
+    
     
     
 }
@@ -71,11 +96,24 @@ extension LoginViewController : UIGestureRecognizerDelegate {
     //탭 제스쳐가 먹히는 상황과 아닌 상황을 판단
     //UIGestureRecognizerDelegate에 있는 함수
     //키보드가 있는 공간에 입력 필드가 있는 경우 사용
-    
+
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
         if (touch.view?.isDescendant(of: emailTxtField))! || (touch.view?.isDescendant(of: passwdTxtField))! {
             return false
         }
         return true
     }
+    
 }
+extension UIView {
+    @IBInspectable var cornerRadius: CGFloat {
+        get {
+            return layer.cornerRadius
+        }
+        set {
+            layer.cornerRadius = newValue
+            layer.masksToBounds = newValue > 0
+        }
+    }
+}
+

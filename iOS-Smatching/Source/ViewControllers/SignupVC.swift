@@ -9,7 +9,8 @@
 import UIKit
 
 class SignupVC: UIViewController, UITextFieldDelegate {
-
+    
+    
     @IBOutlet weak var stackViewConst: NSLayoutConstraint!
     @IBOutlet weak var passwdTxtField2: UITextField!
     @IBOutlet weak var passwdTxtField1: UITextField!
@@ -18,9 +19,11 @@ class SignupVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var createDeactiveBtn: UIButton!
     @IBOutlet weak var createActiveBtn: UIButton!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initGestureRecognizer()
+        TxtFieldChangeColor()
         
         createDeactiveBtn.isHidden = false
         createActiveBtn.isHidden = true
@@ -29,6 +32,14 @@ class SignupVC: UIViewController, UITextFieldDelegate {
         passwdTxtField1.delegate = self
         passwdTxtField2.delegate = self
         // Do any additional setup after loading the view.
+        nicknameTxtField.layer.borderColor = UIColor.lightGray.cgColor
+        nicknameTxtField.layer.borderWidth = 1.0
+        emailTxtField.layer.borderColor = UIColor.lightGray.cgColor
+        emailTxtField.layer.borderWidth = 1.0
+        passwdTxtField1.layer.borderColor = UIColor.lightGray.cgColor
+        passwdTxtField1.layer.borderWidth = 1.0
+        passwdTxtField2.layer.borderColor = UIColor.lightGray.cgColor
+        passwdTxtField2.layer.borderWidth = 1.0
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -64,6 +75,19 @@ class SignupVC: UIViewController, UITextFieldDelegate {
         self.performSegue(withIdentifier: "signupSegue", sender: nil)
         
     }
+    func TxtFieldChangeColor () {
+        if nicknameTxtField.isEditing == true {
+            nicknameTxtField.layer.borderWidth = 2.0
+            nicknameTxtField.layer.borderColor = UIColor(red: 64, green: 178, blue: 204, alpha: 1).cgColor
+        }
+        if nicknameTxtField.text?.isEmpty == false {
+            nicknameTxtField.layer.borderWidth = 2.0
+            nicknameTxtField.layer.borderColor = UIColor(red: 64, green: 178, blue: 204, alpha: 1).cgColor
+        }
+    }
+    private func textFieldDidBeginEditing(_ textField: UITextField) {
+        TxtFieldChangeColor()
+    }
     
 }
 extension SignupVC : UIGestureRecognizerDelegate {
@@ -82,8 +106,12 @@ extension SignupVC : UIGestureRecognizerDelegate {
     //탭 제스쳐가 먹히는 상황과 아닌 상황을 판단
     //UIGestureRecognizerDelegate에 있는 함수
     //키보드가 있는 공간에 입력 필드가 있는 경우 사용
+   
 
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+        
+        
+        
         if (touch.view?.isDescendant(of: emailTxtField))! || (touch.view?.isDescendant(of: passwdTxtField2))! || (touch.view?.isDescendant(of: passwdTxtField1))! || (touch.view?.isDescendant(of: nicknameTxtField))! {
             return false
         }
@@ -129,4 +157,6 @@ extension SignupVC : UIGestureRecognizerDelegate {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
+    
 }
+
