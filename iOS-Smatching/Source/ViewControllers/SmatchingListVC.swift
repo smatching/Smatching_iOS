@@ -9,27 +9,27 @@
 import UIKit
 
 class SmatchingListVC: UIViewController {
-    enum CellState {
-        case collapsed
-        case expanded
-        
-    }
-    
-    @IBOutlet weak var upBtn: UIView!
-    @IBOutlet weak var contentView: UIView!
-    @IBOutlet weak var downBtn: UIView!
-    @IBOutlet weak var stackView: UIStackView!
+//    enum CellState {
+//        case collapsed
+//        case expanded
+//
+//    }
+//
+//    @IBOutlet weak var upBtn: UIView!
+//    @IBOutlet weak var contentView: UIView!
+//    @IBOutlet weak var downBtn: UIView!
+//    @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var alignmentLabel: UILabel!
     @IBOutlet weak var noticeCntLabel: UILabel!
     @IBOutlet weak var noticeTableView: UITableView!
+//
+//    private let expandedViewIndex: Int = 1
     
-    private let expandedViewIndex: Int = 1
-    
-    var state: CellState = .collapsed {
-        didSet {
-            toggle()
-        }
-    }
+//    var state: CellState = .collapsed {
+//        didSet {
+//            toggle()
+//        }
+//    }
     
     var noticeList = [Notice]()
     
@@ -41,8 +41,8 @@ class SmatchingListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         noticeTableView.dataSource = self
-        contentView.layer.cornerRadius = 5.0
-        upBtn.layer.cornerRadius = 5.0
+//        contentView.layer.cornerRadius = 5.0
+//        upBtn.layer.cornerRadius = 5.0
         // Do any additional setup after loading the view.
     }
     
@@ -59,13 +59,13 @@ class SmatchingListVC: UIViewController {
         }
     }
     
-    private func toggle() {
-        stackView.arrangedSubviews[expandedViewIndex].isHidden = stateIsCollapsed()
-    }
-    
-    private func stateIsCollapsed() -> Bool {
-        return state == .collapsed
-    }
+//    private func toggle() {
+//        stackView.arrangedSubviews[expandedViewIndex].isHidden = stateIsCollapsed()
+//    }
+//
+//    private func stateIsCollapsed() -> Bool {
+//        return state == .collapsed
+//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

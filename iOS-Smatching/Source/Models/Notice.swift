@@ -15,6 +15,7 @@ struct Notice : Mappable {
     var institution : String?
     var dday : Int?
     var scrap : Int?
+    var readCnt : Int?
     
     init?(map: Map) {}
     
@@ -23,7 +24,8 @@ struct Notice : Mappable {
         title <- map["title"]
         institution <- map["institution"]
         dday <- map["dday"]
-        scrap <- map["scrap"] 
+        scrap <- map["scrap"]
+        readCnt <- map["readCnt"]
     }
     
 }

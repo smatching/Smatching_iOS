@@ -13,6 +13,11 @@
 		B632123A21D3CE9300087FA2 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B632123921D3CE9300087FA2 /* SignupVC.swift */; };
 		B670933921D6068400472BB2 /* NoticeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B670933821D6068400472BB2 /* NoticeCell.swift */; };
 		B670933B21D652DB00472BB2 /* ChangeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B670933A21D652DB00472BB2 /* ChangeButton.swift */; };
+		B68742E621D74D780094D5E7 /* Condition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68742E521D74D780094D5E7 /* Condition.swift */; };
+		B68742E821D74DEB0094D5E7 /* ConditionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68742E721D74DEB0094D5E7 /* ConditionService.swift */; };
+		B68742EA21D74EDA0094D5E7 /* ConditionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68742E921D74EDA0094D5E7 /* ConditionResponse.swift */; };
+		B68742EE21D752A00094D5E7 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68742ED21D752A00094D5E7 /* SearchVC.swift */; };
+		B68742F021D754D90094D5E7 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68742EF21D754D90094D5E7 /* CustomTextField.swift */; };
 		B68AA6F621D4E2C1000E5549 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68AA6F521D4E2C1000E5549 /* HomeVC.swift */; };
 		B68AA6F821D4E2D0000E5549 /* CustomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68AA6F721D4E2D0000E5549 /* CustomVC.swift */; };
 		B68AA6FA21D4E2DD000E5549 /* TalkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68AA6F921D4E2DD000E5549 /* TalkVC.swift */; };
@@ -50,6 +55,11 @@
 		B65DE6A36435F97FF3F756DC /* Pods_iOS_Smatching.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Smatching.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B670933821D6068400472BB2 /* NoticeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeCell.swift; sourceTree = "<group>"; };
 		B670933A21D652DB00472BB2 /* ChangeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeButton.swift; sourceTree = "<group>"; };
+		B68742E521D74D780094D5E7 /* Condition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Condition.swift; sourceTree = "<group>"; };
+		B68742E721D74DEB0094D5E7 /* ConditionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionService.swift; sourceTree = "<group>"; };
+		B68742E921D74EDA0094D5E7 /* ConditionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionResponse.swift; sourceTree = "<group>"; };
+		B68742ED21D752A00094D5E7 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		B68742EF21D754D90094D5E7 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		B68AA6F521D4E2C1000E5549 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		B68AA6F721D4E2D0000E5549 /* CustomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomVC.swift; sourceTree = "<group>"; };
 		B68AA6F921D4E2DD000E5549 /* TalkVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkVC.swift; sourceTree = "<group>"; };
@@ -195,6 +205,7 @@
 				B6BB461F21D39815003DB754 /* LoginService.swift */,
 				B68AA70321D4FBCF000E5549 /* MainService.swift */,
 				B68AA70521D50187000E5549 /* NoticeService.swift */,
+				B68742E721D74DEB0094D5E7 /* ConditionService.swift */,
 			);
 			path = APIServices;
 			sourceTree = "<group>";
@@ -208,6 +219,8 @@
 				B6A3F4AF21C49870000497BF /* User.swift */,
 				B68AA6FF21D4F837000E5549 /* Notice.swift */,
 				B68AA70121D4FADC000E5549 /* Main.swift */,
+				B68742E521D74D780094D5E7 /* Condition.swift */,
+				B68742E921D74EDA0094D5E7 /* ConditionResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -217,6 +230,7 @@
 			children = (
 				B670933A21D652DB00472BB2 /* ChangeButton.swift */,
 				B670933821D6068400472BB2 /* NoticeCell.swift */,
+				B68742EF21D754D90094D5E7 /* CustomTextField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -234,6 +248,7 @@
 				B68AA6F921D4E2DD000E5549 /* TalkVC.swift */,
 				B68AA6FB21D4E2EE000E5549 /* MyPageVC.swift */,
 				B68AA6FD21D4F6C4000E5549 /* SmatchingListVC.swift */,
+				B68742ED21D752A00094D5E7 /* SearchVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -366,8 +381,10 @@
 			files = (
 				B6A3F4A421C4976F000497BF /* APIManager.swift in Sources */,
 				B68AA6F821D4E2D0000E5549 /* CustomVC.swift in Sources */,
+				B68742EA21D74EDA0094D5E7 /* ConditionResponse.swift in Sources */,
 				B6BB462021D39815003DB754 /* LoginService.swift in Sources */,
 				B68AA6FE21D4F6C4000E5549 /* SmatchingListVC.swift in Sources */,
+				B68742E621D74D780094D5E7 /* Condition.swift in Sources */,
 				B6A3F4AA21C497BA000497BF /* ResponseArray.swift in Sources */,
 				B68AA6FC21D4E2EE000E5549 /* MyPageVC.swift in Sources */,
 				B68AA70021D4F837000E5549 /* Notice.swift in Sources */,
@@ -376,6 +393,8 @@
 				B6A3F4AE21C4983B000497BF /* UserService.swift in Sources */,
 				B6A3F4A821C497A5000497BF /* ResponseObject.swift in Sources */,
 				B68AA70621D50187000E5549 /* NoticeService.swift in Sources */,
+				B68742E821D74DEB0094D5E7 /* ConditionService.swift in Sources */,
+				B68742EE21D752A00094D5E7 /* SearchVC.swift in Sources */,
 				B632123821D3B40800087FA2 /* MainVC.swift in Sources */,
 				B6A3F4B421C49A0D000497BF /* UIViewController+extensions.swift in Sources */,
 				B6A3F4A621C49785000497BF /* NetworkResult.swift in Sources */,
@@ -383,6 +402,7 @@
 				B6A3F4A221C4974C000497BF /* Requestable.swift in Sources */,
 				B6A3F48921C49070000497BF /* ViewController.swift in Sources */,
 				B6A3F48721C49070000497BF /* AppDelegate.swift in Sources */,
+				B68742F021D754D90094D5E7 /* CustomTextField.swift in Sources */,
 				B68AA70421D4FBCF000E5549 /* MainService.swift in Sources */,
 				B68AA70221D4FADC000E5549 /* Main.swift in Sources */,
 				B6A3F4B221C499FB000497BF /* UIImage+imageFromURL.swift in Sources */,
