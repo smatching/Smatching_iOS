@@ -9,6 +9,7 @@
 import UIKit
 
 class NoticeCell: UITableViewCell {
+   
     @IBOutlet weak var scrapActiveBtn: UIButton!
     @IBOutlet weak var scrapDeactiveBtn: UIButton!
     @IBOutlet weak var ddayLabel: UILabel!

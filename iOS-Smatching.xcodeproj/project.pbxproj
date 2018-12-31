@@ -42,6 +42,7 @@
 		B6A3F4B021C49870000497BF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A3F4AF21C49870000497BF /* User.swift */; };
 		B6A3F4B221C499FB000497BF /* UIImage+imageFromURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A3F4B121C499FB000497BF /* UIImage+imageFromURL.swift */; };
 		B6A3F4B421C49A0D000497BF /* UIViewController+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A3F4B321C49A0D000497BF /* UIViewController+extensions.swift */; };
+		B6B74B5921D9EA5D001482BF /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B74B5821D9EA5D001482BF /* Checkbox.swift */; };
 		B6BB462021D39815003DB754 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BB461F21D39815003DB754 /* LoginService.swift */; };
 		C0EE047121D36D810046E030 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EE047021D36D810046E030 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
@@ -86,6 +87,7 @@
 		B6A3F4AF21C49870000497BF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B6A3F4B121C499FB000497BF /* UIImage+imageFromURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+imageFromURL.swift"; sourceTree = "<group>"; };
 		B6A3F4B321C49A0D000497BF /* UIViewController+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extensions.swift"; sourceTree = "<group>"; };
+		B6B74B5821D9EA5D001482BF /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
 		B6BB461F21D39815003DB754 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		C0EE047021D36D810046E030 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,6 +152,7 @@
 		B6A3F49821C490A0000497BF /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				B6B74B5C21DA0150001482BF /* DataSource */,
 				B6A3F4A021C49643000497BF /* ViewControllers */,
 				B6A3F49F21C4963A000497BF /* Views */,
 				B6A3F49E21C49634000497BF /* Models */,
@@ -231,6 +234,7 @@
 				B670933A21D652DB00472BB2 /* ChangeButton.swift */,
 				B670933821D6068400472BB2 /* NoticeCell.swift */,
 				B68742EF21D754D90094D5E7 /* CustomTextField.swift */,
+				B6B74B5821D9EA5D001482BF /* Checkbox.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -251,6 +255,13 @@
 				B68742ED21D752A00094D5E7 /* SearchVC.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B6B74B5C21DA0150001482BF /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataSource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -395,6 +406,7 @@
 				B68AA70621D50187000E5549 /* NoticeService.swift in Sources */,
 				B68742E821D74DEB0094D5E7 /* ConditionService.swift in Sources */,
 				B68742EE21D752A00094D5E7 /* SearchVC.swift in Sources */,
+				B6B74B5921D9EA5D001482BF /* Checkbox.swift in Sources */,
 				B632123821D3B40800087FA2 /* MainVC.swift in Sources */,
 				B6A3F4B421C49A0D000497BF /* UIViewController+extensions.swift in Sources */,
 				B6A3F4A621C49785000497BF /* NetworkResult.swift in Sources */,

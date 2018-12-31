@@ -9,28 +9,18 @@
 import UIKit
 
 class SmatchingListVC: UIViewController {
-//    enum CellState {
-//        case collapsed
-//        case expanded
-//
-//    }
-//
-//    @IBOutlet weak var upBtn: UIView!
-//    @IBOutlet weak var contentView: UIView!
-//    @IBOutlet weak var downBtn: UIView!
-//    @IBOutlet weak var stackView: UIStackView!
+
+
+    var flag = 0
+    @IBOutlet weak var upBtn: UIButton!
+    @IBOutlet weak var downBtn: UIButton!
+    @IBOutlet weak var hideViewBtn: UIImageView!
+    @IBOutlet weak var showViewBtn: UIImageView!
+    @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var alignmentLabel: UILabel!
     @IBOutlet weak var noticeCntLabel: UILabel!
     @IBOutlet weak var noticeTableView: UITableView!
-//
-//    private let expandedViewIndex: Int = 1
-    
-//    var state: CellState = .collapsed {
-//        didSet {
-//            toggle()
-//        }
-//    }
-    
+   
     var noticeList = [Notice]()
     
     var picker : UIPickerView!
@@ -40,9 +30,11 @@ class SmatchingListVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        initView()
         noticeTableView.dataSource = self
-//        contentView.layer.cornerRadius = 5.0
-//        upBtn.layer.cornerRadius = 5.0
+        //        contentView.layer.cornerRadius = 5.0
+        //        upBtn.layer.cornerRadius = 5.0
         // Do any additional setup after loading the view.
     }
     
@@ -54,19 +46,52 @@ class SmatchingListVC: UIViewController {
             self.noticeList += data
             print(data.count)
             print(self.noticeList.count)
-//            self.noticeCntLabel.text = "총 " + "\(self.noticeList.count)" + "건"
+//                        self.noticeCntLabel.text = "총 " + "\(self.noticeList.count)" + "건"
             self.noticeTableView.reloadData()
         }
     }
     
-//    private func toggle() {
-//        stackView.arrangedSubviews[expandedViewIndex].isHidden = stateIsCollapsed()
-//    }
-//
-//    private func stateIsCollapsed() -> Bool {
-//        return state == .collapsed
-//    }
+    @IBAction func showConditionView(_ sender: Any) {
+        if flag == 0 {
+            showView()
+            flag = 1
+        }
+        else {
+            hideView()
+            flag = 0
+        }
+    }
+    func showView() {
+        upBtn.isHidden = false
+        downBtn.isHidden = true
+        
+        showViewBtn.isHidden = true
+        hideViewBtn.isHidden = false
+        self.contentView.transform = CGAffineTransform.identity
+    }
     
+    func hideView() {
+        upBtn.isHidden = true
+        downBtn.isHidden = false
+        showViewBtn.isHidden = false
+        hideViewBtn.isHidden = true
+        UIView.animate(withDuration: 1.0, animations: ({
+            self.contentView.alpha  = 1;
+            }))
+        self.contentView.transform = CGAffineTransform(scaleX: 0, y: -self.contentView.frame.height)
+    }
+    
+    func initView() {
+        upBtn.isHidden = true
+        downBtn.isHidden = false
+        showViewBtn.isHidden = false
+        hideViewBtn.isHidden = true
+        self.contentView.transform =
+            CGAffineTransform(scaleX: 0, y: -self.contentView.frame.height)
+    }
+    @IBAction func conditionClick(_ sender: Any) {
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -96,14 +121,14 @@ class SmatchingListVC: UIViewController {
         sender.inputAccessoryView = toolbar
         
         sender.inputView = picker
-
+        
     }
     @objc func doneTapped() {
         
         print("done tapped")
         
     }
-
+    
     //piker초기화
     func setupPiker() {
         picker = UIPickerView()
@@ -112,9 +137,9 @@ class SmatchingListVC: UIViewController {
         picker.delegate = self
         picker.dataSource = self
         //textfield 선택 -> 키보드가 아닌 piker로
-//        textField.inputView = picker
+        //        textField.inputView = picker
         
-       
+        
     }
     func setupToolbar() {
         toolbar = UIToolbar(frame : CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height))
@@ -122,7 +147,7 @@ class SmatchingListVC: UIViewController {
         let space = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
         
         toolbar.setItems([space,done], animated: true)
-//        textField.inputAccessoryView = toolbar
+        //        textField.inputAccessoryView = toolbar
     }
     //selector안에 들어감
     @objc func selectPart() {
@@ -130,30 +155,39 @@ class SmatchingListVC: UIViewController {
         let pick_alignment = alignment_standard[row]
         
         
-//        switch pick_alignment {
-//        case "최근등록순":
-////            partImage.image = UIImage(named: "sopt_doplan")
-//        case "마감임박순":
-////            partImage.image = UIImage(named: "sopt_dodesign")
-//        case순"조회순":
-////            partImage.image = UIImage(named: "sopt_dodevelop")
-//        default:
-//            break
-//        }
+        //        switch pick_alignment {
+        //        case "최근등록순":
+        ////            partImage.image = UIImage(named: "sopt_doplan")
+        //        case "마감임박순":
+        ////            partImage.image = UIImage(named: "sopt_dodesign")
+        //        case순"조회순":
+        ////            partImage.image = UIImage(named: "sopt_dodevelop")
+        //        default:
+        //            break
+        //        }
         //done 버튼을 누르고 함수 실행 중 edit을 끝냄
-//        textField.endEditing(true)
+        //        textField.endEditing(true)
         
     }
 }
 extension SmatchingListVC : UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     
+    }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+       
+    }
 }
 extension SmatchingListVC : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         return noticeList.count
+    
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "NoticeCell", for: indexPath) as! NoticeCell
         let notice = noticeList[indexPath.row]
         
@@ -176,7 +210,7 @@ extension SmatchingListVC : UITableViewDataSource {
         
         return cell
     }
-
+    
 }
 //delegate를 채택할 때 delegate관련 메소드만 따로 정의
 //동작에 관련한 메소드만 정의함 (pickerview 자체의 뷰에 대한 것-> title 속성)

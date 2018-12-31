@@ -12,9 +12,9 @@ import ObjectMapper
 struct User: Mappable {
     
     var nickname : String?
-    
+
     init? (map: Map) {}
-    
+
     mutating func mapping(map: Map) {
         nickname <- map[""]
     }
