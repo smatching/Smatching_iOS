@@ -11,6 +11,9 @@ import UIKit
 class SmatchingListVC: UIViewController {
 
 
+    @IBOutlet weak var STACKVIEWCONST: NSLayoutConstraint!
+    
+    @IBOutlet weak var moveView: UIView!
     var flag = 0
     @IBOutlet weak var upBtn: UIButton!
     @IBOutlet weak var downBtn: UIButton!
@@ -30,7 +33,7 @@ class SmatchingListVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         initView()
         noticeTableView.dataSource = self
         //        contentView.layer.cornerRadius = 5.0
@@ -68,6 +71,9 @@ class SmatchingListVC: UIViewController {
         showViewBtn.isHidden = true
         hideViewBtn.isHidden = false
         self.contentView.transform = CGAffineTransform.identity
+        UIView.animate(withDuration: 1.0, animations: ({
+           self.STACKVIEWCONST.constant = 317
+        }))
     }
     
     func hideView() {
@@ -79,9 +85,14 @@ class SmatchingListVC: UIViewController {
             self.contentView.alpha  = 1;
             }))
         self.contentView.transform = CGAffineTransform(scaleX: 0, y: -self.contentView.frame.height)
+        UIView.animate(withDuration: 1.0, animations: ({
+            self.STACKVIEWCONST.constant = 43
+        }))
+       
     }
     
     func initView() {
+        
         upBtn.isHidden = true
         downBtn.isHidden = false
         showViewBtn.isHidden = false
@@ -97,35 +108,14 @@ class SmatchingListVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     @IBAction func changeAlignment(_ sender: ChangeButton) {
-        print("조회 조건 picker 띄움!")
-        picker = UIPickerView()
         
-        picker.delegate = self
-        
-        picker.dataSource = self
-        
-        toolbar = UIToolbar()
-        
-        toolbar.sizeToFit()
-        
-        toolbar.barTintColor = UIColor.blue
-        
-        toolbar.tintColor = .white
-        
-        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(selectPart))
-        
-        toolbar.setItems([doneButton], animated: false)
-        
-        toolbar.isUserInteractionEnabled = true
+        setupPiker()
+        setupToolbar()
+      
         
         sender.inputAccessoryView = toolbar
         
         sender.inputView = picker
-        
-    }
-    @objc func doneTapped() {
-        
-        print("done tapped")
         
     }
     
@@ -136,9 +126,6 @@ class SmatchingListVC: UIViewController {
         //밑에 구현한 것들을 정상적으로 수행할 수 있도록 한다.
         picker.delegate = self
         picker.dataSource = self
-        //textfield 선택 -> 키보드가 아닌 piker로
-        //        textField.inputView = picker
-        
         
     }
     func setupToolbar() {
@@ -146,8 +133,10 @@ class SmatchingListVC: UIViewController {
         let done = UIBarButtonItem(title: "done", style: .done, target: self, action: #selector(selectPart))
         let space = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
         
+        toolbar.sizeToFit()
+        toolbar.isUserInteractionEnabled = true
         toolbar.setItems([space,done], animated: true)
-        //        textField.inputAccessoryView = toolbar
+      
     }
     //selector안에 들어감
     @objc func selectPart() {
@@ -155,18 +144,21 @@ class SmatchingListVC: UIViewController {
         let pick_alignment = alignment_standard[row]
         
         
-        //        switch pick_alignment {
-        //        case "최근등록순":
-        ////            partImage.image = UIImage(named: "sopt_doplan")
-        //        case "마감임박순":
-        ////            partImage.image = UIImage(named: "sopt_dodesign")
-        //        case순"조회순":
-        ////            partImage.image = UIImage(named: "sopt_dodevelop")
-        //        default:
-        //            break
-        //        }
-        //done 버튼을 누르고 함수 실행 중 edit을 끝냄
-        //        textField.endEditing(true)
+                switch pick_alignment {
+                case "최근등록순":
+                    alignmentLabel.text = pick_alignment
+                case "마감임박순":
+                    alignmentLabel.text = pick_alignment
+                case "조회순":
+                    alignmentLabel.text = pick_alignment
+                default:
+                    break
+                }
+//        done 버튼을 누르고 함수 실행 중 edit을 끝냄
+        self.alignmentLabel.endEditing(true)
+//        self.picker.removeFromSuperview()
+//        self.toolbar.removeFromSuperview()
+        
         
     }
 }
@@ -235,3 +227,4 @@ extension SmatchingListVC : UIPickerViewDataSource {
     
     
 }
+
