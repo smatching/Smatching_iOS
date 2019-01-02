@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5FC84B12D6D3E5F3D75F8D13 /* Pods_iOS_Smatching.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B65DE6A36435F97FF3F756DC /* Pods_iOS_Smatching.framework */; };
+		B61148F121DC2204004F1E92 /* InsititutionClassifyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61148F021DC2204004F1E92 /* InsititutionClassifyInfo.swift */; };
 		B632123621D3B11000087FA2 /* LoginOrSignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B632123521D3B11000087FA2 /* LoginOrSignupVC.swift */; };
 		B632123821D3B40800087FA2 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B632123721D3B40800087FA2 /* MainVC.swift */; };
 		B632123A21D3CE9300087FA2 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B632123921D3CE9300087FA2 /* SignupVC.swift */; };
@@ -43,6 +44,11 @@
 		B6A3F4B221C499FB000497BF /* UIImage+imageFromURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A3F4B121C499FB000497BF /* UIImage+imageFromURL.swift */; };
 		B6A3F4B421C49A0D000497BF /* UIViewController+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A3F4B321C49A0D000497BF /* UIViewController+extensions.swift */; };
 		B6B74B5921D9EA5D001482BF /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B74B5821D9EA5D001482BF /* Checkbox.swift */; };
+		B6B74B6021DA3BDE001482BF /* CustomSettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B74B5F21DA3BDE001482BF /* CustomSettingVC.swift */; };
+		B6BAFCE521DBB6B2004C8743 /* CustomViewBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BAFCE421DBB6B2004C8743 /* CustomViewBorder.swift */; };
+		B6BAFCE721DBD3FA004C8743 /* CustomDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BAFCE621DBD3FA004C8743 /* CustomDialog.swift */; };
+		B6BAFCEA21DBE865004C8743 /* SelectRegionDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BAFCE821DBE865004C8743 /* SelectRegionDialog.swift */; };
+		B6BAFCEB21DBE866004C8743 /* SelectRegionDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6BAFCE921DBE865004C8743 /* SelectRegionDialog.xib */; };
 		B6BB462021D39815003DB754 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BB461F21D39815003DB754 /* LoginService.swift */; };
 		C0B6D80521DC64260058DA6C /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0B6D80421DC64260058DA6C /* Search.storyboard */; };
 		C0B6D82B21DC93650058DA6C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B6D82A21DC93650058DA6C /* SearchViewController.swift */; };
@@ -52,6 +58,7 @@
 /* Begin PBXFileReference section */
 		1487A7A3B89B90875B172BC6 /* Pods-iOS-Smatching.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Smatching.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOS-Smatching/Pods-iOS-Smatching.debug.xcconfig"; sourceTree = "<group>"; };
 		60F731E17DF2F11691B041FE /* Pods-iOS-Smatching.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Smatching.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS-Smatching/Pods-iOS-Smatching.release.xcconfig"; sourceTree = "<group>"; };
+		B61148F021DC2204004F1E92 /* InsititutionClassifyInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsititutionClassifyInfo.swift; sourceTree = "<group>"; };
 		B632123521D3B11000087FA2 /* LoginOrSignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginOrSignupVC.swift; sourceTree = "<group>"; };
 		B632123721D3B40800087FA2 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		B632123921D3CE9300087FA2 /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
@@ -90,6 +97,11 @@
 		B6A3F4B121C499FB000497BF /* UIImage+imageFromURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+imageFromURL.swift"; sourceTree = "<group>"; };
 		B6A3F4B321C49A0D000497BF /* UIViewController+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extensions.swift"; sourceTree = "<group>"; };
 		B6B74B5821D9EA5D001482BF /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
+		B6B74B5F21DA3BDE001482BF /* CustomSettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSettingVC.swift; sourceTree = "<group>"; };
+		B6BAFCE421DBB6B2004C8743 /* CustomViewBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewBorder.swift; sourceTree = "<group>"; };
+		B6BAFCE621DBD3FA004C8743 /* CustomDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDialog.swift; sourceTree = "<group>"; };
+		B6BAFCE821DBE865004C8743 /* SelectRegionDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRegionDialog.swift; sourceTree = "<group>"; };
+		B6BAFCE921DBE865004C8743 /* SelectRegionDialog.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectRegionDialog.xib; sourceTree = "<group>"; };
 		B6BB461F21D39815003DB754 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		C0B6D80421DC64260058DA6C /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		C0B6D82A21DC93650058DA6C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -240,6 +252,10 @@
 				B670933821D6068400472BB2 /* NoticeCell.swift */,
 				B68742EF21D754D90094D5E7 /* CustomTextField.swift */,
 				B6B74B5821D9EA5D001482BF /* Checkbox.swift */,
+				B6BAFCE421DBB6B2004C8743 /* CustomViewBorder.swift */,
+				B6BAFCE621DBD3FA004C8743 /* CustomDialog.swift */,
+				B6BAFCE821DBE865004C8743 /* SelectRegionDialog.swift */,
+				B6BAFCE921DBE865004C8743 /* SelectRegionDialog.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -259,6 +275,9 @@
 				B68AA6FD21D4F6C4000E5549 /* SmatchingListVC.swift */,
 				B68742ED21D752A00094D5E7 /* SearchVC.swift */,
 				C0B6D82A21DC93650058DA6C /* SearchViewController.swift */,
+
+				B6B74B5F21DA3BDE001482BF /* CustomSettingVC.swift */,
+				B61148F021DC2204004F1E92 /* InsititutionClassifyInfo.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -334,6 +353,7 @@
 				B6A3F48E21C49071000497BF /* Assets.xcassets in Resources */,
 				C0B6D80521DC64260058DA6C /* Search.storyboard in Resources */,
 				B6A3F48C21C49070000497BF /* Main.storyboard in Resources */,
+				B6BAFCEB21DBE866004C8743 /* SelectRegionDialog.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +425,7 @@
 				B68742E621D74D780094D5E7 /* Condition.swift in Sources */,
 				B6A3F4AA21C497BA000497BF /* ResponseArray.swift in Sources */,
 				B68AA6FC21D4E2EE000E5549 /* MyPageVC.swift in Sources */,
+				B61148F121DC2204004F1E92 /* InsititutionClassifyInfo.swift in Sources */,
 				B68AA70021D4F837000E5549 /* Notice.swift in Sources */,
 				B68AA6FA21D4E2DD000E5549 /* TalkVC.swift in Sources */,
 				B68AA6F621D4E2C1000E5549 /* HomeVC.swift in Sources */,
@@ -415,6 +436,7 @@
 				C0B6D82B21DC93650058DA6C /* SearchViewController.swift in Sources */,
 				B68742EE21D752A00094D5E7 /* SearchVC.swift in Sources */,
 				B6B74B5921D9EA5D001482BF /* Checkbox.swift in Sources */,
+				B6BAFCE521DBB6B2004C8743 /* CustomViewBorder.swift in Sources */,
 				B632123821D3B40800087FA2 /* MainVC.swift in Sources */,
 				B6A3F4B421C49A0D000497BF /* UIViewController+extensions.swift in Sources */,
 				B6A3F4A621C49785000497BF /* NetworkResult.swift in Sources */,
@@ -423,8 +445,10 @@
 				B6A3F48921C49070000497BF /* ViewController.swift in Sources */,
 				B6A3F48721C49070000497BF /* AppDelegate.swift in Sources */,
 				B68742F021D754D90094D5E7 /* CustomTextField.swift in Sources */,
+				B6BAFCE721DBD3FA004C8743 /* CustomDialog.swift in Sources */,
 				B68AA70421D4FBCF000E5549 /* MainService.swift in Sources */,
 				B68AA70221D4FADC000E5549 /* Main.swift in Sources */,
+				B6B74B6021DA3BDE001482BF /* CustomSettingVC.swift in Sources */,
 				B6A3F4B221C499FB000497BF /* UIImage+imageFromURL.swift in Sources */,
 				B6A3F4B021C49870000497BF /* User.swift in Sources */,
 				B670933B21D652DB00472BB2 /* ChangeButton.swift in Sources */,
@@ -432,6 +456,7 @@
 				B670933921D6068400472BB2 /* NoticeCell.swift in Sources */,
 				B632123621D3B11000087FA2 /* LoginOrSignupVC.swift in Sources */,
 				B6A3F4AC21C497D0000497BF /* Token.swift in Sources */,
+				B6BAFCEA21DBE865004C8743 /* SelectRegionDialog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

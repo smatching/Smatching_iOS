@@ -66,7 +66,8 @@ class SignupVC: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func signup(_ sender: Any) {
-        UserService.shared.signUp(nickname: nicknameTxtField.text!, email: emailTxtField.text!, password: passwdTxtField1.text!){
+        UserService.shared.signUp(nickname: nicknameTxtField.text!, email: emailTxtField.text!, password: passwdTxtField1.text!){[weak self] (data) in guard let `self` = self else {return}
+            print(data)
         }
         self.performSegue(withIdentifier: "signupSegue", sender: nil)
         
@@ -154,7 +155,7 @@ extension SignupVC : UIGestureRecognizerDelegate {
     //UIGestureRecognizerDelegate에 있는 함수
     //키보드가 있는 공간에 입력 필드가 있는 경우 사용
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
-        
+
         if (touch.view?.isDescendant(of: emailTxtField))! || (touch.view?.isDescendant(of: passwdTxtField2))! || (touch.view?.isDescendant(of: passwdTxtField1))! || (touch.view?.isDescendant(of: nicknameTxtField))! {
             return false
         }

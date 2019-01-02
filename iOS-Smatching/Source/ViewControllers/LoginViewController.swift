@@ -10,6 +10,7 @@ import UIKit
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
+    @IBOutlet weak var stackViewConst: NSLayoutConstraint!
     @IBOutlet weak var emailTxtField: UITextField!
     @IBOutlet weak var passwdTxtField: UITextField!
     
@@ -33,6 +34,16 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         LightGrayTextField(passwdTxtField)
         
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        registerForKeyboardNotifications()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        unregisterForKeyboardNotifications()
+    }
+    
     @IBAction func dismissAction(_ sender: Any) {
         dismiss(animated: true)
     }
@@ -95,12 +106,54 @@ extension LoginViewController : UIGestureRecognizerDelegate {
     //UIGestureRecognizerDelegate에 있는 함수
     //키보드가 있는 공간에 입력 필드가 있는 경우 사용
 
+    //stackview안에있는 텍스트 필드가 위로 올라감.
+    @objc func keyboardWillShow(_ notification: NSNotification) {
+        guard let duration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double else {return}
+        guard let curve = notification.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? UInt else {return}
+        UIView.animate(withDuration: duration, delay: 0.0, options: .init(rawValue: curve), animations: {
+            self.stackViewConst.constant = -120
+        })
+        
+        //stacview의 constraint의 constant값을 변경시킴
+        //위로 올림 -> - 값
+        //        stackViewConstraint.constant = -120
+        
+        
+        self.view.layoutIfNeeded()
+        
+    }
+    @objc func keyboardWillHide(_ notification: NSNotification) {
+        guard let duration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double else {return}
+        guard let curve = notification.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? UInt else {return}
+        UIView.animate(withDuration: duration, delay: 0.0, options: .init(rawValue: curve), animations: {
+            self.stackViewConst.constant = 0
+        })
+        
+        //        stackViewConstraint.constant = 0
+        
+        self.view.layoutIfNeeded()
+    }
+    
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
         if (touch.view?.isDescendant(of: emailTxtField))! || (touch.view?.isDescendant(of: passwdTxtField))! {
             return false
         }
         return true
     }
+    
+    
+    func registerForKeyboardNotifications() {
+        //addObserver - 특정 동작에 selector추가 -> 계속 지켜보고 있으면서 특정 상황이 오면 실행된다.
+        //addObserver - 다른 view controller로 가기 전에 이걸 없애줘야 한다. removeObserver
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    func unregisterForKeyboardNotifications() {
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
     
 }
 extension UIView {
