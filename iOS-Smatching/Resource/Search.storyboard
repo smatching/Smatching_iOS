@@ -12,7 +12,6 @@
         <!--검색-->
         <scene sceneID="UYU-KT-FWD">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wgB-tj-ajG" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="SearchViewController" id="X9W-Wb-KA1" customClass="SearchViewController" customModule="iOS_Smatching" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AIP-Xv-b6a">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
@@ -56,8 +55,9 @@
                         <outlet property="SearchTxtField" destination="iLI-nd-zod" id="E7Q-iO-CEX"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wgB-tj-ajG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="114.40000000000001" y="-127.83251231527095"/>
+            <point key="canvasLocation" x="-294" y="-98"/>
         </scene>
     </scenes>
 </document>

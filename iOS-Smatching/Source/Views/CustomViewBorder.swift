@@ -11,7 +11,7 @@ import UIKit
 @IBDesignable
 class CustomViewBorder: UIView {
 
-    @IBInspectable var borderWidth: CGFloat {
+    @IBInspectable override var borderWidth: CGFloat {
         get {
             return layer.borderWidth
         }

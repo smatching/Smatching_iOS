@@ -135,45 +135,6 @@
                                     <action selector="dismissAction:" destination="waF-lA-qcH" eventType="touchUpInside" id="soy-X8-HSi"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이메일 주소 입력" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="90h-jQ-pPJ">
-                                <rect key="frame" x="54.666666666666657" y="404" width="266" height="38.666666666666686"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="266" id="Vi1-79-TR3"/>
-                                    <constraint firstAttribute="height" constant="38.5" id="gU0-7F-cxx"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="8"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.33784764020000002" green="1" blue="0.4483438515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호 입력" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2rl-b4-kQZ">
-                                <rect key="frame" x="54.666666666666657" y="453.66666666666669" width="266" height="38.333333333333314"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="38.5" id="4GK-Va-3tX"/>
-                                    <constraint firstAttribute="width" constant="266" id="eoK-FN-7HM"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="8"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="rjp-hs-0fV">
                                 <rect key="frame" x="54" y="289.5" width="266" height="88"/>
                                 <subviews>
@@ -193,6 +154,9 @@
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                                 <color key="value" red="0.33784764020000002" green="1" blue="0.4483438515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호 입력" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2rl-b4-kQZ">
@@ -207,6 +171,9 @@
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
@@ -266,7 +233,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="yes"/>
+                                        <textInputTraits key="textInputTraits"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="8"/>
@@ -572,9 +539,6 @@
                                             <constraint firstAttribute="width" constant="44" id="Pho-3g-yfb"/>
                                         </constraints>
                                         <state key="normal" image="edit_img"/>
-                                        <connections>
-                                            <segue destination="9Ch-C8-d7z" kind="push" id="udm-Ri-96O"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Js-MJ-hOM" customClass="Checkbox" customModule="iOS_Smatching" customModuleProvider="target">
                                         <rect key="frame" x="13" y="239" width="18" height="22"/>
@@ -635,6 +599,11 @@
                                     <constraint firstAttribute="trailing" secondItem="wmg-3b-9Bj" secondAttribute="trailing" constant="8" id="zFH-RL-kGS"/>
                                     <constraint firstItem="Sr6-gx-gka" firstAttribute="leading" secondItem="PfH-WU-O0U" secondAttribute="trailing" id="zav-x6-ArY"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bjC-Q1-exs">
                                 <rect key="frame" x="311.5" y="69" width="15" height="15"/>
@@ -843,7 +812,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D4S-nn-XIY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6784.8000000000002" y="1449.6251874062971"/>
+            <point key="canvasLocation" x="7065" y="2242"/>
         </scene>
         <!--TalkVC-->
         <scene sceneID="hxD-6B-VM5">
@@ -852,6 +821,26 @@
                     <view key="view" contentMode="scaleToFill" id="Xif-aT-HmS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wKF-DE-i2m">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="창업토크" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eow-aa-6ey">
+                                        <rect key="frame" x="155" y="12" width="66" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="img_talknotyet" translatesAutoresizingMaskIntoConstraints="NO" id="mGe-LP-krS">
+                                <rect key="frame" x="98.5" y="215" width="178" height="133"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="Yr5-aG-JhE"/>
                     </view>
@@ -861,7 +850,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Hj-fo-fJu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6538.3999999999996" y="2062.3152709359606"/>
+            <point key="canvasLocation" x="5596" y="2063"/>
         </scene>
         <!--My PageVC-->
         <scene sceneID="EUU-zy-MOu">
@@ -879,7 +868,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KzW-dC-cW1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6538.3999999999996" y="2786.4532019704434"/>
+            <point key="canvasLocation" x="5596" y="2787"/>
         </scene>
         <!--맞춤지원-->
         <scene sceneID="qAJ-1F-QFp">
@@ -955,9 +944,13 @@
                         <viewLayoutGuide key="safeArea" id="tm3-0C-csN"/>
                     </view>
                     <navigationItem key="navigationItem" title="맞춤지원" largeTitleDisplayMode="always" id="V50-kw-f9c">
-                        <barButtonItem key="leftBarButtonItem" image="btnBack" style="plain" id="rVh-hF-497">
+                        <barButtonItem key="leftBarButtonItem" image="btnBack" style="done" id="rVh-hF-497">
                             <color key="tintColor" red="0.41960784309999999" green="0.41960784309999999" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="backBtnPressed:" destination="6nE-FD-D2l" id="Lhx-1g-b2L"/>
+                            </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="조건삭제" id="YqE-4o-BNN"/>
                     </navigationItem>
                     <connections>
                         <outlet property="firstView" destination="4oZ-ic-hc8" id="Emc-f7-fEH"/>
@@ -966,7 +959,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x40-aB-5TP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8575.2000000000007" y="1449.6251874062971"/>
+            <point key="canvasLocation" x="7065" y="1409"/>
         </scene>
         <!--Insititution Classify Info-->
         <scene sceneID="RF0-5h-0Oc">
@@ -991,6 +984,9 @@
                                                     <navigationItem title="기업정보" id="0f8-tE-DqW">
                                                         <barButtonItem key="leftBarButtonItem" image="btnBack" id="tRl-ms-gQK">
                                                             <color key="tintColor" red="0.2784313725" green="0.2784313725" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <connections>
+                                                                <action selector="backButton:" destination="uo6-kj-MPn" id="5hj-55-GF6"/>
+                                                            </connections>
                                                         </barButtonItem>
                                                     </navigationItem>
                                                 </items>
@@ -1183,7 +1179,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KGF-7s-vYC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9591.2000000000007" y="1735.6821589205399"/>
+            <point key="canvasLocation" x="8988" y="2352"/>
         </scene>
         <!--SearchVC-->
         <scene sceneID="Olu-e5-bdb">
@@ -1218,7 +1214,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nh8-yM-1sy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10762.4" y="1449.7536945812808"/>
+            <point key="canvasLocation" x="8070" y="1408"/>
         </scene>
         <!--HomeVC-->
         <scene sceneID="i3e-LR-IRz">
@@ -1237,40 +1233,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Xb-Ce-dqE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5596" y="732"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="y8v-VT-DYS">
-            <objects>
-                <viewController id="zwm-ak-1Cw" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="AQL-si-f4J">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Acx-dc-pCG">
-                                <rect key="frame" x="185" y="378" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="5yn-iS-fKp" kind="show" id="YVO-sb-Tup"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="09V-gv-OFM"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="1az-8S-lIM"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="s2y-tv-gQb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2927.1999999999998" y="2327.5862068965516"/>
-        </scene>
-        <!--SearchViewController-->
-        <scene sceneID="PA3-gu-FD1">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="SearchViewController" storyboardName="Search" referencedIdentifier="SearchViewController" id="5yn-iS-fKp" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BCL-6B-ai9" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3516" y="2336.4532019704434"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="LFH-DZ-YiM">
@@ -1313,12 +1275,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LNj-fU-rWt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7632.8000000000002" y="1449.7536945812808"/>
+            <point key="canvasLocation" x="5596" y="1410"/>
         </scene>
         <!--Custom SettingVC-->
         <scene sceneID="RMJ-wb-X6n">
             <objects>
-                <viewController id="9Ch-C8-d7z" customClass="CustomSettingVC" customModule="iOS_Smatching" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CustomSettingVC" id="9Ch-C8-d7z" customClass="CustomSettingVC" customModule="iOS_Smatching" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="byo-Og-1Ll">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1186"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1376,7 +1338,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HF1-q7-bQd" customClass="CustomViewBorder" customModule="iOS_Smatching" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" restorationIdentifier="areaView1" translatesAutoresizingMaskIntoConstraints="NO" id="HF1-q7-bQd" customClass="CustomViewBorder" customModule="iOS_Smatching" customModuleProvider="target">
                                                 <rect key="frame" x="37.5" y="157" width="184" height="36"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rDn-7J-tO4">
@@ -1402,6 +1364,9 @@
                                                     </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="areaView1">
+                                                    <bool key="isElement" value="YES"/>
+                                                </accessibility>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="36" id="64z-Qx-INi"/>
                                                     <constraint firstAttribute="bottom" secondItem="rDn-7J-tO4" secondAttribute="bottom" constant="13" id="9WM-yI-UFp"/>
@@ -1444,7 +1409,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="taO-ZL-lWP">
                                                 <rect key="frame" x="48.5" y="261" width="278" height="70"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eI5-MP-WCe" customClass="CustomViewBorder" customModule="iOS_Smatching" customModuleProvider="target">
+                                                    <view contentMode="scaleToFill" restorationIdentifier="ageView1" translatesAutoresizingMaskIntoConstraints="NO" id="eI5-MP-WCe" customClass="CustomViewBorder" customModule="iOS_Smatching" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="80" height="70"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="만 20세 미만" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5dw-UZ-6fk">
@@ -1456,6 +1421,10 @@
                                                             </label>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="ageView1">
+                                                            <accessibilityTraits key="traits" none="YES"/>
+                                                            <bool key="isElement" value="YES"/>
+                                                        </accessibility>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="70" id="HTx-2D-tMb"/>
                                                             <constraint firstAttribute="width" constant="80" id="WLo-ux-49I"/>
@@ -1472,7 +1441,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xDN-Ai-xxK" customClass="CustomViewBorder" customModule="iOS_Smatching" customModuleProvider="target">
+                                                    <view contentMode="scaleToFill" restorationIdentifier="ageView2" translatesAutoresizingMaskIntoConstraints="NO" id="xDN-Ai-xxK" customClass="CustomViewBorder" customModule="iOS_Smatching" customModuleProvider="target">
                                                         <rect key="frame" x="99" y="0.0" width="80" height="70"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJE-rL-v8O">
@@ -1487,6 +1456,9 @@
                                                             </label>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="ageView2">
+                                                            <bool key="isElement" value="YES"/>
+                                                        </accessibility>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="80" id="U06-nq-bKz"/>
                                                             <constraint firstAttribute="height" constant="70" id="stQ-pY-Ja9"/>
@@ -1503,7 +1475,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mWi-cI-o4G" customClass="CustomViewBorder" customModule="iOS_Smatching" customModuleProvider="target">
+                                                    <view contentMode="scaleToFill" restorationIdentifier="ageView3" translatesAutoresizingMaskIntoConstraints="NO" id="mWi-cI-o4G" customClass="CustomViewBorder" customModule="iOS_Smatching" customModuleProvider="target">
                                                         <rect key="frame" x="198" y="0.0" width="80" height="70"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="만 20세 미만" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8f8-eW-fcq">
@@ -1515,6 +1487,9 @@
                                                             </label>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="ageView3">
+                                                            <bool key="isElement" value="YES"/>
+                                                        </accessibility>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="70" id="fjr-UP-yeR"/>
                                                             <constraint firstAttribute="width" constant="80" id="jGY-88-Z9W"/>
@@ -1596,6 +1571,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="periodView1"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="69" id="Tzu-kU-zSa"/>
                                                                     <constraint firstAttribute="height" constant="36" id="oRG-b1-eoy"/>
@@ -1624,6 +1600,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="periodView2"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="36" id="6vp-Iz-bQq"/>
                                                                     <constraint firstAttribute="width" constant="69" id="cbN-gp-La6"/>
@@ -1652,6 +1629,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="periodView3"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="69" id="1M3-oS-2jM"/>
                                                                 </constraints>
@@ -1679,6 +1657,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="periodView4"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="69" id="EFp-jw-NVl"/>
                                                                 </constraints>
@@ -1722,6 +1701,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="periodView5"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="69" id="a4B-ma-rpX"/>
                                                                     <constraint firstAttribute="height" constant="36" id="zjC-an-y16"/>
@@ -1750,6 +1730,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="periodView6"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="36" id="D1s-ij-6Ad"/>
                                                                     <constraint firstAttribute="width" constant="69" id="rd1-Ce-cNc"/>
@@ -1778,6 +1759,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="periodView7"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="69" id="7VD-lt-tcq"/>
                                                                     <constraint firstAttribute="height" constant="36" id="zGO-33-rxl"/>
@@ -1806,6 +1788,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="periodView8"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="69" id="1ay-Yx-UL1"/>
                                                                     <constraint firstAttribute="height" constant="36" id="S3V-nb-xvc"/>
@@ -1856,6 +1839,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="periodView9"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="69" id="USS-lf-prO"/>
                                                                     <constraint firstAttribute="height" constant="36" id="kbc-gi-hKW"/>
@@ -1957,6 +1941,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="busiView1"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="94" id="8W1-Js-63E"/>
                                                                     <constraint firstAttribute="height" constant="36" id="QIG-PI-Pt2"/>
@@ -1985,6 +1970,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="busiView2"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="36" id="MVt-Ga-bCq"/>
                                                                     <constraint firstAttribute="width" constant="94" id="dFm-lF-xbo"/>
@@ -2013,6 +1999,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="busiView3"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="36" id="Vj0-zK-VTh"/>
                                                                     <constraint firstAttribute="width" constant="94" id="WCa-ap-3Au"/>
@@ -2060,6 +2047,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="busiView4"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="94" id="dTq-Ab-AR5"/>
                                                                     <constraint firstAttribute="height" constant="36" id="krv-UW-MlN"/>
@@ -2088,6 +2076,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="busiView5"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="36" id="1rz-f7-m1q"/>
                                                                     <constraint firstAttribute="width" constant="94" id="xu3-bB-Mya"/>
@@ -2116,6 +2105,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="busiView6"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="94" id="6v8-9M-Pik"/>
                                                                     <constraint firstAttribute="height" constant="36" id="fXP-Vx-dqT"/>
@@ -2162,6 +2152,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="busiView7"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="36" id="7AA-Ec-aYr"/>
                                                                     <constraint firstAttribute="width" constant="94" id="yiC-ud-6sn"/>
@@ -2268,6 +2259,7 @@
                                                     </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="fieldView1"/>
                                                 <constraints>
                                                     <constraint firstItem="28E-xy-hse" firstAttribute="leading" secondItem="4pY-MB-I6Y" secondAttribute="leading" constant="10" id="4Ad-tH-TUZ"/>
                                                     <constraint firstAttribute="height" constant="36" id="5ZO-lK-tDv"/>
@@ -2298,6 +2290,9 @@
                                                     <constraint firstAttribute="height" constant="0.5" id="xn7-fX-Lz6"/>
                                                 </constraints>
                                             </view>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="highlight" translatesAutoresizingMaskIntoConstraints="NO" id="2uV-7h-nAN">
+                                                <rect key="frame" x="33" y="865.5" width="61" height="10"/>
+                                            </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="필요 없는 지원사업분야  0/5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Vn-Qz-AOe">
                                                 <rect key="frame" x="32.5" y="854" width="188" height="19.5"/>
                                                 <constraints>
@@ -2312,10 +2307,10 @@
                                                 <rect key="frame" x="37.5" y="889" width="300" height="36"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9s-c5-rV4">
-                                                        <rect key="frame" x="259.5" y="13" width="10" height="10"/>
+                                                        <rect key="frame" x="267" y="13" width="10" height="10"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="10" id="2jp-qV-ZVu"/>
-                                                            <constraint firstAttribute="height" constant="10" id="VXl-Yh-wMO"/>
+                                                            <constraint firstAttribute="width" constant="10" id="2xv-QK-VZz"/>
+                                                            <constraint firstAttribute="height" constant="10" id="k7o-K8-Thr"/>
                                                         </constraints>
                                                         <state key="normal" image="btn_align_Triangle_747474"/>
                                                     </button>
@@ -2327,15 +2322,16 @@
                                                     </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="excView1"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="f9s-c5-rV4" secondAttribute="trailing" constant="30.5" id="E4Q-B7-Za4"/>
                                                     <constraint firstAttribute="width" constant="300" id="Et1-z4-bQ7"/>
-                                                    <constraint firstAttribute="bottom" secondItem="f9s-c5-rV4" secondAttribute="bottom" constant="13" id="SYG-Hs-Km3"/>
-                                                    <constraint firstItem="f9s-c5-rV4" firstAttribute="top" secondItem="pcl-y0-nqd" secondAttribute="top" constant="13" id="Sew-08-Ejz"/>
+                                                    <constraint firstItem="f9s-c5-rV4" firstAttribute="top" secondItem="pcl-y0-nqd" secondAttribute="top" constant="13" id="UFl-TE-Mtn"/>
                                                     <constraint firstAttribute="bottom" secondItem="umn-rY-GKA" secondAttribute="bottom" constant="9" id="V3j-le-z4c"/>
                                                     <constraint firstItem="umn-rY-GKA" firstAttribute="top" secondItem="pcl-y0-nqd" secondAttribute="top" constant="10" id="bq4-oh-FYt"/>
+                                                    <constraint firstItem="f9s-c5-rV4" firstAttribute="leading" secondItem="umn-rY-GKA" secondAttribute="trailing" constant="31.5" id="dSP-cp-bDD"/>
+                                                    <constraint firstAttribute="trailing" secondItem="f9s-c5-rV4" secondAttribute="trailing" constant="23" id="g47-5p-aYj"/>
+                                                    <constraint firstAttribute="bottom" secondItem="f9s-c5-rV4" secondAttribute="bottom" constant="13" id="idE-tm-RAU"/>
                                                     <constraint firstAttribute="height" constant="36" id="nqN-vX-obg"/>
-                                                    <constraint firstItem="f9s-c5-rV4" firstAttribute="leading" secondItem="umn-rY-GKA" secondAttribute="trailing" constant="24" id="obi-Kg-9x1"/>
                                                     <constraint firstItem="umn-rY-GKA" firstAttribute="leading" secondItem="pcl-y0-nqd" secondAttribute="leading" constant="10" id="qnj-KP-u20"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
@@ -2374,7 +2370,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="FED-4O-4P2">
                                                         <rect key="frame" x="0.0" y="0.0" width="300" height="36"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XXq-cU-BRQ" customClass="CustomViewBorder" customModule="iOS_Smatching" customModuleProvider="target">
+                                                            <view contentMode="scaleToFill" restorationIdentifier="advantageView1" translatesAutoresizingMaskIntoConstraints="NO" id="XXq-cU-BRQ" customClass="CustomViewBorder" customModule="iOS_Smatching" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="94" height="36"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="재도전기업" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyu-cX-rJN">
@@ -2386,6 +2382,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="advantageView1"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="94" id="2Cg-BM-mJq"/>
                                                                     <constraint firstAttribute="height" constant="36" id="xLG-Pr-Tbe"/>
@@ -2402,7 +2399,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G8P-Tf-fxK" customClass="CustomViewBorder" customModule="iOS_Smatching" customModuleProvider="target">
+                                                            <view contentMode="scaleToFill" restorationIdentifier="advantageView2" translatesAutoresizingMaskIntoConstraints="NO" id="G8P-Tf-fxK" customClass="CustomViewBorder" customModule="iOS_Smatching" customModuleProvider="target">
                                                                 <rect key="frame" x="103" y="0.0" width="94" height="36"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="여성기업" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ycs-JB-ZPZ">
@@ -2414,6 +2411,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="advantageView2"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="36" id="JJe-Wz-SrE"/>
                                                                     <constraint firstAttribute="width" constant="94" id="TOw-tW-vxW"/>
@@ -2430,7 +2428,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vqf-I8-Dgv" customClass="CustomViewBorder" customModule="iOS_Smatching" customModuleProvider="target">
+                                                            <view contentMode="scaleToFill" restorationIdentifier="advantageView3" translatesAutoresizingMaskIntoConstraints="NO" id="Vqf-I8-Dgv" customClass="CustomViewBorder" customModule="iOS_Smatching" customModuleProvider="target">
                                                                 <rect key="frame" x="206" y="0.0" width="94" height="36"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="장애인기업" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U1E-Ck-WwP">
@@ -2442,6 +2440,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="advantageView3"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="36" id="ZEb-x5-wVa"/>
                                                                     <constraint firstAttribute="width" constant="94" id="mfP-10-vq5"/>
@@ -2477,7 +2476,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="Kqu-Hj-XsA">
                                                         <rect key="frame" x="0.0" y="45" width="300" height="36"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r1i-AJ-dvP" customClass="CustomViewBorder" customModule="iOS_Smatching" customModuleProvider="target">
+                                                            <view contentMode="scaleToFill" restorationIdentifier="advantageView4" translatesAutoresizingMaskIntoConstraints="NO" id="r1i-AJ-dvP" customClass="CustomViewBorder" customModule="iOS_Smatching" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="94" height="36"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="사회적기업" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ne-ed-jh7">
@@ -2489,6 +2488,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="advantageView4"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="94" id="OUv-TR-Mxt"/>
                                                                     <constraint firstAttribute="height" constant="36" id="Za1-QJ-0v8"/>
@@ -2505,7 +2505,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eAY-sn-4Ro" customClass="CustomViewBorder" customModule="iOS_Smatching" customModuleProvider="target">
+                                                            <view contentMode="scaleToFill" restorationIdentifier="advantageView5" translatesAutoresizingMaskIntoConstraints="NO" id="eAY-sn-4Ro" customClass="CustomViewBorder" customModule="iOS_Smatching" customModuleProvider="target">
                                                                 <rect key="frame" x="103" y="0.0" width="94" height="36"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1인창조기업" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FEj-dE-mEg">
@@ -2517,6 +2517,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="advantageView5"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="36" id="2GV-2H-JAL"/>
                                                                     <constraint firstAttribute="width" constant="94" id="euO-E8-v4C"/>
@@ -2533,7 +2534,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UKb-cL-d6Q" customClass="CustomViewBorder" customModule="iOS_Smatching" customModuleProvider="target">
+                                                            <view contentMode="scaleToFill" restorationIdentifier="advantageView6" translatesAutoresizingMaskIntoConstraints="NO" id="UKb-cL-d6Q" customClass="CustomViewBorder" customModule="iOS_Smatching" customModuleProvider="target">
                                                                 <rect key="frame" x="206" y="0.0" width="94" height="36"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4차산업관련기업" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDp-vo-d20">
@@ -2545,6 +2546,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="advantageView6"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="94" id="OD6-WQ-vZS"/>
                                                                     <constraint firstAttribute="height" constant="36" id="n99-ai-jwb"/>
@@ -2580,7 +2582,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="dPK-Sb-5he">
                                                         <rect key="frame" x="0.0" y="90" width="300" height="36"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oUg-Jh-0NQ" customClass="CustomViewBorder" customModule="iOS_Smatching" customModuleProvider="target">
+                                                            <view contentMode="scaleToFill" restorationIdentifier="advantageView7" translatesAutoresizingMaskIntoConstraints="NO" id="oUg-Jh-0NQ" customClass="CustomViewBorder" customModule="iOS_Smatching" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="94" height="36"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="대학(원)생" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O63-a8-Noz">
@@ -2592,6 +2594,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="advantageView7"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="36" id="4fS-x5-WK3"/>
                                                                     <constraint firstAttribute="width" constant="94" id="CAH-oq-m04"/>
@@ -2603,9 +2606,12 @@
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                                                         <color key="value" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="8"/>
+                                                                    </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2FA-l4-mbc" customClass="CustomViewBorder" customModule="iOS_Smatching" customModuleProvider="target">
+                                                            <view contentMode="scaleToFill" restorationIdentifier="advantageView8" translatesAutoresizingMaskIntoConstraints="NO" id="2FA-l4-mbc" customClass="CustomViewBorder" customModule="iOS_Smatching" customModuleProvider="target">
                                                                 <rect key="frame" x="103" y="0.0" width="94" height="36"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="공동창업" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wvS-Is-AVU">
@@ -2617,6 +2623,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="advantageView8"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="94" id="RPE-iC-UQ5"/>
                                                                     <constraint firstAttribute="height" constant="36" id="fa1-Hf-OEY"/>
@@ -2627,6 +2634,9 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                                                         <color key="value" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="8"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
@@ -2710,6 +2720,7 @@
                                             <constraint firstAttribute="trailing" secondItem="vzO-LU-XMO" secondAttribute="trailing" constant="26" id="BoA-ii-96V"/>
                                             <constraint firstItem="CkR-nJ-aba" firstAttribute="leading" secondItem="DHE-35-N6c" secondAttribute="trailing" constant="143" id="C35-iz-zNI"/>
                                             <constraint firstItem="DHE-35-N6c" firstAttribute="top" secondItem="Icv-Yh-7Mv" secondAttribute="bottom" constant="16.5" id="C67-Sy-Zf1"/>
+                                            <constraint firstAttribute="trailing" secondItem="2uV-7h-nAN" secondAttribute="trailing" constant="281" id="D1X-iv-rGC"/>
                                             <constraint firstAttribute="trailing" secondItem="CkR-nJ-aba" secondAttribute="trailing" constant="40.5" id="DLu-L0-Q2x"/>
                                             <constraint firstItem="ThJ-Ah-7Ds" firstAttribute="top" secondItem="4pY-MB-I6Y" secondAttribute="bottom" constant="16" id="ErT-4e-dMD"/>
                                             <constraint firstItem="R9M-ez-qH9" firstAttribute="top" secondItem="fvl-4s-RHA" secondAttribute="bottom" constant="18" id="Foz-Qg-Opf"/>
@@ -2717,6 +2728,7 @@
                                             <constraint firstItem="taO-ZL-lWP" firstAttribute="centerX" secondItem="RC9-H1-WKJ" secondAttribute="centerX" id="J2J-Yz-NSK"/>
                                             <constraint firstItem="pcl-y0-nqd" firstAttribute="top" secondItem="5Vn-Qz-AOe" secondAttribute="bottom" constant="15.5" id="JJU-5r-BUQ"/>
                                             <constraint firstItem="iLg-JK-GB3" firstAttribute="centerX" secondItem="RC9-H1-WKJ" secondAttribute="centerX" id="JhU-sv-Bqy"/>
+                                            <constraint firstItem="2uV-7h-nAN" firstAttribute="top" secondItem="ThJ-Ah-7Ds" secondAttribute="bottom" constant="28" id="Js5-yb-awC"/>
                                             <constraint firstItem="8OB-qS-g6D" firstAttribute="top" secondItem="Kbt-kI-eMJ" secondAttribute="bottom" constant="19" id="KGD-yd-ma6"/>
                                             <constraint firstAttribute="trailing" secondItem="3NL-Ce-Z7b" secondAttribute="trailing" constant="25.5" id="KWz-bw-8Zy"/>
                                             <constraint firstAttribute="width" secondItem="RC9-H1-WKJ" secondAttribute="height" multiplier="375:1186" id="LSm-Zf-Bvi"/>
@@ -2738,9 +2750,11 @@
                                             <constraint firstItem="vzO-LU-XMO" firstAttribute="top" secondItem="pcl-y0-nqd" secondAttribute="bottom" constant="16" id="X2T-5i-1qW"/>
                                             <constraint firstAttribute="trailing" secondItem="pcl-y0-nqd" secondAttribute="trailing" constant="37.5" id="X95-7w-8RM"/>
                                             <constraint firstItem="5Vn-Qz-AOe" firstAttribute="leading" secondItem="RC9-H1-WKJ" secondAttribute="leading" constant="32.5" id="XWS-Pf-LlS"/>
+                                            <constraint firstItem="2uV-7h-nAN" firstAttribute="leading" secondItem="RC9-H1-WKJ" secondAttribute="leading" constant="33" id="Xdd-Eh-1Nq"/>
                                             <constraint firstAttribute="trailing" secondItem="4pY-MB-I6Y" secondAttribute="trailing" constant="37.5" id="Xo7-92-43y"/>
                                             <constraint firstItem="taO-ZL-lWP" firstAttribute="top" secondItem="MuL-TI-v5c" secondAttribute="bottom" constant="17" id="YjA-kn-abg"/>
                                             <constraint firstItem="4pY-MB-I6Y" firstAttribute="leading" secondItem="RC9-H1-WKJ" secondAttribute="leading" constant="37.5" id="aPn-b5-IxZ"/>
+                                            <constraint firstItem="pcl-y0-nqd" firstAttribute="top" secondItem="2uV-7h-nAN" secondAttribute="bottom" constant="13.5" id="cLr-MN-1xI"/>
                                             <constraint firstItem="52G-3J-0BF" firstAttribute="top" secondItem="Ezx-ym-PgZ" secondAttribute="bottom" constant="16.5" id="ceX-Cu-6Tv"/>
                                             <constraint firstItem="Sg4-Cn-DHe" firstAttribute="top" secondItem="WCU-Vd-919" secondAttribute="bottom" constant="16.5" id="eL3-YC-cKR"/>
                                             <constraint firstItem="iLg-JK-GB3" firstAttribute="top" secondItem="RC9-H1-WKJ" secondAttribute="top" constant="41" id="ecJ-gG-XOr"/>
@@ -2796,6 +2810,32 @@
                     <navigationItem key="navigationItem" id="oi9-yC-f7w"/>
                     <size key="freeformSize" width="375" height="1186"/>
                     <connections>
+                        <outlet property="advanView1" destination="XXq-cU-BRQ" id="JQo-Rp-esj"/>
+                        <outlet property="advanView2" destination="G8P-Tf-fxK" id="Hf5-Wo-Y9o"/>
+                        <outlet property="advanView3" destination="Vqf-I8-Dgv" id="zhF-bF-af9"/>
+                        <outlet property="advanView4" destination="r1i-AJ-dvP" id="y4F-f3-6La"/>
+                        <outlet property="advanView5" destination="eAY-sn-4Ro" id="HMP-Zw-oV9"/>
+                        <outlet property="advanView6" destination="UKb-cL-d6Q" id="K0j-PS-krq"/>
+                        <outlet property="advanView7" destination="oUg-Jh-0NQ" id="qIA-bt-hsi"/>
+                        <outlet property="advanView8" destination="2FA-l4-mbc" id="ahb-W4-037"/>
+                        <outlet property="busiView1" destination="SDi-Ek-lX6" id="AEr-EK-krn"/>
+                        <outlet property="busiView2" destination="mRd-xT-4B7" id="ggb-Yp-6dS"/>
+                        <outlet property="busiView3" destination="sjv-Hl-ka6" id="LWF-kV-5Kl"/>
+                        <outlet property="busiView4" destination="Swo-cH-LLI" id="iGj-UV-yWe"/>
+                        <outlet property="busiView5" destination="Brw-ZT-rYc" id="Rlz-SO-68B"/>
+                        <outlet property="busiView6" destination="9tb-VW-Cmt" id="TPa-XD-wlZ"/>
+                        <outlet property="busiView7" destination="Dtu-8O-AYj" id="n9c-Lx-sre"/>
+                        <outlet property="excView1" destination="pcl-y0-nqd" id="Vmx-uk-2cw"/>
+                        <outlet property="fieldView1" destination="4pY-MB-I6Y" id="rJD-NK-1mV"/>
+                        <outlet property="periodView1" destination="N8U-QJ-JJs" id="vqt-kL-5aF"/>
+                        <outlet property="periodView2" destination="FvG-we-yMQ" id="dI4-MP-TQa"/>
+                        <outlet property="periodView3" destination="7PP-qX-UZK" id="lRv-DJ-AHE"/>
+                        <outlet property="periodView4" destination="Gh9-T8-GiI" id="Nf4-J3-Ra8"/>
+                        <outlet property="periodView5" destination="bDR-kE-eho" id="SAN-Wp-fLH"/>
+                        <outlet property="periodView6" destination="u9k-Nv-DO2" id="aQX-sG-C9i"/>
+                        <outlet property="periodView7" destination="vwB-1Y-JTL" id="bV9-Tp-Ugt"/>
+                        <outlet property="periodView8" destination="jZm-xo-ryS" id="Myy-JQ-Fh1"/>
+                        <outlet property="periodView9" destination="zJf-p2-ZgY" id="Clk-Jb-F2P"/>
                         <outlet property="showDetail" destination="CkR-nJ-aba" id="8yc-q2-9Fr"/>
                         <outlet property="titleTxtField" destination="xat-C5-26U" id="Weu-8f-GXd"/>
                     </connections>
@@ -2803,24 +2843,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wmi-xv-9o2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="8269.6000000000004" y="2459.3703148425789"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="L73-Nw-xRO">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fg3-xY-M9l" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YEY-yc-2ZS">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="zwm-ak-1Cw" kind="relationship" relationship="rootViewController" id="N3y-iC-siY"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ccc-5k-crb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1984.8" y="2327.5862068965516"/>
         </scene>
     </scenes>
     <resources>
@@ -2846,6 +2868,7 @@
         <image name="btn_tab_talk" width="40" height="38"/>
         <image name="btn_tab_talk_click" width="40" height="38"/>
         <image name="edit_img" width="44" height="13"/>
+        <image name="highlight" width="61" height="10"/>
         <image name="icn_back_white" width="15" height="15"/>
         <image name="icn_back_white_revers" width="15" height="15"/>
         <image name="icn_emptybox" width="18" height="18"/>
@@ -2853,13 +2876,13 @@
         <image name="icn_scrap_yellow" width="20" height="20"/>
         <image name="image_blueboard" width="310" height="40"/>
         <image name="img_precautionbox" width="319" height="83"/>
+        <image name="img_talknotyet" width="178" height="133"/>
         <image name="ivLogo" width="152" height="74"/>
         <image name="txtSmatching" width="246" height="16"/>
         <image name="txt_explain" width="164" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="udm-Ri-96O"/>
         <segue reference="wSi-NC-Dum"/>
-        <segue reference="qzU-bA-t8u"/>
+        <segue reference="ACH-Ba-gGw"/>
     </inferredMetricsTieBreakers>
 </document>
