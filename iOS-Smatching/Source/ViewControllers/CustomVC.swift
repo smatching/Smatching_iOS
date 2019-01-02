@@ -17,6 +17,14 @@ class CustomVC: UIViewController {
         super.viewDidLoad()
         firstView.isHidden = false
         secondView.isHidden = true
+        if let button = self.navigationItem.leftBarButtonItem {
+            button.isEnabled = false
+            button.tintColor = UIColor.clear
+        }
+        if let button = self.navigationItem.rightBarButtonItem {
+            button.isEnabled = false
+            button.tintColor = UIColor.clear
+        }
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -25,18 +33,29 @@ class CustomVC: UIViewController {
     }
 
     @IBAction func showConditionMenu(_ sender: Any) {
+        if let button = self.navigationItem.leftBarButtonItem {
+            button.isEnabled = true
+            button.tintColor = UIColor.gray
+        }
+        if let button = self.navigationItem.rightBarButtonItem {
+            button.isEnabled = true
+            button.tintColor = UIColor.blue
+        }
         firstView.isHidden = true
         secondView.isHidden = false
     }
     
-}
-extension UINavigationBar {
-    
-    func shouldRemoveShadow(_ value: Bool) -> Void {
-        if value {
-            self.setValue(true, forKey: "hidesShadow")
-        } else {
-            self.setValue(false, forKey: "hidesShadow")
+    @IBAction func backBtnPressed(_ sender: Any) {
+        if let button = self.navigationItem.leftBarButtonItem {
+            button.isEnabled = false
+            button.tintColor = UIColor.clear
         }
+        if let button = self.navigationItem.rightBarButtonItem {
+            button.isEnabled = false
+            button.tintColor = UIColor.clear
+        }
+        firstView.isHidden = false
+        secondView.isHidden = true
     }
 }
+

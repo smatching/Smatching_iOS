@@ -10,23 +10,29 @@
 		5FC84B12D6D3E5F3D75F8D13 /* Pods_iOS_Smatching.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B65DE6A36435F97FF3F756DC /* Pods_iOS_Smatching.framework */; };
 		B61148F121DC2204004F1E92 /* InsititutionClassifyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61148F021DC2204004F1E92 /* InsititutionClassifyInfo.swift */; };
 		B632123621D3B11000087FA2 /* LoginOrSignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B632123521D3B11000087FA2 /* LoginOrSignupVC.swift */; };
-		B632123821D3B40800087FA2 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B632123721D3B40800087FA2 /* MainVC.swift */; };
 		B632123A21D3CE9300087FA2 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B632123921D3CE9300087FA2 /* SignupVC.swift */; };
 		B670933921D6068400472BB2 /* NoticeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B670933821D6068400472BB2 /* NoticeCell.swift */; };
 		B670933B21D652DB00472BB2 /* ChangeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B670933A21D652DB00472BB2 /* ChangeButton.swift */; };
+		B67F2A8821DC42E200452579 /* ConditionSettingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67F2A8721DC42E200452579 /* ConditionSettingService.swift */; };
+		B67F2A8A21DC43E000452579 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67F2A8921DC43E000452579 /* Location.swift */; };
+		B67F2A8C21DC451000452579 /* Age.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67F2A8B21DC451000452579 /* Age.swift */; };
+		B67F2A9021DC45E700452579 /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67F2A8F21DC45E700452579 /* Field.swift */; };
+		B67F2A9221DC460B00452579 /* Advantage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67F2A9121DC460B00452579 /* Advantage.swift */; };
+		B67F2A9421DC461800452579 /* BusiType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67F2A9321DC461800452579 /* BusiType.swift */; };
+		B67F2A9621DC462300452579 /* ExcCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67F2A9521DC462300452579 /* ExcCategory.swift */; };
+		B67F2A9821DC4CD700452579 /* String+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67F2A9721DC4CD700452579 /* String+extensions.swift */; };
+		B67F2A9A21DC4D0800452579 /* UIView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67F2A9921DC4D0800452579 /* UIView+extension.swift */; };
+		B67F2A9C21DC4D5800452579 /* UINavigationBar+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67F2A9B21DC4D5800452579 /* UINavigationBar+extension.swift */; };
 		B68742E621D74D780094D5E7 /* Condition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68742E521D74D780094D5E7 /* Condition.swift */; };
 		B68742E821D74DEB0094D5E7 /* ConditionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68742E721D74DEB0094D5E7 /* ConditionService.swift */; };
 		B68742EA21D74EDA0094D5E7 /* ConditionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68742E921D74EDA0094D5E7 /* ConditionResponse.swift */; };
 		B68742EE21D752A00094D5E7 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68742ED21D752A00094D5E7 /* SearchVC.swift */; };
-		B68742F021D754D90094D5E7 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68742EF21D754D90094D5E7 /* CustomTextField.swift */; };
 		B68AA6F621D4E2C1000E5549 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68AA6F521D4E2C1000E5549 /* HomeVC.swift */; };
 		B68AA6F821D4E2D0000E5549 /* CustomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68AA6F721D4E2D0000E5549 /* CustomVC.swift */; };
 		B68AA6FA21D4E2DD000E5549 /* TalkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68AA6F921D4E2DD000E5549 /* TalkVC.swift */; };
 		B68AA6FC21D4E2EE000E5549 /* MyPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68AA6FB21D4E2EE000E5549 /* MyPageVC.swift */; };
 		B68AA6FE21D4F6C4000E5549 /* SmatchingListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68AA6FD21D4F6C4000E5549 /* SmatchingListVC.swift */; };
 		B68AA70021D4F837000E5549 /* Notice.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68AA6FF21D4F837000E5549 /* Notice.swift */; };
-		B68AA70221D4FADC000E5549 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68AA70121D4FADC000E5549 /* Main.swift */; };
-		B68AA70421D4FBCF000E5549 /* MainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68AA70321D4FBCF000E5549 /* MainService.swift */; };
 		B68AA70621D50187000E5549 /* NoticeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68AA70521D50187000E5549 /* NoticeService.swift */; };
 		B6A3F48721C49070000497BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A3F48621C49070000497BF /* AppDelegate.swift */; };
 		B6A3F48921C49070000497BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A3F48821C49070000497BF /* ViewController.swift */; };
@@ -45,13 +51,19 @@
 		B6A3F4B421C49A0D000497BF /* UIViewController+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A3F4B321C49A0D000497BF /* UIViewController+extensions.swift */; };
 		B6B74B5921D9EA5D001482BF /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B74B5821D9EA5D001482BF /* Checkbox.swift */; };
 		B6B74B6021DA3BDE001482BF /* CustomSettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B74B5F21DA3BDE001482BF /* CustomSettingVC.swift */; };
+		B6BAD20F21DC842300A4B4BD /* Period.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BAD20E21DC842300A4B4BD /* Period.swift */; };
 		B6BAFCE521DBB6B2004C8743 /* CustomViewBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BAFCE421DBB6B2004C8743 /* CustomViewBorder.swift */; };
 		B6BAFCE721DBD3FA004C8743 /* CustomDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BAFCE621DBD3FA004C8743 /* CustomDialog.swift */; };
 		B6BAFCEA21DBE865004C8743 /* SelectRegionDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BAFCE821DBE865004C8743 /* SelectRegionDialog.swift */; };
 		B6BAFCEB21DBE866004C8743 /* SelectRegionDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6BAFCE921DBE865004C8743 /* SelectRegionDialog.xib */; };
 		B6BB462021D39815003DB754 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BB461F21D39815003DB754 /* LoginService.swift */; };
+<<<<<<< HEAD
 		C0B6D80521DC64260058DA6C /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0B6D80421DC64260058DA6C /* Search.storyboard */; };
 		C0B6D82B21DC93650058DA6C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B6D82A21DC93650058DA6C /* SearchViewController.swift */; };
+=======
+		C0376D2321DCF79600D845EB /* DetailContent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0376D2221DCF79600D845EB /* DetailContent.storyboard */; };
+		C0376D2521DD1E3C00D845EB /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0376D2421DD1E3C00D845EB /* Setting.storyboard */; };
+>>>>>>> temp2
 		C0EE047121D36D810046E030 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EE047021D36D810046E030 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,24 +72,30 @@
 		60F731E17DF2F11691B041FE /* Pods-iOS-Smatching.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Smatching.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS-Smatching/Pods-iOS-Smatching.release.xcconfig"; sourceTree = "<group>"; };
 		B61148F021DC2204004F1E92 /* InsititutionClassifyInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsititutionClassifyInfo.swift; sourceTree = "<group>"; };
 		B632123521D3B11000087FA2 /* LoginOrSignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginOrSignupVC.swift; sourceTree = "<group>"; };
-		B632123721D3B40800087FA2 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		B632123921D3CE9300087FA2 /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		B65DE6A36435F97FF3F756DC /* Pods_iOS_Smatching.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Smatching.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B670933821D6068400472BB2 /* NoticeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeCell.swift; sourceTree = "<group>"; };
 		B670933A21D652DB00472BB2 /* ChangeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeButton.swift; sourceTree = "<group>"; };
+		B67F2A8721DC42E200452579 /* ConditionSettingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionSettingService.swift; sourceTree = "<group>"; };
+		B67F2A8921DC43E000452579 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		B67F2A8B21DC451000452579 /* Age.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Age.swift; sourceTree = "<group>"; };
+		B67F2A8F21DC45E700452579 /* Field.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Field.swift; sourceTree = "<group>"; };
+		B67F2A9121DC460B00452579 /* Advantage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advantage.swift; sourceTree = "<group>"; };
+		B67F2A9321DC461800452579 /* BusiType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusiType.swift; sourceTree = "<group>"; };
+		B67F2A9521DC462300452579 /* ExcCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcCategory.swift; sourceTree = "<group>"; };
+		B67F2A9721DC4CD700452579 /* String+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+extensions.swift"; sourceTree = "<group>"; };
+		B67F2A9921DC4D0800452579 /* UIView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extension.swift"; sourceTree = "<group>"; };
+		B67F2A9B21DC4D5800452579 /* UINavigationBar+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+extension.swift"; sourceTree = "<group>"; };
 		B68742E521D74D780094D5E7 /* Condition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Condition.swift; sourceTree = "<group>"; };
 		B68742E721D74DEB0094D5E7 /* ConditionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionService.swift; sourceTree = "<group>"; };
 		B68742E921D74EDA0094D5E7 /* ConditionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionResponse.swift; sourceTree = "<group>"; };
 		B68742ED21D752A00094D5E7 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
-		B68742EF21D754D90094D5E7 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		B68AA6F521D4E2C1000E5549 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		B68AA6F721D4E2D0000E5549 /* CustomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomVC.swift; sourceTree = "<group>"; };
 		B68AA6F921D4E2DD000E5549 /* TalkVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkVC.swift; sourceTree = "<group>"; };
 		B68AA6FB21D4E2EE000E5549 /* MyPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageVC.swift; sourceTree = "<group>"; };
 		B68AA6FD21D4F6C4000E5549 /* SmatchingListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmatchingListVC.swift; sourceTree = "<group>"; };
 		B68AA6FF21D4F837000E5549 /* Notice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notice.swift; sourceTree = "<group>"; };
-		B68AA70121D4FADC000E5549 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
-		B68AA70321D4FBCF000E5549 /* MainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainService.swift; sourceTree = "<group>"; };
 		B68AA70521D50187000E5549 /* NoticeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeService.swift; sourceTree = "<group>"; };
 		B6A3F48321C49070000497BF /* iOS-Smatching.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Smatching.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6A3F48621C49070000497BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -98,13 +116,19 @@
 		B6A3F4B321C49A0D000497BF /* UIViewController+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extensions.swift"; sourceTree = "<group>"; };
 		B6B74B5821D9EA5D001482BF /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
 		B6B74B5F21DA3BDE001482BF /* CustomSettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSettingVC.swift; sourceTree = "<group>"; };
+		B6BAD20E21DC842300A4B4BD /* Period.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Period.swift; sourceTree = "<group>"; };
 		B6BAFCE421DBB6B2004C8743 /* CustomViewBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewBorder.swift; sourceTree = "<group>"; };
 		B6BAFCE621DBD3FA004C8743 /* CustomDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDialog.swift; sourceTree = "<group>"; };
 		B6BAFCE821DBE865004C8743 /* SelectRegionDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRegionDialog.swift; sourceTree = "<group>"; };
 		B6BAFCE921DBE865004C8743 /* SelectRegionDialog.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectRegionDialog.xib; sourceTree = "<group>"; };
 		B6BB461F21D39815003DB754 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		C0B6D80421DC64260058DA6C /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		C0B6D82A21DC93650058DA6C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+=======
+		C0376D2221DCF79600D845EB /* DetailContent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailContent.storyboard; sourceTree = "<group>"; };
+		C0376D2421DD1E3C00D845EB /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
+>>>>>>> temp2
 		C0EE047021D36D810046E030 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -186,7 +210,12 @@
 				B6A3F48D21C49071000497BF /* Assets.xcassets */,
 				B6A3F48F21C49071000497BF /* LaunchScreen.storyboard */,
 				B6A3F48A21C49070000497BF /* Main.storyboard */,
+<<<<<<< HEAD
 				C0B6D80421DC64260058DA6C /* Search.storyboard */,
+=======
+				C0376D2221DCF79600D845EB /* DetailContent.storyboard */,
+				C0376D2421DD1E3C00D845EB /* Setting.storyboard */,
+>>>>>>> temp2
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -211,6 +240,9 @@
 			children = (
 				B6A3F4B121C499FB000497BF /* UIImage+imageFromURL.swift */,
 				B6A3F4B321C49A0D000497BF /* UIViewController+extensions.swift */,
+				B67F2A9721DC4CD700452579 /* String+extensions.swift */,
+				B67F2A9921DC4D0800452579 /* UIView+extension.swift */,
+				B67F2A9B21DC4D5800452579 /* UINavigationBar+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -223,9 +255,9 @@
 				B6A3F4A321C4976F000497BF /* APIManager.swift */,
 				B6A3F4A521C49785000497BF /* NetworkResult.swift */,
 				B6BB461F21D39815003DB754 /* LoginService.swift */,
-				B68AA70321D4FBCF000E5549 /* MainService.swift */,
 				B68AA70521D50187000E5549 /* NoticeService.swift */,
 				B68742E721D74DEB0094D5E7 /* ConditionService.swift */,
+				B67F2A8721DC42E200452579 /* ConditionSettingService.swift */,
 			);
 			path = APIServices;
 			sourceTree = "<group>";
@@ -238,9 +270,15 @@
 				B6A3F4AB21C497D0000497BF /* Token.swift */,
 				B6A3F4AF21C49870000497BF /* User.swift */,
 				B68AA6FF21D4F837000E5549 /* Notice.swift */,
-				B68AA70121D4FADC000E5549 /* Main.swift */,
 				B68742E521D74D780094D5E7 /* Condition.swift */,
 				B68742E921D74EDA0094D5E7 /* ConditionResponse.swift */,
+				B67F2A8921DC43E000452579 /* Location.swift */,
+				B67F2A8B21DC451000452579 /* Age.swift */,
+				B67F2A8F21DC45E700452579 /* Field.swift */,
+				B67F2A9121DC460B00452579 /* Advantage.swift */,
+				B67F2A9321DC461800452579 /* BusiType.swift */,
+				B67F2A9521DC462300452579 /* ExcCategory.swift */,
+				B6BAD20E21DC842300A4B4BD /* Period.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -250,7 +288,6 @@
 			children = (
 				B670933A21D652DB00472BB2 /* ChangeButton.swift */,
 				B670933821D6068400472BB2 /* NoticeCell.swift */,
-				B68742EF21D754D90094D5E7 /* CustomTextField.swift */,
 				B6B74B5821D9EA5D001482BF /* Checkbox.swift */,
 				B6BAFCE421DBB6B2004C8743 /* CustomViewBorder.swift */,
 				B6BAFCE621DBD3FA004C8743 /* CustomDialog.swift */,
@@ -266,7 +303,6 @@
 				B6A3F48821C49070000497BF /* ViewController.swift */,
 				C0EE047021D36D810046E030 /* LoginViewController.swift */,
 				B632123521D3B11000087FA2 /* LoginOrSignupVC.swift */,
-				B632123721D3B40800087FA2 /* MainVC.swift */,
 				B632123921D3CE9300087FA2 /* SignupVC.swift */,
 				B68AA6F521D4E2C1000E5549 /* HomeVC.swift */,
 				B68AA6F721D4E2D0000E5549 /* CustomVC.swift */,
@@ -353,7 +389,9 @@
 				B6A3F48E21C49071000497BF /* Assets.xcassets in Resources */,
 				C0B6D80521DC64260058DA6C /* Search.storyboard in Resources */,
 				B6A3F48C21C49070000497BF /* Main.storyboard in Resources */,
+				C0376D2321DCF79600D845EB /* DetailContent.storyboard in Resources */,
 				B6BAFCEB21DBE866004C8743 /* SelectRegionDialog.xib in Resources */,
+				C0376D2521DD1E3C00D845EB /* Setting.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,41 +457,48 @@
 			files = (
 				B6A3F4A421C4976F000497BF /* APIManager.swift in Sources */,
 				B68AA6F821D4E2D0000E5549 /* CustomVC.swift in Sources */,
+				B67F2A9A21DC4D0800452579 /* UIView+extension.swift in Sources */,
 				B68742EA21D74EDA0094D5E7 /* ConditionResponse.swift in Sources */,
+				B67F2A9021DC45E700452579 /* Field.swift in Sources */,
+				B67F2A8C21DC451000452579 /* Age.swift in Sources */,
 				B6BB462021D39815003DB754 /* LoginService.swift in Sources */,
 				B68AA6FE21D4F6C4000E5549 /* SmatchingListVC.swift in Sources */,
 				B68742E621D74D780094D5E7 /* Condition.swift in Sources */,
 				B6A3F4AA21C497BA000497BF /* ResponseArray.swift in Sources */,
+				B67F2A9221DC460B00452579 /* Advantage.swift in Sources */,
 				B68AA6FC21D4E2EE000E5549 /* MyPageVC.swift in Sources */,
+				B67F2A9C21DC4D5800452579 /* UINavigationBar+extension.swift in Sources */,
 				B61148F121DC2204004F1E92 /* InsititutionClassifyInfo.swift in Sources */,
 				B68AA70021D4F837000E5549 /* Notice.swift in Sources */,
 				B68AA6FA21D4E2DD000E5549 /* TalkVC.swift in Sources */,
 				B68AA6F621D4E2C1000E5549 /* HomeVC.swift in Sources */,
 				B6A3F4AE21C4983B000497BF /* UserService.swift in Sources */,
+				B6BAD20F21DC842300A4B4BD /* Period.swift in Sources */,
 				B6A3F4A821C497A5000497BF /* ResponseObject.swift in Sources */,
+				B67F2A8A21DC43E000452579 /* Location.swift in Sources */,
 				B68AA70621D50187000E5549 /* NoticeService.swift in Sources */,
 				B68742E821D74DEB0094D5E7 /* ConditionService.swift in Sources */,
 				C0B6D82B21DC93650058DA6C /* SearchViewController.swift in Sources */,
 				B68742EE21D752A00094D5E7 /* SearchVC.swift in Sources */,
 				B6B74B5921D9EA5D001482BF /* Checkbox.swift in Sources */,
 				B6BAFCE521DBB6B2004C8743 /* CustomViewBorder.swift in Sources */,
-				B632123821D3B40800087FA2 /* MainVC.swift in Sources */,
 				B6A3F4B421C49A0D000497BF /* UIViewController+extensions.swift in Sources */,
+				B67F2A9621DC462300452579 /* ExcCategory.swift in Sources */,
 				B6A3F4A621C49785000497BF /* NetworkResult.swift in Sources */,
 				B632123A21D3CE9300087FA2 /* SignupVC.swift in Sources */,
 				B6A3F4A221C4974C000497BF /* Requestable.swift in Sources */,
 				B6A3F48921C49070000497BF /* ViewController.swift in Sources */,
 				B6A3F48721C49070000497BF /* AppDelegate.swift in Sources */,
-				B68742F021D754D90094D5E7 /* CustomTextField.swift in Sources */,
 				B6BAFCE721DBD3FA004C8743 /* CustomDialog.swift in Sources */,
-				B68AA70421D4FBCF000E5549 /* MainService.swift in Sources */,
-				B68AA70221D4FADC000E5549 /* Main.swift in Sources */,
+				B67F2A8821DC42E200452579 /* ConditionSettingService.swift in Sources */,
+				B67F2A9821DC4CD700452579 /* String+extensions.swift in Sources */,
 				B6B74B6021DA3BDE001482BF /* CustomSettingVC.swift in Sources */,
 				B6A3F4B221C499FB000497BF /* UIImage+imageFromURL.swift in Sources */,
 				B6A3F4B021C49870000497BF /* User.swift in Sources */,
 				B670933B21D652DB00472BB2 /* ChangeButton.swift in Sources */,
 				C0EE047121D36D810046E030 /* LoginViewController.swift in Sources */,
 				B670933921D6068400472BB2 /* NoticeCell.swift in Sources */,
+				B67F2A9421DC461800452579 /* BusiType.swift in Sources */,
 				B632123621D3B11000087FA2 /* LoginOrSignupVC.swift in Sources */,
 				B6A3F4AC21C497D0000497BF /* Token.swift in Sources */,
 				B6BAFCEA21DBE865004C8743 /* SelectRegionDialog.swift in Sources */,

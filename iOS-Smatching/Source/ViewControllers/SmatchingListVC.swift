@@ -9,8 +9,8 @@
 import UIKit
 
 class SmatchingListVC: UIViewController {
-
-
+    
+    
     @IBOutlet weak var STACKVIEWCONST: NSLayoutConstraint!
     
     @IBOutlet weak var moveView: UIView!
@@ -23,7 +23,7 @@ class SmatchingListVC: UIViewController {
     @IBOutlet weak var alignmentLabel: UILabel!
     @IBOutlet weak var noticeCntLabel: UILabel!
     @IBOutlet weak var noticeTableView: UITableView!
-   
+    
     var noticeList = [Notice]()
     
     var picker : UIPickerView!
@@ -33,12 +33,10 @@ class SmatchingListVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
         initView()
         noticeTableView.dataSource = self
-        //        contentView.layer.cornerRadius = 5.0
-        //        upBtn.layer.cornerRadius = 5.0
-        // Do any additional setup after loading the view.
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -47,10 +45,14 @@ class SmatchingListVC: UIViewController {
         NoticeService.shared.getAllNotice(request_num: 20, exist_num: self.noticeList.count) {[weak self] (data) in guard let `self` = self else {return}
             
             self.noticeList += data
-            print(data.count)
+            print(data[0].noticeIdx)
             print(self.noticeList.count)
-//                        self.noticeCntLabel.text = "총 " + "\(self.noticeList.count)" + "건"
+//            self.noticeCntLabel.text = "총 " + "\(self.noticeList.count)" + "건"
             self.noticeTableView.reloadData()
+        }
+        NoticeService.shared.getNoticeScrap(notice_idx: 292) {[weak self] (data) in guard let `self` = self else {return}
+            print(data)
+            
         }
     }
     
@@ -72,7 +74,7 @@ class SmatchingListVC: UIViewController {
         hideViewBtn.isHidden = false
         self.contentView.transform = CGAffineTransform.identity
         UIView.animate(withDuration: 1.0, animations: ({
-           self.STACKVIEWCONST.constant = 317
+            self.STACKVIEWCONST.constant = 317
         }))
     }
     
@@ -83,12 +85,12 @@ class SmatchingListVC: UIViewController {
         hideViewBtn.isHidden = true
         UIView.animate(withDuration: 1.0, animations: ({
             self.contentView.alpha  = 1;
-            }))
+        }))
         self.contentView.transform = CGAffineTransform(scaleX: 0, y: -self.contentView.frame.height)
         UIView.animate(withDuration: 1.0, animations: ({
             self.STACKVIEWCONST.constant = 43
         }))
-       
+        
     }
     
     func initView() {
@@ -111,7 +113,6 @@ class SmatchingListVC: UIViewController {
         
         setupPiker()
         setupToolbar()
-      
         
         sender.inputAccessoryView = toolbar
         
@@ -136,7 +137,7 @@ class SmatchingListVC: UIViewController {
         toolbar.sizeToFit()
         toolbar.isUserInteractionEnabled = true
         toolbar.setItems([space,done], animated: true)
-      
+        
     }
     //selector안에 들어감
     @objc func selectPart() {
@@ -144,38 +145,36 @@ class SmatchingListVC: UIViewController {
         let pick_alignment = alignment_standard[row]
         
         
-                switch pick_alignment {
-                case "최근등록순":
-                    alignmentLabel.text = pick_alignment
-                case "마감임박순":
-                    alignmentLabel.text = pick_alignment
-                case "조회순":
-                    alignmentLabel.text = pick_alignment
-                default:
-                    break
-                }
-//        done 버튼을 누르고 함수 실행 중 edit을 끝냄
+        switch pick_alignment {
+        case "최근등록순":
+            alignmentLabel.text = pick_alignment
+        case "마감임박순":
+            alignmentLabel.text = pick_alignment
+        case "조회순":
+            alignmentLabel.text = pick_alignment
+        default:
+            break
+        }
+        //        done 버튼을 누르고 함수 실행 중 edit을 끝냄
         self.alignmentLabel.endEditing(true)
-//        self.picker.removeFromSuperview()
-//        self.toolbar.removeFromSuperview()
-        
+
         
     }
 }
 extension SmatchingListVC : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    
+        
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-       
+        
     }
 }
 extension SmatchingListVC : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return noticeList.count
-    
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

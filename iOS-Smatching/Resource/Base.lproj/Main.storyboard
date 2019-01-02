@@ -969,7 +969,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="911"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tjj-FZ-BuG">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tjj-FZ-BuG">
                                 <rect key="frame" x="0.0" y="20" width="375" height="891"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GmK-Dq-VzQ">
@@ -2826,7 +2826,7 @@
                         <outlet property="busiView6" destination="9tb-VW-Cmt" id="TPa-XD-wlZ"/>
                         <outlet property="busiView7" destination="Dtu-8O-AYj" id="n9c-Lx-sre"/>
                         <outlet property="excView1" destination="pcl-y0-nqd" id="Vmx-uk-2cw"/>
-                        <outlet property="fieldView1" destination="4pY-MB-I6Y" id="rJD-NK-1mV"/>
+                        <outlet property="fieldView1" destination="4pY-MB-I6Y" id="rJD-NK-1mV"/>                        <outlet property="periodLabelChange" destination="52G-3J-0BF" id="18U-Jh-ps4"/>
                         <outlet property="periodView1" destination="N8U-QJ-JJs" id="vqt-kL-5aF"/>
                         <outlet property="periodView2" destination="FvG-we-yMQ" id="dI4-MP-TQa"/>
                         <outlet property="periodView3" destination="7PP-qX-UZK" id="lRv-DJ-AHE"/>
@@ -2849,7 +2849,7 @@
         <image name="btnBack" width="48" height="48"/>
         <image name="btnCreateaccountCanclick" width="266" height="47"/>
         <image name="btnExperience" width="266" height="47"/>
-        <image name="btnLogin" width="119" height="19"/>
+        <image name="btnLogin" width="266" height="47"/>
         <image name="btnLoginCanclick" width="266" height="47"/>
         <image name="btnLogin_1" width="266" height="47"/>
         <image name="btn_addsmatching_canclick" width="87" height="87"/>

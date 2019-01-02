@@ -51,7 +51,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         guard emailTxtField.text?.isEmpty != true else {return false}
         guard passwdTxtField.text?.isEmpty != true else {return false}
-
+        
         loginActiveBtn.isHidden = false;
         loginDeactiveBtn.isHidden = true;
         return true
@@ -130,8 +130,7 @@ extension LoginViewController : UIGestureRecognizerDelegate {
         })
         
         //        stackViewConstraint.constant = 0
-        
-        self.view.layoutIfNeeded()
+            self.view.layoutIfNeeded()
     }
     
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
@@ -175,4 +174,5 @@ extension UIView {
         }
     }
 }
+
 
