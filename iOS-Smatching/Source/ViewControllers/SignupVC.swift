@@ -23,7 +23,7 @@ class SignupVC: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         initGestureRecognizer()
-        TxtFieldChangeColor()
+        
         
         createDeactiveBtn.isHidden = false
         createActiveBtn.isHidden = true
@@ -32,19 +32,16 @@ class SignupVC: UIViewController, UITextFieldDelegate {
         passwdTxtField1.delegate = self
         passwdTxtField2.delegate = self
         // Do any additional setup after loading the view.
-        nicknameTxtField.layer.borderColor = UIColor.lightGray.cgColor
-        nicknameTxtField.layer.borderWidth = 1.0
-        emailTxtField.layer.borderColor = UIColor.lightGray.cgColor
-        emailTxtField.layer.borderWidth = 1.0
-        passwdTxtField1.layer.borderColor = UIColor.lightGray.cgColor
-        passwdTxtField1.layer.borderWidth = 1.0
-        passwdTxtField2.layer.borderColor = UIColor.lightGray.cgColor
-        passwdTxtField2.layer.borderWidth = 1.0
+        LightGrayTextField(nicknameTxtField)
+        LightGrayTextField(emailTxtField)
+        LightGrayTextField(passwdTxtField1)
+        LightGrayTextField(passwdTxtField2)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         registerForKeyboardNotifications()
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -53,10 +50,10 @@ class SignupVC: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        guard emailTxtField.text?.isEmpty != true else {return false}
+        guard emailTxtField.layer.borderColor == UIColor(red: 64/255, green: 178/255, blue: 204/255, alpha: 1).cgColor else {return false}
         guard nicknameTxtField.text?.isEmpty != true else {return false}
         guard passwdTxtField1.text?.isEmpty != true else {return false}
-        guard passwdTxtField2.text?.isEmpty != true else {return false}
+        guard passwdTxtField2.layer.borderColor ==  UIColor(red: 64/255, green: 178/255, blue: 204/255, alpha: 1).cgColor else {return false}
         
         createDeactiveBtn.isHidden = true
         createActiveBtn.isHidden = false
@@ -74,19 +71,69 @@ class SignupVC: UIViewController, UITextFieldDelegate {
         self.performSegue(withIdentifier: "signupSegue", sender: nil)
         
     }
-    func TxtFieldChangeColor () {
-        if nicknameTxtField.isEditing == true {
-            nicknameTxtField.layer.borderWidth = 2.0
-            nicknameTxtField.layer.borderColor = UIColor(red: 64, green: 178, blue: 204, alpha: 1).cgColor
+    
+    //타이핑 중에 일어나는 TextField Delegate
+    //타이핑 중이면 파란색으로 바뀐다.
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        BlueTextField(textField)
+        CheckBothPasswdEqual()
+        return true
+    }
+    //타이핑이 끝나면 일어나는 TextField Delegate
+    //비어있으면 빨강, 그렇지 않으면 파랑
+    //두 비밀번호가 같으면 파랑, 다르면 빨강
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        
+        if textField.text?.isEmpty == true {
+            RedTextField(textField)
+        } else {
+            BlueTextField(textField)
+            CheckBothPasswdEqual()
         }
-        if nicknameTxtField.text?.isEmpty == false {
-            nicknameTxtField.layer.borderWidth = 2.0
-            nicknameTxtField.layer.borderColor = UIColor(red: 64, green: 178, blue: 204, alpha: 1).cgColor
+        guard isValidEmail(enteredEmail: emailTxtField.text!) else {
+            return RedTextField(emailTxtField)
+        }
+        
+    }
+    
+    //비밀번호, 비밀번호 확인 값이 서로 같은지 검사
+    func CheckBothPasswdEqual () {
+        if passwdTxtField1.text != passwdTxtField2.text {
+            RedTextField(passwdTxtField2)
         }
     }
-    private func textFieldDidBeginEditing(_ textField: UITextField) {
-        TxtFieldChangeColor()
+    
+    // TextField 우측 지우기버튼
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        textField.applyCustomClearbutton()
+        return true
     }
+    
+    //email 형식 유효성 검사
+    func isValidEmail (enteredEmail: String) -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let emailTest = NSPredicate(format: "SELF MATCHES %@", emailRegEx)
+        return emailTest.evaluate(with:enteredEmail)
+    }
+    
+    
+    
+    
+    func BlueTextField (_ textField: UITextField) {
+        textField.layer.borderColor = UIColor(red: 64/255, green: 178/255, blue: 204/255, alpha: 1).cgColor
+    }
+    func RedTextField (_ textField: UITextField){
+        textField.layer.borderColor = UIColor(red: 229/255, green: 136/255, blue: 136/255, alpha: 1).cgColor
+    }
+    func LightGrayTextField (_ textField: UITextField) {
+        textField.layer.borderColor = UIColor.lightGray.cgColor
+    }
+    
+    
+    
+    
+    
+    
     
 }
 extension SignupVC : UIGestureRecognizerDelegate {
@@ -102,14 +149,11 @@ extension SignupVC : UIGestureRecognizerDelegate {
         self.passwdTxtField2.resignFirstResponder()
         self.passwdTxtField1.resignFirstResponder()
     }
+
     //탭 제스쳐가 먹히는 상황과 아닌 상황을 판단
     //UIGestureRecognizerDelegate에 있는 함수
     //키보드가 있는 공간에 입력 필드가 있는 경우 사용
-   
-
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
-        
-        
         
         if (touch.view?.isDescendant(of: emailTxtField))! || (touch.view?.isDescendant(of: passwdTxtField2))! || (touch.view?.isDescendant(of: passwdTxtField1))! || (touch.view?.isDescendant(of: nicknameTxtField))! {
             return false
@@ -123,11 +167,11 @@ extension SignupVC : UIGestureRecognizerDelegate {
         guard let curve = notification.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? UInt else {return}
         UIView.animate(withDuration: duration, delay: 0.0, options: .init(rawValue: curve), animations: {
             self.stackViewConst.constant = -120
+            
         })
         
         //stacview의 constraint의 constant값을 변경시킴
         //위로 올림 -> - 값
-        //        stackViewConstraint.constant = -120
         
         
         self.view.layoutIfNeeded()
@@ -140,7 +184,6 @@ extension SignupVC : UIGestureRecognizerDelegate {
             self.stackViewConst.constant = 0
         })
         
-        //        stackViewConstraint.constant = 0
         
         self.view.layoutIfNeeded()
     }
@@ -157,5 +200,22 @@ extension SignupVC : UIGestureRecognizerDelegate {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
+    
+    
 }
+extension UITextField {
+    func applyCustomClearbutton () {
+        clearButtonMode = .never
+        rightViewMode = .whileEditing
 
+        let clearButton = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+        clearButton.setImage(UIImage(named: "btnX1"), for: .normal)
+        clearButton.addTarget(self, action: #selector(clearClicked(sender:)), for: .touchUpInside)
+
+        rightView = clearButton
+    }
+
+    @objc func clearClicked (sender : UIButton) {
+        text = ""
+    }
+}

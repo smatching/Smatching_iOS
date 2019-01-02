@@ -29,11 +29,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         passwdTxtField.delegate = self
     
         // 초기 TextField BorderColor 정하기
-        emailTxtField.layer.borderColor = UIColor.lightGray.cgColor
-        emailTxtField.layer.borderWidth = 1.0
-        passwdTxtField.layer.borderColor = UIColor.lightGray.cgColor
-        passwdTxtField.layer.borderWidth = 1.0
-        
+        LightGrayTextField(emailTxtField)
+        LightGrayTextField(passwdTxtField)
         
     }
     @IBAction func dismissAction(_ sender: Any) {
@@ -63,24 +60,24 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     // TextField borderColor 변경
     // Text 입력 중엔 민트색, Text없을시 lightgray
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        textField.layer.borderColor = UIColor(red: 64/255, green: 178/255, blue: 204/255, alpha: 1).cgColor
-        textField.layer.borderWidth = 1.0
-        //textFieldDidEndEditing(emailTxtField)
-        return true;
+        BlueTextField(textField)
+        return true
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
 
         if textField.text?.isEmpty == true {
-            textField.layer.borderColor = UIColor.lightGray.cgColor
-            textField.layer.borderWidth = 1.0
+            LightGrayTextField(textField)
         } else {
-            textField.layer.borderColor = UIColor(red: 64/255, green: 178/255, blue: 204/255, alpha: 1).cgColor
-            textField.layer.borderWidth = 1.0
+            BlueTextField(textField)
 
         }
     }
-    
-    
+    func BlueTextField (_ textField: UITextField) {
+        textField.layer.borderColor = UIColor(red: 64/255, green: 178/255, blue: 204/255, alpha: 1).cgColor
+    }
+    func LightGrayTextField (_ textField: UITextField) {
+        textField.layer.borderColor = UIColor.lightGray.cgColor
+    }
     
 }
 extension LoginViewController : UIGestureRecognizerDelegate {
@@ -114,6 +111,14 @@ extension UIView {
         set {
             layer.cornerRadius = newValue
             layer.masksToBounds = newValue > 0
+        }
+    }
+    @IBInspectable var borderWidth: CGFloat {
+        get {
+            return layer.borderWidth
+        }
+        set {
+            layer.borderWidth = newValue
         }
     }
 }
