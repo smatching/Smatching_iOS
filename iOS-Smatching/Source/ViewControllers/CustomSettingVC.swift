@@ -12,20 +12,63 @@ class CustomSettingVC: UIViewController {
     
     @IBOutlet weak var showDetail: UILabel!
     @IBOutlet weak var titleTxtField: UITextField!
+    
+    @IBOutlet weak var advanView8: CustomViewBorder!
+    @IBOutlet weak var advanView7: CustomViewBorder!
+    @IBOutlet weak var advanView6: CustomViewBorder!
+    @IBOutlet weak var advanView5: CustomViewBorder!
+    @IBOutlet weak var advanView4: CustomViewBorder!
+    @IBOutlet weak var advanView3: CustomViewBorder!
+    @IBOutlet weak var advanView2: CustomViewBorder!
+    @IBOutlet weak var advanView1: CustomViewBorder!
+    
+    @IBOutlet weak var excView1: CustomViewBorder!
+    
+    @IBOutlet weak var fieldView1: CustomViewBorder!
+    
+    @IBOutlet weak var busiView7: CustomViewBorder!
+    @IBOutlet weak var busiView6: CustomViewBorder!
+    @IBOutlet weak var busiView5: CustomViewBorder!
+    @IBOutlet weak var busiView4: CustomViewBorder!
+    @IBOutlet weak var busiView3: CustomViewBorder!
+    @IBOutlet weak var busiView2: CustomViewBorder!
+    @IBOutlet weak var busiView1: CustomViewBorder!
+    
+    @IBOutlet weak var periodView9: CustomViewBorder!
+    @IBOutlet weak var periodView8: CustomViewBorder!
+    @IBOutlet weak var periodView7: CustomViewBorder!
+    @IBOutlet weak var periodView6: CustomViewBorder!
+    @IBOutlet weak var periodView5: CustomViewBorder!
+    @IBOutlet weak var periodView4: CustomViewBorder!
+    @IBOutlet weak var periodView3: CustomViewBorder!
+    @IBOutlet weak var periodView2: CustomViewBorder!
+    @IBOutlet weak var periodView1: CustomViewBorder!
+    
+
+    @IBOutlet weak var periodLabelChange: UILabel!
+    
+    var age : Age?
+    var advantage : Advantage?
+    var busiType : BusiType?
+    var period : Period?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initGestureRecognizer()
+        
+        //uilabel에 tapgesture 추가
         let gestureRec = UITapGestureRecognizer(target: self, action:  #selector (self.someAction (_:)))
         // here we add it to our custom view
         showDetail.isUserInteractionEnabled = true
         showDetail.addGestureRecognizer(gestureRec)
+        
     }
-
+    
+    //기업정보 vc로 이동
     @objc func someAction(_ sender:UITapGestureRecognizer){
         let controller = storyboard?.instantiateViewController(withIdentifier: "InsititutionClassifyInfo")
         self.present(controller!, animated: true, completion: nil)
-        // swift 2
-        // self.presentViewController(controller, animated: true, completion: nil)
     }
     
     @IBAction func clearTitle(_ sender: Any) {
@@ -34,6 +77,7 @@ class CustomSettingVC: UIViewController {
     @IBAction func selectRegionBtn(_ sender: Any) {
         startAlert()
     }
+    
     func startAlert()
     {
         // 사용자정의 팝업
@@ -49,7 +93,6 @@ class CustomSettingVC: UIViewController {
     {
 
     }
-    
 }
 extension CustomSettingVC: UIGestureRecognizerDelegate {
     func initGestureRecognizer() {
@@ -84,21 +127,13 @@ extension CustomSettingVC: UIGestureRecognizerDelegate {
         guard let duration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double else {return}
         guard let curve = notification.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? UInt else {return}
         
-        //stacview의 constraint의 constant값을 변경시킴
-        //위로 올림 -> - 값
-        //        stackViewConstraint.constant = -120
-        
-        
         self.view.layoutIfNeeded()
         
     }
     @objc func keyboardWillHide(_ notification: NSNotification) {
         guard let duration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double else {return}
         guard let curve = notification.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? UInt else {return}
-    
-        
-        //        stackViewConstraint.constant = 0
-        
+
         self.view.layoutIfNeeded()
     }
     

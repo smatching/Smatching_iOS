@@ -593,7 +593,6 @@
                         <constraint firstItem="3PS-AI-GZP" firstAttribute="top" secondItem="9BD-Yg-dEN" secondAttribute="bottom" constant="43" id="2ai-Rm-ziF"/>
                         <constraint firstAttribute="width" constant="310" id="3ZG-N5-l4o"/>
                         <constraint firstItem="3PS-AI-GZP" firstAttribute="top" secondItem="Eu9-gT-AOp" secondAttribute="bottom" constant="8" id="54Q-mj-g8D"/>
-                        <constraint firstItem="Ap4-Or-Om0" firstAttribute="leading" secondItem="6HI-5l-O3q" secondAttribute="trailing" id="6VI-YG-jba"/>
                         <constraint firstItem="Ap4-Or-Om0" firstAttribute="leading" secondItem="6HI-5l-O3q" secondAttribute="trailing" id="7sP-J1-5Ud"/>
                         <constraint firstItem="dZY-fy-qoX" firstAttribute="top" secondItem="vcG-bZ-0Oi" secondAttribute="bottom" constant="9.5" id="8bh-Jl-1f9"/>
                         <constraint firstAttribute="trailing" secondItem="kP2-EP-MTK" secondAttribute="trailing" constant="48" id="Be9-8x-Hvf"/>

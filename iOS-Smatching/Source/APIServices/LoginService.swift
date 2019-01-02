@@ -10,8 +10,8 @@ import Foundation
 import Alamofire
 
 struct LoginService: APIManager, Requestable {
-    
-    typealias NetworkData = ResponseObject<Token>
+    typealias NetworkData = ResponseArray<Token>
+    typealias NetworkDataObj = ResponseObject<Token>
     static let shared = LoginService()
     let loginURL = url("/users/login")//url 상세주소
     let headers: HTTPHeaders = [
@@ -23,9 +23,9 @@ struct LoginService: APIManager, Requestable {
         
         let body = [
             "email" : email,
-            "password" : password,
+            "password" : password
             ]
-        postable(loginURL, body: body, header: headers) { res in
+        postableObj(loginURL, body: body, header: headers) { res in
             switch res {
             case .success(let value):
                 print(value)

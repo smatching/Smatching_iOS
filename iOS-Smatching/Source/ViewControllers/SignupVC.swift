@@ -53,10 +53,18 @@ class SignupVC: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        guard emailTxtField.text?.isEmpty != true else {return false}
         guard nicknameTxtField.text?.isEmpty != true else {return false}
+        guard emailTxtField.text?.isEmpty != true else {return false}
+        guard emailTxtField.text!.validateEmail() == true else {
+            emailTxtField.text = "이메일 형식 틀림"
+            return false}
         guard passwdTxtField1.text?.isEmpty != true else {return false}
         guard passwdTxtField2.text?.isEmpty != true else {return false}
+        
+        guard passwdTxtField1.text! == passwdTxtField2.text! else {
+            passwdTxtField2.isSecureTextEntry = false
+            passwdTxtField2.text = "비밀번호 불일치"
+            return false}
         
         createDeactiveBtn.isHidden = true
         createActiveBtn.isHidden = false
@@ -69,8 +77,7 @@ class SignupVC: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func signup(_ sender: Any) {
-        UserService.shared.signUp(nickname: nicknameTxtField.text!, email: emailTxtField.text!, password: passwdTxtField1.text!){[weak self] (data) in guard let `self` = self else {return}
-            print(data)
+        UserService.shared.signUp(nickname: nicknameTxtField.text!, email: emailTxtField.text!, password: passwdTxtField1.text!){
         }
         self.performSegue(withIdentifier: "signupSegue", sender: nil)
         
