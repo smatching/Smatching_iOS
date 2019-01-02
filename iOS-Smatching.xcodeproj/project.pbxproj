@@ -44,6 +44,8 @@
 		B6A3F4B421C49A0D000497BF /* UIViewController+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A3F4B321C49A0D000497BF /* UIViewController+extensions.swift */; };
 		B6B74B5921D9EA5D001482BF /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B74B5821D9EA5D001482BF /* Checkbox.swift */; };
 		B6BB462021D39815003DB754 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BB461F21D39815003DB754 /* LoginService.swift */; };
+		C0B6D80521DC64260058DA6C /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0B6D80421DC64260058DA6C /* Search.storyboard */; };
+		C0B6D82B21DC93650058DA6C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B6D82A21DC93650058DA6C /* SearchViewController.swift */; };
 		C0EE047121D36D810046E030 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EE047021D36D810046E030 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +91,8 @@
 		B6A3F4B321C49A0D000497BF /* UIViewController+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extensions.swift"; sourceTree = "<group>"; };
 		B6B74B5821D9EA5D001482BF /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
 		B6BB461F21D39815003DB754 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		C0B6D80421DC64260058DA6C /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		C0B6D82A21DC93650058DA6C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		C0EE047021D36D810046E030 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -170,6 +174,7 @@
 				B6A3F48D21C49071000497BF /* Assets.xcassets */,
 				B6A3F48F21C49071000497BF /* LaunchScreen.storyboard */,
 				B6A3F48A21C49070000497BF /* Main.storyboard */,
+				C0B6D80421DC64260058DA6C /* Search.storyboard */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -253,6 +258,7 @@
 				B68AA6FB21D4E2EE000E5549 /* MyPageVC.swift */,
 				B68AA6FD21D4F6C4000E5549 /* SmatchingListVC.swift */,
 				B68742ED21D752A00094D5E7 /* SearchVC.swift */,
+				C0B6D82A21DC93650058DA6C /* SearchViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -326,6 +332,7 @@
 			files = (
 				B6A3F49121C49071000497BF /* LaunchScreen.storyboard in Resources */,
 				B6A3F48E21C49071000497BF /* Assets.xcassets in Resources */,
+				C0B6D80521DC64260058DA6C /* Search.storyboard in Resources */,
 				B6A3F48C21C49070000497BF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,6 +412,7 @@
 				B6A3F4A821C497A5000497BF /* ResponseObject.swift in Sources */,
 				B68AA70621D50187000E5549 /* NoticeService.swift in Sources */,
 				B68742E821D74DEB0094D5E7 /* ConditionService.swift in Sources */,
+				C0B6D82B21DC93650058DA6C /* SearchViewController.swift in Sources */,
 				B68742EE21D752A00094D5E7 /* SearchVC.swift in Sources */,
 				B6B74B5921D9EA5D001482BF /* Checkbox.swift in Sources */,
 				B632123821D3B40800087FA2 /* MainVC.swift in Sources */,

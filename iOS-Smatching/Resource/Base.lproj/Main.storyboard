@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fg3-xY-M9l">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -662,7 +662,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Hj-fo-fJu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5596" y="2063"/>
+            <point key="canvasLocation" x="6538.3999999999996" y="2062.3152709359606"/>
         </scene>
         <!--My PageVC-->
         <scene sceneID="EUU-zy-MOu">
@@ -680,7 +680,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KzW-dC-cW1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5596" y="2787"/>
+            <point key="canvasLocation" x="6538.3999999999996" y="2786.4532019704434"/>
         </scene>
         <!--CustomVC-->
         <scene sceneID="qAJ-1F-QFp">
@@ -785,6 +785,40 @@
             </objects>
             <point key="canvasLocation" x="5596" y="732"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="y8v-VT-DYS">
+            <objects>
+                <viewController id="zwm-ak-1Cw" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AQL-si-f4J">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Acx-dc-pCG">
+                                <rect key="frame" x="185" y="378" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="5yn-iS-fKp" kind="show" id="YVO-sb-Tup"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="09V-gv-OFM"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1az-8S-lIM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s2y-tv-gQb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2927.1999999999998" y="2327.5862068965516"/>
+        </scene>
+        <!--SearchViewController-->
+        <scene sceneID="PA3-gu-FD1">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="SearchViewController" storyboardName="Search" referencedIdentifier="SearchViewController" id="5yn-iS-fKp" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BCL-6B-ai9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3516" y="2336.4532019704434"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="LFH-DZ-YiM">
             <objects>
@@ -844,6 +878,24 @@
             </objects>
             <point key="canvasLocation" x="4001" y="436"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="L73-Nw-xRO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fg3-xY-M9l" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YEY-yc-2ZS">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="zwm-ak-1Cw" kind="relationship" relationship="rootViewController" id="N3y-iC-siY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ccc-5k-crb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1984.8" y="2327.5862068965516"/>
+        </scene>
     </scenes>
     <resources>
         <image name="btnBack" width="48" height="48"/>
@@ -876,6 +928,6 @@
         <image name="txt_explain" width="164" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ACH-Ba-gGw"/>
+        <segue reference="qzU-bA-t8u"/>
     </inferredMetricsTieBreakers>
 </document>
