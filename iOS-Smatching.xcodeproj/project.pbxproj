@@ -57,6 +57,8 @@
 		B6BAFCEA21DBE865004C8743 /* SelectRegionDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BAFCE821DBE865004C8743 /* SelectRegionDialog.swift */; };
 		B6BAFCEB21DBE866004C8743 /* SelectRegionDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6BAFCE921DBE865004C8743 /* SelectRegionDialog.xib */; };
 		B6BB462021D39815003DB754 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BB461F21D39815003DB754 /* LoginService.swift */; };
+		C0376D2321DCF79600D845EB /* DetailContent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0376D2221DCF79600D845EB /* DetailContent.storyboard */; };
+		C0376D2521DD1E3C00D845EB /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0376D2421DD1E3C00D845EB /* Setting.storyboard */; };
 		C0EE047121D36D810046E030 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EE047021D36D810046E030 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -115,6 +117,8 @@
 		B6BAFCE821DBE865004C8743 /* SelectRegionDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRegionDialog.swift; sourceTree = "<group>"; };
 		B6BAFCE921DBE865004C8743 /* SelectRegionDialog.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectRegionDialog.xib; sourceTree = "<group>"; };
 		B6BB461F21D39815003DB754 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		C0376D2221DCF79600D845EB /* DetailContent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailContent.storyboard; sourceTree = "<group>"; };
+		C0376D2421DD1E3C00D845EB /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 		C0EE047021D36D810046E030 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -196,6 +200,8 @@
 				B6A3F48D21C49071000497BF /* Assets.xcassets */,
 				B6A3F48F21C49071000497BF /* LaunchScreen.storyboard */,
 				B6A3F48A21C49070000497BF /* Main.storyboard */,
+				C0376D2221DCF79600D845EB /* DetailContent.storyboard */,
+				C0376D2421DD1E3C00D845EB /* Setting.storyboard */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -366,7 +372,9 @@
 				B6A3F49121C49071000497BF /* LaunchScreen.storyboard in Resources */,
 				B6A3F48E21C49071000497BF /* Assets.xcassets in Resources */,
 				B6A3F48C21C49070000497BF /* Main.storyboard in Resources */,
+				C0376D2321DCF79600D845EB /* DetailContent.storyboard in Resources */,
 				B6BAFCEB21DBE866004C8743 /* SelectRegionDialog.xib in Resources */,
+				C0376D2521DD1E3C00D845EB /* Setting.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
