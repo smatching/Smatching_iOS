@@ -66,6 +66,7 @@
 		C0EE1D5821DD8C00005B114E /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EE1D5721DD8C00005B114E /* SettingViewController.swift */; };
 		C0EE1D5A21DD8DC0005B114E /* MypageSettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EE1D5921DD8DC0005B114E /* MypageSettingVC.swift */; };
 		C0EE1D5C21DD8DEB005B114E /* MypageAskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EE1D5B21DD8DEB005B114E /* MypageAskVC.swift */; };
+		C0EE1D5E21DE422B005B114E /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0EE1D5D21DE422B005B114E /* Search.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -132,6 +133,7 @@
 		C0EE1D5721DD8C00005B114E /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		C0EE1D5921DD8DC0005B114E /* MypageSettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageSettingVC.swift; sourceTree = "<group>"; };
 		C0EE1D5B21DD8DEB005B114E /* MypageAskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageAskVC.swift; sourceTree = "<group>"; };
+		C0EE1D5D21DE422B005B114E /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +216,7 @@
 				B6A3F48A21C49070000497BF /* Main.storyboard */,
 				C0376D2221DCF79600D845EB /* DetailContent.storyboard */,
 				C0376D2421DD1E3C00D845EB /* Setting.storyboard */,
+				C0EE1D5D21DE422B005B114E /* Search.storyboard */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -391,6 +394,7 @@
 				B6A3F48E21C49071000497BF /* Assets.xcassets in Resources */,
 				B6A3F48C21C49070000497BF /* Main.storyboard in Resources */,
 				C0376D2321DCF79600D845EB /* DetailContent.storyboard in Resources */,
+				C0EE1D5E21DE422B005B114E /* Search.storyboard in Resources */,
 				B6BAFCEB21DBE866004C8743 /* SelectRegionDialog.xib in Resources */,
 				C0376D2521DD1E3C00D845EB /* Setting.storyboard in Resources */,
 			);

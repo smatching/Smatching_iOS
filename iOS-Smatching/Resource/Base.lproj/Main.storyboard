@@ -1192,41 +1192,6 @@
             </objects>
             <point key="canvasLocation" x="8988" y="2352"/>
         </scene>
-        <!--SearchVC-->
-        <scene sceneID="Olu-e5-bdb">
-            <objects>
-                <viewController id="Wn6-qQ-dEX" customClass="SearchVC" customModule="iOS_Smatching" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="XkK-4K-kE0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="검색어를 입력하세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M5z-fh-rCV" customClass="CustomTextField" customModule="iOS_Smatching" customModuleProvider="target">
-                                <rect key="frame" x="31.66666666666697" y="160" width="313" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
-                                        <color key="value" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
-                                        <color key="value" red="0.65490196078431373" green="0.65490196078431373" blue="0.65490196078431373" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="hER-6J-e7p"/>
-                    </view>
-                    <connections>
-                        <outlet property="searchTxtField" destination="M5z-fh-rCV" id="l3r-rR-bm4"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Nh8-yM-1sy" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="8070" y="1408"/>
-        </scene>
         <!--HomeVC-->
         <scene sceneID="i3e-LR-IRz">
             <objects>
@@ -3278,7 +3243,7 @@
                         <outlet property="excView1" destination="pcl-y0-nqd" id="Vmx-uk-2cw"/>
                         <outlet property="fieldView1" destination="4pY-MB-I6Y" id="rJD-NK-1mV"/>
                         <outlet property="periodLabelChange" destination="a0r-Ql-nhb" id="Xex-al-4Ul"/>
-                       <outlet property="periodView1" destination="N8U-QJ-JJs" id="vqt-kL-5aF"/>
+                        <outlet property="periodView1" destination="N8U-QJ-JJs" id="vqt-kL-5aF"/>
                         <outlet property="periodView2" destination="FvG-we-yMQ" id="dI4-MP-TQa"/>
                         <outlet property="periodView3" destination="7PP-qX-UZK" id="lRv-DJ-AHE"/>
                         <outlet property="periodView4" destination="Gh9-T8-GiI" id="Nf4-J3-Ra8"/>
@@ -3300,7 +3265,7 @@
         <image name="btnBack" width="48" height="48"/>
         <image name="btnCreateaccountCanclick" width="266" height="47"/>
         <image name="btnExperience" width="266" height="47"/>
-        <image name="btnLogin" width="266" height="47"/>
+        <image name="btnLogin" width="119" height="19"/>
         <image name="btnLoginCanclick" width="266" height="47"/>
         <image name="btnLogin_1" width="266" height="47"/>
         <image name="btn_addsmatching_canclick" width="87" height="87"/>
@@ -3339,7 +3304,7 @@
         <image name="txt_explain" width="164" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="LJP-4N-WlQ"/>
-        <segue reference="qzU-bA-t8u"/>
+        <segue reference="wSi-NC-Dum"/>
+        <segue reference="ACH-Ba-gGw"/>
     </inferredMetricsTieBreakers>
 </document>
