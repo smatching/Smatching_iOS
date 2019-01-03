@@ -23,6 +23,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = UIImage(named: "btnBack")
         initGestureRecognizer()
         
+        textFieldAddTarget(emailTxtField)
+        textFieldAddTarget(passwdTxtField)
+        
         loginDeactiveBtn.isHidden = false
         loginActiveBtn.isHidden = true
         
@@ -68,12 +71,16 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
         self.performSegue(withIdentifier: "loginSegue", sender: nil)
     }
+    
     // TextField borderColor 변경
     // Text 입력 중엔 민트색, Text없을시 lightgray
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         BlueTextField(textField)
         return true
     }
+    
+    
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
 
         if textField.text?.isEmpty == true {
@@ -83,6 +90,22 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
         }
     }
+    
+    //우측 지우기 버튼
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        textField.applyCustomClearbutton()
+        return true
+    }
+    
+    // TextField Tap할 때 placeholder 지우기/ borderColor 지정
+    func textFieldAddTarget (_ textField: UITextField) {
+        textField.addTarget(self, action: #selector(whenTxtFieldTapped(_:)), for: UIControl.Event.touchDown)
+    }
+    @objc func whenTxtFieldTapped (_ textField: UITextField) {
+        BlueTextField(textField)
+        textField.placeholder = ""
+    }
+    // TextField 색깔 지정 함수
     func BlueTextField (_ textField: UITextField) {
         textField.layer.borderColor = UIColor(red: 64/255, green: 178/255, blue: 204/255, alpha: 1).cgColor
     }
@@ -156,15 +179,6 @@ extension LoginViewController : UIGestureRecognizerDelegate {
     
 }
 extension UIView {
-//    @IBInspectable var cornerRadius: CGFloat {
-//        get {
-//            return layer.cornerRadius
-//        }
-//        set {
-//            layer.cornerRadius = newValue
-//            layer.masksToBounds = newValue > 0
-//        }
-//    }
     @IBInspectable var borderWidth: CGFloat {
         get {
             return layer.borderWidth

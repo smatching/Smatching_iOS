@@ -24,6 +24,10 @@ class SignupVC: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         initGestureRecognizer()
         
+        textFieldAddTarget(nicknameTxtField)
+        textFieldAddTarget(emailTxtField)
+        textFieldAddTarget(passwdTxtField1)
+        textFieldAddTarget(passwdTxtField2)
         
         createDeactiveBtn.isHidden = false
         createActiveBtn.isHidden = true
@@ -126,8 +130,16 @@ class SignupVC: UIViewController, UITextFieldDelegate {
     }
     
     
+    func textFieldAddTarget (_ textField: UITextField) {
+        textField.addTarget(self, action: #selector(whenTxtFieldTapped(_:)), for: UIControl.Event.touchDown)
+    }
+    @objc func whenTxtFieldTapped (_ textField: UITextField) {
+        BlueTextField(textField)
+        textField.placeholder = ""
+    }
     
     
+    //TextField 색깔 지정 함수
     func BlueTextField (_ textField: UITextField) {
         textField.layer.borderColor = UIColor(red: 64/255, green: 178/255, blue: 204/255, alpha: 1).cgColor
     }
@@ -215,7 +227,7 @@ extension SignupVC : UIGestureRecognizerDelegate {
 extension UITextField {
     func applyCustomClearbutton () {
         clearButtonMode = .never
-        rightViewMode = .whileEditing
+        rightViewMode = .always
 
         let clearButton = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
         clearButton.setImage(UIImage(named: "btnX1"), for: .normal)
