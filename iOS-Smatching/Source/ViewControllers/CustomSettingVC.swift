@@ -44,18 +44,17 @@ class CustomSettingVC: UIViewController {
     @IBOutlet weak var periodView2: CustomViewBorder!
     @IBOutlet weak var periodView1: CustomViewBorder!
     
-
-    @IBOutlet weak var periodLabelChange: UILabel!
     
-    var age : Age?
-    var advantage : Advantage?
-    var busiType : BusiType?
-    var period : Period?
+    @IBOutlet weak var periodLabelChange: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         initGestureRecognizer()
+        UserDefaults.standard.set(0, forKey: "periodCount")
+        UserDefaults.standard.set(0, forKey: "busiCount")
+        UserDefaults.standard.set(0, forKey: "advanCount")
         
         //uilabel에 tapgesture 추가
         let gestureRec = UITapGestureRecognizer(target: self, action:  #selector (self.someAction (_:)))
@@ -82,7 +81,7 @@ class CustomSettingVC: UIViewController {
     {
         // 사용자정의 팝업
         let popup: SelectRegionDialog = UINib(nibName: SelectRegionDialog.identifier, bundle: nil).instantiate(withOwner: self, options: nil)[0] as! SelectRegionDialog
-        popup.backgroundColor = UIColor.gray.withAlphaComponent(0.9)
+        popup.backgroundColor = UIColor.gray.withAlphaComponent(1)
         popup.center = CGPoint(x: self.view.frame.width / 2, y: self.view.frame.height / 2)
         popup.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
         popup.cancelBtn.addTarget(self, action: #selector(btnClick), for: .touchUpInside) // 버튼 이벤트 등록
@@ -91,7 +90,7 @@ class CustomSettingVC: UIViewController {
     
     @objc func btnClick() -> Void
     {
-
+        
     }
 }
 extension CustomSettingVC: UIGestureRecognizerDelegate {
@@ -99,15 +98,20 @@ extension CustomSettingVC: UIGestureRecognizerDelegate {
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleTabMainView(_:)))
         tap.delegate = self
         view.addGestureRecognizer(tap)
+        
+        
     }
     @objc func handleTabMainView(_ sender: UITapGestureRecognizer){
         //입력할 수 있는 기능을 없앰
         self.titleTxtField.resignFirstResponder()
+        
     }
+    
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
         if (touch.view?.isDescendant(of: titleTxtField))! {
             return false
         }
+        
         return true
     }
     func registerForKeyboardNotifications() {
@@ -133,7 +137,7 @@ extension CustomSettingVC: UIGestureRecognizerDelegate {
     @objc func keyboardWillHide(_ notification: NSNotification) {
         guard let duration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double else {return}
         guard let curve = notification.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? UInt else {return}
-
+        
         self.view.layoutIfNeeded()
     }
     

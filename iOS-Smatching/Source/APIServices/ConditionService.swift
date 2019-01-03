@@ -20,19 +20,5 @@ struct ConditionService : APIManager, Requestable {
         "Content-Type" : "application/json",
         "Authorization" : UserDefaults.standard.string(forKey: "token") as! String
         ]
-    //홈탭 유저의 맞춤조건 현황 조회
-    func getUserCondition(completion : @escaping(ConditionResponse) -> Void) {
-        gettableObj(conditionURL, body: nil, header: headers) {(res)in
-            switch res {
-            case .success(let value):
-                guard let conditionList = value.data else
-                {return}
-                completion(conditionList)
-            case .error(let error):
-                print(error)
-            }
-        }
-            
-        
-    }
+ 
 }

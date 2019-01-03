@@ -28,7 +28,6 @@ struct Location: Mappable {
     var kyunggi : Bool?
     var incheon : Bool?
     var jeonnam : Bool?
-    var domesticAll : Bool?
     
     init?(map: Map) {}
     
@@ -51,8 +50,6 @@ struct Location: Mappable {
         kyunggi <- map["kyunggi"]
         incheon <- map["incheon"]
         jeonnam <- map["incheon"]
-        domesticAll <- map["domesticAll"]
-        
         
     }
     
