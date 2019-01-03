@@ -16,7 +16,7 @@ class CustomViewBorder: UIView {
     var busiType : BusiType?
     var period : Period?
     
-    @IBInspectable var borderWidth: CGFloat {
+    @IBInspectable override var borderWidth: CGFloat {
         get {
             return layer.borderWidth
         }

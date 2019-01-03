@@ -57,14 +57,12 @@
 		B6BAFCEA21DBE865004C8743 /* SelectRegionDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BAFCE821DBE865004C8743 /* SelectRegionDialog.swift */; };
 		B6BAFCEB21DBE866004C8743 /* SelectRegionDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6BAFCE921DBE865004C8743 /* SelectRegionDialog.xib */; };
 		B6BB462021D39815003DB754 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BB461F21D39815003DB754 /* LoginService.swift */; };
-<<<<<<< HEAD
-		C0B6D80521DC64260058DA6C /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0B6D80421DC64260058DA6C /* Search.storyboard */; };
-		C0B6D82B21DC93650058DA6C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B6D82A21DC93650058DA6C /* SearchViewController.swift */; };
-=======
 		C0376D2321DCF79600D845EB /* DetailContent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0376D2221DCF79600D845EB /* DetailContent.storyboard */; };
 		C0376D2521DD1E3C00D845EB /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0376D2421DD1E3C00D845EB /* Setting.storyboard */; };
->>>>>>> temp2
 		C0EE047121D36D810046E030 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EE047021D36D810046E030 /* LoginViewController.swift */; };
+		C0EE1D5821DD8C00005B114E /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EE1D5721DD8C00005B114E /* SettingViewController.swift */; };
+		C0EE1D5A21DD8DC0005B114E /* MypageSettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EE1D5921DD8DC0005B114E /* MypageSettingVC.swift */; };
+		C0EE1D5C21DD8DEB005B114E /* MypageAskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EE1D5B21DD8DEB005B114E /* MypageAskVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -122,14 +120,12 @@
 		B6BAFCE821DBE865004C8743 /* SelectRegionDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRegionDialog.swift; sourceTree = "<group>"; };
 		B6BAFCE921DBE865004C8743 /* SelectRegionDialog.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectRegionDialog.xib; sourceTree = "<group>"; };
 		B6BB461F21D39815003DB754 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
-<<<<<<< HEAD
-		C0B6D80421DC64260058DA6C /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
-		C0B6D82A21DC93650058DA6C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-=======
 		C0376D2221DCF79600D845EB /* DetailContent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailContent.storyboard; sourceTree = "<group>"; };
 		C0376D2421DD1E3C00D845EB /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
->>>>>>> temp2
 		C0EE047021D36D810046E030 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C0EE1D5721DD8C00005B114E /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		C0EE1D5921DD8DC0005B114E /* MypageSettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageSettingVC.swift; sourceTree = "<group>"; };
+		C0EE1D5B21DD8DEB005B114E /* MypageAskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageAskVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,12 +206,8 @@
 				B6A3F48D21C49071000497BF /* Assets.xcassets */,
 				B6A3F48F21C49071000497BF /* LaunchScreen.storyboard */,
 				B6A3F48A21C49070000497BF /* Main.storyboard */,
-<<<<<<< HEAD
-				C0B6D80421DC64260058DA6C /* Search.storyboard */,
-=======
 				C0376D2221DCF79600D845EB /* DetailContent.storyboard */,
 				C0376D2421DD1E3C00D845EB /* Setting.storyboard */,
->>>>>>> temp2
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -310,10 +302,11 @@
 				B68AA6FB21D4E2EE000E5549 /* MyPageVC.swift */,
 				B68AA6FD21D4F6C4000E5549 /* SmatchingListVC.swift */,
 				B68742ED21D752A00094D5E7 /* SearchVC.swift */,
-				C0B6D82A21DC93650058DA6C /* SearchViewController.swift */,
-
 				B6B74B5F21DA3BDE001482BF /* CustomSettingVC.swift */,
 				B61148F021DC2204004F1E92 /* InsititutionClassifyInfo.swift */,
+				C0EE1D5721DD8C00005B114E /* SettingViewController.swift */,
+				C0EE1D5921DD8DC0005B114E /* MypageSettingVC.swift */,
+				C0EE1D5B21DD8DEB005B114E /* MypageAskVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -387,7 +380,6 @@
 			files = (
 				B6A3F49121C49071000497BF /* LaunchScreen.storyboard in Resources */,
 				B6A3F48E21C49071000497BF /* Assets.xcassets in Resources */,
-				C0B6D80521DC64260058DA6C /* Search.storyboard in Resources */,
 				B6A3F48C21C49070000497BF /* Main.storyboard in Resources */,
 				C0376D2321DCF79600D845EB /* DetailContent.storyboard in Resources */,
 				B6BAFCEB21DBE866004C8743 /* SelectRegionDialog.xib in Resources */,
@@ -465,8 +457,10 @@
 				B68AA6FE21D4F6C4000E5549 /* SmatchingListVC.swift in Sources */,
 				B68742E621D74D780094D5E7 /* Condition.swift in Sources */,
 				B6A3F4AA21C497BA000497BF /* ResponseArray.swift in Sources */,
+				C0EE1D5A21DD8DC0005B114E /* MypageSettingVC.swift in Sources */,
 				B67F2A9221DC460B00452579 /* Advantage.swift in Sources */,
 				B68AA6FC21D4E2EE000E5549 /* MyPageVC.swift in Sources */,
+				C0EE1D5C21DD8DEB005B114E /* MypageAskVC.swift in Sources */,
 				B67F2A9C21DC4D5800452579 /* UINavigationBar+extension.swift in Sources */,
 				B61148F121DC2204004F1E92 /* InsititutionClassifyInfo.swift in Sources */,
 				B68AA70021D4F837000E5549 /* Notice.swift in Sources */,
@@ -476,9 +470,9 @@
 				B6BAD20F21DC842300A4B4BD /* Period.swift in Sources */,
 				B6A3F4A821C497A5000497BF /* ResponseObject.swift in Sources */,
 				B67F2A8A21DC43E000452579 /* Location.swift in Sources */,
+				C0EE1D5821DD8C00005B114E /* SettingViewController.swift in Sources */,
 				B68AA70621D50187000E5549 /* NoticeService.swift in Sources */,
 				B68742E821D74DEB0094D5E7 /* ConditionService.swift in Sources */,
-				C0B6D82B21DC93650058DA6C /* SearchViewController.swift in Sources */,
 				B68742EE21D752A00094D5E7 /* SearchVC.swift in Sources */,
 				B6B74B5921D9EA5D001482BF /* Checkbox.swift in Sources */,
 				B6BAFCE521DBB6B2004C8743 /* CustomViewBorder.swift in Sources */,
