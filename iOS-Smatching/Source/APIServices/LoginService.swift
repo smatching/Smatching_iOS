@@ -20,11 +20,11 @@ struct LoginService: APIManager, Requestable {
 
     func login(email: String, password: String, completion: @escaping(Token) -> Void) {
         
-        
         let body = [
             "email" : email,
             "password" : password
             ]
+        
         postableObj(loginURL, body: body, header: headers) { res in
             switch res {
             case .success(let value):

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		5FC84B12D6D3E5F3D75F8D13 /* Pods_iOS_Smatching.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B65DE6A36435F97FF3F756DC /* Pods_iOS_Smatching.framework */; };
 		B61148F121DC2204004F1E92 /* InsititutionClassifyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61148F021DC2204004F1E92 /* InsititutionClassifyInfo.swift */; };
+		B61674F121DD2F3A006D67A4 /* CommonResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61674F021DD2F3A006D67A4 /* CommonResponse.swift */; };
+		B61674F321DD31C2006D67A4 /* CommonResponse2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61674F221DD31C2006D67A4 /* CommonResponse2.swift */; };
+		B61674F521DD3437006D67A4 /* FitConditionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61674F421DD3437006D67A4 /* FitConditionResponse.swift */; };
 		B632123621D3B11000087FA2 /* LoginOrSignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B632123521D3B11000087FA2 /* LoginOrSignupVC.swift */; };
 		B632123A21D3CE9300087FA2 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B632123921D3CE9300087FA2 /* SignupVC.swift */; };
 		B670933921D6068400472BB2 /* NoticeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B670933821D6068400472BB2 /* NoticeCell.swift */; };
@@ -69,6 +72,9 @@
 		1487A7A3B89B90875B172BC6 /* Pods-iOS-Smatching.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Smatching.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOS-Smatching/Pods-iOS-Smatching.debug.xcconfig"; sourceTree = "<group>"; };
 		60F731E17DF2F11691B041FE /* Pods-iOS-Smatching.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Smatching.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS-Smatching/Pods-iOS-Smatching.release.xcconfig"; sourceTree = "<group>"; };
 		B61148F021DC2204004F1E92 /* InsititutionClassifyInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsititutionClassifyInfo.swift; sourceTree = "<group>"; };
+		B61674F021DD2F3A006D67A4 /* CommonResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonResponse.swift; sourceTree = "<group>"; };
+		B61674F221DD31C2006D67A4 /* CommonResponse2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonResponse2.swift; sourceTree = "<group>"; };
+		B61674F421DD3437006D67A4 /* FitConditionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitConditionResponse.swift; sourceTree = "<group>"; };
 		B632123521D3B11000087FA2 /* LoginOrSignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginOrSignupVC.swift; sourceTree = "<group>"; };
 		B632123921D3CE9300087FA2 /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		B65DE6A36435F97FF3F756DC /* Pods_iOS_Smatching.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Smatching.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -271,6 +277,9 @@
 				B67F2A9321DC461800452579 /* BusiType.swift */,
 				B67F2A9521DC462300452579 /* ExcCategory.swift */,
 				B6BAD20E21DC842300A4B4BD /* Period.swift */,
+				B61674F021DD2F3A006D67A4 /* CommonResponse.swift */,
+				B61674F221DD31C2006D67A4 /* CommonResponse2.swift */,
+				B61674F421DD3437006D67A4 /* FitConditionResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -471,13 +480,16 @@
 				B6A3F4A821C497A5000497BF /* ResponseObject.swift in Sources */,
 				B67F2A8A21DC43E000452579 /* Location.swift in Sources */,
 				C0EE1D5821DD8C00005B114E /* SettingViewController.swift in Sources */,
+				B61674F521DD3437006D67A4 /* FitConditionResponse.swift in Sources */,
 				B68AA70621D50187000E5549 /* NoticeService.swift in Sources */,
 				B68742E821D74DEB0094D5E7 /* ConditionService.swift in Sources */,
 				B68742EE21D752A00094D5E7 /* SearchVC.swift in Sources */,
 				B6B74B5921D9EA5D001482BF /* Checkbox.swift in Sources */,
 				B6BAFCE521DBB6B2004C8743 /* CustomViewBorder.swift in Sources */,
+				B61674F321DD31C2006D67A4 /* CommonResponse2.swift in Sources */,
 				B6A3F4B421C49A0D000497BF /* UIViewController+extensions.swift in Sources */,
 				B67F2A9621DC462300452579 /* ExcCategory.swift in Sources */,
+				B61674F121DD2F3A006D67A4 /* CommonResponse.swift in Sources */,
 				B6A3F4A621C49785000497BF /* NetworkResult.swift in Sources */,
 				B632123A21D3CE9300087FA2 /* SignupVC.swift in Sources */,
 				B6A3F4A221C4974C000497BF /* Requestable.swift in Sources */,

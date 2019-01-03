@@ -30,6 +30,8 @@ class CustomVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.shouldRemoveShadow(true)
+        
+        
     }
 
     @IBAction func showConditionMenu(_ sender: Any) {

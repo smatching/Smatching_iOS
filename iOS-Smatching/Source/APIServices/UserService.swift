@@ -11,13 +11,14 @@ import Alamofire
 
 struct UserService: APIManager, Requestable {
     typealias NetworkData = ResponseArray<User>
-    typealias NetworkDataObj = ResponseObject<User>
+    typealias NetworkDataObj = ResponseObject<ConditionResponse>
     static let shared = UserService()
     let signupURL = url("/users")//url 상세주소
     let headers: HTTPHeaders = [
         "Content-Type" : "application/json"
     ]
     
+    //회원가입
     func signUp(nickname: String, email: String, password: String, completion: @escaping() -> Void) {
         
         let body = [
@@ -33,5 +34,26 @@ struct UserService: APIManager, Requestable {
                 print(error)
             }
         }
+    }
+    
+    //홈탭 유저의 맞춤조건 현황 조회
+    func getUserCondition(completion : @escaping(ConditionResponse) -> Void) {
+        let headers: HTTPHeaders = [
+            "Content-Type" : "application/json",
+            "Authorization" : UserDefaults.standard.string(forKey: "token") as! String
+        ]
+        let getURL = signupURL + "/cond"
+        gettableObj(getURL, body: nil, header: headers) {(res)in
+            switch res {
+            case .success(let value):
+                print(value)
+                guard let conditionList = value.data else {return}
+                completion(conditionList)
+            case .error(let error):
+                print(error)
+            }
+        }
+        
+        
     }
 }

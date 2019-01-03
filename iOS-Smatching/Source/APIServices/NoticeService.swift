@@ -13,22 +13,20 @@ import ObjectMapper
 
 struct NoticeService : APIManager, Requestable {
     typealias NetworkData = ResponseArray<Notice>
-    typealias NetworkDataObj = ResponseObject<Notice>
+    typealias NetworkDataObj = ResponseObject<CommonResponse>
     static let shared = NoticeService()
     var noticeURL = url("/notices")//url 상세주소
     let headers: HTTPHeaders = [
-        "Content-Type" : "application/json",
+        "Content-Type" : "application/json"
         ]
     
     //홈탭에서 사용하는 전체지원사업 목록 조회
     func getAllNotice(request_num : Int? = 5, exist_num : Int? = 0, completion : @escaping([Notice]) -> Void) {
         let queryURL = noticeURL + "/list?request_num=\(request_num ?? 5)&exist_num=\(exist_num ?? 0)"
-        var token = UserDefaults.standard.string(forKey: "token")
         
         guard let headers: HTTPHeaders = [
-            "Authorization" : UserDefaults.standard.string(forKey: "token") as! String,
+            "Authorization" : UserDefaults.standard.string(forKey: "token") as! String
             ] else {}
-        
         
         gettable(queryURL, body: nil, header: headers){(res) in
             switch res {
@@ -63,25 +61,64 @@ struct NoticeService : APIManager, Requestable {
         }
     }
     
-    //지원사업 스크랩 여부 조회
-    func getNoticeScrap(notice_idx : Int, completion : @escaping(Notice) -> Void) {
+    //맞춤지원사업 개수 조회
+    func getFitNoticeCount(cond_idx : Int, completion : @escaping(CommonResponse) -> Void) {
         
-        guard let headers: HTTPHeaders = [
-            "Authorization" : UserDefaults.standard.string(forKey: "token") as! String,
-            ] else {}
+        let headers: HTTPHeaders = [
+            "Client" : "iOS"
+            ]
         
-        let queryURL = noticeURL + "/scrap?notice_idx=\(notice_idx)"
+        let queryURL = noticeURL + "/count?cond_idx=\(cond_idx)"
         
         gettableObj(queryURL, body: nil, header: headers){(res) in
             switch res {
             case .success(let value):
-                print(value.data)
-                guard let isNoticeScrap = value.data else {return}
-                completion(isNoticeScrap)
+                guard let noticeCount = value.data else {return}
+                completion(noticeCount)
             case .error(let error):
                 print(error)
             }
         }
     }
+    //전체지원사업 개수 조회
+    func getAllNoticeCount(completion : @escaping(CommonResponse) -> Void) {
+        
+        let headers: HTTPHeaders = [
+            "Client" : "iOS"
+        ]
+        
+        let queryURL = noticeURL + "/count"
+        
+        gettableObj(queryURL, body: nil, header: headers){(res) in
+            switch res {
+            case .success(let value):
+                guard let noticeCount = value.data else {return}
+                completion(noticeCount)
+            case .error(let error):
+                print(error)
+            }
+        }
+    }
+    
+//    //지원사업 스크랩 여부 조회
+//    func getNoticeScrap(notice_idx : Int, completion : @escaping(Notice) -> Void) {
+//
+//        guard let headers: HTTPHeaders = [
+//            "Authorization" : UserDefaults.standard.string(forKey: "token") as! String,
+//            ] else {}
+//
+//        let queryURL = noticeURL + "/scrap?notice_idx=\(notice_idx)"
+//
+//        gettableObj(queryURL, body: nil, header: headers){(res) in
+//            switch res {
+//            case .success(let value):
+//                print(value.data)
+//                guard let isNoticeScrap = value.data else {return}
+//                completion(isNoticeScrap)
+//            case .error(let error):
+//                print(error)
+//            }
+//        }
+//    }
     
 }

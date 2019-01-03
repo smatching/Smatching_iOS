@@ -13,18 +13,33 @@ class SmatchingListVC: UIViewController {
     
     @IBOutlet weak var STACKVIEWCONST: NSLayoutConstraint!
     
-    @IBOutlet weak var moveView: UIView!
-    var flag = 0
+     var flag = 0
+    
+    //contentview 영역 outlet
+    @IBOutlet weak var settingAlarmBtn: Checkbox!
+    @IBOutlet weak var editBtn: UIButton!
+    @IBOutlet weak var advantageLabel: UILabel!
+    @IBOutlet weak var excCateLabel: UILabel!
+    @IBOutlet weak var fieldLabel: UILabel!
+    @IBOutlet weak var busiTypeLabel: UILabel!
+    @IBOutlet weak var periodLabel: UILabel!
+    @IBOutlet weak var ageLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var conditionTitle: UILabel!
+    
+    
     @IBOutlet weak var upBtn: UIButton!
     @IBOutlet weak var downBtn: UIButton!
     @IBOutlet weak var hideViewBtn: UIImageView!
     @IBOutlet weak var showViewBtn: UIImageView!
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var alignmentLabel: UILabel!
-    @IBOutlet weak var noticeCntLabel: UILabel!
     @IBOutlet weak var noticeTableView: UITableView!
+    @IBOutlet weak var noticesCount: UILabel!
     
     var noticeList = [Notice]()
+    
+    var conditionList = [Condition]()
     
     var picker : UIPickerView!
     var toolbar : UIToolbar!
@@ -47,13 +62,9 @@ class SmatchingListVC: UIViewController {
             self.noticeList += data
             print(data[0].noticeIdx)
             print(self.noticeList.count)
-//            self.noticeCntLabel.text = "총 " + "\(self.noticeList.count)" + "건"
             self.noticeTableView.reloadData()
         }
-        NoticeService.shared.getNoticeScrap(notice_idx: 292) {[weak self] (data) in guard let `self` = self else {return}
-            print(data)
-            
-        }
+
     }
     
     @IBAction func showConditionView(_ sender: Any) {
