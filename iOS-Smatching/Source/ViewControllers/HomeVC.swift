@@ -43,37 +43,40 @@ class HomeVC: UIViewController {
         
         UserService.shared.getUserCondition() {[weak self] (data) in guard let `self` = self else {return}
             self.conditionList = data.condSummaryList!
+            
             self.nicknameLabel.text = self.gsno(data.nickname)
             self.noticeListCnt.text = "\(self.gino(self.conditionList[0].noticeCnt))개"
             self.conditionTitle.text = self.gsno(self.conditionList[0].condName)
-            
-            if self.conditionList == nil {
-                self.noNoticeList.isHidden = true
-                self.conditionAdaptView.isHidden = true
-                self.noConditionView.isHidden = false
-            } else if self.gino(self.conditionList[0].noticeCnt) == 0 {
-                self.noNoticeList.isHidden = false
-                self.conditionAdaptView.isHidden = true
-                self.noConditionView.isHidden = true
-            }
-            else {
-                self.noNoticeList.isHidden = true
-                self.conditionAdaptView.isHidden = false
-                self.noConditionView.isHidden = true
-            }
         }
+        
+        if self.conditionList.count != 0 {
+            self.noNoticeList.isHidden = true
+            self.conditionAdaptView.isHidden = true
+            self.noConditionView.isHidden = false
+        } else if self.gino(self.conditionList[0].noticeCnt) == 0 {
+            self.noNoticeList.isHidden = false
+            self.conditionAdaptView.isHidden = true
+            self.noConditionView.isHidden = true
+        }
+        else {
+            self.noNoticeList.isHidden = true
+            self.conditionAdaptView.isHidden = false
+            self.noConditionView.isHidden = true
+        }
+        
         NoticeService.shared.getAllNotice(request_num: 4, exist_num: self.noticeList.count) {[weak self] (data) in guard let `self` = self else {return}
-            
+            print(data)
             self.noticeList = data
             self.noticeAllTableView.reloadData()
         }
-        NoticeService.shared.getFitNotice(cond_idx: self.gino(self.conditionList[0].condIdx), request_num: 3, exist_num: self.noticeFitList.count ) {[weak self] (data) in guard let `self` = self else {return}
-            
-            print(data)
-            self.noticeFitList = data
-            self.noticeTableView.reloadData()
+        if self.conditionList.count != 0 {
+            NoticeService.shared.getFitNotice(cond_idx: self.gino(self.conditionList[0].condIdx), request_num: 3, exist_num: 0 ) {[weak self] (data) in guard let `self` = self else {return}
+                
+                print(data)
+                self.noticeFitList = data
+                self.noticeTableView.reloadData()
+            }
         }
-        
     }
     
 }
@@ -83,7 +86,7 @@ extension HomeVC : UITableViewDelegate {
 extension HomeVC : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableView == noticeAllTableView {
-             return noticeList.count
+            return noticeList.count
         }
         else {
             return noticeFitList.count
@@ -95,13 +98,13 @@ extension HomeVC : UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "NoticeCell", for: indexPath) as! NoticeCell
             let notice = noticeList[indexPath.row]
             
-            cell.titleLabel.text = self.gsno(notice.title)
-            cell.institutionLabel.text = self.gsno(notice.institution)
-            if self.gino(notice.dday) > 1000 {
+            cell.titleLabel.text = gsno(notice.title)
+            cell.institutionLabel.text = gsno(notice.institution)
+            if gino(notice.dday) > 1000 {
                 cell.ddayLabel.text = "예산소진시"
             }
             else {
-                cell.ddayLabel.text = "D - " + "\(self.gino(notice.dday))"
+                cell.ddayLabel.text = "D - " + "\(gino(notice.dday))"
             }
             
             return cell
@@ -110,13 +113,13 @@ extension HomeVC : UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "NoticeCellMain", for: indexPath) as! NoticeCell
             let notice = noticeFitList[indexPath.row]
             
-            cell.titleLabel.text = self.gsno(notice.title)
-            cell.institutionLabel.text = self.gsno(notice.institution)
-            if self.gino(notice.dday) > 1000 {
+            cell.titleLabel.text = gsno(notice.title)
+            cell.institutionLabel.text = gsno(notice.institution)
+            if gino(notice.dday) > 1000 {
                 cell.ddayLabel.text = "예산소진시"
             }
             else {
-                cell.ddayLabel.text = "D - " + "\(self.gino(notice.dday))"
+                cell.ddayLabel.text = "D - " + "\(gino(notice.dday))"
             }
             
             return cell
