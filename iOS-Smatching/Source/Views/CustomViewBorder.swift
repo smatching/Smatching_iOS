@@ -15,20 +15,14 @@ class CustomViewBorder: UIView {
     var advantage : Advantage?
     var busiType : BusiType?
     var period : Period?
-    
-<<<<<<< HEAD
-    @IBInspectable override var borderWidth: CGFloat {
-=======
+
     var periodCnt = 0
     var busiCnt = 0
     var advanCnt = 0
     
     var flag = 0
     
-    
-    
-    @IBInspectable var borderWidth: CGFloat {
->>>>>>> 55519f7b273e9de544c7c6374ac257ec67e23d25
+    @IBInspectable override var borderWidth: CGFloat {
         get {
             return layer.borderWidth
         }

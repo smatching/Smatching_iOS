@@ -24,18 +24,33 @@ struct NoticeService : APIManager, Requestable {
     func getAllNotice(request_num : Int? = 5, exist_num : Int? = 0, completion : @escaping([Notice]) -> Void) {
         let queryURL = noticeURL + "/list?request_num=\(request_num ?? 5)&exist_num=\(exist_num ?? 0)"
         
-        guard let headers: HTTPHeaders = [
-            "Authorization" : UserDefaults.standard.string(forKey: "token") as! String
-            ] else {}
-        
-        gettable(queryURL, body: nil, header: headers){(res) in
-            switch res {
-            case .success(let value):
-                guard let noticeList = value.data else
-                {return}
-                completion(noticeList)
-            case .error(let error):
-                print(error)
+        if let token = UserDefaults.standard.string(forKey: "token") as? String {
+            let headers: HTTPHeaders = [
+                "Authorization" : token
+            ]
+            gettable(queryURL, body: nil, header: headers){(res) in
+                switch res {
+                case .success(let value):
+                    guard let noticeList = value.data else
+                    {return}
+                    completion(noticeList)
+                case .error(let error):
+                    print(error)
+                }
+            }
+        } else {
+            let headers: HTTPHeaders = [
+                "Content-Type" : "application/json"
+            ]
+            gettable(queryURL, body: nil, header: headers){(res) in
+                switch res {
+                case .success(let value):
+                    guard let noticeList = value.data else
+                    {return}
+                    completion(noticeList)
+                case .error(let error):
+                    print(error)
+                }
             }
         }
     }

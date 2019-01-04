@@ -27,7 +27,7 @@ class HomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
         //기본 화면을 조건 선택 화면으로 이동
         noNoticeList.isHidden = true
         conditionAdaptView.isHidden = true
@@ -40,39 +40,47 @@ class HomeVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
         
-        UserService.shared.getUserCondition() {[weak self] (data) in guard let `self` = self else {return}
-            self.conditionList = data.condSummaryList!
-            self.nicknameLabel.text = self.gsno(data.nickname)
-            self.noticeListCnt.text = "\(self.gino(self.conditionList[0].noticeCnt))개"
-            self.conditionTitle.text = self.gsno(self.conditionList[0].condName)
-            
-            if self.conditionList == nil {
-                self.noNoticeList.isHidden = true
-                self.conditionAdaptView.isHidden = true
-                self.noConditionView.isHidden = false
-            } else if self.gino(self.conditionList[0].noticeCnt) == 0 {
-                self.noNoticeList.isHidden = false
-                self.conditionAdaptView.isHidden = true
-                self.noConditionView.isHidden = true
+        if let token = UserDefaults.standard.string(forKey: "token") as? String {
+            UserService.shared.getUserCondition() {[weak self] (data) in guard let `self` = self else {return}
+                self.conditionList = data.condSummaryList!
+                self.nicknameLabel.text = self.gsno(data.nickname)
+                self.noticeListCnt.text = "\(self.gino(self.conditionList[0].noticeCnt))개"
+                self.conditionTitle.text = self.gsno(self.conditionList[0].condName)
+                
+                if self.conditionList.count != 0 {
+                    self.noNoticeList.isHidden = true
+                    self.conditionAdaptView.isHidden = true
+                    self.noConditionView.isHidden = false
+                } else if self.gino(self.conditionList[0].noticeCnt) == 0 {
+                    self.noNoticeList.isHidden = false
+                    self.conditionAdaptView.isHidden = true
+                    self.noConditionView.isHidden = true
+                }
+                else {
+                    self.noNoticeList.isHidden = true
+                    self.conditionAdaptView.isHidden = false
+                    self.noConditionView.isHidden = true
+                }
             }
-            else {
-                self.noNoticeList.isHidden = true
-                self.conditionAdaptView.isHidden = false
-                self.noConditionView.isHidden = true
+            if self.conditionList.count != 0 {
+                NoticeService.shared.getFitNotice(cond_idx: self.gino(self.conditionList[0].condIdx), request_num: 3, exist_num: self.noticeFitList.count ) {[weak self] (data) in guard let `self` = self else {return}
+                    print("conditionList exist!!")
+                    print(data)
+                    self.noticeFitList = data
+                    self.noticeTableView.reloadData()
+                }
             }
+        
         }
         NoticeService.shared.getAllNotice(request_num: 4, exist_num: self.noticeList.count) {[weak self] (data) in guard let `self` = self else {return}
-            
+            print("전체공고1!")
+            print(data)
             self.noticeList = data
             self.noticeAllTableView.reloadData()
         }
-        NoticeService.shared.getFitNotice(cond_idx: self.gino(self.conditionList[0].condIdx), request_num: 3, exist_num: self.noticeFitList.count ) {[weak self] (data) in guard let `self` = self else {return}
-            
-            print(data)
-            self.noticeFitList = data
-            self.noticeTableView.reloadData()
-        }
+        
         
     }
     
@@ -92,7 +100,7 @@ extension HomeVC : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if tableView == noticeAllTableView {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "NoticeCell", for: indexPath) as! NoticeCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "NoticeDownCell", for: indexPath) as! NoticeCell
             let notice = noticeList[indexPath.row]
             
             cell.titleLabel.text = self.gsno(notice.title)
@@ -107,7 +115,7 @@ extension HomeVC : UITableViewDataSource {
             return cell
         }
         else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "NoticeCellMain", for: indexPath) as! NoticeCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "NoticeUpCell", for: indexPath) as! NoticeCell
             let notice = noticeFitList[indexPath.row]
             
             cell.titleLabel.text = self.gsno(notice.title)
