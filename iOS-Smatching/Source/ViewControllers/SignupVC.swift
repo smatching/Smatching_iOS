@@ -90,10 +90,10 @@ class SignupVC: UIViewController, UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
 //        CheckBothPasswdEqual()
         let currentText = passwdTxtField1.text ?? ""
-        guard let stringRange = Range(range, in: currentText) else {return true}
+        guard let stringRange = Range(range, in: currentText) else {return false}
         let updatedText = currentText.replacingCharacters(in: stringRange, with: string)
         
-        return updatedText.count <= 10
+        return updatedText.count <= 15
     }
     //타이핑이 끝나면 일어나는 TextField Delegate
     //비어있으면 빨강, 그렇지 않으면 파랑
