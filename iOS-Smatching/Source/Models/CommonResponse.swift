@@ -11,11 +11,15 @@ import ObjectMapper
 
 struct CommonResponse: Mappable {
     var num : Int?
+    var scrap : Int?
+    var result : Bool?
     
     init?(map: Map) {
     }
     
     mutating func mapping(map: Map) {
         num <- map["num"]
+        scrap <- map["scrap"]
+        result <- map["result"]
     }
 }

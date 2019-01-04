@@ -13,13 +13,13 @@ struct FitConditionResponse: Mappable {
     var condIdx : Int?
     var condName : String?
     var alert : Bool?
-    var location : [Location]?
-    var age : [Age]?
-    var period : [Period]?
-    var field : [Field]?
-    var advantage : [Advantage]?
-    var busiType : [BusiType]?
-    var excCategory : [ExcCategory]?
+    var location: Location?
+    var age : Age?
+    var period : Period?
+    var field : Field?
+    var advantage : Advantage?
+    var busiType : BusiType?
+    var excCategory : ExcCategory?
     
     init?(map: Map) {
     }

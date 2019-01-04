@@ -115,25 +115,26 @@ struct NoticeService : APIManager, Requestable {
         }
     }
     
-//    //지원사업 스크랩 여부 조회
-//    func getNoticeScrap(notice_idx : Int, completion : @escaping(Notice) -> Void) {
-//
-//        guard let headers: HTTPHeaders = [
-//            "Authorization" : UserDefaults.standard.string(forKey: "token") as! String,
-//            ] else {}
-//
-//        let queryURL = noticeURL + "/scrap?notice_idx=\(notice_idx)"
-//
-//        gettableObj(queryURL, body: nil, header: headers){(res) in
-//            switch res {
-//            case .success(let value):
-//                print(value.data)
-//                guard let isNoticeScrap = value.data else {return}
-//                completion(isNoticeScrap)
-//            case .error(let error):
-//                print(error)
-//            }
-//        }
-//    }
+    //지원사업 스크랩 여부 조회
+    func getNoticeScrap(notice_idx : Int, completion : @escaping(CommonResponse) -> Void) {
+
+        guard let headers: HTTPHeaders = [
+            "Authorization" : UserDefaults.standard.string(forKey: "token") as! String,
+            "Client" : "iOS"
+            ] else {}
+
+        let queryURL = noticeURL + "/scrap?notice_idx=\(notice_idx)"
+
+        gettableObj(queryURL, body: nil, header: headers){(res) in
+            switch res {
+            case .success(let value):
+                print(value.data)
+                guard let isNoticeScrap = value.data else {return}
+                completion(isNoticeScrap)
+            case .error(let error):
+                print(error)
+            }
+        }
+    }
     
 }

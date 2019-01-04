@@ -22,6 +22,7 @@ class CustomViewBorder: UIView {
     
     var flag = 0
     
+
     @IBInspectable override var borderWidth: CGFloat {
         get {
             return layer.borderWidth

@@ -296,7 +296,7 @@
         <!--Setting View Controller-->
         <scene sceneID="cvO-j3-rIh">
             <objects>
-                <viewController id="Lb4-jR-T6t" customClass="SettingViewController" customModule="iOS_Smatching" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingVC" id="Lb4-jR-T6t" customClass="SettingViewController" customModule="iOS_Smatching" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lKE-V0-qfT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
