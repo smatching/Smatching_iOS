@@ -54,20 +54,20 @@ class SignupVC: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        guard emailTxtField.layer.borderColor == UIColor(red: 64/255, green: 178/255, blue: 204/255, alpha: 1).cgColor else {return false}
         guard nicknameTxtField.text?.isEmpty != true else {return false}
         guard emailTxtField.text?.isEmpty != true else {return false}
         guard emailTxtField.text!.validateEmail() == true else {
-            emailTxtField.text = "이메일 형식 틀림"
+            emailTxtField.text = ""
+            emailTxtField.placeholder = "이메일 형식 틀림"
+            RedTextField(emailTxtField)
             return false}
         guard passwdTxtField1.text?.isEmpty != true else {return false}
-        guard passwdTxtField2.layer.borderColor ==  UIColor(red: 64/255, green: 178/255, blue: 204/255, alpha: 1).cgColor else {return false}
-        
+
         guard passwdTxtField1.text! == passwdTxtField2.text! else {
-            passwdTxtField2.isSecureTextEntry = false
-            passwdTxtField2.text = "비밀번호 불일치"
+            passwdTxtField2.text = ""
+            passwdTxtField2.placeholder = "비밀번호 불일치"
+            RedTextField(passwdTxtField2)
             return false}
-        
         createDeactiveBtn.isHidden = true
         createActiveBtn.isHidden = false
         return true
@@ -88,9 +88,12 @@ class SignupVC: UIViewController, UITextFieldDelegate {
     //타이핑 중에 일어나는 TextField Delegate
     //타이핑 중이면 파란색으로 바뀐다.
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        BlueTextField(textField)
-        CheckBothPasswdEqual()
-        return true
+//        CheckBothPasswdEqual()
+        let currentText = passwdTxtField1.text ?? ""
+        guard let stringRange = Range(range, in: currentText) else {return true}
+        let updatedText = currentText.replacingCharacters(in: stringRange, with: string)
+        
+        return updatedText.count <= 10
     }
     //타이핑이 끝나면 일어나는 TextField Delegate
     //비어있으면 빨강, 그렇지 않으면 파랑
@@ -101,20 +104,17 @@ class SignupVC: UIViewController, UITextFieldDelegate {
             RedTextField(textField)
         } else {
             BlueTextField(textField)
-            CheckBothPasswdEqual()
-        }
-        guard isValidEmail(enteredEmail: emailTxtField.text!) else {
-            return RedTextField(emailTxtField)
+//            CheckBothPasswdEqual()
         }
         
     }
     
     //비밀번호, 비밀번호 확인 값이 서로 같은지 검사
-    func CheckBothPasswdEqual () {
-        if passwdTxtField1.text != passwdTxtField2.text {
-            RedTextField(passwdTxtField2)
-        }
-    }
+//    func CheckBothPasswdEqual () {
+//        if passwdTxtField1.text != passwdTxtField2.text {
+//            RedTextField(passwdTxtField2)
+//        }
+//    }
     
     // TextField 우측 지우기버튼
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
@@ -122,12 +122,6 @@ class SignupVC: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    //email 형식 유효성 검사
-    func isValidEmail (enteredEmail: String) -> Bool {
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        let emailTest = NSPredicate(format: "SELF MATCHES %@", emailRegEx)
-        return emailTest.evaluate(with:enteredEmail)
-    }
     
     
     func textFieldAddTarget (_ textField: UITextField) {

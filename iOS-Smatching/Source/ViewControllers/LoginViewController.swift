@@ -75,8 +75,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     // TextField borderColor 변경
     // Text 입력 중엔 민트색, Text없을시 lightgray
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        BlueTextField(textField)
-        return true
+        let currentText = passwdTxtField.text ?? ""
+        guard let stringRange = Range(range, in: currentText) else {return true}
+        let updatedText = currentText.replacingCharacters(in: stringRange, with: string)
+        return updatedText.count <= 10
+        
     }
     
     
