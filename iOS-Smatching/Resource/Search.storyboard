@@ -12,7 +12,7 @@
         <!--SearchVC-->
         <scene sceneID="xl7-5V-j7S">
             <objects>
-                <viewController id="Ecm-ho-8BR" customClass="SearchVC" customModule="iOS_Smatching" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchVC" id="Ecm-ho-8BR" customClass="SearchVC" customModule="iOS_Smatching" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9wN-rI-BZd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -297,6 +297,7 @@
                             <constraint firstItem="nIc-jh-CfE" firstAttribute="top" secondItem="Aro-xg-Df6" secondAttribute="bottom" constant="22" id="dXz-xV-Cow"/>
                             <constraint firstItem="Aro-xg-Df6" firstAttribute="centerX" secondItem="JIr-qk-WAZ" secondAttribute="centerX" id="fa9-Wv-Qdx"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="Fde-4o-EWI"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TGI-k6-LRx" userLabel="First Responder" sceneMemberID="firstResponder"/>

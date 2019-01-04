@@ -13,33 +13,13 @@ import ObjectMapper
 
 struct ConditionSettingSerive : APIManager, Requestable {
     typealias NetworkDataObj = ResponseObject<FitConditionResponse>
-    typealias NetworkData = ResponseArray<CommonResponse2>
+    typealias NetworkData = ResponseArray<ConditionResponse>
     static let shared = ConditionSettingSerive()
     var conditionURL = url("/conds")//url 상세주소
     let headers: HTTPHeaders = [
-        "Content-Type" : "application/json"
+        "Content-Type" : "application/json",
+        "Authorization" : UserDefaults.standard.string(forKey: "token") as! String
     ]
-    
-//    //맞춤조건 알람 ON OFF
-//    func putAlarmSetting(condIdx : Int ,completion : @escaping(CommonResponse2) -> Void) {
-//
-//        let headers: HTTPHeaders = [
-//            "Authorization" : UserDefaults.standard.string(forKey: "token") as! String,
-//            "Client" : "iOS"
-//        ]
-//
-//        let queryURL = conditionURL + "/alert?condIdx=\(condIdx)"
-//
-//        puttable(queryURL, body: nil, header: headers){(res) in
-//            switch res {
-//            case .success(let value):
-//                guard let isAlarm = value.data else {return}
-//                completion(isAlarm)
-//            case .error(let error):
-//                print(error)
-//            }
-//        }
-//    }
     
     func getFitConditionInfo(cond_idx : Int, completion: @escaping(FitConditionResponse) -> Void) {
         let queryURL = conditionURL + "?cond_idx=\(cond_idx)"

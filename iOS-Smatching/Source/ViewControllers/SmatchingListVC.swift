@@ -8,12 +8,13 @@
 
 import UIKit
 
-class SmatchingListVC: UIViewController {
-    
+class SmatchingListVC: UIViewController,CheckBoxDelegate {
     
     @IBOutlet weak var STACKVIEWCONST: NSLayoutConstraint!
     
-     var flag = 0
+    var flag = 0
+    
+    var cond_idx : Int?
     
     //contentview 영역 outlet
     @IBOutlet weak var settingAlarmBtn: Checkbox!
@@ -41,6 +42,8 @@ class SmatchingListVC: UIViewController {
     
     var conditionList = [Condition]()
     
+    let checkbox = Checkbox()
+    
     var picker : UIPickerView!
     var toolbar : UIToolbar!
     
@@ -51,20 +54,37 @@ class SmatchingListVC: UIViewController {
         
         initView()
         noticeTableView.dataSource = self
+        self.settingAlarmBtn.delegate = self
 
     }
     
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        ConditionSettingSerive.shared.getFitConditionInfo(cond_idx: self.gino(self.cond_idx)) {[weak self] (data) in guard let `self` = self else {return}
+            print(data)
+            self.conditionTitle.text = self.gsno(data.condName)
+            if self.gbno(data.alert) == true {
+                self.checkBoxDidChange(checkbox: self.settingAlarmBtn)
+            }
+        }
         
         NoticeService.shared.getAllNotice(request_num: 20, exist_num: self.noticeList.count) {[weak self] (data) in guard let `self` = self else {return}
             
             self.noticeList += data
-            print(data[0].noticeIdx)
-            print(self.noticeList.count)
             self.noticeTableView.reloadData()
+            
         }
 
+    }
+    
+    func checkBoxDidChange(checkbox: Checkbox) {
+        if checkbox == self.settingAlarmBtn {
+            self.settingAlarmBtn.isChecked = !checkbox.isChecked
+        }
+//         else {
+//            self.siCheckBox.isChecked = !checkbox.isChecked
+//        }
     }
     
     @IBAction func showConditionView(_ sender: Any) {
@@ -106,16 +126,16 @@ class SmatchingListVC: UIViewController {
     
     func initView() {
         
-        upBtn.isHidden = true
-        downBtn.isHidden = false
-        showViewBtn.isHidden = false
-        hideViewBtn.isHidden = true
-        self.contentView.transform =
-            CGAffineTransform(scaleX: 0, y: -self.contentView.frame.height)
+        upBtn.isHidden = false
+        downBtn.isHidden = true
+        showViewBtn.isHidden = true
+        hideViewBtn.isHidden = false
+        self.contentView.transform = CGAffineTransform.identity
+        UIView.animate(withDuration: 1.0, animations: ({
+            self.STACKVIEWCONST.constant = 317
+        }))
     }
-    @IBAction func conditionClick(_ sender: Any) {
-        
-    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -177,9 +197,6 @@ extension SmatchingListVC : UITableViewDelegate {
         
     }
     
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        
-    }
 }
 extension SmatchingListVC : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -210,6 +227,17 @@ extension SmatchingListVC : UITableViewDataSource {
             cell.scrapDeactiveBtn.isHidden = true
         }
         
+        NoticeService.shared.getNoticeScrap(notice_idx: notice.noticeIdx!) {[weak self] (data) in guard let `self` = self else {return}
+            
+            print(data.scrap)
+            if self.gino(data.scrap) == 0 {
+                cell.scrapActiveBtn.isHidden = true
+                cell.scrapDeactiveBtn.isHidden = false
+            } else {
+                cell.scrapActiveBtn.isHidden = false
+                cell.scrapDeactiveBtn.isHidden = true
+            }
+        }
         return cell
     }
     
