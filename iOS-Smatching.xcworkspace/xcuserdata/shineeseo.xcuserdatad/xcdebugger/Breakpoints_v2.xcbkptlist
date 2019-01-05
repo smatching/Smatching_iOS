@@ -2,4 +2,69 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOS-Smatching/Source/ViewControllers/LoginViewController.swift"
+            timestampString = "568315059.942556"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "login(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOS_Smatching.LoginViewController.login(Any) -&gt; ()"
+                  moduleName = "iOS-Smatching"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shineeseo/Smatching_iOS/iOS-Smatching/Source/ViewControllers/LoginViewController.swift"
+                  timestampString = "568264201.230366"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "37">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (iOS_Smatching.Token) -&gt; () in iOS_Smatching.LoginViewController.login(Any) -&gt; ()"
+                  moduleName = "iOS-Smatching"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shineeseo/Smatching_iOS/iOS-Smatching/Source/ViewControllers/LoginViewController.swift"
+                  timestampString = "568264201.23278"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "51">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (iOS_Smatching.Token) -&gt; () in iOS_Smatching.LoginViewController.login(Any) -&gt; ()"
+                  moduleName = "iOS-Smatching"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shineeseo/Smatching_iOS/iOS-Smatching/Source/ViewControllers/LoginViewController.swift"
+                  timestampString = "568264201.2351"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "59">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

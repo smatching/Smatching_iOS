@@ -10,6 +10,16 @@ import Foundation
 import UIKit
 
 extension UIViewController {
+    func isObjectNotNil(object:AnyObject!) -> Bool
+    {
+        if let _:AnyObject = object
+        {
+            return true
+        }
+        
+        return false
+    }
+    
     func simpleAlert(_ title: String, _ msg: String, completion: ((UIAlertAction) -> Void)?) {
         let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
         let ok = UIAlertAction(title: "확인", style: .default, handler: completion)
@@ -47,5 +57,6 @@ extension UIViewController {
         }
         return value_
     }//func gfno
+    
     
 }

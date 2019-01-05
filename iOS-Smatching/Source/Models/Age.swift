@@ -14,7 +14,15 @@ struct Age : Mappable {
     var twenty_less : Bool?
     var twenty_forty : Bool?
     
-    init?(map: Map) {}
+    init(twenty_less:Bool, twenty_forty:Bool, forty_more : Bool) {
+        self.twenty_less = twenty_less
+        self.twenty_forty = twenty_forty
+        self.forty_more = forty_more
+    }
+    
+    init?(map: Map) {
+        
+    }
     
     mutating func mapping(map: Map) {
         forty_more <- map["forty_more"]

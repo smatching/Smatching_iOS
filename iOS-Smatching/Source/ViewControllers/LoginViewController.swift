@@ -23,6 +23,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = UIImage(named: "btnBack")
         initGestureRecognizer()
         
+        textFieldAddTarget(emailTxtField)
+        textFieldAddTarget(passwdTxtField)
+        
         loginDeactiveBtn.isHidden = false
         loginActiveBtn.isHidden = true
         
@@ -30,11 +33,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         passwdTxtField.delegate = self
     
         // 초기 TextField BorderColor 정하기
-        emailTxtField.layer.borderColor = UIColor.lightGray.cgColor
-        emailTxtField.layer.borderWidth = 1.0
-        passwdTxtField.layer.borderColor = UIColor.lightGray.cgColor
-        passwdTxtField.layer.borderWidth = 1.0
-        
+        LightGrayTextField(emailTxtField)
+        LightGrayTextField(passwdTxtField)
         
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -53,45 +53,65 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         guard emailTxtField.text?.isEmpty != true else {return false}
+        guard emailTxtField.text!.validateEmail() == true else {
+            emailTxtField.text = "이메일 형식 틀림"
+            return false}
         guard passwdTxtField.text?.isEmpty != true else {return false}
         
         loginActiveBtn.isHidden = false;
         loginDeactiveBtn.isHidden = true;
         return true
     }
-
-    
     
     @IBAction func login(_ sender: Any) {
-        LoginService.shared.login(email : emailTxtField.text!, password : passwdTxtField.text! ) {(token) in
-            print(self.gsno(token.token))
+        LoginService.shared.login(email : emailTxtField.text!, password : passwdTxtField.text! ) {[weak self] (token) in guard let `self` = self else {return}
             
-            UserDefaults.standard.set(self.gsno(token.token), forKey: "token")
-            
+            if self.isObjectNotNil(object: token as AnyObject) {
+                UserDefaults.standard.set(self.gsno(token.token), forKey: "token")
+                self.performSegue(withIdentifier: "loginSegue", sender: nil)
+            }
         }
-        self.performSegue(withIdentifier: "loginSegue", sender: nil)
+        
     }
+    
     // TextField borderColor 변경
     // Text 입력 중엔 민트색, Text없을시 lightgray
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        textField.layer.borderColor = UIColor(red: 64/255, green: 178/255, blue: 204/255, alpha: 1).cgColor
-        textField.layer.borderWidth = 1.0
-        //textFieldDidEndEditing(emailTxtField)
-        return true;
+        BlueTextField(textField)
+        return true
     }
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
 
         if textField.text?.isEmpty == true {
-            textField.layer.borderColor = UIColor.lightGray.cgColor
-            textField.layer.borderWidth = 1.0
+            LightGrayTextField(textField)
         } else {
-            textField.layer.borderColor = UIColor(red: 64/255, green: 178/255, blue: 204/255, alpha: 1).cgColor
-            textField.layer.borderWidth = 1.0
+            BlueTextField(textField)
 
         }
     }
     
+    //우측 지우기 버튼
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        textField.applyCustomClearbutton()
+        return true
+    }
     
+    // TextField Tap할 때 placeholder 지우기/ borderColor 지정
+    func textFieldAddTarget (_ textField: UITextField) {
+        textField.addTarget(self, action: #selector(whenTxtFieldTapped(_:)), for: UIControl.Event.touchDown)
+    }
+    @objc func whenTxtFieldTapped (_ textField: UITextField) {
+        BlueTextField(textField)
+        textField.placeholder = ""
+    }
+    // TextField 색깔 지정 함수
+    func BlueTextField (_ textField: UITextField) {
+        textField.layer.borderColor = UIColor(red: 64/255, green: 178/255, blue: 204/255, alpha: 1).cgColor
+    }
+    func LightGrayTextField (_ textField: UITextField) {
+        textField.layer.borderColor = UIColor.lightGray.cgColor
+    }
     
 }
 extension LoginViewController : UIGestureRecognizerDelegate {
@@ -158,6 +178,15 @@ extension LoginViewController : UIGestureRecognizerDelegate {
     
     
 }
-
+extension UIView {
+    @IBInspectable var borderWidth: CGFloat {
+        get {
+            return layer.borderWidth
+        }
+        set {
+            layer.borderWidth = newValue
+        }
+    }
+}
 
 

@@ -7,13 +7,16 @@
 //
 
 import UIKit
+protocol CheckBoxDelegate {
+    func checkBoxDidChange(checkbox: Checkbox) -> Void
+}
 
 class Checkbox: UIButton {
         // Images
         let checkedImage = UIImage(named: "icn_checkbox_white")! as UIImage
         let uncheckedImage = UIImage(named: "icn_emptybox")! as UIImage
     
-    
+        var delegate: CheckBoxDelegate?
         // Bool property
         var isChecked: Bool = false {
             didSet{
@@ -26,15 +29,14 @@ class Checkbox: UIButton {
         }
         
         override func awakeFromNib() {
-            self.addTarget(self, action:#selector(buttonClicked(sender:)), for: UIControl.Event.touchUpInside)
+            self.addTarget(self, action:Selector("buttonClicked:"), for: UIControl.Event.touchUpInside)
             self.isChecked = false
         }
         
-    @objc func buttonClicked(sender: UIButton) {
-            if sender == self {
-                isChecked = !isChecked
-            }
-        }
+    func buttonClicked(sender: UIButton) {
+        isChecked = !isChecked
+        self.delegate?.checkBoxDidChange(checkbox: self)
+    }
     
 
 }
