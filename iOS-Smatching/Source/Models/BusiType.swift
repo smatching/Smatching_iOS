@@ -18,6 +18,16 @@ struct BusiType: Mappable {
     var midbig : Bool?
     var tradi : Bool?
     
+    init(sole : Bool, small : Bool,big : Bool,pre : Bool,midsmall : Bool,midbig : Bool,tradi : Bool ) {
+        self.sole = sole
+        self.small = small
+        self.big = big
+        self.pre = pre
+        self.midsmall = midsmall
+        self.midbig = midbig
+        self.tradi = tradi
+        
+    }
     init?(map: Map) {
     }
     

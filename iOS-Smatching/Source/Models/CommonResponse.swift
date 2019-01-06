@@ -13,6 +13,7 @@ struct CommonResponse: Mappable {
     var num : Int?
     var scrap : Int?
     var result : Bool?
+    var condIdx : Int?
     
     init?(map: Map) {
     }
@@ -21,5 +22,6 @@ struct CommonResponse: Mappable {
         num <- map["num"]
         scrap <- map["scrap"]
         result <- map["result"]
+        condIdx <- map["condIdx"]
     }
 }

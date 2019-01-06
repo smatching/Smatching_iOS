@@ -36,6 +36,10 @@
 		B68AA6FE21D4F6C4000E5549 /* SmatchingListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68AA6FD21D4F6C4000E5549 /* SmatchingListVC.swift */; };
 		B68AA70021D4F837000E5549 /* Notice.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68AA6FF21D4F837000E5549 /* Notice.swift */; };
 		B68AA70621D50187000E5549 /* NoticeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68AA70521D50187000E5549 /* NoticeService.swift */; };
+		B696AE9B21DFB17400ABFBDB /* ConditionPutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B696AE9A21DFB17400ABFBDB /* ConditionPutService.swift */; };
+		B696AE9D21DFC10300ABFBDB /* NoticeDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B696AE9C21DFC10300ABFBDB /* NoticeDetailVC.swift */; };
+		B696AE9F21DFC36300ABFBDB /* NoticeDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B696AE9E21DFC36300ABFBDB /* NoticeDetailResponse.swift */; };
+		B696AEA121DFC42D00ABFBDB /* NoticeDetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B696AEA021DFC42D00ABFBDB /* NoticeDetailService.swift */; };
 		B6A3F48721C49070000497BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A3F48621C49070000497BF /* AppDelegate.swift */; };
 		B6A3F48921C49070000497BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A3F48821C49070000497BF /* ViewController.swift */; };
 		B6A3F48C21C49070000497BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6A3F48A21C49070000497BF /* Main.storyboard */; };
@@ -51,6 +55,8 @@
 		B6A3F4B021C49870000497BF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A3F4AF21C49870000497BF /* User.swift */; };
 		B6A3F4B221C499FB000497BF /* UIImage+imageFromURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A3F4B121C499FB000497BF /* UIImage+imageFromURL.swift */; };
 		B6A3F4B421C49A0D000497BF /* UIViewController+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A3F4B321C49A0D000497BF /* UIViewController+extensions.swift */; };
+		B6AFE59821DF470A0001FA55 /* ConditionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AFE59721DF470A0001FA55 /* ConditionButton.swift */; };
+		B6AFE59A21DF70050001FA55 /* AlertCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AFE59921DF70050001FA55 /* AlertCheckBox.swift */; };
 		B6B74B5921D9EA5D001482BF /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B74B5821D9EA5D001482BF /* Checkbox.swift */; };
 		B6B74B6021DA3BDE001482BF /* CustomSettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B74B5F21DA3BDE001482BF /* CustomSettingVC.swift */; };
 		B6BAD20F21DC842300A4B4BD /* Period.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BAD20E21DC842300A4B4BD /* Period.swift */; };
@@ -100,6 +106,10 @@
 		B68AA6FD21D4F6C4000E5549 /* SmatchingListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmatchingListVC.swift; sourceTree = "<group>"; };
 		B68AA6FF21D4F837000E5549 /* Notice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notice.swift; sourceTree = "<group>"; };
 		B68AA70521D50187000E5549 /* NoticeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeService.swift; sourceTree = "<group>"; };
+		B696AE9A21DFB17400ABFBDB /* ConditionPutService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionPutService.swift; sourceTree = "<group>"; };
+		B696AE9C21DFC10300ABFBDB /* NoticeDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeDetailVC.swift; sourceTree = "<group>"; };
+		B696AE9E21DFC36300ABFBDB /* NoticeDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeDetailResponse.swift; sourceTree = "<group>"; };
+		B696AEA021DFC42D00ABFBDB /* NoticeDetailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeDetailService.swift; sourceTree = "<group>"; };
 		B6A3F48321C49070000497BF /* iOS-Smatching.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Smatching.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6A3F48621C49070000497BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6A3F48821C49070000497BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +127,8 @@
 		B6A3F4AF21C49870000497BF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B6A3F4B121C499FB000497BF /* UIImage+imageFromURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+imageFromURL.swift"; sourceTree = "<group>"; };
 		B6A3F4B321C49A0D000497BF /* UIViewController+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extensions.swift"; sourceTree = "<group>"; };
+		B6AFE59721DF470A0001FA55 /* ConditionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ConditionButton.swift; path = ../../../ConditionButton.swift; sourceTree = "<group>"; };
+		B6AFE59921DF70050001FA55 /* AlertCheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertCheckBox.swift; sourceTree = "<group>"; };
 		B6B74B5821D9EA5D001482BF /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
 		B6B74B5F21DA3BDE001482BF /* CustomSettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSettingVC.swift; sourceTree = "<group>"; };
 		B6BAD20E21DC842300A4B4BD /* Period.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Period.swift; sourceTree = "<group>"; };
@@ -257,6 +269,8 @@
 				B68AA70521D50187000E5549 /* NoticeService.swift */,
 				B68742E721D74DEB0094D5E7 /* ConditionService.swift */,
 				B67F2A8721DC42E200452579 /* ConditionSettingService.swift */,
+				B696AE9A21DFB17400ABFBDB /* ConditionPutService.swift */,
+				B696AEA021DFC42D00ABFBDB /* NoticeDetailService.swift */,
 			);
 			path = APIServices;
 			sourceTree = "<group>";
@@ -280,6 +294,7 @@
 				B6BAD20E21DC842300A4B4BD /* Period.swift */,
 				B61674F021DD2F3A006D67A4 /* CommonResponse.swift */,
 				B61674F421DD3437006D67A4 /* FitConditionResponse.swift */,
+				B696AE9E21DFC36300ABFBDB /* NoticeDetailResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -287,6 +302,7 @@
 		B6A3F49F21C4963A000497BF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B6AFE59721DF470A0001FA55 /* ConditionButton.swift */,
 				B670933A21D652DB00472BB2 /* ChangeButton.swift */,
 				B670933821D6068400472BB2 /* NoticeCell.swift */,
 				B6B74B5821D9EA5D001482BF /* Checkbox.swift */,
@@ -294,6 +310,7 @@
 				B6BAFCE621DBD3FA004C8743 /* CustomDialog.swift */,
 				B6BAFCE821DBE865004C8743 /* SelectRegionDialog.swift */,
 				B6BAFCE921DBE865004C8743 /* SelectRegionDialog.xib */,
+				B6AFE59921DF70050001FA55 /* AlertCheckBox.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -316,6 +333,7 @@
 				C0EE1D5721DD8C00005B114E /* SettingViewController.swift */,
 				C0EE1D5921DD8DC0005B114E /* MypageSettingVC.swift */,
 				C0EE1D5B21DD8DEB005B114E /* MypageAskVC.swift */,
+				B696AE9C21DFC10300ABFBDB /* NoticeDetailVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -472,12 +490,14 @@
 				B68AA6FC21D4E2EE000E5549 /* MyPageVC.swift in Sources */,
 				C0EE1D5C21DD8DEB005B114E /* MypageAskVC.swift in Sources */,
 				B67F2A9C21DC4D5800452579 /* UINavigationBar+extension.swift in Sources */,
+				B6AFE59A21DF70050001FA55 /* AlertCheckBox.swift in Sources */,
 				B61148F121DC2204004F1E92 /* InsititutionClassifyInfo.swift in Sources */,
 				B68AA70021D4F837000E5549 /* Notice.swift in Sources */,
 				B68AA6FA21D4E2DD000E5549 /* TalkVC.swift in Sources */,
 				B68AA6F621D4E2C1000E5549 /* HomeVC.swift in Sources */,
 				B6A3F4AE21C4983B000497BF /* UserService.swift in Sources */,
 				B6BAD20F21DC842300A4B4BD /* Period.swift in Sources */,
+				B696AE9D21DFC10300ABFBDB /* NoticeDetailVC.swift in Sources */,
 				B6A3F4A821C497A5000497BF /* ResponseObject.swift in Sources */,
 				B67F2A8A21DC43E000452579 /* Location.swift in Sources */,
 				C0EE1D5821DD8C00005B114E /* SettingViewController.swift in Sources */,
@@ -494,8 +514,10 @@
 				B632123A21D3CE9300087FA2 /* SignupVC.swift in Sources */,
 				B6A3F4A221C4974C000497BF /* Requestable.swift in Sources */,
 				B6A3F48921C49070000497BF /* ViewController.swift in Sources */,
+				B696AEA121DFC42D00ABFBDB /* NoticeDetailService.swift in Sources */,
 				B6A3F48721C49070000497BF /* AppDelegate.swift in Sources */,
 				B6BAFCE721DBD3FA004C8743 /* CustomDialog.swift in Sources */,
+				B696AE9F21DFC36300ABFBDB /* NoticeDetailResponse.swift in Sources */,
 				B67F2A8821DC42E200452579 /* ConditionSettingService.swift in Sources */,
 				B67F2A9821DC4CD700452579 /* String+extensions.swift in Sources */,
 				B6B74B6021DA3BDE001482BF /* CustomSettingVC.swift in Sources */,
@@ -507,7 +529,9 @@
 				B67F2A9421DC461800452579 /* BusiType.swift in Sources */,
 				B632123621D3B11000087FA2 /* LoginOrSignupVC.swift in Sources */,
 				B6A3F4AC21C497D0000497BF /* Token.swift in Sources */,
+				B696AE9B21DFB17400ABFBDB /* ConditionPutService.swift in Sources */,
 				B6BAFCEA21DBE865004C8743 /* SelectRegionDialog.swift in Sources */,
+				B6AFE59821DF470A0001FA55 /* ConditionButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

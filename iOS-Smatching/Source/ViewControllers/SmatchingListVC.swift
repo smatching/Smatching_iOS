@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SmatchingListVC: UIViewController,CheckBoxDelegate {
+class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate {
     
     @IBOutlet weak var contentViewHeightConstraint: NSLayoutConstraint!
     
@@ -18,6 +18,7 @@ class SmatchingListVC: UIViewController,CheckBoxDelegate {
     
     //contentview 영역 outlet
     @IBOutlet weak var settingAlarmBtn: Checkbox!
+    
     @IBOutlet weak var editBtn: UIButton!
     @IBOutlet weak var advantageLabel: UILabel!
     @IBOutlet weak var excCateLabel: UILabel!
@@ -172,8 +173,17 @@ class SmatchingListVC: UIViewController,CheckBoxDelegate {
         }
         //        done 버튼을 누르고 함수 실행 중 edit을 끝냄
         self.alignmentLabel.endEditing(true)
+    }
+    
+    //스크랩 버튼 클릭시 동작
+    func doScrapNotice(noticeIdx: Int) {
+        print(noticeIdx)
+        NoticeService.shared.putNoticeScrap(noticeIdx: noticeIdx) {
+            [weak self] (data) in guard let `self` = self else {return}
+            print(data.scrap)
 
-        
+        }
+        self.noticeTableView.reloadData()
     }
 }
 extension SmatchingListVC : UITableViewDelegate {
@@ -194,6 +204,9 @@ extension SmatchingListVC : UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NoticeCell", for: indexPath) as! NoticeCell
         let notice = noticeList[indexPath.row]
         
+        cell.delegate = self
+        
+        cell.noticeIdx = gino(notice.noticeIdx)
         cell.titleLabel.text = gsno(notice.title)
         cell.institutionLabel.text = gsno(notice.institution)
         if gino(notice.dday) > 1000 {

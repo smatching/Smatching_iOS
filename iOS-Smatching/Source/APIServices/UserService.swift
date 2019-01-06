@@ -46,7 +46,6 @@ struct UserService: APIManager, Requestable {
         gettableObj(getURL, body: nil, header: headers) {(res)in
             switch res {
             case .success(let value):
-                print(value.data?.condSummaryList)
                 guard let conditionList = value.data else {return}
                 completion(conditionList)
             case .error(let error):

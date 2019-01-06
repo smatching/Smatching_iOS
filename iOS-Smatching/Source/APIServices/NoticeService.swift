@@ -137,4 +137,26 @@ struct NoticeService : APIManager, Requestable {
         }
     }
     
+    //지원사업 스크랩 설정/해제
+    func putNoticeScrap(noticeIdx : Int ,completion : @escaping(CommonResponse) -> Void) {
+        
+        let headers: HTTPHeaders = [
+            "Authorization" : UserDefaults.standard.string(forKey: "token") as! String,
+            "Client" : "iOS"
+        ]
+        
+        let queryURL = noticeURL + "/scrap/\(noticeIdx)"
+        
+        puttable(queryURL, body: nil, header: headers){(res) in
+            switch res {
+            case .success(let value):
+                print(value)
+                guard let scrap = value.data else {return}
+                completion(scrap)
+            case .error(let error):
+                print(error)
+            }
+        }
+    }
+    
 }

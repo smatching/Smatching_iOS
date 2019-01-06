@@ -7,7 +7,9 @@
 //
 
 import UIKit
-
+protocol NoticeCellDelegate {
+    func doScrapNotice(noticeIdx : Int)
+}
 class NoticeCell: UITableViewCell {
    
     @IBOutlet weak var scrapActiveBtn: UIButton!
@@ -16,6 +18,12 @@ class NoticeCell: UITableViewCell {
     @IBOutlet weak var institutionLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     
+    var delegate : NoticeCellDelegate!
+    var noticeIdx : Int!
+    
+    @IBAction func doScrap(_ sender: Any) {
+        self.delegate?.doScrapNotice(noticeIdx: noticeIdx)
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
