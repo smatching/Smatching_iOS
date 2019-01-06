@@ -21,6 +21,17 @@ struct FitConditionResponse: Mappable {
     var busiType : BusiType?
     var excCategory : ExcCategory?
     
+    init(condName: String, location: Location, age : Age, period : Period, field: Field, advantage: Advantage, busiType: BusiType, excCategory: ExcCategory) {
+        self.condName = condName
+        self.location = location
+        self.age = age
+        self.period = period
+        self.field = field
+        self.advantage = advantage
+        self.busiType = busiType
+        self.excCategory = excCategory
+        
+    }
     init?(map: Map) {
     }
     

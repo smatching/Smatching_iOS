@@ -35,6 +35,21 @@ struct Period : Mappable{
     init?(map: Map) {
     }
     
+    func getPeriodDic(period : Period) -> [String: Bool] {
+        var body = [String: Bool]()
+        body.updateValue(period.three_four!, forKey: "three_four")
+        body.updateValue(period.six_seven!, forKey: "six_seven")
+        body.updateValue(period.one_two!, forKey: "one_two")
+        body.updateValue(period.four_five!, forKey: "four_five")
+        body.updateValue(period.yet!, forKey: "yet")
+        body.updateValue(period.two_three!, forKey: "two_three")
+        body.updateValue(period.five_six!, forKey: "five_six")
+        body.updateValue(period.seven_more!, forKey: "seven_more")
+        body.updateValue(period.zero_one!, forKey: "zero_one")
+        return body
+        
+    }
+    
     mutating func mapping(map: Map) {
         three_four <- map["three_four"]
         six_seven <- map["six_seven"]

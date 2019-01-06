@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate {
+class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate, UIScrollViewDelegate {
     
     @IBOutlet weak var STACKVIEWCONST: NSLayoutConstraint!
     
@@ -29,7 +29,6 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate {
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var conditionTitle: UILabel!
     
-    
     @IBOutlet weak var upBtn: UIButton!
     @IBOutlet weak var downBtn: UIButton!
     @IBOutlet weak var hideViewBtn: UIImageView!
@@ -43,8 +42,6 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate {
     
     var conditionList = [Condition]()
     
-    let checkbox = Checkbox()
-    
     var picker : UIPickerView!
     var toolbar : UIToolbar!
     
@@ -54,11 +51,11 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate {
         super.viewDidLoad()
         
         initView()
+        noticeTableView.delegate = self
         noticeTableView.dataSource = self
         self.settingAlarmBtn.delegate = self
-
+        
     }
-    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -72,20 +69,20 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate {
         
         NoticeService.shared.getAllNotice(request_num: 20, exist_num: self.noticeList.count) {[weak self] (data) in guard let `self` = self else {return}
             
-            self.noticeList += data
+            self.noticeList = data
             self.noticeTableView.reloadData()
             
         }
-
+        
     }
     
     func checkBoxDidChange(checkbox: Checkbox) {
         if checkbox == self.settingAlarmBtn {
             self.settingAlarmBtn.isChecked = !checkbox.isChecked
         }
-//         else {
-//            self.siCheckBox.isChecked = !checkbox.isChecked
-//        }
+        //         else {
+        //            self.siCheckBox.isChecked = !checkbox.isChecked
+        //        }
     }
     
     @IBAction func showConditionView(_ sender: Any) {
@@ -125,6 +122,7 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate {
         
     }
     
+    //초기 화면 설정 -> 조건 뷰가 보여지도록
     func initView() {
         
         upBtn.isHidden = false
@@ -141,8 +139,9 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    //공고 목록 보여주는 기준 바꾸기 (pickerview 띄우기)
     @IBAction func changeAlignment(_ sender: ChangeButton) {
-        
         setupPiker()
         setupToolbar()
         
@@ -152,7 +151,7 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate {
         
     }
     
-    //piker초기화
+    //picker초기화
     func setupPiker() {
         picker = UIPickerView()
         //delegate를 위임받는 주체를 명시해줘야한다. (viewcontroller 자체가 위임받는다.)
@@ -161,6 +160,7 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate {
         picker.dataSource = self
         
     }
+    
     func setupToolbar() {
         toolbar = UIToolbar(frame : CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height))
         let done = UIBarButtonItem(title: "done", style: .done, target: self, action: #selector(selectPart))
@@ -189,6 +189,8 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate {
         }
         //        done 버튼을 누르고 함수 실행 중 edit을 끝냄
         self.alignmentLabel.endEditing(true)
+        self.picker.removeFromSuperview()
+        self.toolbar.removeFromSuperview()
     }
     
     //스크랩 버튼 클릭시 동작
@@ -197,22 +199,57 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate {
         NoticeService.shared.putNoticeScrap(noticeIdx: noticeIdx) {
             [weak self] (data) in guard let `self` = self else {return}
             print(data.scrap)
-
         }
         self.noticeTableView.reloadData()
+    }
+    
+    //무한 스크롤링
+    var pageIndex: Int = 1
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        
+        if offsetY > contentHeight - scrollView.frame.size.height {
+            /* increment page index to load new data set from */
+            pageIndex += 1
+            
+            /* call API to load data from next page or just add dummy data to your datasource */
+            /* Needs to be implemented */
+            loadNewItemsFrom(pageIndex)
+            
+            /* reload tableview with new data */
+            noticeTableView.reloadData()
+        }
+    }
+    
+    func loadNewItemsFrom(_: Int) {
+        NoticeService.shared.getAllNotice(request_num: 20, exist_num: self.noticeList.count) {[weak self] (data) in guard let `self` = self else {return}
+            
+            self.noticeList += data
+            print(self.noticeList.count)
+            self.noticeTableView.reloadData()
+            
+        }
     }
 }
 extension SmatchingListVC : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "DetailContent", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "NoticeDetailVC") as! NoticeDetailVC
+        
+        let notice = self.noticeList[indexPath.row]
+        print(notice.noticeIdx)
+        nextViewController.notice_idx = gino(notice.noticeIdx)
+        
+        self.navigationController?.pushViewController(nextViewController, animated: true)
         
     }
     
 }
 extension SmatchingListVC : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return noticeList.count
-        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -240,17 +277,18 @@ extension SmatchingListVC : UITableViewDataSource {
             cell.scrapDeactiveBtn.isHidden = true
         }
         
-        NoticeService.shared.getNoticeScrap(notice_idx: notice.noticeIdx!) {[weak self] (data) in guard let `self` = self else {return}
-            
-            print(data.scrap)
-            if self.gino(data.scrap) == 0 {
-                cell.scrapActiveBtn.isHidden = true
-                cell.scrapDeactiveBtn.isHidden = false
-            } else {
-                cell.scrapActiveBtn.isHidden = false
-                cell.scrapDeactiveBtn.isHidden = true
-            }
-        }
+//        NoticeService.shared.getNoticeScrap(notice_idx: notice.noticeIdx!) {[weak self] (data) in guard let `self` = self else {return}
+//
+//            print(data.scrap)
+//            if self.gino(data.scrap) == 0 {
+//                cell.scrapActiveBtn.isHidden = true
+//                cell.scrapDeactiveBtn.isHidden = false
+//            } else {
+//                cell.scrapActiveBtn.isHidden = false
+//                cell.scrapDeactiveBtn.isHidden = true
+//            }
+//
+//        }
         return cell
     }
     
@@ -259,7 +297,8 @@ extension SmatchingListVC : UITableViewDataSource {
 //동작에 관련한 메소드만 정의함 (pickerview 자체의 뷰에 대한 것-> title 속성)
 extension SmatchingListVC : UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return alignment_standard[row]//row index에 해당하는 data 를 반환
+        return alignment_standard[row]
+        //row index에 해당하는 data 를 반환
     }
 }
 
@@ -278,4 +317,3 @@ extension SmatchingListVC : UIPickerViewDataSource {
     
     
 }
-

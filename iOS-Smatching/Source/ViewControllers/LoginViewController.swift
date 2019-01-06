@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Lottie
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
@@ -17,6 +18,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var loginDeactiveBtn: UIButton!
     @IBOutlet weak var loginActiveBtn: UIButton!
     
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.backIndicatorImage = UIImage(named: "btnBack")
@@ -36,6 +38,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         LightGrayTextField(emailTxtField)
         LightGrayTextField(passwdTxtField)
         
+        
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -51,6 +55,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         dismiss(animated: true)
     }
 
+    //textfield delegate
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         guard emailTxtField.text?.isEmpty != true else {return false}
         guard emailTxtField.text!.validateEmail() == true else {
@@ -63,13 +68,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
+    //로그인 기능 실행
     @IBAction func login(_ sender: Any) {
         LoginService.shared.login(email : emailTxtField.text!, password : passwdTxtField.text! ) {[weak self] (token) in guard let `self` = self else {return}
             
-            if self.isObjectNotNil(object: token as AnyObject) {
-                UserDefaults.standard.set(self.gsno(token.token), forKey: "token")
+            UserDefaults.standard.set(self.gsno(token.token), forKey: "token")
                 self.performSegue(withIdentifier: "loginSegue", sender: nil)
-            }
+            
         }
         
     }
@@ -137,11 +142,6 @@ extension LoginViewController : UIGestureRecognizerDelegate {
             self.stackViewConst.constant = -120
         })
         
-        //stacview의 constraint의 constant값을 변경시킴
-        //위로 올림 -> - 값
-        //        stackViewConstraint.constant = -120
-        
-        
         self.view.layoutIfNeeded()
         
     }
@@ -151,8 +151,7 @@ extension LoginViewController : UIGestureRecognizerDelegate {
         UIView.animate(withDuration: duration, delay: 0.0, options: .init(rawValue: curve), animations: {
             self.stackViewConst.constant = 0
         })
-        
-        //        stackViewConstraint.constant = 0
+    
             self.view.layoutIfNeeded()
     }
     

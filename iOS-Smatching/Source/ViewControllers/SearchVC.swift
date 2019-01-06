@@ -10,19 +10,38 @@ import UIKit
 
 class SearchVC: UIViewController, UITextFieldDelegate {
 
-    @IBOutlet var SearchResultView: UIView!
+    @IBOutlet weak var searchResultView: UIView!
+    @IBOutlet weak var searchTableView: UITableView!
     @IBOutlet var SearchImg: UIImageView!
     @IBOutlet var SearchTxtField: UITextField!
     @IBOutlet var UnderlineOfText: UIView!
+    @IBOutlet weak var noSearchResult: UIView!
+    
+    var noticeList = [Notice]()
     override func viewDidLoad() {
         super.viewDidLoad()
         initGestureRecognizer()
+        
+//        searchResultView.isHidden = true
+        noSearchResult.isHidden = true
+        
+        SearchTxtField.delegate = self
+        
         SearchTxtField.addTarget(self, action: #selector(whenTxtFieldTapped), for: UIControl.Event.touchDown)
+        
+        searchTableView.delegate = self
+        searchTableView.dataSource = self
         // Do any additional setup after loading the view.
-        SearchResultView.layer.shadowRadius = 5
-        SearchResultView.layer.shadowOffset = CGSize(width: 0, height: 3)
-        SearchResultView.layer.shadowColor = UIColor.black.cgColor
-        SearchResultView.layer.shadowOpacity = 0.3
+//        SearchResultView.layer.shadowRadius = 5
+//        SearchResultView.layer.shadowOffset = CGSize(width: 0, height: 3)
+//        SearchResultView.layer.shadowColor = UIColor.black.cgColor
+//        SearchResultView.layer.shadowOpacity = 0.3
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.shouldRemoveShadow(true)
     }
     
     @objc func whenTxtFieldTapped () {
@@ -31,8 +50,17 @@ class SearchVC: UIViewController, UITextFieldDelegate {
         SearchTxtField.placeholder = ""
         SearchTxtField.applyCustomClearbutton()
     }
-    
-    
+    //textfield delegate
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        guard SearchTxtField.text?.isEmpty != true else {return false}
+        
+        SearchService.shared.getSearchResult(query: self.SearchTxtField.text!, request_num: 4, exist_num: 0 ) { [weak self] (res) in guard let `self` = self else {return}
+            self.noticeList = res
+            self.searchTableView.reloadData()
+        }
+        return true
+    }
    
 }
 extension SearchVC: UIGestureRecognizerDelegate {
@@ -80,5 +108,31 @@ extension SearchVC: UIGestureRecognizerDelegate {
     }
     
 }
-
-
+extension SearchVC : UITableViewDelegate {
+    
+}
+extension SearchVC : UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return noticeList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "NoticeCell", for: indexPath) as! NoticeCell
+        
+        let notice = self.noticeList[indexPath.row]
+        
+        cell.titleLabel.text = gsno(notice.title)
+        
+        cell.institutionLabel.text = gsno(notice.institution)
+        
+        if gino(notice.dday) > 1000 {
+            cell.ddayLabel.text = "예산소진시"
+        }
+        else {
+            cell.ddayLabel.text = "D - " + "\(gino(notice.dday))"
+        }
+        
+        return cell
+        
+    }
+}

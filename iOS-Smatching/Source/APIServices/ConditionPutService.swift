@@ -18,21 +18,22 @@ struct ConditionPutService : APIManager, Requestable {
     var conditionURL = url("/conds")//url 상세주소
     let headers: HTTPHeaders = [
         "Content-Type" : "application/json",
-        "Authorization" : UserDefaults.standard.string(forKey: "token") as! String,
-         "Client" : "iOS"
+        "Authorization" : UserDefaults.standard.string(forKey: "token") ?? "",
+        "Client" : "iOS"
     ]
     
     func putFitConditionInfo(condName : String, location: Location, age : Age, period : Period ,field : Field, advantage: Advantage, busiType : BusiType, excCategory : ExcCategory, completion: @escaping(CommonResponse) -> Void) {
-        let body = [
+        //       let body = FitConditionResponse(condName: condName, location: location, age: age, period: period, field: field, advantage: advantage, busiType: busiType, excCategory: excCategory) as [String : Any]
+        let body: [String : Any] = [
             "condName" : condName,
-            "location" : location,
-            "age" : age,
-            "period" : period,
-            "field" : field,
-            "advantage" : advantage,
-            "busiType" : busiType,
-            "excCategory" : excCategory
-            ] as [String : Any]
+            "location" : location.getLocationDic(location: location),
+            "age" : age.getAgeDic(age: age),
+            "period" : period.getPeriodDic(period : period),
+            "field" : field.getFieldDic(field : field),
+            "advantage" : advantage.getAdvantageDic(advantage: advantage),
+            "busiType" : busiType.getBusiTypeDic(busiType : busiType),
+            "excCategory" : excCategory.getExcCategoryDic(excCategory: excCategory)
+        ]
         
         postableObj(conditionURL, body: body, header: headers) {(res) in
             switch res {

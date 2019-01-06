@@ -16,14 +16,14 @@ struct LoginService: APIManager, Requestable {
     let loginURL = url("/users/login")//url 상세주소
     let headers: HTTPHeaders = [
         "Content-Type" : "application/json"
-]
+    ]
 
     func login(email: String, password: String, completion: @escaping(Token) -> Void) {
         
         let body = [
             "email" : email,
             "password" : password
-            ]
+        ]
         
         postableObj(loginURL, body: body, header: headers) { res in
             switch res {

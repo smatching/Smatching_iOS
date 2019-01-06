@@ -12,7 +12,7 @@
         <!--Mypage SettingVC-->
         <scene sceneID="Gd3-05-ljZ">
             <objects>
-                <viewController id="gJ9-Pp-bUP" customClass="MypageSettingVC" customModule="iOS_Smatching" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MypageSettingVC" id="gJ9-Pp-bUP" customClass="MypageSettingVC" customModule="iOS_Smatching" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" tag="9" contentMode="scaleToFill" id="wd8-AO-jDR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,6 +59,9 @@
                                     <constraint firstAttribute="height" constant="25" id="Ito-Ek-HQX"/>
                                 </constraints>
                                 <state key="normal" image="icnProfileCamera"/>
+                                <connections>
+                                    <action selector="updateProfileImgBtn:" destination="gJ9-Pp-bUP" eventType="touchUpInside" id="meo-kb-V1y"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="sZu-XQ-Flx">
                                 <rect key="frame" x="30" y="243" width="315" height="332.5"/>
@@ -204,7 +207,7 @@
                                 <state key="normal" image="btnSave"/>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="7m4-4R-az4" firstAttribute="top" secondItem="RFv-mb-cj4" secondAttribute="bottom" constant="62" id="2gO-N7-Az2"/>
                             <constraint firstItem="RFv-mb-cj4" firstAttribute="top" secondItem="dew-K3-meb" secondAttribute="top" constant="37" id="4Qv-cY-peS"/>
@@ -223,6 +226,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dew-K3-meb"/>
                     </view>
+                    <connections>
+                        <outlet property="profileImg" destination="7m4-4R-az4" id="Hch-Gc-gRo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VHt-pK-J2D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -275,7 +281,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="IOC-VN-5gt" firstAttribute="centerX" secondItem="8MN-Kb-Fwl" secondAttribute="centerX" id="XwR-2c-diR"/>
                             <constraint firstItem="4UX-OU-GtA" firstAttribute="centerX" secondItem="8MN-Kb-Fwl" secondAttribute="centerX" id="hui-fl-G2k"/>
@@ -555,7 +561,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="DGG-vK-e3m" firstAttribute="centerX" secondItem="lKE-V0-qfT" secondAttribute="centerX" constant="2" id="WxX-RD-PT5"/>
                             <constraint firstItem="DGG-vK-e3m" firstAttribute="top" secondItem="JRh-g1-Olv" secondAttribute="top" multiplier="4" id="aIT-3r-pGO"/>

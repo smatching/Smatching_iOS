@@ -24,6 +24,13 @@ struct Age : Mappable {
         
     }
     
+    func getAgeDic(age: Age) -> [String: Bool] {
+        var body = [String: Bool]()
+        body.updateValue(age.twenty_less!, forKey: "twenty_less")
+        body.updateValue(age.twenty_forty!, forKey: "twenty_forty")
+        body.updateValue(age.forty_more!, forKey: "forty_more")
+        return body
+    }
     mutating func mapping(map: Map) {
         forty_more <- map["forty_more"]
         twenty_less <- map["twenty_less"]

@@ -10,5 +10,5 @@ target 'iOS-Smatching' do
 	pod 'AlamofireObjectMapper'
 	pod 'ObjectMapper'
 	pod 'Kingfisher'
-	
+	pod 'lottie-ios'	
 end

@@ -52,6 +52,30 @@ struct Location: Mappable {
     }
     init?(map: Map) {}
     
+    func getLocationDic(location : Location) -> [String: Bool] {
+        var body = [String: Bool]()
+        body.updateValue(location.seoul!, forKey: "seoul")
+        body.updateValue(location.jeonbuk!, forKey: "jeonbuk")
+        body.updateValue(location.gangwon!, forKey: "gangwon")
+        body.updateValue(location.gwangju!, forKey: "gwangju")
+        body.updateValue(location.ulsan!, forKey: "ulsan")
+        body.updateValue(location.kyungbuk!, forKey: "kyungbuk")
+        body.updateValue(location.chungnam!, forKey: "chungnam")
+        body.updateValue(location.daejeon!, forKey: "daejeon")
+        body.updateValue(location.busan!, forKey: "busan")
+        body.updateValue(location.jeju!, forKey: "jeju")
+        body.updateValue(location.daegu!, forKey: "daegu")
+        body.updateValue(location.aborad!, forKey: "aborad")
+        body.updateValue(location.kyunggi!, forKey: "kyunggi")
+        body.updateValue(location.incheon!, forKey: "incheon")
+        body.updateValue(location.jeonnam!, forKey: "jeonnam")
+        body.updateValue(location.sejong!, forKey: "sejong")
+        body.updateValue(location.chungbuk!, forKey: "chungbuk")
+        body.updateValue(location.kyungnam!, forKey: "kyungnam")
+        
+        return body
+    }
+    
     mutating func mapping(map: Map) {
         jeonbuk <- map["jeonbuk"]
         gangwon <- map["gangwon"]

@@ -18,7 +18,7 @@ struct ConditionSettingSerive : APIManager, Requestable {
     var conditionURL = url("/conds")//url 상세주소
     let headers: HTTPHeaders = [
         "Content-Type" : "application/json",
-        "Authorization" : UserDefaults.standard.string(forKey: "token") as! String
+        "Authorization" : UserDefaults.standard.string(forKey: "token") ?? ""
     ]
     
     func getFitConditionInfo(cond_idx : Int, completion: @escaping(FitConditionResponse) -> Void) {

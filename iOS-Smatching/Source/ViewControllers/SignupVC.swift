@@ -80,6 +80,7 @@ class SignupVC: UIViewController, UITextFieldDelegate {
     
     @IBAction func signup(_ sender: Any) {
         UserService.shared.signUp(nickname: nicknameTxtField.text!, email: emailTxtField.text!, password: passwdTxtField1.text!){
+          
         }
         self.performSegue(withIdentifier: "signupSegue", sender: nil)
         

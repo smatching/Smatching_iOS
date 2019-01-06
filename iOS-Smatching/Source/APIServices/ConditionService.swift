@@ -18,14 +18,14 @@ struct ConditionService : APIManager, Requestable {
     var conditionURL = url("/user/cond")//url 상세주소
     let headers: HTTPHeaders = [
         "Content-Type" : "application/json",
-        "Authorization" : UserDefaults.standard.string(forKey: "token") as! String
+        "Authorization" : UserDefaults.standard.string(forKey: "token") ?? ""
         ]
     
         //맞춤조건 알람 ON OFF
         func putAlarmSetting(condIdx : Int ,completion : @escaping(CommonResponse) -> Void) {
     
             let headers: HTTPHeaders = [
-                "Authorization" : UserDefaults.standard.string(forKey: "token") as! String,
+                "Authorization" : UserDefaults.standard.string(forKey: "token") ?? "",
                 "Client" : "iOS"
             ]
     

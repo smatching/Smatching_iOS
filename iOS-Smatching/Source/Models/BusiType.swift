@@ -31,6 +31,19 @@ struct BusiType: Mappable {
     init?(map: Map) {
     }
     
+    func getBusiTypeDic(busiType: BusiType) -> [String: Bool] {
+        var body = [String: Bool]()
+        body.updateValue(busiType.sole!, forKey: "sole")
+        body.updateValue(busiType.small!, forKey: "small")
+        body.updateValue(busiType.big!, forKey: "big")
+        body.updateValue(busiType.pre!, forKey: "pre")
+        body.updateValue(busiType.midsmall!, forKey: "midsmall")
+        body.updateValue(busiType.midbig!, forKey: "midbig")
+        body.updateValue(busiType.tradi!, forKey: "tradi")
+        
+        return body
+        
+    }
     mutating func mapping(map: Map) {
         sole <- map["sole"]
         small <- map["small"]

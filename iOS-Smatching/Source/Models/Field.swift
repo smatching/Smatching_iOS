@@ -62,6 +62,35 @@ struct Field : Mappable{
     init?(map: Map) {
         
     }
+    
+    func getFieldDic(field: Field) -> [String: Bool] {
+        var body = [String: Bool]()
+        body.updateValue(field.a!, forKey: "a")
+        body.updateValue(field.b!, forKey: "b")
+        body.updateValue(field.c!, forKey: "c")
+        body.updateValue(field.d!, forKey: "d")
+        body.updateValue(field.e!, forKey: "e")
+        body.updateValue(field.f!, forKey: "f")
+        body.updateValue(field.g!, forKey: "g")
+        body.updateValue(field.h!, forKey: "h")
+        body.updateValue(field.i!, forKey: "i")
+        body.updateValue(field.j!, forKey: "j")
+        body.updateValue(field.k!, forKey: "k")
+        body.updateValue(field.l!, forKey: "l")
+        body.updateValue(field.m!, forKey: "m")
+        body.updateValue(field.n!, forKey: "n")
+        body.updateValue(field.o!, forKey: "o")
+        body.updateValue(field.p!, forKey: "p")
+        body.updateValue(field.q!, forKey: "q")
+        body.updateValue(field.r!, forKey: "r")
+        body.updateValue(field.s!, forKey: "s")
+        body.updateValue(field.t!, forKey: "t")
+        body.updateValue(field.u!, forKey: "u")
+        body.updateValue(field.v!, forKey: "v")
+        
+        return body
+    }
+    
     mutating func mapping(map: Map) {
         a <- map["a"]
         b <- map["b"]

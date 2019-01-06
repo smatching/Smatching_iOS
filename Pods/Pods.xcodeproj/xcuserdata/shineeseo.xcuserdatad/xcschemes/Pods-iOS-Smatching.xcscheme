@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6CEBE5EF504021FA412445FB0170B316"
+               BlueprintIdentifier = "0C2998F7D81842EAAA862C0830006119"
                BuildableName = "Pods_iOS_Smatching.framework"
                BlueprintName = "Pods-iOS-Smatching"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6CEBE5EF504021FA412445FB0170B316"
+            BlueprintIdentifier = "0C2998F7D81842EAAA862C0830006119"
             BuildableName = "Pods_iOS_Smatching.framework"
             BlueprintName = "Pods-iOS-Smatching"
             ReferencedContainer = "container:Pods.xcodeproj">

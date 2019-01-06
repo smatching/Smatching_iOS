@@ -33,6 +33,20 @@ struct ExcCategory: Mappable {
     init?(map: Map) {
     }
     
+    func getExcCategoryDic(excCategory: ExcCategory) -> [String: Bool] {
+        var body = [String: Bool]()
+        body.updateValue(excCategory.loan!, forKey: "loan")
+        body.updateValue(excCategory.global!, forKey: "global")
+        body.updateValue(excCategory.edu!, forKey: "edu")
+        body.updateValue(excCategory.know!, forKey: "know")
+        body.updateValue(excCategory.place!, forKey: "place")
+        body.updateValue(excCategory.make!, forKey: "make")
+        body.updateValue(excCategory.local!, forKey: "local")
+        body.updateValue(excCategory.gov!, forKey: "gov")
+        return body
+        
+    }
+    
     mutating func mapping(map: Map) {
         loan <- map["loan"]
         edu <- map["edu"]

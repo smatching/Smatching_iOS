@@ -31,8 +31,20 @@ struct Advantage: Mappable {
         
     }
     
-    
     init?(map: Map) {
+    }
+    
+    func getAdvantageDic(advantage: Advantage) -> [String: Bool] {
+        var body = [String: Bool]()
+        body.updateValue(advantage.sole!, forKey: "sole")
+        body.updateValue(advantage.univ!, forKey: "univ")
+        body.updateValue(advantage.woman!, forKey: "woman")
+        body.updateValue(advantage.social!, forKey: "social")
+        body.updateValue(advantage.disabled!, forKey: "disabled")
+        body.updateValue(advantage.togather!, forKey: "togather")
+        body.updateValue(advantage.fourth!, forKey: "fourth")
+        body.updateValue(advantage.retry!, forKey: "retry")
+        return body
     }
     
     mutating func mapping(map: Map) {

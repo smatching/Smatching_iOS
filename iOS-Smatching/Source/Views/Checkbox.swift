@@ -13,7 +13,7 @@ protocol CheckBoxDelegate {
 
 class Checkbox: UIButton {
         // Images
-        let checkedImage = UIImage(named: "icn_checkbox_white")! as UIImage
+        let checkedImage = UIImage(named: "icn_checkbox_blue")! as UIImage
         let uncheckedImage = UIImage(named: "icn_emptybox")! as UIImage
     
         var delegate: CheckBoxDelegate?
