@@ -10,7 +10,7 @@ import UIKit
 
 class SmatchingListVC: UIViewController,CheckBoxDelegate {
     
-    @IBOutlet weak var STACKVIEWCONST: NSLayoutConstraint!
+    @IBOutlet weak var contentViewHeightConstraint: NSLayoutConstraint!
     
     var flag = 0
     
@@ -29,10 +29,7 @@ class SmatchingListVC: UIViewController,CheckBoxDelegate {
     @IBOutlet weak var conditionTitle: UILabel!
     
     
-    @IBOutlet weak var upBtn: UIButton!
-    @IBOutlet weak var downBtn: UIButton!
-    @IBOutlet weak var hideViewBtn: UIImageView!
-    @IBOutlet weak var showViewBtn: UIImageView!
+    @IBOutlet weak var showListBtn: UIButton!
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var alignmentLabel: UILabel!
     @IBOutlet weak var noticeTableView: UITableView!
@@ -98,42 +95,29 @@ class SmatchingListVC: UIViewController,CheckBoxDelegate {
         }
     }
     func showView() {
-        upBtn.isHidden = false
-        downBtn.isHidden = true
-        
-        showViewBtn.isHidden = true
-        hideViewBtn.isHidden = false
-        self.contentView.transform = CGAffineTransform.identity
-        UIView.animate(withDuration: 1.0, animations: ({
-            self.STACKVIEWCONST.constant = 317
+        UIView.animate(withDuration: 0.2, animations: ({
+            self.contentViewHeightConstraint.constant = 317
+            self.view.layoutIfNeeded()
         }))
     }
     
     func hideView() {
-        upBtn.isHidden = true
-        downBtn.isHidden = false
-        showViewBtn.isHidden = false
-        hideViewBtn.isHidden = true
-        UIView.animate(withDuration: 1.0, animations: ({
+        UIView.animate(withDuration: 0.2, animations: ({
             self.contentView.alpha  = 1;
         }))
-        self.contentView.transform = CGAffineTransform(scaleX: 0, y: -self.contentView.frame.height)
-        UIView.animate(withDuration: 1.0, animations: ({
-            self.STACKVIEWCONST.constant = 43
+        UIView.animate(withDuration: 0.2, animations: ({
+            self.contentViewHeightConstraint.constant = 0
+            self.view.layoutIfNeeded()
         }))
         
     }
     
     func initView() {
-        
-        upBtn.isHidden = false
-        downBtn.isHidden = true
-        showViewBtn.isHidden = true
-        hideViewBtn.isHidden = false
-        self.contentView.transform = CGAffineTransform.identity
-        UIView.animate(withDuration: 1.0, animations: ({
-            self.STACKVIEWCONST.constant = 317
-        }))
+        contentViewHeightConstraint.constant = 0
+//        self.contentView.transform = CGAffineTransform.identity
+//        UIView.animate(withDuration: 1.0, animations: ({
+//            self.contentViewHeightConstraint.constant = 317
+//        }))
     }
     
     override func didReceiveMemoryWarning() {
