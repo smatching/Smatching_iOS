@@ -28,8 +28,8 @@ class SelectRegionDialog: UIView {
          removeFromSuperview();
     }
    
+    
     @IBAction func okBtnPressed(_ sender: Any) {
-        removeFromSuperview();
     }
  
 

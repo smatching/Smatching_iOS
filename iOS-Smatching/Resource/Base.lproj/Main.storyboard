@@ -390,121 +390,6 @@
                                     <action selector="showConditionView:" destination="K77-xo-hr5" eventType="touchUpInside" id="jvT-PJ-78f"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="총 76건" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fU-Sj-RpX">
-                                <rect key="frame" x="31.5" y="116" width="39" height="15"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="15" id="0ze-KH-jOH"/>
-                                    <constraint firstAttribute="width" constant="39" id="8bC-dc-3GF"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="최신등록순" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fP-Ov-gr7">
-                                <rect key="frame" x="267.5" y="116" width="52" height="15"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="15" id="Ak9-UM-d2Z"/>
-                                    <constraint firstAttribute="width" constant="52" id="WC5-1S-AxV"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LBL-fC-hB3">
-                                <rect key="frame" x="0.0" y="142" width="375" height="524"/>
-                                <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="375" id="P1k-cu-7dg"/>
-                                </constraints>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="NoticeCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NoticeCell" rowHeight="73" id="VDC-5s-K64" customClass="NoticeCell" customModule="iOS_Smatching" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="73"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VDC-5s-K64" id="91I-jo-L6G">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="72.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ejb-PA-OhH">
-                                                    <rect key="frame" x="25.5" y="1.5" width="324" height="71"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="대한무역투자진흥공사" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z1o-bw-wdl">
-                                                            <rect key="frame" x="5" y="11" width="274" height="14"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="274" id="B03-Pm-eFc"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2019년 말레이시아 쿠알라룸푸르 할랄 전시회(MIHAS) 한국관 참가기업 모집 공고" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcT-jC-g0L">
-                                                            <rect key="frame" x="5" y="31" width="274" height="32"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="32" id="gmy-Yl-TFa"/>
-                                                                <constraint firstAttribute="width" constant="274" id="lig-vj-q3B"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D-21" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bjd-yI-jxI">
-                                                            <rect key="frame" x="290" y="13" width="23" height="12"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z0F-I1-Ldg">
-                                                            <rect key="frame" x="289.5" y="37" width="20" height="22"/>
-                                                            <state key="normal" image="icn_scrap_grey"/>
-                                                            <connections>
-                                                                <action selector="doScrap:" destination="VDC-5s-K64" eventType="touchUpInside" id="j0N-KE-9Pg"/>
-                                                            </connections>
-                                                        </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IIh-jS-tKz">
-                                                            <rect key="frame" x="289.5" y="37" width="20" height="20"/>
-                                                            <state key="normal" image="icn_scrap_yellow"/>
-                                                        </button>
-                                                    </subviews>
-                                                    <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="IIh-jS-tKz" secondAttribute="bottom" constant="14" id="3SY-BK-5p5"/>
-                                                        <constraint firstItem="Bjd-yI-jxI" firstAttribute="top" secondItem="ejb-PA-OhH" secondAttribute="top" constant="13" id="9Eb-0z-an3"/>
-                                                        <constraint firstAttribute="height" constant="71" id="Aq0-a8-ACC"/>
-                                                        <constraint firstAttribute="trailing" secondItem="z0F-I1-Ldg" secondAttribute="trailing" constant="14.67" id="Ddy-jb-ith"/>
-                                                        <constraint firstItem="z1o-bw-wdl" firstAttribute="top" secondItem="ejb-PA-OhH" secondAttribute="top" constant="10.67" id="Ewo-CX-uei"/>
-                                                        <constraint firstAttribute="bottom" secondItem="z0F-I1-Ldg" secondAttribute="bottom" constant="12" id="GHS-08-4FC"/>
-                                                        <constraint firstAttribute="bottom" secondItem="kcT-jC-g0L" secondAttribute="bottom" constant="8" id="Iab-NI-Kfz"/>
-                                                        <constraint firstAttribute="width" constant="324" id="P8h-b2-zWi"/>
-                                                        <constraint firstItem="z0F-I1-Ldg" firstAttribute="leading" secondItem="kcT-jC-g0L" secondAttribute="trailing" constant="10.33" id="bGW-Is-PbE"/>
-                                                        <constraint firstItem="kcT-jC-g0L" firstAttribute="top" secondItem="z1o-bw-wdl" secondAttribute="bottom" constant="6" id="dmx-7u-Gxe"/>
-                                                        <constraint firstItem="z1o-bw-wdl" firstAttribute="leading" secondItem="ejb-PA-OhH" secondAttribute="leading" constant="5" id="eK7-tE-NF1"/>
-                                                        <constraint firstItem="Bjd-yI-jxI" firstAttribute="leading" secondItem="z1o-bw-wdl" secondAttribute="trailing" constant="11" id="esG-pF-zF1"/>
-                                                        <constraint firstItem="IIh-jS-tKz" firstAttribute="leading" secondItem="kcT-jC-g0L" secondAttribute="trailing" constant="10.33" id="evA-yO-Y2W"/>
-                                                        <constraint firstItem="IIh-jS-tKz" firstAttribute="top" secondItem="Bjd-yI-jxI" secondAttribute="bottom" constant="12" id="gcA-7L-gG9"/>
-                                                        <constraint firstItem="kcT-jC-g0L" firstAttribute="leading" secondItem="ejb-PA-OhH" secondAttribute="leading" constant="5" id="gda-Xg-JYA"/>
-                                                        <constraint firstItem="z0F-I1-Ldg" firstAttribute="top" secondItem="Bjd-yI-jxI" secondAttribute="bottom" constant="12" id="hAg-dV-dAl"/>
-                                                        <constraint firstAttribute="trailing" secondItem="Bjd-yI-jxI" secondAttribute="trailing" constant="11" id="sSS-KQ-xjJ"/>
-                                                        <constraint firstAttribute="trailing" secondItem="IIh-jS-tKz" secondAttribute="trailing" constant="14.67" id="yrf-pc-bLj"/>
-                                                    </constraints>
-                                                </view>
-                                            </subviews>
-                                            <color key="backgroundColor" red="0.92549019607843142" green="0.92549019607843142" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="ejb-PA-OhH" secondAttribute="trailing" constant="25.329999999999998" id="U5S-vg-o5D"/>
-                                                <constraint firstItem="ejb-PA-OhH" firstAttribute="top" secondItem="91I-jo-L6G" secondAttribute="top" constant="1.6699999999999999" id="u2X-42-RuN"/>
-                                                <constraint firstItem="ejb-PA-OhH" firstAttribute="leading" secondItem="91I-jo-L6G" secondAttribute="leading" constant="25.670000000000002" id="uId-cB-PMG"/>
-                                                <constraint firstAttribute="bottom" secondItem="ejb-PA-OhH" secondAttribute="bottom" id="wY2-Cn-uKM"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="ddayLabel" destination="Bjd-yI-jxI" id="FWS-aV-uXl"/>
-                                            <outlet property="institutionLabel" destination="z1o-bw-wdl" id="FGU-zO-VHa"/>
-                                            <outlet property="scrapActiveBtn" destination="IIh-jS-tKz" id="xU4-ps-m7U"/>
-                                            <outlet property="scrapDeactiveBtn" destination="z0F-I1-Ldg" id="PK1-ht-rBY"/>
-                                            <outlet property="titleLabel" destination="kcT-jC-g0L" id="TKp-Yg-3OU"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K1Z-cl-XwE">
                                 <rect key="frame" x="32.5" y="99" width="310" height="229"/>
                                 <subviews>
@@ -973,6 +858,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iAT-HT-z7O">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <connections>
+                                    <segue destination="9Ch-C8-d7z" kind="embed" id="nhI-dO-iaw"/>
+                                </connections>
+                            </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4oZ-ic-hc8">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <subviews>
@@ -984,7 +875,7 @@
                                         </constraints>
                                         <state key="normal" title="Button" image="btn_addsmatching_canclick"/>
                                         <connections>
-                                            <segue destination="9Ch-C8-d7z" kind="presentation" id="qkw-Lb-YsK"/>
+                                            <action selector="showConditionMenu:" destination="6nE-FD-D2l" eventType="touchUpInside" id="NPB-dV-PtH"/>
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="txt_explain" translatesAutoresizingMaskIntoConstraints="NO" id="mPd-Ai-SM5">
@@ -1017,18 +908,33 @@
                         </subviews>
                         <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="iAT-HT-z7O" firstAttribute="top" secondItem="tm3-0C-csN" secondAttribute="top" id="1VB-Zl-NKX"/>
+                            <constraint firstItem="iAT-HT-z7O" firstAttribute="leading" secondItem="tm3-0C-csN" secondAttribute="leading" id="1f5-Oh-p6c"/>
+                            <constraint firstItem="iAT-HT-z7O" firstAttribute="centerX" secondItem="tm3-0C-csN" secondAttribute="centerX" id="6qb-VK-Ib0"/>
+                            <constraint firstItem="iAT-HT-z7O" firstAttribute="centerY" secondItem="tm3-0C-csN" secondAttribute="centerY" id="Fow-Xy-3tM"/>
+                            <constraint firstItem="iAT-HT-z7O" firstAttribute="bottom" secondItem="tm3-0C-csN" secondAttribute="bottom" id="IDU-Lb-hId"/>
                             <constraint firstItem="4oZ-ic-hc8" firstAttribute="bottom" secondItem="tm3-0C-csN" secondAttribute="bottom" id="KOe-qG-Wj4"/>
                             <constraint firstItem="4oZ-ic-hc8" firstAttribute="trailing" secondItem="tm3-0C-csN" secondAttribute="trailing" id="S6p-j2-d3R"/>
                             <constraint firstItem="4oZ-ic-hc8" firstAttribute="top" secondItem="tm3-0C-csN" secondAttribute="top" id="bK3-lY-tpp"/>
                             <constraint firstItem="4oZ-ic-hc8" firstAttribute="leading" secondItem="tm3-0C-csN" secondAttribute="leading" id="bkL-xX-CQj"/>
+                            <constraint firstItem="iAT-HT-z7O" firstAttribute="trailing" secondItem="tm3-0C-csN" secondAttribute="trailing" id="d2K-FP-90X"/>
                             <constraint firstItem="4oZ-ic-hc8" firstAttribute="centerX" secondItem="tm3-0C-csN" secondAttribute="centerX" id="fB1-BW-xEo"/>
                             <constraint firstItem="4oZ-ic-hc8" firstAttribute="centerY" secondItem="tm3-0C-csN" secondAttribute="centerY" id="mAD-Qv-4YJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tm3-0C-csN"/>
                     </view>
-                    <navigationItem key="navigationItem" title="맞춤지원" largeTitleDisplayMode="always" id="V50-kw-f9c"/>
+                    <navigationItem key="navigationItem" title="맞춤지원" largeTitleDisplayMode="always" id="V50-kw-f9c">
+                        <barButtonItem key="leftBarButtonItem" image="btnBack" style="done" id="rVh-hF-497">
+                            <color key="tintColor" red="0.41960784309999999" green="0.41960784309999999" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="backBtnPressed:" destination="6nE-FD-D2l" id="Lhx-1g-b2L"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="조건삭제" id="YqE-4o-BNN"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="firstView" destination="4oZ-ic-hc8" id="Emc-f7-fEH"/>
+                        <outlet property="secondView" destination="iAT-HT-z7O" id="VgA-D9-Ys2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x40-aB-5TP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1375,51 +1281,6 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E8N-h1-ZIf">
-                                                <rect key="frame" x="32" y="155" width="310" height="307"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="나에게 꼭 맞는 지원사업" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aSA-2y-RQ3">
-                                                        <rect key="frame" x="79.5" y="178" width="151.5" height="19.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ogy-HP-sAs">
-                                                        <rect key="frame" x="96.5" y="209" width="117.5" height="29"/>
-                                                        <string key="text">맞춤조건을 최대 7개까지
-설정하실 수 있습니다.</string>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9K-zX-nTP">
-                                                        <rect key="frame" x="121" y="68" width="69" height="69"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" secondItem="z9K-zX-nTP" secondAttribute="height" multiplier="1:1" id="8OS-7s-Er1"/>
-                                                        </constraints>
-                                                        <state key="normal" image="btn_addsmatching_canclick"/>
-                                                        <connections>
-                                                            <segue destination="9Ch-C8-d7z" kind="presentation" id="aa2-3K-Glj"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstItem="Ogy-HP-sAs" firstAttribute="centerX" secondItem="E8N-h1-ZIf" secondAttribute="centerX" id="I2q-GQ-cEq"/>
-                                                    <constraint firstAttribute="width" secondItem="E8N-h1-ZIf" secondAttribute="height" multiplier="310:307" id="IQy-y5-QRl"/>
-                                                    <constraint firstItem="z9K-zX-nTP" firstAttribute="leading" secondItem="E8N-h1-ZIf" secondAttribute="leading" constant="121" id="JJz-Wg-C7H"/>
-                                                    <constraint firstItem="z9K-zX-nTP" firstAttribute="top" secondItem="E8N-h1-ZIf" secondAttribute="top" constant="68" id="TUN-Az-vdf"/>
-                                                    <constraint firstItem="Ogy-HP-sAs" firstAttribute="top" secondItem="aSA-2y-RQ3" secondAttribute="bottom" constant="11.5" id="bk0-je-Zr7"/>
-                                                    <constraint firstItem="aSA-2y-RQ3" firstAttribute="centerX" secondItem="E8N-h1-ZIf" secondAttribute="centerX" id="ffz-K4-dB0"/>
-                                                    <constraint firstAttribute="trailing" secondItem="z9K-zX-nTP" secondAttribute="trailing" constant="120" id="hA1-aO-emm"/>
-                                                    <constraint firstItem="aSA-2y-RQ3" firstAttribute="top" secondItem="z9K-zX-nTP" secondAttribute="bottom" constant="41" id="srb-Sj-bQV"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="10"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jzs-Gw-5rr">
                                                 <rect key="frame" x="32" y="155" width="328" height="327"/>
                                                 <subviews>
@@ -1433,15 +1294,22 @@
                                                         <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="000개" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcd-6a-8Wb">
-                                                        <rect key="frame" x="25" y="47" width="60" height="24"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="를 확인해보세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Umh-Pu-ICA">
+                                                        <rect key="frame" x="68.5" y="51.5" width="101.5" height="19.5"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00개" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcd-6a-8Wb">
+                                                        <rect key="frame" x="25" y="47" width="42.5" height="24"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kMU-ld-ekP">
-                                                        <rect key="frame" x="26" y="71" width="53" height="2"/>
+                                                        <rect key="frame" x="25.5" y="70.5" width="43" height="2"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </view>
@@ -1512,13 +1380,6 @@
                                                     </tableView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="님을 위한 스매칭" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qZ-mL-eIU">
                                                         <rect key="frame" x="144" y="23" width="105.5" height="18"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                        <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="를 확인해보세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Umh-Pu-ICA">
-                                                        <rect key="frame" x="85" y="51" width="101.5" height="19.5"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                         <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1775,7 +1636,6 @@
                         <outlet property="noticeAllTableView" destination="LCJ-Th-yoq" id="1w9-wb-bWp"/>
                         <outlet property="noticeListCnt" destination="hcd-6a-8Wb" id="GFT-TL-bF4"/>
                         <outlet property="noticeTableView" destination="jUn-MG-nsh" id="r1V-B7-lsR"/>
-                        <outlet property="pageControl" destination="pQi-EM-d2c" id="Zwx-3W-YYf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Xb-Ce-dqE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1846,11 +1706,22 @@
                                                 </constraints>
                                             </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="맞춤조건1" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xat-C5-26U">
-                                                <rect key="frame" x="42.5" y="49" width="292.5" height="22"/>
+                                                <rect key="frame" x="42.5" y="49" width="75" height="22"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kXz-fM-xR6">
+                                                <rect key="frame" x="316.5" y="54" width="10" height="10"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="10" id="QWY-eC-Fj4"/>
+                                                    <constraint firstAttribute="height" constant="10" id="i9p-0q-5OU"/>
+                                                </constraints>
+                                                <state key="normal" image="btn_delete"/>
+                                                <connections>
+                                                    <action selector="clearTitle:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="mSv-Db-tO8"/>
+                                                </connections>
+                                            </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btn_custom_must" translatesAutoresizingMaskIntoConstraints="NO" id="Kbt-kI-eMJ">
                                                 <rect key="frame" x="32.5" y="95" width="8" height="8"/>
                                                 <constraints>
@@ -1925,39 +1796,6 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gaj-Nv-Rdk">
-                                                <rect key="frame" x="37" y="201" width="20" height="8"/>
-                                                <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="img_rightround" translatesAutoresizingMaskIntoConstraints="NO" id="Mzb-dc-kaR">
-                                                        <rect key="frame" x="0.0" y="0.0" width="10" height="32"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    </imageView>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="img_leftround" translatesAutoresizingMaskIntoConstraints="NO" id="aLZ-GA-cw3">
-                                                        <rect key="frame" x="70" y="0.0" width="10" height="32"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    </imageView>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="img_square" translatesAutoresizingMaskIntoConstraints="NO" id="u5K-Ox-xGU">
-                                                        <rect key="frame" x="10" y="0.0" width="60" height="32"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    </imageView>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ffy-iv-5fF">
-                                                        <rect key="frame" x="54" y="11" width="10" height="10"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <state key="normal" image="btn_delete"/>
-                                                    </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="서울" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKo-cf-6if">
-                                                        <rect key="frame" x="16" y="10" width="22" height="13"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="Gaj-Nv-Rdk" secondAttribute="height" multiplier="5:2" id="NzX-NX-Kqq"/>
-                                                </constraints>
-                                            </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3NL-Ce-Z7b">
                                                 <rect key="frame" x="25.5" y="209" width="324" height="0.5"/>
                                                 <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1978,7 +1816,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="taO-ZL-lWP">
                                                 <rect key="frame" x="48.5" y="261" width="278" height="70"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" restorationIdentifier="twenty_less" translatesAutoresizingMaskIntoConstraints="NO" id="eI5-MP-WCe" customClass="ConditionButton" customModule="iOS_Smatching" customModuleProvider="target">
+                                                    <view contentMode="scaleToFill" restorationIdentifier="ageView1" translatesAutoresizingMaskIntoConstraints="NO" id="eI5-MP-WCe" customClass="CustomViewBorder" customModule="iOS_Smatching" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="80" height="70"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="만 20세 미만" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5dw-UZ-6fk">
@@ -1990,7 +1828,7 @@
                                                             </label>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <accessibility key="accessibilityConfiguration" identifier="twenty_less">
+                                                        <accessibility key="accessibilityConfiguration" identifier="ageView1">
                                                             <accessibilityTraits key="traits" none="YES"/>
                                                             <bool key="isElement" value="YES"/>
                                                         </accessibility>
@@ -2009,11 +1847,8 @@
                                                                 <real key="value" value="1"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <action selector="conditionBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="r68-Dn-09j"/>
-                                                        </connections>
                                                     </view>
-                                                    <view contentMode="scaleToFill" restorationIdentifier="twenty_forty" translatesAutoresizingMaskIntoConstraints="NO" id="xDN-Ai-xxK" customClass="ConditionButton" customModule="iOS_Smatching" customModuleProvider="target">
+                                                    <view contentMode="scaleToFill" restorationIdentifier="ageView2" translatesAutoresizingMaskIntoConstraints="NO" id="xDN-Ai-xxK" customClass="CustomViewBorder" customModule="iOS_Smatching" customModuleProvider="target">
                                                         <rect key="frame" x="99" y="0.0" width="80" height="70"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJE-rL-v8O">
@@ -2028,7 +1863,7 @@
                                                             </label>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <accessibility key="accessibilityConfiguration" identifier="twenty_forty">
+                                                        <accessibility key="accessibilityConfiguration" identifier="ageView2">
                                                             <bool key="isElement" value="YES"/>
                                                         </accessibility>
                                                         <constraints>
@@ -2046,11 +1881,8 @@
                                                                 <real key="value" value="1"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <action selector="conditionBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="et1-X4-ZqV"/>
-                                                        </connections>
                                                     </view>
-                                                    <view contentMode="scaleToFill" restorationIdentifier="forty_more" translatesAutoresizingMaskIntoConstraints="NO" id="mWi-cI-o4G" customClass="ConditionButton" customModule="iOS_Smatching" customModuleProvider="target">
+                                                    <view contentMode="scaleToFill" restorationIdentifier="ageView3" translatesAutoresizingMaskIntoConstraints="NO" id="mWi-cI-o4G" customClass="CustomViewBorder" customModule="iOS_Smatching" customModuleProvider="target">
                                                         <rect key="frame" x="198" y="0.0" width="80" height="70"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="만 20세 미만" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8f8-eW-fcq">
@@ -2062,7 +1894,7 @@
                                                             </label>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <accessibility key="accessibilityConfiguration" identifier="forty_more">
+                                                        <accessibility key="accessibilityConfiguration" identifier="ageView3">
                                                             <bool key="isElement" value="YES"/>
                                                         </accessibility>
                                                         <constraints>
@@ -2080,9 +1912,6 @@
                                                                 <real key="value" value="1"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <action selector="conditionBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="2qx-U7-zXc"/>
-                                                        </connections>
                                                     </view>
                                                 </subviews>
                                                 <constraints>
@@ -2147,7 +1976,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="OZM-QS-Qbs">
                                                         <rect key="frame" x="0.0" y="0.0" width="300" height="36"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" restorationIdentifier="zero_one" translatesAutoresizingMaskIntoConstraints="NO" id="N8U-QJ-JJs" customClass="ConditionButton" customModule="iOS_Smatching" customModuleProvider="target">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N8U-QJ-JJs" customClass="CustomViewBorder" customModule="iOS_Smatching" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="69" height="36"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0~1년" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqO-oD-wDn">
@@ -2159,7 +1988,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <accessibility key="accessibilityConfiguration" identifier="zero_one"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="periodView1"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="69" id="Tzu-kU-zSa"/>
                                                                     <constraint firstAttribute="height" constant="36" id="oRG-b1-eoy"/>
@@ -2175,11 +2004,8 @@
                                                                         <color key="value" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
-                                                                <connections>
-                                                                    <action selector="conditionBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="hAN-4E-ANq"/>
-                                                                </connections>
                                                             </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FvG-we-yMQ" customClass="ConditionButton" customModule="iOS_Smatching" customModuleProvider="target">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FvG-we-yMQ" customClass="CustomViewBorder" customModule="iOS_Smatching" customModuleProvider="target">
                                                                 <rect key="frame" x="77" y="0.0" width="69" height="36"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1~2년" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hjw-VS-HnO">
@@ -2191,7 +2017,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <accessibility key="accessibilityConfiguration" identifier="one_two"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="periodView2"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="36" id="6vp-Iz-bQq"/>
                                                                     <constraint firstAttribute="width" constant="69" id="cbN-gp-La6"/>
@@ -2207,11 +2033,8 @@
                                                                         <color key="value" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
-                                                                <connections>
-                                                                    <action selector="conditionBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="Q1f-JL-CLm"/>
-                                                                </connections>
                                                             </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7PP-qX-UZK" customClass="ConditionButton" customModule="iOS_Smatching" customModuleProvider="target">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7PP-qX-UZK" customClass="CustomViewBorder" customModule="iOS_Smatching" customModuleProvider="target">
                                                                 <rect key="frame" x="154" y="0.0" width="69" height="36"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2~3년" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwf-2Q-Aqc">
@@ -2223,7 +2046,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <accessibility key="accessibilityConfiguration" identifier="two_three"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="periodView3"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="69" id="1M3-oS-2jM"/>
                                                                 </constraints>
@@ -2238,11 +2061,8 @@
                                                                         <color key="value" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
-                                                                <connections>
-                                                                    <action selector="conditionBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="62M-vf-IQ7"/>
-                                                                </connections>
                                                             </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gh9-T8-GiI" customClass="ConditionButton" customModule="iOS_Smatching" customModuleProvider="target">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gh9-T8-GiI" customClass="CustomViewBorder" customModule="iOS_Smatching" customModuleProvider="target">
                                                                 <rect key="frame" x="231" y="0.0" width="69" height="36"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3~4년" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXW-a2-ket">
@@ -2254,7 +2074,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <accessibility key="accessibilityConfiguration" identifier="three_four"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="periodView4"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="69" id="EFp-jw-NVl"/>
                                                                 </constraints>
@@ -2269,9 +2089,6 @@
                                                                         <color key="value" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
-                                                                <connections>
-                                                                    <action selector="conditionBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="Vlm-YK-Q5g"/>
-                                                                </connections>
                                                             </view>
                                                         </subviews>
                                                         <constraints>
@@ -2289,7 +2106,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="KYf-Qe-yC1">
                                                         <rect key="frame" x="0.0" y="44" width="300" height="36"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bDR-kE-eho" customClass="ConditionButton" customModule="iOS_Smatching" customModuleProvider="target">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bDR-kE-eho" customClass="CustomViewBorder" customModule="iOS_Smatching" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="69" height="36"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4~5년" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wpm-fL-dWs">
@@ -2301,7 +2118,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <accessibility key="accessibilityConfiguration" identifier="four_five"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="periodView5"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="69" id="a4B-ma-rpX"/>
                                                                     <constraint firstAttribute="height" constant="36" id="zjC-an-y16"/>
@@ -2317,11 +2134,8 @@
                                                                         <color key="value" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
-                                                                <connections>
-                                                                    <action selector="conditionBtnClick:" destination="9Ch-C8-d7z" eventType="valueChanged" id="5ua-OU-Lef"/>
-                                                                </connections>
                                                             </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u9k-Nv-DO2" customClass="ConditionButton" customModule="iOS_Smatching" customModuleProvider="target">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u9k-Nv-DO2" customClass="CustomViewBorder" customModule="iOS_Smatching" customModuleProvider="target">
                                                                 <rect key="frame" x="77" y="0.0" width="69" height="36"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5~6년" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ztD-Vf-se2">
@@ -2333,7 +2147,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <accessibility key="accessibilityConfiguration" identifier="five_six"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="periodView6"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="36" id="D1s-ij-6Ad"/>
                                                                     <constraint firstAttribute="width" constant="69" id="rd1-Ce-cNc"/>
@@ -2349,11 +2163,8 @@
                                                                         <color key="value" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
-                                                                <connections>
-                                                                    <action selector="conditionBtnClick:" destination="9Ch-C8-d7z" eventType="valueChanged" id="8Ji-NF-fvI"/>
-                                                                </connections>
                                                             </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vwB-1Y-JTL" customClass="ConditionButton" customModule="iOS_Smatching" customModuleProvider="target">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vwB-1Y-JTL" customClass="CustomViewBorder" customModule="iOS_Smatching" customModuleProvider="target">
                                                                 <rect key="frame" x="154" y="0.0" width="69" height="36"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="6~7년" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZX-qY-aFE">
@@ -2365,7 +2176,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <accessibility key="accessibilityConfiguration" identifier="six_seven"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="periodView7"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="69" id="7VD-lt-tcq"/>
                                                                     <constraint firstAttribute="height" constant="36" id="zGO-33-rxl"/>
@@ -2381,11 +2192,8 @@
                                                                         <color key="value" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
-                                                                <connections>
-                                                                    <action selector="conditionBtnClick:" destination="9Ch-C8-d7z" eventType="valueChanged" id="Ecs-d3-9a1"/>
-                                                                </connections>
                                                             </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jZm-xo-ryS" customClass="ConditionButton" customModule="iOS_Smatching" customModuleProvider="target">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jZm-xo-ryS" customClass="CustomViewBorder" customModule="iOS_Smatching" customModuleProvider="target">
                                                                 <rect key="frame" x="231" y="0.0" width="69" height="36"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="7년 이상" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oa9-hg-942">
@@ -2397,7 +2205,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <accessibility key="accessibilityConfiguration" identifier="seven_more"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="periodView8"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="69" id="1ay-Yx-UL1"/>
                                                                     <constraint firstAttribute="height" constant="36" id="S3V-nb-xvc"/>
@@ -2413,9 +2221,6 @@
                                                                         <color key="value" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
-                                                                <connections>
-                                                                    <action selector="conditionBtnClick:" destination="9Ch-C8-d7z" eventType="valueChanged" id="F0s-Wo-Bsx"/>
-                                                                </connections>
                                                             </view>
                                                         </subviews>
                                                         <constraints>
@@ -2439,7 +2244,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="zKh-hJ-pV4">
                                                         <rect key="frame" x="0.0" y="88" width="300" height="36"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zJf-p2-ZgY" customClass="ConditionButton" customModule="iOS_Smatching" customModuleProvider="target">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zJf-p2-ZgY" customClass="CustomViewBorder" customModule="iOS_Smatching" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="69" height="36"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="예비창업자" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mFj-ux-sPg">
@@ -2451,7 +2256,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <accessibility key="accessibilityConfiguration" identifier="yet"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="periodView9"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="69" id="USS-lf-prO"/>
                                                                     <constraint firstAttribute="height" constant="36" id="kbc-gi-hKW"/>
@@ -2467,9 +2272,6 @@
                                                                         <color key="value" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
-                                                                <connections>
-                                                                    <action selector="conditionBtnClick:" destination="9Ch-C8-d7z" eventType="valueChanged" id="7OM-lV-xj0"/>
-                                                                </connections>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y0g-Fp-ILt">
                                                                 <rect key="frame" x="77" y="0.0" width="69" height="36"/>
@@ -2544,7 +2346,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="rai-8H-g0s">
                                                         <rect key="frame" x="0.0" y="0.0" width="300" height="36"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SDi-Ek-lX6" customClass="ConditionButton" customModule="iOS_Smatching" customModuleProvider="target">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SDi-Ek-lX6" customClass="CustomViewBorder" customModule="iOS_Smatching" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="94" height="36"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="중소기업" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5iv-6T-sCh">
@@ -2556,7 +2358,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <accessibility key="accessibilityConfiguration" identifier="midsmall"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="busiView1"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="94" id="8W1-Js-63E"/>
                                                                     <constraint firstAttribute="height" constant="36" id="QIG-PI-Pt2"/>
@@ -2572,11 +2374,8 @@
                                                                         <color key="value" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
-                                                                <connections>
-                                                                    <action selector="conditionBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="O19-Vh-b1E"/>
-                                                                </connections>
                                                             </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mRd-xT-4B7" customClass="ConditionButton" customModule="iOS_Smatching" customModuleProvider="target">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mRd-xT-4B7" customClass="CustomViewBorder" customModule="iOS_Smatching" customModuleProvider="target">
                                                                 <rect key="frame" x="103" y="0.0" width="94" height="36"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="중견기업" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yWg-K1-kOs">
@@ -2588,7 +2387,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <accessibility key="accessibilityConfiguration" identifier="midbig"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="busiView2"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="36" id="MVt-Ga-bCq"/>
                                                                     <constraint firstAttribute="width" constant="94" id="dFm-lF-xbo"/>
@@ -2604,11 +2403,8 @@
                                                                         <color key="value" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
-                                                                <connections>
-                                                                    <action selector="conditionBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="hOm-4V-hyE"/>
-                                                                </connections>
                                                             </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sjv-Hl-ka6" customClass="ConditionButton" customModule="iOS_Smatching" customModuleProvider="target">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sjv-Hl-ka6" customClass="CustomViewBorder" customModule="iOS_Smatching" customModuleProvider="target">
                                                                 <rect key="frame" x="206" y="0.0" width="94" height="36"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="대기업" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Af7-Kt-426">
@@ -2620,7 +2416,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <accessibility key="accessibilityConfiguration" identifier="big"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="busiView3"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="36" id="Vj0-zK-VTh"/>
                                                                     <constraint firstAttribute="width" constant="94" id="WCa-ap-3Au"/>
@@ -2636,9 +2432,6 @@
                                                                         <color key="value" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
-                                                                <connections>
-                                                                    <action selector="conditionBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="Sno-pH-nYH"/>
-                                                                </connections>
                                                             </view>
                                                         </subviews>
                                                         <constraints>
@@ -2659,7 +2452,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="3nd-iT-GDI">
                                                         <rect key="frame" x="0.0" y="45" width="300" height="36"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Swo-cH-LLI" customClass="ConditionButton" customModule="iOS_Smatching" customModuleProvider="target">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Swo-cH-LLI" customClass="CustomViewBorder" customModule="iOS_Smatching" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="94" height="36"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1인창조기업" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="395-Dh-eS9">
@@ -2671,7 +2464,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <accessibility key="accessibilityConfiguration" identifier="sole"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="busiView4"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="94" id="dTq-Ab-AR5"/>
                                                                     <constraint firstAttribute="height" constant="36" id="krv-UW-MlN"/>
@@ -2687,11 +2480,8 @@
                                                                         <color key="value" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
-                                                                <connections>
-                                                                    <action selector="conditionBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="Iai-hp-tOE"/>
-                                                                </connections>
                                                             </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Brw-ZT-rYc" customClass="ConditionButton" customModule="iOS_Smatching" customModuleProvider="target">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Brw-ZT-rYc" customClass="CustomViewBorder" customModule="iOS_Smatching" customModuleProvider="target">
                                                                 <rect key="frame" x="103" y="0.0" width="94" height="36"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="소상공인" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2cs-d2-vou">
@@ -2703,7 +2493,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <accessibility key="accessibilityConfiguration" identifier="small"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="busiView5"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="36" id="1rz-f7-m1q"/>
                                                                     <constraint firstAttribute="width" constant="94" id="xu3-bB-Mya"/>
@@ -2719,11 +2509,8 @@
                                                                         <color key="value" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
-                                                                <connections>
-                                                                    <action selector="conditionBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="sHC-XC-VUv"/>
-                                                                </connections>
                                                             </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9tb-VW-Cmt" customClass="ConditionButton" customModule="iOS_Smatching" customModuleProvider="target">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9tb-VW-Cmt" customClass="CustomViewBorder" customModule="iOS_Smatching" customModuleProvider="target">
                                                                 <rect key="frame" x="206" y="0.0" width="94" height="36"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="전통시장" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nCK-62-3sv">
@@ -2735,7 +2522,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <accessibility key="accessibilityConfiguration" identifier="tradi"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="busiView6"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="94" id="6v8-9M-Pik"/>
                                                                     <constraint firstAttribute="height" constant="36" id="fXP-Vx-dqT"/>
@@ -2751,9 +2538,6 @@
                                                                         <color key="value" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
-                                                                <connections>
-                                                                    <action selector="conditionBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="adC-bM-fn3"/>
-                                                                </connections>
                                                             </view>
                                                         </subviews>
                                                         <constraints>
@@ -2773,7 +2557,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="Xki-BH-rQz">
                                                         <rect key="frame" x="0.0" y="90" width="300" height="36"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dtu-8O-AYj" customClass="ConditionButton" customModule="iOS_Smatching" customModuleProvider="target">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dtu-8O-AYj" customClass="CustomViewBorder" customModule="iOS_Smatching" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="94" height="36"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="예비창업자" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="822-tR-o5a">
@@ -2785,7 +2569,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <accessibility key="accessibilityConfiguration" identifier="pre"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="busiView7"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="36" id="7AA-Ec-aYr"/>
                                                                     <constraint firstAttribute="width" constant="94" id="yiC-ud-6sn"/>
@@ -2801,9 +2585,6 @@
                                                                         <color key="value" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
-                                                                <connections>
-                                                                    <action selector="conditionBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="JLI-X5-aIg"/>
-                                                                </connections>
                                                             </view>
                                                             <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w3i-N3-Dqa">
                                                                 <rect key="frame" x="103" y="0.0" width="94" height="36"/>
@@ -3006,7 +2787,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="FED-4O-4P2">
                                                         <rect key="frame" x="0.0" y="0.0" width="300" height="36"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" restorationIdentifier="retry" translatesAutoresizingMaskIntoConstraints="NO" id="XXq-cU-BRQ" customClass="ConditionButton" customModule="iOS_Smatching" customModuleProvider="target">
+                                                            <view contentMode="scaleToFill" restorationIdentifier="advantageView1" translatesAutoresizingMaskIntoConstraints="NO" id="XXq-cU-BRQ" customClass="CustomViewBorder" customModule="iOS_Smatching" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="94" height="36"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="재도전기업" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyu-cX-rJN">
@@ -3018,7 +2799,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <accessibility key="accessibilityConfiguration" identifier="retry"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="advantageView1"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="94" id="2Cg-BM-mJq"/>
                                                                     <constraint firstAttribute="height" constant="36" id="xLG-Pr-Tbe"/>
@@ -3034,11 +2815,8 @@
                                                                         <color key="value" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
-                                                                <connections>
-                                                                    <action selector="conditionBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="cwW-Oe-geh"/>
-                                                                </connections>
                                                             </view>
-                                                            <view contentMode="scaleToFill" restorationIdentifier="woman" translatesAutoresizingMaskIntoConstraints="NO" id="G8P-Tf-fxK" customClass="ConditionButton" customModule="iOS_Smatching" customModuleProvider="target">
+                                                            <view contentMode="scaleToFill" restorationIdentifier="advantageView2" translatesAutoresizingMaskIntoConstraints="NO" id="G8P-Tf-fxK" customClass="CustomViewBorder" customModule="iOS_Smatching" customModuleProvider="target">
                                                                 <rect key="frame" x="103" y="0.0" width="94" height="36"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="여성기업" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ycs-JB-ZPZ">
@@ -3050,7 +2828,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <accessibility key="accessibilityConfiguration" identifier="woman"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="advantageView2"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="36" id="JJe-Wz-SrE"/>
                                                                     <constraint firstAttribute="width" constant="94" id="TOw-tW-vxW"/>
@@ -3066,11 +2844,8 @@
                                                                         <color key="value" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
-                                                                <connections>
-                                                                    <action selector="conditionBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="bhx-SN-Ug5"/>
-                                                                </connections>
                                                             </view>
-                                                            <view contentMode="scaleToFill" restorationIdentifier="disabled" translatesAutoresizingMaskIntoConstraints="NO" id="Vqf-I8-Dgv" customClass="ConditionButton" customModule="iOS_Smatching" customModuleProvider="target">
+                                                            <view contentMode="scaleToFill" restorationIdentifier="advantageView3" translatesAutoresizingMaskIntoConstraints="NO" id="Vqf-I8-Dgv" customClass="CustomViewBorder" customModule="iOS_Smatching" customModuleProvider="target">
                                                                 <rect key="frame" x="206" y="0.0" width="94" height="36"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="장애인기업" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U1E-Ck-WwP">
@@ -3082,7 +2857,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <accessibility key="accessibilityConfiguration" identifier="disabled"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="advantageView3"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="36" id="ZEb-x5-wVa"/>
                                                                     <constraint firstAttribute="width" constant="94" id="mfP-10-vq5"/>
@@ -3098,9 +2873,6 @@
                                                                         <color key="value" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
-                                                                <connections>
-                                                                    <action selector="conditionBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="Gcj-eU-Soz"/>
-                                                                </connections>
                                                             </view>
                                                         </subviews>
                                                         <constraints>
@@ -3121,7 +2893,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="Kqu-Hj-XsA">
                                                         <rect key="frame" x="0.0" y="45" width="300" height="36"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" restorationIdentifier="social" translatesAutoresizingMaskIntoConstraints="NO" id="r1i-AJ-dvP" customClass="ConditionButton" customModule="iOS_Smatching" customModuleProvider="target">
+                                                            <view contentMode="scaleToFill" restorationIdentifier="advantageView4" translatesAutoresizingMaskIntoConstraints="NO" id="r1i-AJ-dvP" customClass="CustomViewBorder" customModule="iOS_Smatching" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="94" height="36"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="사회적기업" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ne-ed-jh7">
@@ -3133,7 +2905,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <accessibility key="accessibilityConfiguration" identifier="social"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="advantageView4"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="94" id="OUv-TR-Mxt"/>
                                                                     <constraint firstAttribute="height" constant="36" id="Za1-QJ-0v8"/>
@@ -3149,11 +2921,8 @@
                                                                         <color key="value" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
-                                                                <connections>
-                                                                    <action selector="conditionBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="qBL-tO-NJ9"/>
-                                                                </connections>
                                                             </view>
-                                                            <view contentMode="scaleToFill" restorationIdentifier="sole" translatesAutoresizingMaskIntoConstraints="NO" id="eAY-sn-4Ro" customClass="ConditionButton" customModule="iOS_Smatching" customModuleProvider="target">
+                                                            <view contentMode="scaleToFill" restorationIdentifier="advantageView5" translatesAutoresizingMaskIntoConstraints="NO" id="eAY-sn-4Ro" customClass="CustomViewBorder" customModule="iOS_Smatching" customModuleProvider="target">
                                                                 <rect key="frame" x="103" y="0.0" width="94" height="36"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1인창조기업" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FEj-dE-mEg">
@@ -3165,7 +2934,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <accessibility key="accessibilityConfiguration" identifier="sole"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="advantageView5"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="36" id="2GV-2H-JAL"/>
                                                                     <constraint firstAttribute="width" constant="94" id="euO-E8-v4C"/>
@@ -3181,11 +2950,8 @@
                                                                         <color key="value" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
-                                                                <connections>
-                                                                    <action selector="conditionBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="nxf-Ky-0Il"/>
-                                                                </connections>
                                                             </view>
-                                                            <view contentMode="scaleToFill" restorationIdentifier="fourth" translatesAutoresizingMaskIntoConstraints="NO" id="UKb-cL-d6Q" customClass="ConditionButton" customModule="iOS_Smatching" customModuleProvider="target">
+                                                            <view contentMode="scaleToFill" restorationIdentifier="advantageView6" translatesAutoresizingMaskIntoConstraints="NO" id="UKb-cL-d6Q" customClass="CustomViewBorder" customModule="iOS_Smatching" customModuleProvider="target">
                                                                 <rect key="frame" x="206" y="0.0" width="94" height="36"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4차산업관련기업" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDp-vo-d20">
@@ -3197,7 +2963,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <accessibility key="accessibilityConfiguration" identifier="fourth"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="advantageView6"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="94" id="OD6-WQ-vZS"/>
                                                                     <constraint firstAttribute="height" constant="36" id="n99-ai-jwb"/>
@@ -3213,9 +2979,6 @@
                                                                         <color key="value" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
-                                                                <connections>
-                                                                    <action selector="conditionBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="qpe-SA-j2l"/>
-                                                                </connections>
                                                             </view>
                                                         </subviews>
                                                         <constraints>
@@ -3236,7 +2999,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="dPK-Sb-5he">
                                                         <rect key="frame" x="0.0" y="90" width="300" height="36"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" restorationIdentifier="univ" translatesAutoresizingMaskIntoConstraints="NO" id="oUg-Jh-0NQ" customClass="ConditionButton" customModule="iOS_Smatching" customModuleProvider="target">
+                                                            <view contentMode="scaleToFill" restorationIdentifier="advantageView7" translatesAutoresizingMaskIntoConstraints="NO" id="oUg-Jh-0NQ" customClass="CustomViewBorder" customModule="iOS_Smatching" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="94" height="36"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="대학(원)생" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O63-a8-Noz">
@@ -3248,7 +3011,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <accessibility key="accessibilityConfiguration" identifier="univ"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="advantageView7"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="36" id="4fS-x5-WK3"/>
                                                                     <constraint firstAttribute="width" constant="94" id="CAH-oq-m04"/>
@@ -3264,11 +3027,8 @@
                                                                         <real key="value" value="8"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
-                                                                <connections>
-                                                                    <action selector="conditionBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="xS6-Xf-ves"/>
-                                                                </connections>
                                                             </view>
-                                                            <view contentMode="scaleToFill" restorationIdentifier="togather" translatesAutoresizingMaskIntoConstraints="NO" id="2FA-l4-mbc" customClass="ConditionButton" customModule="iOS_Smatching" customModuleProvider="target">
+                                                            <view contentMode="scaleToFill" restorationIdentifier="advantageView8" translatesAutoresizingMaskIntoConstraints="NO" id="2FA-l4-mbc" customClass="CustomViewBorder" customModule="iOS_Smatching" customModuleProvider="target">
                                                                 <rect key="frame" x="103" y="0.0" width="94" height="36"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="공동창업" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wvS-Is-AVU">
@@ -3280,7 +3040,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <accessibility key="accessibilityConfiguration" identifier="togather"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="advantageView8"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="94" id="RPE-iC-UQ5"/>
                                                                     <constraint firstAttribute="height" constant="36" id="fa1-Hf-OEY"/>
@@ -3296,9 +3056,6 @@
                                                                         <real key="value" value="8"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
-                                                                <connections>
-                                                                    <action selector="conditionBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="XMH-xL-hGs"/>
-                                                                </connections>
                                                             </view>
                                                             <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k58-ZY-3l3">
                                                                 <rect key="frame" x="206" y="0.0" width="94" height="36"/>
@@ -3339,7 +3096,7 @@
                                                     <constraint firstAttribute="height" constant="126" id="wKk-0x-1rP"/>
                                                 </constraints>
                                             </stackView>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R9M-ez-qH9" customClass="UIButton">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R9M-ez-qH9">
                                                 <rect key="frame" x="0.0" y="1137" width="375" height="48.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,742건의 결과보기" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FyD-1g-HTO">
@@ -3359,9 +3116,6 @@
                                                     <constraint firstItem="FyD-1g-HTO" firstAttribute="centerY" secondItem="R9M-ez-qH9" secondAttribute="centerY" id="HCd-FC-1Y3"/>
                                                     <constraint firstItem="FyD-1g-HTO" firstAttribute="centerX" secondItem="R9M-ez-qH9" secondAttribute="centerX" id="zMH-dM-RqO"/>
                                                 </constraints>
-                                                <connections>
-                                                    <action selector="submitCondition:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="AEA-wT-yBK"/>
-                                                </connections>
                                             </view>
                                             <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gby-rf-MiO">
                                                 <rect key="frame" x="0.0" y="8" width="375" height="44"/>
@@ -3369,7 +3123,7 @@
                                                     <constraint firstAttribute="width" secondItem="Gby-rf-MiO" secondAttribute="height" multiplier="375:44" id="2vW-Zf-BOj"/>
                                                 </constraints>
                                                 <items>
-                                                    <navigationItem title="맞춤조건" id="IuR-BU-yg9">
+                                                    <navigationItem title="기업정보" id="IuR-BU-yg9">
                                                         <barButtonItem key="leftBarButtonItem" image="btnBack" id="iGK-MW-w5d">
                                                             <color key="tintColor" red="0.2784313725" green="0.2784313725" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <connections>
@@ -3383,7 +3137,6 @@
                                         <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
-                                            <constraint firstItem="Gaj-Nv-Rdk" firstAttribute="top" secondItem="HF1-q7-bQd" secondAttribute="bottom" constant="8" id="0C9-GG-pYV"/>
                                             <constraint firstItem="HF1-q7-bQd" firstAttribute="leading" secondItem="RC9-H1-WKJ" secondAttribute="leading" constant="37.5" id="0f5-A5-Ylb"/>
                                             <constraint firstAttribute="trailing" secondItem="RwM-XT-AZS" secondAttribute="trailing" constant="249.5" id="30c-Pz-CBn"/>
                                             <constraint firstItem="R9M-ez-qH9" firstAttribute="leading" secondItem="RC9-H1-WKJ" secondAttribute="leading" id="3IL-FA-f3r"/>
@@ -3391,12 +3144,12 @@
                                             <constraint firstItem="WCU-Vd-919" firstAttribute="leading" secondItem="RC9-H1-WKJ" secondAttribute="leading" constant="25" id="42Z-LC-cxQ"/>
                                             <constraint firstItem="znk-Py-3dz" firstAttribute="top" secondItem="52G-3J-0BF" secondAttribute="bottom" constant="17" id="44o-9Q-mOJ"/>
                                             <constraint firstItem="RwM-XT-AZS" firstAttribute="top" secondItem="vzO-LU-XMO" secondAttribute="bottom" constant="16.5" id="4Tl-hA-bae"/>
+                                            <constraint firstItem="iLg-JK-GB3" firstAttribute="trailing" secondItem="kXz-fM-xR6" secondAttribute="trailing" constant="16" id="5O4-rH-mnQ"/>
                                             <constraint firstItem="znk-Py-3dz" firstAttribute="centerX" secondItem="RC9-H1-WKJ" secondAttribute="centerX" id="5kr-s9-pEm"/>
                                             <constraint firstItem="xat-C5-26U" firstAttribute="top" secondItem="iLg-JK-GB3" secondAttribute="top" constant="8" id="6RC-Gu-K0J"/>
                                             <constraint firstItem="DHE-35-N6c" firstAttribute="leading" secondItem="RC9-H1-WKJ" secondAttribute="leading" constant="32.5" id="7MU-ZB-LgY"/>
                                             <constraint firstItem="3NL-Ce-Z7b" firstAttribute="leading" secondItem="RC9-H1-WKJ" secondAttribute="leading" constant="25.5" id="7TF-zA-sC9"/>
                                             <constraint firstItem="Ezx-ym-PgZ" firstAttribute="top" secondItem="taO-ZL-lWP" secondAttribute="bottom" constant="16" id="7Ye-l7-kN8"/>
-                                            <constraint firstItem="iLg-JK-GB3" firstAttribute="trailing" secondItem="xat-C5-26U" secondAttribute="trailing" constant="7.5" id="8hz-Ce-TDU"/>
                                             <constraint firstItem="1gF-a5-jkO" firstAttribute="top" secondItem="iLg-JK-GB3" secondAttribute="bottom" constant="16" id="9Qy-jH-j5z"/>
                                             <constraint firstAttribute="trailing" secondItem="vzO-LU-XMO" secondAttribute="trailing" constant="26" id="BoA-ii-96V"/>
                                             <constraint firstItem="CkR-nJ-aba" firstAttribute="leading" secondItem="DHE-35-N6c" secondAttribute="trailing" constant="143" id="C35-iz-zNI"/>
@@ -3424,8 +3177,6 @@
                                             <constraint firstItem="Icv-Yh-7Mv" firstAttribute="top" secondItem="znk-Py-3dz" secondAttribute="bottom" constant="16" id="PMR-li-VyP"/>
                                             <constraint firstItem="a0r-Ql-nhb" firstAttribute="top" secondItem="Ezx-ym-PgZ" secondAttribute="bottom" constant="16.5" id="Ph7-17-RYz"/>
                                             <constraint firstAttribute="trailing" secondItem="R9M-ez-qH9" secondAttribute="trailing" id="Pxi-mb-aN0"/>
-                                            <constraint firstItem="3NL-Ce-Z7b" firstAttribute="top" secondItem="Gaj-Nv-Rdk" secondAttribute="bottom" constant="16" id="QCK-WB-Noq"/>
-                                            <constraint firstItem="Gaj-Nv-Rdk" firstAttribute="leading" secondItem="RC9-H1-WKJ" secondAttribute="leading" constant="37" id="QmK-l6-Gcn"/>
                                             <constraint firstAttribute="trailing" secondItem="ThJ-Ah-7Ds" secondAttribute="trailing" constant="26" id="Rdv-Em-afr"/>
                                             <constraint firstItem="MuL-TI-v5c" firstAttribute="top" secondItem="3NL-Ce-Z7b" secondAttribute="bottom" constant="16.5" id="Sps-f1-6UQ"/>
                                             <constraint firstItem="Icv-Yh-7Mv" firstAttribute="leading" secondItem="RC9-H1-WKJ" secondAttribute="leading" constant="25.5" id="UxP-Us-c3Q"/>
@@ -3468,6 +3219,7 @@
                                             <constraint firstItem="4pY-MB-I6Y" firstAttribute="top" secondItem="rd6-cU-uzO" secondAttribute="bottom" constant="31" id="rQc-Jm-o7o"/>
                                             <constraint firstItem="WCU-Vd-919" firstAttribute="top" secondItem="c8N-On-nV0" secondAttribute="bottom" constant="16" id="rX6-kC-dzg"/>
                                             <constraint firstItem="dWH-TG-4qD" firstAttribute="leading" secondItem="a0r-Ql-nhb" secondAttribute="trailing" constant="7.5" id="tf1-Hr-Fll"/>
+                                            <constraint firstItem="kXz-fM-xR6" firstAttribute="top" secondItem="iLg-JK-GB3" secondAttribute="top" constant="13" id="vaO-v7-iEH"/>
                                             <constraint firstItem="fvl-4s-RHA" firstAttribute="top" secondItem="RwM-XT-AZS" secondAttribute="bottom" constant="15.5" id="vji-EA-pox"/>
                                             <constraint firstItem="dWH-TG-4qD" firstAttribute="leading" secondItem="52G-3J-0BF" secondAttribute="trailing" id="wfn-IB-Vae"/>
                                             <constraint firstItem="vzO-LU-XMO" firstAttribute="leading" secondItem="RC9-H1-WKJ" secondAttribute="leading" constant="25" id="xBO-kN-Ysy"/>
@@ -3496,39 +3248,35 @@
                     <navigationItem key="navigationItem" id="oi9-yC-f7w"/>
                     <size key="freeformSize" width="375" height="1186"/>
                     <connections>
-                        <outlet property="big" destination="sjv-Hl-ka6" id="cmn-f3-lyp"/>
-                        <outlet property="disabled" destination="Vqf-I8-Dgv" id="cDL-x3-9JR"/>
-                        <outlet property="five_six" destination="u9k-Nv-DO2" id="hcX-Ic-SMP"/>
-                        <outlet property="forty_more" destination="mWi-cI-o4G" id="dvN-A2-sXd"/>
-                        <outlet property="four_five" destination="bDR-kE-eho" id="IHn-o1-8JE"/>
-                        <outlet property="fourth" destination="UKb-cL-d6Q" id="2Lz-t6-DMF"/>
-                        <outlet property="locationBelowBorder" destination="3NL-Ce-Z7b" id="dgp-Ai-bB3"/>
-                        <outlet property="locationBorderConst" destination="hYG-2h-qZN" id="ljB-4B-sQV"/>
-                        <outlet property="locationSettingRes" destination="Gaj-Nv-Rdk" id="38k-BK-S9X"/>
-                        <outlet property="midbig" destination="mRd-xT-4B7" id="ab2-8M-hkw"/>
-                        <outlet property="midsmall" destination="SDi-Ek-lX6" id="JWE-z1-2kF"/>
-                        <outlet property="one_two" destination="FvG-we-yMQ" id="vkq-Z6-ink"/>
+                        <outlet property="advanView1" destination="XXq-cU-BRQ" id="JQo-Rp-esj"/>
+                        <outlet property="advanView2" destination="G8P-Tf-fxK" id="Hf5-Wo-Y9o"/>
+                        <outlet property="advanView3" destination="Vqf-I8-Dgv" id="zhF-bF-af9"/>
+                        <outlet property="advanView4" destination="r1i-AJ-dvP" id="y4F-f3-6La"/>
+                        <outlet property="advanView5" destination="eAY-sn-4Ro" id="HMP-Zw-oV9"/>
+                        <outlet property="advanView6" destination="UKb-cL-d6Q" id="K0j-PS-krq"/>
+                        <outlet property="advanView7" destination="oUg-Jh-0NQ" id="qIA-bt-hsi"/>
+                        <outlet property="advanView8" destination="2FA-l4-mbc" id="ahb-W4-037"/>
+                        <outlet property="busiView1" destination="SDi-Ek-lX6" id="AEr-EK-krn"/>
+                        <outlet property="busiView2" destination="mRd-xT-4B7" id="ggb-Yp-6dS"/>
+                        <outlet property="busiView3" destination="sjv-Hl-ka6" id="LWF-kV-5Kl"/>
+                        <outlet property="busiView4" destination="Swo-cH-LLI" id="iGj-UV-yWe"/>
+                        <outlet property="busiView5" destination="Brw-ZT-rYc" id="Rlz-SO-68B"/>
+                        <outlet property="busiView6" destination="9tb-VW-Cmt" id="TPa-XD-wlZ"/>
+                        <outlet property="busiView7" destination="Dtu-8O-AYj" id="n9c-Lx-sre"/>
+                        <outlet property="excView1" destination="pcl-y0-nqd" id="Vmx-uk-2cw"/>
+                        <outlet property="fieldView1" destination="4pY-MB-I6Y" id="rJD-NK-1mV"/>
                         <outlet property="periodLabelChange" destination="a0r-Ql-nhb" id="Xex-al-4Ul"/>
-                        <outlet property="pre" destination="Dtu-8O-AYj" id="9vm-QM-A7O"/>
-                        <outlet property="retry" destination="XXq-cU-BRQ" id="wmB-IQ-h4q"/>
-                        <outlet property="seven_more" destination="jZm-xo-ryS" id="uz4-Ou-J6o"/>
+                        <outlet property="periodView1" destination="N8U-QJ-JJs" id="vqt-kL-5aF"/>
+                        <outlet property="periodView2" destination="FvG-we-yMQ" id="dI4-MP-TQa"/>
+                        <outlet property="periodView3" destination="7PP-qX-UZK" id="lRv-DJ-AHE"/>
+                        <outlet property="periodView4" destination="Gh9-T8-GiI" id="Nf4-J3-Ra8"/>
+                        <outlet property="periodView5" destination="bDR-kE-eho" id="SAN-Wp-fLH"/>
+                        <outlet property="periodView6" destination="u9k-Nv-DO2" id="aQX-sG-C9i"/>
+                        <outlet property="periodView7" destination="vwB-1Y-JTL" id="bV9-Tp-Ugt"/>
+                        <outlet property="periodView8" destination="jZm-xo-ryS" id="Myy-JQ-Fh1"/>
+                        <outlet property="periodView9" destination="zJf-p2-ZgY" id="Clk-Jb-F2P"/>
                         <outlet property="showDetail" destination="CkR-nJ-aba" id="8yc-q2-9Fr"/>
-                        <outlet property="six_seven" destination="vwB-1Y-JTL" id="FyP-6g-Rrd"/>
-                        <outlet property="small" destination="Brw-ZT-rYc" id="Lc5-rH-qgf"/>
-                        <outlet property="social" destination="r1i-AJ-dvP" id="4X3-ZJ-69u"/>
-                        <outlet property="sole" destination="Swo-cH-LLI" id="3Ak-gt-uhG"/>
-                        <outlet property="sole_create" destination="eAY-sn-4Ro" id="HsQ-CD-O8k"/>
-                        <outlet property="three_four" destination="Gh9-T8-GiI" id="mDG-M0-6VU"/>
                         <outlet property="titleTxtField" destination="xat-C5-26U" id="Weu-8f-GXd"/>
-                        <outlet property="together" destination="2FA-l4-mbc" id="yo1-mC-bmm"/>
-                        <outlet property="tradi" destination="9tb-VW-Cmt" id="b9V-tS-ELT"/>
-                        <outlet property="twenty_forty" destination="xDN-Ai-xxK" id="FaE-zK-SW0"/>
-                        <outlet property="twenty_less" destination="eI5-MP-WCe" id="X5i-Hp-hy6"/>
-                        <outlet property="two_three" destination="7PP-qX-UZK" id="mto-Wu-COD"/>
-                        <outlet property="univ" destination="oUg-Jh-0NQ" id="V0A-4k-a2R"/>
-                        <outlet property="woman" destination="G8P-Tf-fxK" id="Quz-Qe-pcv"/>
-                        <outlet property="yet" destination="zJf-p2-ZgY" id="10v-dF-lN3"/>
-                        <outlet property="zero_one" destination="N8U-QJ-JJs" id="CF4-xF-Kee"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wmi-xv-9o2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3588,11 +3336,8 @@
         <image name="icn_scrap_grey" width="20" height="20"/>
         <image name="icn_scrap_yellow" width="20" height="20"/>
         <image name="img_allsupportbox_blue" width="310" height="11"/>
-        <image name="img_leftround" width="10" height="32"/>
         <image name="img_precautionbox" width="319" height="83"/>
-        <image name="img_rightround" width="10" height="32"/>
         <image name="img_smatchingbox_blue" width="310" height="87"/>
-        <image name="img_square" width="60" height="32"/>
         <image name="img_symbol" width="65" height="20"/>
         <image name="img_talknotyet" width="178" height="133"/>
         <image name="ivLogo" width="152" height="74"/>

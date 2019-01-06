@@ -19,19 +19,6 @@ struct Advantage: Mappable {
     var fourth : Bool?
     var retry : Bool?
     
-    init(sole:Bool, univ:Bool, woman : Bool, social : Bool, disabled : Bool, togather : Bool, fourth : Bool,retry : Bool) {
-        self.sole = sole
-        self.univ = univ
-        self.woman = woman
-        self.social = social
-        self.disabled = disabled
-        self.togather = togather
-        self.fourth = fourth
-        self.retry = retry
-        
-    }
-    
-    
     init?(map: Map) {
     }
     

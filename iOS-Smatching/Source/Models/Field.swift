@@ -33,32 +33,6 @@ struct Field : Mappable{
     var u : Bool?
     var v : Bool?
     
-    init(a:Bool, b:Bool, c : Bool, d:Bool, e:Bool,f:Bool,g:Bool,h:Bool,i:Bool,j:Bool,k:Bool,l:Bool,m:Bool,n:Bool,o:Bool,p:Bool,q:Bool,r:Bool,s:Bool,t:Bool,u:Bool,v:Bool ) {
-        self.a = a
-        self.b = b
-        self.c = c
-        self.d = d
-        self.e = e
-        self.f = f
-        self.g = g
-        self.h = h
-        self.i = i
-        self.j = j
-        self.k = k
-        self.l = l
-        self.m = m
-        self.n = n
-        self.o = o
-        self.p = p
-        self.q = q
-        self.r = r
-        self.s = s
-        self.t = t
-        self.u = u
-        self.v = v
-        
-    }
-    
     init?(map: Map) {
         
     }

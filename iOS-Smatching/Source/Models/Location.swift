@@ -29,27 +29,6 @@ struct Location: Mappable {
     var incheon : Bool?
     var jeonnam : Bool?
     
-    init(jeonbuk : Bool, gangwon : Bool,gwangju : Bool,ulsan : Bool,kyungbuk : Bool,sejong : Bool,chungbuk : Bool,kyungnam : Bool,seoul : Bool,chungnam : Bool,daejeon : Bool,busan : Bool,jeju : Bool,daegu : Bool,aborad : Bool,kyunggi : Bool,incheon : Bool, jeonnam: Bool) {
-        self.jeonbuk = jeonbuk
-        self.gangwon = gangwon
-        self.gwangju = gwangju
-        self.ulsan = ulsan
-        self.kyungbuk = kyungbuk
-        self.seoul = seoul
-        self.chungnam = chungnam
-        self.daejeon = daejeon
-        self.busan = busan
-        self.jeju = jeju
-        self.daegu = daegu
-        self.aborad = aborad
-        self.kyunggi = kyunggi
-        self.incheon = incheon
-        self.jeonnam = jeonnam
-        self.sejong = sejong
-        self.chungbuk = chungbuk
-        self.kyungnam = kyungnam
-        
-    }
     init?(map: Map) {}
     
     mutating func mapping(map: Map) {
