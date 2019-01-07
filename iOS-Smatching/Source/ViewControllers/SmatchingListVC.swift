@@ -12,10 +12,16 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate, U
     
     @IBOutlet weak var contentViewHeightConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var noConditionView: UIView!
+    
     @IBOutlet var showStatusArrowImg: UIImageView!
     var flag = true
     
     var cond_idx : Int?
+    
+    var cur_cond_idx : Int?
+    var conditionList = [Condition]()
+    @IBOutlet weak var pageControl: UIPageControl!
     
     
     var fitConditionRes : FitConditionResponse?
@@ -33,7 +39,7 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate, U
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var conditionTitle: UILabel!
     
-   
+    
     @IBOutlet weak var showListBtn: UIButton!
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var alignmentLabel: UILabel!
@@ -41,8 +47,6 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate, U
     @IBOutlet weak var noticesCount: UILabel!
     
     var noticeList = [Notice]()
-    
-    var conditionList = [Condition]()
     
     var picker : UIPickerView!
     var toolbar : UIToolbar!
@@ -58,21 +62,81 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate, U
     let advantage: [String] = ["재도전기업", "여성기업", "장애인기업", "사회적기업", "1인창조기업", "4차산업관련기업", "대학(원)생", "공동창업"]
     
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         initView()
+        //조건이 없을 경우 나오는 뷰
+        noConditionView.isHidden = true
+        
         noticeTableView.delegate = self
         noticeTableView.dataSource = self
+        
         self.settingAlarmBtn.delegate = self
+        
+        //swipe 처리
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
+        swipeRight.direction = .right
+        self.view.addGestureRecognizer(swipeRight)
+        
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
+        swipeLeft.direction = .left
+        self.view.addGestureRecognizer(swipeLeft)
+        
+        
+        UserService.shared.getUserCondition() {[weak self] (data) in guard let `self` = self else {return}
+            self.conditionList = data.condSummaryList!
+            
+           
+            if self.conditionList.isEmpty == false {
+                self.conditionTitle.text = self.gsno(self.conditionList[0].condName)
+                
+                self.cur_cond_idx = self.gino(self.conditionList[0].condIdx)
+                
+                self.noConditionView.isHidden = !self.noConditionView.isHidden
+                
+            }
+            else {
+                self.noConditionView.isHidden = !self.noConditionView.isHidden
+            }
+        }
+        
         
         
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        ConditionSettingSerive.shared.getFitConditionInfo(cond_idx: self.gino(self.cond_idx)) {[weak self] (data) in guard let `self` = self else {return}
+        self.navigationController?.navigationBar.shouldRemoveShadow(true)
+        
+        
+        NoticeService.shared.getAllNotice(request_num: 20, exist_num: self.noticeList.count) {[weak self] (data) in guard let `self` = self else {return}
+            
+            self.noticeList = data
+            self.noticeTableView.reloadData()
+        }
+        
+    }
+    
+    
+    @objc func handleGesture(gesture: UISwipeGestureRecognizer) -> Void {
+        
+        if gesture.direction == UISwipeGestureRecognizer.Direction.right {
+            print("Swipe Right")
+            pageControl.currentPage = 0
+            if self.conditionList.isEmpty == false {
+                self.noConditionView.isHidden = true
+                self.cur_cond_idx = self.gino(self.conditionList[0].condIdx)
+            }
+        }
+        else if gesture.direction == UISwipeGestureRecognizer.Direction.left {
+            print("Swipe Left")
+            pageControl.currentPage = 1
+            if self.conditionList.isEmpty == false {
+                  self.noConditionView.isHidden = true
+                self.cur_cond_idx = self.gino(self.conditionList[1].condIdx)
+            }
+        }
+        ConditionSettingSerive.shared.getFitConditionInfo(cond_idx: self.gino(self.cur_cond_idx)) {[weak self] (data) in guard let `self` = self else {return}
             print(data)
             self.fitConditionRes = data
             self.conditionTitle.text = self.gsno(data.condName)
@@ -82,13 +146,6 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate, U
             self.inputTextMatchingInfo()
             
         }
-        
-        NoticeService.shared.getAllNotice(request_num: 20, exist_num: self.noticeList.count) {[weak self] (data) in guard let `self` = self else {return}
-            
-            self.noticeList = data
-            self.noticeTableView.reloadData()
-        }
-        
     }
     
     func checkBoxDidChange(checkbox: Checkbox) {
@@ -352,18 +409,18 @@ extension SmatchingListVC : UITableViewDataSource {
             cell.scrapDeactiveBtn.isHidden = true
         }
         
-//        NoticeService.shared.getNoticeScrap(notice_idx: notice.noticeIdx!) {[weak self] (data) in guard let `self` = self else {return}
-//
-//            print(data.scrap)
-//            if self.gino(data.scrap) == 0 {
-//                cell.scrapActiveBtn.isHidden = true
-//                cell.scrapDeactiveBtn.isHidden = false
-//            } else {
-//                cell.scrapActiveBtn.isHidden = false
-//                cell.scrapDeactiveBtn.isHidden = true
-//            }
-//
-//        }
+        //        NoticeService.shared.getNoticeScrap(notice_idx: notice.noticeIdx!) {[weak self] (data) in guard let `self` = self else {return}
+        //
+        //            print(data.scrap)
+        //            if self.gino(data.scrap) == 0 {
+        //                cell.scrapActiveBtn.isHidden = true
+        //                cell.scrapDeactiveBtn.isHidden = false
+        //            } else {
+        //                cell.scrapActiveBtn.isHidden = false
+        //                cell.scrapDeactiveBtn.isHidden = true
+        //            }
+        //
+        //        }
         return cell
     }
     

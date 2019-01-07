@@ -14,7 +14,10 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var titleTxtField: UITextField!
     @IBOutlet weak var periodLabelChange: UILabel!
     
-    @IBOutlet weak var locationSettingRes: UIView!
+    @IBOutlet weak var locationSettingSeoul: UIView!
+    @IBOutlet weak var locationSettingIncheon: UIView!
+    @IBOutlet weak var locationSettingDaegu: UIView!
+    @IBOutlet weak var locationSettingBusan: UIView!
     
     @IBOutlet weak var locationBelowBorder: UIView!
     @IBOutlet weak var locationBorderConst: NSLayoutConstraint!
@@ -88,11 +91,16 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
     
     var age = Age(twenty_less : false, twenty_forty : false, forty_more : false)
     
+    var count : Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         initGestureRecognizer()
-        locationSettingRes.isHidden = true
+        locationSettingSeoul.isHidden = true
+        locationSettingBusan.isHidden = true
+        locationSettingDaegu.isHidden = true
+        locationSettingIncheon.isHidden = true
         
         //uilabel에 tapgesture 추가
         let gestureRec = UITapGestureRecognizer(target: self, action:  #selector (self.someAction (_:)))
@@ -109,18 +117,45 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
          dismiss(animated: true, completion: nil )
     }
     func showView() {
-        self.locationSettingRes.isHidden = false
-        self.locationSettingRes.transform = CGAffineTransform.identity
         
+        if self.location.seoul == true {
+            self.locationSettingSeoul.isHidden = !self.locationSettingSeoul.isHidden
+            if count == 0 {
+                self.locationSettingSeoul.transform = CGAffineTransform.identity
+            }
+            else {
+                self.locationSettingSeoul.transform = CGAffineTransform(translationX: self.locationSettingSeoul.frame.width, y: 0)
+            }
+            count += 1
+        }
+        if self.location.busan == true {
+            self.locationSettingBusan.isHidden = !self.locationSettingBusan.isHidden
+            if count == 0 {
+                self.locationSettingBusan.transform = CGAffineTransform.identity
+            }
+            else {
+                
+                self.locationSettingBusan.transform = CGAffineTransform(translationX: self.locationSettingBusan.frame.width, y: 0)
+            }
+            count += 1
+            
+        }
+        if self.location.daegu == true {
+            self.locationSettingBusan.isHidden = false
+            print(count)
+            
+            self.locationSettingBusan.transform = CGAffineTransform(translationX: self.locationSettingBusan.frame.width, y: 0)
+            count += 1
+            
+        }
         UIView.animate(withDuration: 1.0, animations: ({
             self.locationBorderConst.constant = 43
         }))
     }
     func initView() {
         
-       self.locationSettingRes.isHidden = true
-        self.locationSettingRes.transform =
-            CGAffineTransform(scaleX: self.locationSettingRes.frame.width, y: 0)
+        self.locationSettingSeoul.transform =
+            CGAffineTransform(scaleX: self.locationSettingSeoul.frame.width, y: 0)
     }
     
     //기업정보 vc로 이동
@@ -415,6 +450,10 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
         print(self.age)
         print(self.period); ConditionPutService.shared.putFitConditionInfo(condName: self.titleTxtField.text!, location: self.location, age: self.age, period: self.period, field: self.field, advantage: self.advantage, busiType: self.busitype, excCategory: self.excCategory){[weak self] (data) in guard let `self` = self else {return}
             print(data)
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SmatchingListVC") as! SmatchingListVC
+           nextViewController.cond_idx = data.condIdx
+           self.present(nextViewController, animated: true, completion: nil)
         }
     }
 }

@@ -20,6 +20,8 @@ class MyPageVC: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        
         scrapedNoticeTableView.dataSource = self
         
         searchScrapTxtField.delegate = self
@@ -37,14 +39,20 @@ class MyPageVC: UIViewController, UITextFieldDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
         
-        MypageService.shared.getScrappedNotices(request_num: 3, exist_num: self.noticeList.count) {[weak self] (data) in guard let `self` = self else {return}
+        MypageService.shared.getScrappedNotices(request_num: 3, exist_num: 0) {[weak self] (data) in guard let `self` = self else {return}
             print(data)
             self.noticeList = data
             self.scrapedNoticeTableView.reloadData()
         }
     }
      
+    @IBAction func showSettingView(_ sender: Any) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Setting", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SettingVC") as! SettingViewController
+        self.navigationController?.pushViewController(nextViewController, animated: true)
+    }
     @IBAction func updateProfile(_ sender: Any) {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Setting", bundle:nil)
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MypageSettingVC") as! MypageSettingVC
