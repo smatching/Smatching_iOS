@@ -11,8 +11,9 @@ import UIKit
 class SmatchingListVC: UIViewController,CheckBoxDelegate {
     
     @IBOutlet weak var contentViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet var showStatusArrowImg: UIImageView!
     
-    var flag = 0
+    var flag = true
     
     var cond_idx : Int?
     
@@ -85,13 +86,13 @@ class SmatchingListVC: UIViewController,CheckBoxDelegate {
     }
     
     @IBAction func showConditionView(_ sender: Any) {
-        if flag == 0 {
+        if flag {
             showView()
-            flag = 1
+            flag = false
         }
         else {
             hideView()
-            flag = 0
+            flag = true
         }
     }
     func showView() {
@@ -109,7 +110,6 @@ class SmatchingListVC: UIViewController,CheckBoxDelegate {
             self.contentViewHeightConstraint.constant = 0
             self.view.layoutIfNeeded()
         }))
-        
     }
     
     func initView() {
