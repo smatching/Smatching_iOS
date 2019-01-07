@@ -10,15 +10,19 @@ import UIKit
 
 class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate, UIScrollViewDelegate {
     
-    @IBOutlet weak var STACKVIEWCONST: NSLayoutConstraint!
+    @IBOutlet weak var contentViewHeightConstraint: NSLayoutConstraint!
     
-    var flag = 0
+    @IBOutlet var showStatusArrowImg: UIImageView!
+    var flag = true
     
     var cond_idx : Int?
     
+    
+    var fitConditionRes : FitConditionResponse?
+    
+    
     //contentview 영역 outlet
     @IBOutlet weak var settingAlarmBtn: Checkbox!
-    
     @IBOutlet weak var editBtn: UIButton!
     @IBOutlet weak var advantageLabel: UILabel!
     @IBOutlet weak var excCateLabel: UILabel!
@@ -29,10 +33,8 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate, U
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var conditionTitle: UILabel!
     
-    @IBOutlet weak var upBtn: UIButton!
-    @IBOutlet weak var downBtn: UIButton!
-    @IBOutlet weak var hideViewBtn: UIImageView!
-    @IBOutlet weak var showViewBtn: UIImageView!
+   
+    @IBOutlet weak var showListBtn: UIButton!
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var alignmentLabel: UILabel!
     @IBOutlet weak var noticeTableView: UITableView!
@@ -42,15 +44,19 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate, U
     
     var conditionList = [Condition]()
     
-    var fitConditionRes : FitConditionResponse?
-    
     var picker : UIPickerView!
     var toolbar : UIToolbar!
     
     let alignment_standard : [String] = ["최근등록순", "마감임박순", "조회순"]
     
-    let location : [String] = ["서울", "대전"]
-    var locationString : String?
+    let location: [String] = ["서울", "부산", "대구", "인천", "광주", "대전", "울산", "세종", "강원", "경기", "경남", "경북", "전남", "전북", "충남", "충북", "제주"]
+    let age: [String] = ["만 20세 미만", "만 20세 이상 ~ 39세 이하", "40세 이상"]
+    let period: [String] = ["0~1년", "1~2년", "2~3년", "3~4년", "4~5년", "5~6년", "6~7년", "7년 이상", "예비창업자"]
+    let businessType: [String] = ["중소기업", "중견기업", "대기업", "1인창조기업", "소상공인", "전통시장", "예비창업자"]
+    let field: [String] = ["농업,임업 및 어업", "광업", "전기, 가스, 증기 및 공기 조절 공금업", "수도, 하수 및 폐기물 처리, 원료 재생업", "건설업", "도매 및 소매업", "운수 및 창고업", "숙박 및 음식접업", "정보통신업", "금융 및 보험업", "부동산업", "전문, 과학 및 기술 서비스업", "사업시설 관리, 사업지원 및 임대서비스업", "공공 행정, 국방 및 사회보장 행정", "교육 서비스업", "보건업 및 사회복지 서비스업", "예술, 스포츠 및 여가관련 서비스업", "협회 및 단체, 수리 및 기타 개인 서비스업", "가구 내 고용활동 및 달리 분류되지 않은 자가 소비 생산활동", "국제 및 외국기관", "4차산업분야"]
+    let excCate: [String] = ["창업교육, 창업 멘토링", "지식재산권(특허, 저작권 등)", "시설, 공간", "국내판로 확대", "해외판로 확대", "시제품 제작,제조양산", "정부 대출 지원", "무대출 자금 지원"]
+    let advantage: [String] = ["재도전기업", "여성기업", "장애인기업", "사회적기업", "1인창조기업", "4차산업관련기업", "대학(원)생", "공동창업"]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,25 +66,25 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate, U
         noticeTableView.dataSource = self
         self.settingAlarmBtn.delegate = self
         
+        
     }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         ConditionSettingSerive.shared.getFitConditionInfo(cond_idx: self.gino(self.cond_idx)) {[weak self] (data) in guard let `self` = self else {return}
             print(data)
             self.fitConditionRes = data
-            
             self.conditionTitle.text = self.gsno(data.condName)
             if self.gbno(data.alert) == true {
                 self.checkBoxDidChange(checkbox: self.settingAlarmBtn)
             }
+            self.inputTextMatchingInfo()
+            
         }
         
         NoticeService.shared.getAllNotice(request_num: 20, exist_num: self.noticeList.count) {[weak self] (data) in guard let `self` = self else {return}
             
             self.noticeList = data
             self.noticeTableView.reloadData()
-            
         }
         
     }
@@ -93,53 +99,39 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate, U
     }
     
     @IBAction func showConditionView(_ sender: Any) {
-        if flag == 0 {
+        if flag {
             showView()
-            flag = 1
+            flag = false
         }
         else {
             hideView()
-            flag = 0
+            flag = true
         }
     }
     func showView() {
-        upBtn.isHidden = false
-        downBtn.isHidden = true
         
-        showViewBtn.isHidden = true
-        hideViewBtn.isHidden = false
-        self.contentView.transform = CGAffineTransform.identity
-        UIView.animate(withDuration: 1.0, animations: ({
-            self.STACKVIEWCONST.constant = 317
+        UIView.animate(withDuration: 0.2, animations: ({
+            self.contentViewHeightConstraint.constant = 317
+            self.view.layoutIfNeeded()
         }))
+        showStatusArrowImg.image = UIImage(named: "icn_back_white_revers")
     }
     
     func hideView() {
-        upBtn.isHidden = true
-        downBtn.isHidden = false
-        showViewBtn.isHidden = false
-        hideViewBtn.isHidden = true
-        UIView.animate(withDuration: 1.0, animations: ({
+        UIView.animate(withDuration: 0.2, animations: ({
             self.contentView.alpha  = 1;
         }))
-        self.contentView.transform = CGAffineTransform(scaleX: 0, y: -self.contentView.frame.height)
-        UIView.animate(withDuration: 1.0, animations: ({
-            self.STACKVIEWCONST.constant = 43
+        UIView.animate(withDuration: 0.2, animations: ({
+            self.contentViewHeightConstraint.constant = 0
+            self.view.layoutIfNeeded()
         }))
-        
+        showStatusArrowImg.image = UIImage(named: "icn_back_white")
     }
     
     //초기 화면 설정 -> 조건 뷰가 보여지도록
     func initView() {
-        
-        upBtn.isHidden = false
-        downBtn.isHidden = true
-        showViewBtn.isHidden = true
-        hideViewBtn.isHidden = false
-        self.contentView.transform = CGAffineTransform.identity
-        UIView.animate(withDuration: 1.0, animations: ({
-            self.STACKVIEWCONST.constant = 317
-        }))
+        contentViewHeightConstraint.constant = 0
+        showStatusArrowImg.image = UIImage(named: "icn_back_white")
     }
     
     override func didReceiveMemoryWarning() {
@@ -239,6 +231,80 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate, U
             
         }
     }
+    
+    // 맞춤조건 설정페이지와 정보 연결
+    func inputTextMatchingInfo () {
+        //지역
+        if self.gbno(fitConditionRes?.location?.seoul) == true {
+            self.locationLabel.text? += self.location[0] + ", "
+        }
+        if self.gbno(fitConditionRes?.location?.busan) == true {
+            self.locationLabel.text? += self.location[1] + ", "
+        }
+        if self.gbno(fitConditionRes?.location?.daegu) == true {
+            self.locationLabel.text? += self.location[2] + ", "
+        }
+        if self.gbno(fitConditionRes?.location?.incheon) == true {
+            self.locationLabel.text? += self.location[3] + ", "
+        }
+        if self.gbno(fitConditionRes?.location?.gwangju) == true {
+            self.locationLabel.text? += self.location[4] + ", "
+        }
+        if self.gbno(fitConditionRes?.location?.daejeon) == true {
+            self.locationLabel.text? += self.location[5] + ", "
+        }
+        if self.gbno(fitConditionRes?.location?.ulsan) == true {
+            self.locationLabel.text? += self.location[6] + ", "
+        }
+        if self.gbno(fitConditionRes?.location?.sejong) == true {
+            self.locationLabel.text? += self.location[7] + ", "
+        }
+        if self.gbno(fitConditionRes?.location?.gangwon) == true {
+            self.locationLabel.text? += self.location[8] + ", "
+        }
+        if self.gbno(fitConditionRes?.location?.kyunggi) == true {
+            self.locationLabel.text? += self.location[9] + ", "
+        }
+        if self.gbno(fitConditionRes?.location?.kyungbuk) == true {
+            self.locationLabel.text? += self.location[10] + ", "
+        }
+        if self.gbno(fitConditionRes?.location?.kyungnam) == true {
+            self.locationLabel.text? += self.location[11] + ", "
+        }
+        if self.gbno(fitConditionRes?.location?.jeonnam) == true {
+            self.locationLabel.text? += self.location[12] + ", "
+        }
+        if self.gbno(fitConditionRes?.location?.jeonbuk) == true {
+            self.locationLabel.text? += self.location[13] + ", "
+        }
+        if self.gbno(fitConditionRes?.location?.chungnam) == true {
+            self.locationLabel.text? += self.location[14] + ", "
+        }
+        if self.gbno(fitConditionRes?.location?.chungbuk) == true {
+            self.locationLabel.text? += self.location[15] + ", "
+        }
+        if self.gbno(fitConditionRes?.location?.jeju) == true {
+            self.locationLabel.text? += self.location[16] + ", "
+        }
+        locationLabel.text = DoneListingWords(locationLabel)
+        // 나이
+        if self.gbno(fitConditionRes?.age?.twenty_less) == true {
+            self.ageLabel.text? += self.age[0] + ", "
+        }
+        if self.gbno(fitConditionRes?.age?.twenty_forty) == true {
+            self.ageLabel.text? += self.age[1] + ", "
+        }
+        if self.gbno(fitConditionRes?.age?.forty_more) == true {
+            self.ageLabel.text? += self.age[2] + ", "
+        }
+        ageLabel.text = DoneListingWords(ageLabel)
+    }
+    func DoneListingWords (_ label: UILabel) -> String {
+        var text = label.text!
+        text = String(text.dropLast(2))
+        return text
+    }
+    
 }
 extension SmatchingListVC : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
