@@ -450,6 +450,10 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
         print(self.age)
         print(self.period); ConditionPutService.shared.putFitConditionInfo(condName: self.titleTxtField.text!, location: self.location, age: self.age, period: self.period, field: self.field, advantage: self.advantage, busiType: self.busitype, excCategory: self.excCategory){[weak self] (data) in guard let `self` = self else {return}
             print(data)
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SmatchingListVC") as! SmatchingListVC
+           nextViewController.cond_idx = data.condIdx
+           self.present(nextViewController, animated: true, completion: nil)
         }
     }
 }
