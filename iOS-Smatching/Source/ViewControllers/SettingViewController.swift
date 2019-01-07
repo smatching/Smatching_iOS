@@ -11,10 +11,18 @@ import UIKit
 class SettingViewController: UIViewController {
 
     @IBAction func Withdrawl(_ sender: UIButton) {
-        simpleAlert("", "회원탈퇴 하시겠습니까?", completion: nil)
+        simpleAlert("", "회원탈퇴 하시겠습니까?",  completion: { (action) in
+            self.navigationController?.popViewController(animated: true)})
     }
     @IBAction func Logout(_ sender: UIButton) {
-        simpleAlert("", "로그아웃 하시겠습니까?", completion: nil)
+        simpleAlert("", "로그아웃 하시겠습니까?",  completion: { (action) in
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "LoginOrSignupVC") as! LoginOrSignupVC
+            
+            self.present(nextViewController, animated: true, completion: nil)
+            UserDefaults.standard.removeObject(forKey: "token")
+        })
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()

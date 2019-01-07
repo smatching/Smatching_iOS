@@ -42,10 +42,15 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate, U
     
     var conditionList = [Condition]()
     
+    var fitConditionRes : FitConditionResponse?
+    
     var picker : UIPickerView!
     var toolbar : UIToolbar!
     
     let alignment_standard : [String] = ["최근등록순", "마감임박순", "조회순"]
+    
+    let location : [String] = ["서울", "대전"]
+    var locationString : String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +66,8 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate, U
         super.viewWillAppear(animated)
         ConditionSettingSerive.shared.getFitConditionInfo(cond_idx: self.gino(self.cond_idx)) {[weak self] (data) in guard let `self` = self else {return}
             print(data)
+            self.fitConditionRes = data
+            
             self.conditionTitle.text = self.gsno(data.condName)
             if self.gbno(data.alert) == true {
                 self.checkBoxDidChange(checkbox: self.settingAlarmBtn)

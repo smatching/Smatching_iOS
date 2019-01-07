@@ -32,8 +32,6 @@ struct ConditionSettingSerive : APIManager, Requestable {
             case .error(let error):
                 print(error)
             }
-            
         }
     }
-    
 }
