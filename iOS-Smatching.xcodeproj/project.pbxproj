@@ -82,6 +82,8 @@
 		C0EE1D5A21DD8DC0005B114E /* MypageSettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EE1D5921DD8DC0005B114E /* MypageSettingVC.swift */; };
 		C0EE1D5C21DD8DEB005B114E /* MypageAskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EE1D5B21DD8DEB005B114E /* MypageAskVC.swift */; };
 		C0EE1D5E21DE422B005B114E /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0EE1D5D21DE422B005B114E /* Search.storyboard */; };
+		C0F7C0B021E4033500A450A3 /* AcceptTerms.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0F7C0AF21E4033400A450A3 /* AcceptTerms.storyboard */; };
+		C0F7C0B221E438B200A450A3 /* AcceptTermsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F7C0B121E438B100A450A3 /* AcceptTermsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -164,6 +166,8 @@
 		C0EE1D5921DD8DC0005B114E /* MypageSettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageSettingVC.swift; sourceTree = "<group>"; };
 		C0EE1D5B21DD8DEB005B114E /* MypageAskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageAskVC.swift; sourceTree = "<group>"; };
 		C0EE1D5D21DE422B005B114E /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		C0F7C0AF21E4033400A450A3 /* AcceptTerms.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AcceptTerms.storyboard; sourceTree = "<group>"; };
+		C0F7C0B121E438B100A450A3 /* AcceptTermsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptTermsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,16 +245,17 @@
 		B6A3F49921C490A6000497BF /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				B67AC95321E2A10C00690DD7 /* NanumSquareBold.ttf */,
 				B67AC95421E2A10E00690DD7 /* NanumSquareExtraBold.ttf */,
 				B67AC95621E2A11500690DD7 /* NanumSquareLight.ttf */,
 				B67AC95521E2A11100690DD7 /* NanumSquareRegular.ttf */,
+				B67AC95321E2A10C00690DD7 /* NanumSquareBold.ttf */,
 				B6A3F48D21C49071000497BF /* Assets.xcassets */,
 				B6A3F48F21C49071000497BF /* LaunchScreen.storyboard */,
 				B6A3F48A21C49070000497BF /* Main.storyboard */,
 				C0376D2221DCF79600D845EB /* DetailContent.storyboard */,
 				C0376D2421DD1E3C00D845EB /* Setting.storyboard */,
 				C0EE1D5D21DE422B005B114E /* Search.storyboard */,
+				C0F7C0AF21E4033400A450A3 /* AcceptTerms.storyboard */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -363,6 +368,7 @@
 				C0EE1D5B21DD8DEB005B114E /* MypageAskVC.swift */,
 				B696AE9C21DFC10300ABFBDB /* NoticeDetailVC.swift */,
 				B6248D4421E0DBAD0058BAC4 /* TotalNoticeVC.swift */,
+				C0F7C0B121E438B100A450A3 /* AcceptTermsVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -438,6 +444,7 @@
 				B67AC95A21E2A14600690DD7 /* NanumSquareRegular.ttf in Resources */,
 				C0EE1D5E21DE422B005B114E /* Search.storyboard in Resources */,
 				B6BAFCEB21DBE866004C8743 /* SelectRegionDialog.xib in Resources */,
+				C0F7C0B021E4033500A450A3 /* AcceptTerms.storyboard in Resources */,
 				C0376D2521DD1E3C00D845EB /* Setting.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -562,6 +569,7 @@
 				B67F2A9421DC461800452579 /* BusiType.swift in Sources */,
 				B632123621D3B11000087FA2 /* LoginOrSignupVC.swift in Sources */,
 				B6A3F4AC21C497D0000497BF /* Token.swift in Sources */,
+				C0F7C0B221E438B200A450A3 /* AcceptTermsVC.swift in Sources */,
 				B696AE9B21DFB17400ABFBDB /* ConditionPutService.swift in Sources */,
 				B6248D4921E0E8B80058BAC4 /* SearchService.swift in Sources */,
 				B6BAFCEA21DBE865004C8743 /* SelectRegionDialog.swift in Sources */,

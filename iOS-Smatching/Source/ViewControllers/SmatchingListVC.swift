@@ -174,6 +174,12 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate, U
             self.view.layoutIfNeeded()
         }))
         showStatusArrowImg.image = UIImage(named: "icn_back_white_revers")
+        let maskPath = UIBezierPath(roundedRect: contentView.bounds, byRoundingCorners: [UIRectCorner.bottomLeft, UIRectCorner.bottomRight],cornerRadii: CGSize(width: 8, height: 8))
+        let maskLayer = CAShapeLayer()
+        maskLayer.frame = contentView.bounds
+        maskLayer.path = maskPath.cgPath
+        contentView.layer.mask = maskLayer
+
     }
     
     func hideView() {
