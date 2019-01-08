@@ -100,6 +100,8 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
         
         initGestureRecognizer()
         
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        
         titleTxtField.text = fitConditionRes?.condName ?? "맞춤조건1"
         self.age = fitConditionRes?.age ?? self.age
         self.advantage = fitConditionRes?.advantage ?? self.advantage
@@ -125,6 +127,8 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
         initView()
     }
     
+    @IBAction func DeleteLocation(_ sender: UIButton) {
+    }
     @IBAction func dismissAction(_ sender: Any) {
          dismiss(animated: true, completion: nil )
     }
@@ -467,6 +471,11 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
            nextViewController.cond_idx = data.condIdx
            self.present(nextViewController, animated: true, completion: nil)
         }
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SmatchingListVC") as! SmatchingListVC
+    self.navigationController?.popViewController(animated: true)
+        
+        dismiss(animated: true, completion: nil)
     }
 }
 extension CustomSettingVC: UIGestureRecognizerDelegate {

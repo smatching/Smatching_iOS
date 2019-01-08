@@ -61,7 +61,6 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate, U
     let excCate: [String] = ["창업교육, 창업 멘토링", "지식재산권(특허, 저작권 등)", "시설, 공간", "국내판로 확대", "해외판로 확대", "시제품 제작,제조양산", "정부 대출 지원", "무대출 자금 지원"]
     let advantage: [String] = ["재도전기업", "여성기업", "장애인기업", "사회적기업", "1인창조기업", "4차산업관련기업", "대학(원)생", "공동창업"]
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -96,27 +95,17 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate, U
                 self.noConditionView.isHidden = !self.noConditionView.isHidden
                 
             }
-            else {
-                self.noConditionView.isHidden = !self.noConditionView.isHidden
-            }
         }
-        
-        
-        
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.shouldRemoveShadow(true)
-        
-        
         NoticeService.shared.getAllNotice(request_num: 20, exist_num: self.noticeList.count) {[weak self] (data) in guard let `self` = self else {return}
             
             self.noticeList = data
             self.noticeTableView.reloadData()
         }
-        
     }
-    
     
     @objc func handleGesture(gesture: UISwipeGestureRecognizer) -> Void {
         
@@ -143,8 +132,8 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate, U
             if self.gbno(data.alert) == true {
                 self.checkBoxDidChange(checkbox: self.settingAlarmBtn)
             }
-            self.inputTextMatchingInfo()
             
+            self.inputTextMatchingInfo()
         }
     }
     
@@ -272,6 +261,8 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate, U
             [weak self] (data) in guard let `self` = self else {return}
             print(data.scrap)
         }
+        self.clearTheLabels(locationLabel)
+        self.clearTheLabels(ageLabel)
         self.noticeTableView.reloadData()
     }
     
@@ -377,7 +368,9 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate, U
         text = String(text.dropLast(2))
         return text
     }
-    
+    func clearTheLabels (_ label: UILabel) {
+        label.text! = ""
+    }
 }
 extension SmatchingListVC : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
