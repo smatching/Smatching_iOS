@@ -38,6 +38,7 @@ struct ConditionPutService : APIManager, Requestable {
         postableObj(conditionURL, body: body, header: headers) {(res) in
             switch res {
             case .success(let value):
+                print(value)
                 guard let condIdx = value.data else {return}
                 completion(condIdx)
             case .error(let error):
@@ -63,6 +64,7 @@ struct ConditionPutService : APIManager, Requestable {
         puttable(putURL, body: body, header: headers) {(res) in
             switch res {
             case .success(let value):
+                print(value)
                 guard let condIdx = value.data else {return}
                 completion(condIdx)
             case .error(let error):

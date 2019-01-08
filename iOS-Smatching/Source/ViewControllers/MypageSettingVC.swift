@@ -11,15 +11,29 @@ import UIKit
 class MypageSettingVC: UIViewController {
 
     @IBOutlet weak var profileImg: UIImageView!
+    @IBOutlet weak var newPasswdLabel2: UITextField!
+    @IBOutlet weak var newPasswdLabel: UITextField!
+    @IBOutlet weak var prevPasswdLabel: UITextField!
+    @IBOutlet weak var nicknameLabel: UITextField!
+    @IBOutlet weak var emailLabel: UILabel!
     
-    @IBAction func DismissAction(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil )
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    
+        MypageService.shared.getEditUserInfo() {[weak self] (res) in guard let `self` = self else {return}
+           
+            self.nicknameLabel.text = self.gsno(res.nickname)
+            self.emailLabel.text = self.gsno(res.email)
+            self.prevPasswdLabel.text = self.gsno(res.password)
+            self.profileImg.imageFromUrl(self.gsno(res.profileUrl), defaultImgPath: "")
+        }
     }
+    
+    @IBAction func DismissAction(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil )
+    }
+    
     @IBAction func updateProfileImgBtn(_ sender: Any) {
         let picker = UIImagePickerController()
         picker.delegate = self
@@ -43,6 +57,15 @@ class MypageSettingVC: UIViewController {
         actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         self.present(picker, animated: true)
     }
+    @IBAction func completeEdit(_ sender: Any) {
+        UserService.shared.editUsersInfo(nickname: self.nicknameLabel.text!, password: self.prevPasswdLabel.text!, newPassword: self.newPasswdLabel.text!) { [weak self] () in guard let `self` = self else {return}
+            
+            self.simpleAlert("", "사용자 정보가 변경되었습니다.", completion: nil)
+            self.navigationController?.popViewController(animated: true)
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
 }
 extension MypageSettingVC :  UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
@@ -60,7 +83,11 @@ extension MypageSettingVC :  UIImagePickerControllerDelegate, UINavigationContro
         else {
             return
         }
-        profileImg.image = newImg
+        profileImg.image = cropToBounds(image: newImg, width: Double(self.profileImg.frame.width), height: Double(self.profileImg.frame.height))
+        
+        UserService.shared.putUserProfilImg(picture: profileImg.image!){
+            self.simpleAlert("", "프로필 사진이 변경되었습니다.", completion: nil)
+        }
         dismiss(animated: true, completion: nil)
     }
 }

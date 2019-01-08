@@ -14,6 +14,8 @@ class TotalNoticeVC: UIViewController, UIScrollViewDelegate {
     var noticeList = [Notice]()
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        self.navigationController?.navigationBar.shouldRemoveShadow(true)
         totalNoticeTableView.delegate = self
         totalNoticeTableView.dataSource = self
         // Do any additional setup after loading the view.
@@ -22,6 +24,9 @@ class TotalNoticeVC: UIViewController, UIScrollViewDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+       
+        self.navigationController?.navigationBar.shouldRemoveShadow(true)
         NoticeService.shared.getAllNotice(request_num: 20, exist_num: self.noticeList.count) {[weak self] (data) in guard let `self` = self else {return}
             print(data)
             self.noticeList = data

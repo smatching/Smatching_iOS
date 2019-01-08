@@ -61,6 +61,8 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate, U
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBar.shouldRemoveShadow(true); self.navigationController?.setNavigationBarHidden(false, animated: true)
+        
         initView()
         //조건이 없을 경우 나오는 뷰
         self.noConditionView.isHidden = false
@@ -69,6 +71,10 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate, U
         noticeTableView.dataSource = self
         
         self.settingAlarmBtn.delegate = self
+        
+        //조건 뷰 선택하면 접혀지도록 설정하기
+        let tap = UITapGestureRecognizer(target: self, action: #selector(showConditionView(_:)))
+        contentView.addGestureRecognizer(tap)
         
         //swipe 처리
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
@@ -81,12 +87,13 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate, U
         
         UserService.shared.getUserCondition() {[weak self] (data) in guard let `self` = self else {return}
             self.conditionList = data.condSummaryList!
-            
+            print(data)
             if self.conditionList.isEmpty == false {
                 self.conditionTitle.text = self.gsno(self.conditionList[0].condName)
                 
                 self.cur_cond_idx = self.gino(self.conditionList[0].condIdx)
                 
+                self.noticesCount.text = "총 \(self.gino(self.conditionList[0].noticeCnt))건"
                 self.noConditionView.isHidden = true
                 
             }
@@ -94,7 +101,7 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate, U
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print(self.conditionList)
+        self.navigationController?.navigationBar.shouldRemoveShadow(true); self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     @objc func handleGesture(gesture: UISwipeGestureRecognizer) -> Void {
@@ -105,14 +112,22 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate, U
             if self.conditionList.isEmpty == false {
                 self.noConditionView.isHidden = true
                 self.cur_cond_idx = self.gino(self.conditionList[0].condIdx)
+                self.noticesCount.text = "총 \(self.gino(self.conditionList[0].noticeCnt))건"
+            }
+            else {
+                self.noConditionView.isHidden = false
             }
         }
         else if gesture.direction == UISwipeGestureRecognizer.Direction.left {
             print("Swipe Left")
             pageControl.currentPage = 1
-            if self.conditionList.isEmpty == false {
+            if self.conditionList.count > 1 {
                   self.noConditionView.isHidden = true
                 self.cur_cond_idx = self.gino(self.conditionList[1].condIdx)
+                self.noticesCount.text = "총 \(self.gino(self.conditionList[1].noticeCnt))건"
+            }
+            else {
+                self.noConditionView.isHidden = false
             }
         }
         ConditionSettingSerive.shared.getFitConditionInfo(cond_idx: self.gino(self.cur_cond_idx)) {[weak self] (data) in guard let `self` = self else {return}
@@ -135,9 +150,6 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate, U
         if checkbox == self.settingAlarmBtn {
             self.settingAlarmBtn.isChecked = !checkbox.isChecked
         }
-        //         else {
-        //            self.siCheckBox.isChecked = !checkbox.isChecked
-        //        }
     }
     
     @IBAction func showConditionView(_ sender: Any) {

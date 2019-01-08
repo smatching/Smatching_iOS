@@ -560,6 +560,8 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
     @IBAction func deleteAllConditions(_ sender: Any) {
         ConditionPutService.shared.deleteFitConditionInfo(cond_idx: self.gino(self.cur_cond_idx)) {[weak self] () in guard let `self` = self else {return}
             print("delete!!")
+            self.navigationController?.popViewController(animated: true)
+            self.dismiss(animated: true, completion: nil)
         }
         
     }
@@ -578,10 +580,8 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
                 self.cur_cond_idx = self.gino(data.condIdx)
             }
         }
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SmatchingListVC") as! SmatchingListVC
-        nextViewController.cond_idx = self.cur_cond_idx
         self.navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
     }
     
 }

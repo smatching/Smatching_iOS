@@ -41,7 +41,6 @@
 		B68742EA21D74EDA0094D5E7 /* ConditionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68742E921D74EDA0094D5E7 /* ConditionResponse.swift */; };
 		B68742EE21D752A00094D5E7 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68742ED21D752A00094D5E7 /* SearchVC.swift */; };
 		B68AA6F621D4E2C1000E5549 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68AA6F521D4E2C1000E5549 /* HomeVC.swift */; };
-		B68AA6F821D4E2D0000E5549 /* CustomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68AA6F721D4E2D0000E5549 /* CustomVC.swift */; };
 		B68AA6FA21D4E2DD000E5549 /* TalkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68AA6F921D4E2DD000E5549 /* TalkVC.swift */; };
 		B68AA6FC21D4E2EE000E5549 /* MyPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68AA6FB21D4E2EE000E5549 /* MyPageVC.swift */; };
 		B68AA6FE21D4F6C4000E5549 /* SmatchingListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68AA6FD21D4F6C4000E5549 /* SmatchingListVC.swift */; };
@@ -123,7 +122,6 @@
 		B68742E921D74EDA0094D5E7 /* ConditionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionResponse.swift; sourceTree = "<group>"; };
 		B68742ED21D752A00094D5E7 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		B68AA6F521D4E2C1000E5549 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
-		B68AA6F721D4E2D0000E5549 /* CustomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomVC.swift; sourceTree = "<group>"; };
 		B68AA6F921D4E2DD000E5549 /* TalkVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkVC.swift; sourceTree = "<group>"; };
 		B68AA6FB21D4E2EE000E5549 /* MyPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageVC.swift; sourceTree = "<group>"; };
 		B68AA6FD21D4F6C4000E5549 /* SmatchingListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmatchingListVC.swift; sourceTree = "<group>"; };
@@ -356,7 +354,6 @@
 				B632123521D3B11000087FA2 /* LoginOrSignupVC.swift */,
 				B632123921D3CE9300087FA2 /* SignupVC.swift */,
 				B68AA6F521D4E2C1000E5549 /* HomeVC.swift */,
-				B68AA6F721D4E2D0000E5549 /* CustomVC.swift */,
 				B68AA6F921D4E2DD000E5549 /* TalkVC.swift */,
 				B68AA6FB21D4E2EE000E5549 /* MyPageVC.swift */,
 				B68AA6FD21D4F6C4000E5549 /* SmatchingListVC.swift */,
@@ -512,7 +509,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6A3F4A421C4976F000497BF /* APIManager.swift in Sources */,
-				B68AA6F821D4E2D0000E5549 /* CustomVC.swift in Sources */,
 				B67F2A9A21DC4D0800452579 /* UIView+extension.swift in Sources */,
 				B68742EA21D74EDA0094D5E7 /* ConditionResponse.swift in Sources */,
 				B67F2A9021DC45E700452579 /* Field.swift in Sources */,
@@ -721,13 +717,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 325VLH85CK;
+				DEVELOPMENT_TEAM = 38HL58Q2DM;
 				INFOPLIST_FILE = "$(SRCROOT)/iOS-Smatching/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "shyn22.iOS-Smatching-1";
+				PRODUCT_BUNDLE_IDENTIFIER = "shyn22.iOS-Smatching";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -740,13 +736,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 325VLH85CK;
+				DEVELOPMENT_TEAM = 38HL58Q2DM;
 				INFOPLIST_FILE = "$(SRCROOT)/iOS-Smatching/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "shyn22.iOS-Smatching-1";
+				PRODUCT_BUNDLE_IDENTIFIER = "shyn22.iOS-Smatching";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
