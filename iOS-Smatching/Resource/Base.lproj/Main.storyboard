@@ -149,7 +149,7 @@
                                             <constraint firstAttribute="height" constant="38.5" id="gU0-7F-cxx"/>
                                         </constraints>
                                         <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="12"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -170,7 +170,7 @@
                                             <constraint firstAttribute="width" constant="266" id="eoK-FN-7HM"/>
                                         </constraints>
                                         <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="12"/>
                                         <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -3964,7 +3964,7 @@
         <image name="btnBack" width="48" height="48"/>
         <image name="btnCreateaccountCanclick" width="266" height="47"/>
         <image name="btnExperience" width="266" height="47"/>
-        <image name="btnLogin" width="119" height="19"/>
+        <image name="btnLogin" width="266" height="47"/>
         <image name="btnLoginCanclick" width="266" height="47"/>
         <image name="btnLogin_1" width="266" height="47"/>
         <image name="btn_addsmatching_canclick" width="87" height="87"/>
@@ -4006,7 +4006,7 @@
         <image name="txt_explain" width="164" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="qkw-Lb-YsK"/>
+        <segue reference="aa2-3K-Glj"/>
         <segue reference="LJP-4N-WlQ"/>
         <segue reference="qzU-bA-t8u"/>
     </inferredMetricsTieBreakers>
