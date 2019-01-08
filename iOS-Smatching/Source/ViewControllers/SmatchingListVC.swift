@@ -174,6 +174,12 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate, U
             self.view.layoutIfNeeded()
         }))
         showStatusArrowImg.image = UIImage(named: "icn_back_white_revers")
+        let maskPath = UIBezierPath(roundedRect: contentView.bounds, byRoundingCorners: [UIRectCorner.bottomLeft, UIRectCorner.bottomRight],cornerRadii: CGSize(width: 8, height: 8))
+        let maskLayer = CAShapeLayer()
+        maskLayer.frame = contentView.bounds
+        maskLayer.path = maskPath.cgPath
+        contentView.layer.mask = maskLayer
+
     }
     
     func hideView() {
@@ -193,6 +199,14 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate, U
         showStatusArrowImg.image = UIImage(named: "icn_back_white")
     }
     
+    @IBAction func editConditionBtn(_ sender: Any) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "CustomSettingVC") as! CustomSettingVC
+        
+        nextViewController.fitConditionRes = self.fitConditionRes
+        
+        self.present(nextViewController, animated: true, completion: nil)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

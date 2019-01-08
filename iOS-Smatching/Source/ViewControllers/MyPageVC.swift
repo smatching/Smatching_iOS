@@ -10,6 +10,7 @@ import UIKit
 
 class MyPageVC: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet var SearchImg: UIImageView!
     @IBOutlet weak var scrapedNoticeTableView: UITableView!
     @IBOutlet weak var settingBtn: UIButton!
     @IBOutlet weak var profileImg: UIImageView!
@@ -71,7 +72,14 @@ class MyPageVC: UIViewController, UITextFieldDelegate {
         return true
         
     }
-    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        textField.applyCustomClearbutton()
+        guard searchScrapTxtField.text?.isEmpty == true else{ SearchImg.isHidden = true
+            return true
+        }
+        SearchImg.isHidden = false
+        return true
+    }
 }
 extension MyPageVC : UITableViewDelegate{
     

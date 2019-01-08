@@ -39,7 +39,6 @@ class HomeVC: UIViewController {
         noticeTableView.dataSource = self
         
         
-        
         //로딩 화면
         //        self.view.addSubview(animationView)
         

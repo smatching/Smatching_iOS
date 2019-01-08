@@ -93,10 +93,22 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
     
     var count : Int = 0
     
+    var fitConditionRes : FitConditionResponse?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         initGestureRecognizer()
+        
+        titleTxtField.text = fitConditionRes?.condName ?? "맞춤조건1"
+        self.age = fitConditionRes?.age ?? self.age
+        self.advantage = fitConditionRes?.advantage ?? self.advantage
+        self.location = fitConditionRes?.location ?? self.location
+        self.period = fitConditionRes?.period ?? self.period
+        self.busitype = fitConditionRes?.busiType ?? self.busitype
+        self.field = fitConditionRes?.field ?? self.field
+        self.excCategory = fitConditionRes?.excCategory ?? self.excCategory
+        
         locationSettingSeoul.isHidden = true
         locationSettingBusan.isHidden = true
         locationSettingDaegu.isHidden = true
