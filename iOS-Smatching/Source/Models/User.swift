@@ -14,6 +14,9 @@ struct User : Mappable {
     var profileUrl : String?
     var noticeScrapCnt : Int?
     var talkScrapCnt : Int?
+    var email : String?
+    var password : String?
+    var newPassword : String?
     
     init?(map: Map) {
         
@@ -24,5 +27,8 @@ struct User : Mappable {
         profileUrl <- map["profileUrl"]
         noticeScrapCnt <- map["noticeScrapCnt"]
         talkScrapCnt <- map["talkScrapCnt"]
+        email <- map["email"]
+        password <- map["password"]
+        newPassword <- map["newPassword"]
     }
 }

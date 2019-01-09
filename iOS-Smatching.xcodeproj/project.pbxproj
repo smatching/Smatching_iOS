@@ -41,7 +41,6 @@
 		B68742EA21D74EDA0094D5E7 /* ConditionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68742E921D74EDA0094D5E7 /* ConditionResponse.swift */; };
 		B68742EE21D752A00094D5E7 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68742ED21D752A00094D5E7 /* SearchVC.swift */; };
 		B68AA6F621D4E2C1000E5549 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68AA6F521D4E2C1000E5549 /* HomeVC.swift */; };
-		B68AA6F821D4E2D0000E5549 /* CustomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68AA6F721D4E2D0000E5549 /* CustomVC.swift */; };
 		B68AA6FA21D4E2DD000E5549 /* TalkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68AA6F921D4E2DD000E5549 /* TalkVC.swift */; };
 		B68AA6FC21D4E2EE000E5549 /* MyPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68AA6FB21D4E2EE000E5549 /* MyPageVC.swift */; };
 		B68AA6FE21D4F6C4000E5549 /* SmatchingListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68AA6FD21D4F6C4000E5549 /* SmatchingListVC.swift */; };
@@ -65,6 +64,7 @@
 		B6A3F4AE21C4983B000497BF /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A3F4AD21C4983B000497BF /* UserService.swift */; };
 		B6A3F4B221C499FB000497BF /* UIImage+imageFromURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A3F4B121C499FB000497BF /* UIImage+imageFromURL.swift */; };
 		B6A3F4B421C49A0D000497BF /* UIViewController+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A3F4B321C49A0D000497BF /* UIViewController+extensions.swift */; };
+		B6A7D7C621E5532B00075B4A /* UIImage+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A7D7C521E5532B00075B4A /* UIImage+extension.swift */; };
 		B6AFE59821DF470A0001FA55 /* ConditionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AFE59721DF470A0001FA55 /* ConditionButton.swift */; };
 		B6AFE59A21DF70050001FA55 /* AlertCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AFE59921DF70050001FA55 /* AlertCheckBox.swift */; };
 		B6B74B5921D9EA5D001482BF /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B74B5821D9EA5D001482BF /* Checkbox.swift */; };
@@ -127,7 +127,6 @@
 		B68742E921D74EDA0094D5E7 /* ConditionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionResponse.swift; sourceTree = "<group>"; };
 		B68742ED21D752A00094D5E7 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		B68AA6F521D4E2C1000E5549 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
-		B68AA6F721D4E2D0000E5549 /* CustomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomVC.swift; sourceTree = "<group>"; };
 		B68AA6F921D4E2DD000E5549 /* TalkVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkVC.swift; sourceTree = "<group>"; };
 		B68AA6FB21D4E2EE000E5549 /* MyPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageVC.swift; sourceTree = "<group>"; };
 		B68AA6FD21D4F6C4000E5549 /* SmatchingListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmatchingListVC.swift; sourceTree = "<group>"; };
@@ -153,6 +152,7 @@
 		B6A3F4AD21C4983B000497BF /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		B6A3F4B121C499FB000497BF /* UIImage+imageFromURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+imageFromURL.swift"; sourceTree = "<group>"; };
 		B6A3F4B321C49A0D000497BF /* UIViewController+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extensions.swift"; sourceTree = "<group>"; };
+		B6A7D7C521E5532B00075B4A /* UIImage+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+extension.swift"; sourceTree = "<group>"; };
 		B6AFE59721DF470A0001FA55 /* ConditionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ConditionButton.swift; path = ../../../ConditionButton.swift; sourceTree = "<group>"; };
 		B6AFE59921DF70050001FA55 /* AlertCheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertCheckBox.swift; sourceTree = "<group>"; };
 		B6B74B5821D9EA5D001482BF /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
@@ -291,6 +291,7 @@
 				B67F2A9721DC4CD700452579 /* String+extensions.swift */,
 				B67F2A9921DC4D0800452579 /* UIView+extension.swift */,
 				B67F2A9B21DC4D5800452579 /* UINavigationBar+extension.swift */,
+				B6A7D7C521E5532B00075B4A /* UIImage+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -368,7 +369,6 @@
 				B632123521D3B11000087FA2 /* LoginOrSignupVC.swift */,
 				B632123921D3CE9300087FA2 /* SignupVC.swift */,
 				B68AA6F521D4E2C1000E5549 /* HomeVC.swift */,
-				B68AA6F721D4E2D0000E5549 /* CustomVC.swift */,
 				B68AA6F921D4E2DD000E5549 /* TalkVC.swift */,
 				B68AA6FB21D4E2EE000E5549 /* MyPageVC.swift */,
 				B68AA6FD21D4F6C4000E5549 /* SmatchingListVC.swift */,
@@ -526,7 +526,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6A3F4A421C4976F000497BF /* APIManager.swift in Sources */,
-				B68AA6F821D4E2D0000E5549 /* CustomVC.swift in Sources */,
 				B67F2A9A21DC4D0800452579 /* UIView+extension.swift in Sources */,
 				B68742EA21D74EDA0094D5E7 /* ConditionResponse.swift in Sources */,
 				C0FB18BC21E58ECC00621629 /* SelectBusiType.swift in Sources */,
@@ -567,6 +566,7 @@
 				B61674F121DD2F3A006D67A4 /* CommonResponse.swift in Sources */,
 				B67AC95221E28CFA00690DD7 /* MypageService.swift in Sources */,
 				B6A3F4A621C49785000497BF /* NetworkResult.swift in Sources */,
+				B6A7D7C621E5532B00075B4A /* UIImage+extension.swift in Sources */,
 				B632123A21D3CE9300087FA2 /* SignupVC.swift in Sources */,
 				B6A3F4A221C4974C000497BF /* Requestable.swift in Sources */,
 				B6A3F48921C49070000497BF /* ViewController.swift in Sources */,
@@ -737,13 +737,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 325VLH85CK;
+				DEVELOPMENT_TEAM = 38HL58Q2DM;
 				INFOPLIST_FILE = "$(SRCROOT)/iOS-Smatching/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "shyn22.iOS-Smatching-1";
+				PRODUCT_BUNDLE_IDENTIFIER = "shyn22.iOS-Smatching";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -756,13 +756,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 325VLH85CK;
+				DEVELOPMENT_TEAM = 38HL58Q2DM;
 				INFOPLIST_FILE = "$(SRCROOT)/iOS-Smatching/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "shyn22.iOS-Smatching-1";
+				PRODUCT_BUNDLE_IDENTIFIER = "shyn22.iOS-Smatching";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

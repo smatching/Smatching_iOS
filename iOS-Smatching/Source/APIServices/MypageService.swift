@@ -51,4 +51,24 @@ struct MypageService : APIManager, Requestable {
             }
         }
     }
+    //회원 정보 조회
+    func getEditUserInfo(completion: @escaping(User) -> Void) {
+        let getURL = userURL + "/edit"
+        
+        let headers: HTTPHeaders = [
+            "Authorization" : UserDefaults.standard.string(forKey: "token") ?? ""
+        ]
+        
+        gettableObj(getURL, body: nil, header: headers) {(res) in
+            switch res {
+            case .success(let value):
+                print(value)
+                guard let userInfo = value.data else {return}
+                completion(userInfo)
+            case .error(let error):
+                print(error)
+            }
+        }
+        
+    }
 }

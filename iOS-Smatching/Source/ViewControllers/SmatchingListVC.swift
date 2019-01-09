@@ -23,9 +23,7 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate, U
     var conditionList = [Condition]()
     @IBOutlet weak var pageControl: UIPageControl!
     
-    
     var fitConditionRes : FitConditionResponse?
-    
     
     //contentview 영역 outlet
     @IBOutlet weak var settingAlarmBtn: Checkbox!
@@ -38,7 +36,6 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate, U
     @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var conditionTitle: UILabel!
-    
     
     @IBOutlet weak var showListBtn: UIButton!
     @IBOutlet weak var contentView: UIView!
@@ -64,14 +61,20 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate, U
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBar.shouldRemoveShadow(true); self.navigationController?.setNavigationBarHidden(false, animated: true)
+        
         initView()
         //조건이 없을 경우 나오는 뷰
-        noConditionView.isHidden = true
+        self.noConditionView.isHidden = false
         
         noticeTableView.delegate = self
         noticeTableView.dataSource = self
         
         self.settingAlarmBtn.delegate = self
+        
+        //조건 뷰 선택하면 접혀지도록 설정하기
+        let tap = UITapGestureRecognizer(target: self, action: #selector(showConditionView(_:)))
+        contentView.addGestureRecognizer(tap)
         
         //swipe 처리
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
@@ -82,24 +85,24 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate, U
         swipeLeft.direction = .left
         self.view.addGestureRecognizer(swipeLeft)
         
-        
         UserService.shared.getUserCondition() {[weak self] (data) in guard let `self` = self else {return}
             self.conditionList = data.condSummaryList!
-            
-           
+            print(data)
             if self.conditionList.isEmpty == false {
                 self.conditionTitle.text = self.gsno(self.conditionList[0].condName)
                 
                 self.cur_cond_idx = self.gino(self.conditionList[0].condIdx)
                 
-                self.noConditionView.isHidden = !self.noConditionView.isHidden
+                self.noticesCount.text = "총 \(self.gino(self.conditionList[0].noticeCnt))건"
+                self.noConditionView.isHidden = true
                 
             }
         }
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.navigationBar.shouldRemoveShadow(true)
+        self.navigationController?.navigationBar.shouldRemoveShadow(true); self.navigationController?.setNavigationBarHidden(false, animated: true)
+
         NoticeService.shared.getAllNotice(request_num: 20, exist_num: self.noticeList.count) {[weak self] (data) in guard let `self` = self else {return}
             
             self.noticeList = data
@@ -115,14 +118,22 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate, U
             if self.conditionList.isEmpty == false {
                 self.noConditionView.isHidden = true
                 self.cur_cond_idx = self.gino(self.conditionList[0].condIdx)
+                self.noticesCount.text = "총 \(self.gino(self.conditionList[0].noticeCnt))건"
+            }
+            else {
+                self.noConditionView.isHidden = false
             }
         }
         else if gesture.direction == UISwipeGestureRecognizer.Direction.left {
             print("Swipe Left")
             pageControl.currentPage = 1
-            if self.conditionList.isEmpty == false {
+            if self.conditionList.count > 1 {
                   self.noConditionView.isHidden = true
                 self.cur_cond_idx = self.gino(self.conditionList[1].condIdx)
+                self.noticesCount.text = "총 \(self.gino(self.conditionList[1].noticeCnt))건"
+            }
+            else {
+                self.noConditionView.isHidden = false
             }
         }
         ConditionSettingSerive.shared.getFitConditionInfo(cond_idx: self.gino(self.cur_cond_idx)) {[weak self] (data) in guard let `self` = self else {return}
@@ -135,15 +146,16 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate, U
             
             self.inputTextMatchingInfo()
         }
+        NoticeService.shared.getFitNotice(cond_idx: self.gino(self.cur_cond_idx), request_num: 3, exist_num: self.noticeList.count ) {[weak self] (data) in guard let `self` = self else {return}
+            self.noticeList = data
+            self.noticeTableView.reloadData()
+        }
     }
     
     func checkBoxDidChange(checkbox: Checkbox) {
         if checkbox == self.settingAlarmBtn {
             self.settingAlarmBtn.isChecked = !checkbox.isChecked
         }
-        //         else {
-        //            self.siCheckBox.isChecked = !checkbox.isChecked
-        //        }
     }
     
     @IBAction func showConditionView(_ sender: Any) {
@@ -168,7 +180,6 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate, U
         maskLayer.frame = contentView.bounds
         maskLayer.path = maskPath.cgPath
         contentView.layer.mask = maskLayer
-
     }
     
     func hideView() {
@@ -184,14 +195,14 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate, U
     
     //초기 화면 설정 -> 조건 뷰가 보여지도록
     func initView() {
-        contentViewHeightConstraint.constant = 0
-        showStatusArrowImg.image = UIImage(named: "icn_back_white")
+        contentViewHeightConstraint.constant = 317
+        showStatusArrowImg.image = UIImage(named: "icn_back_white_revers")
     }
     
     @IBAction func editConditionBtn(_ sender: Any) {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "CustomSettingVC") as! CustomSettingVC
-        
+        nextViewController.cur_cond_idx = self.cur_cond_idx
         nextViewController.fitConditionRes = self.fitConditionRes
         
         self.present(nextViewController, animated: true, completion: nil)

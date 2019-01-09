@@ -54,4 +54,79 @@ struct UserService: APIManager, Requestable {
             }
         }
     }
+    //회원 프로필 사진 변경
+    func putUserProfilImg(picture : UIImage, completion: @escaping() -> Void) {
+        let putURL = signupURL + "/picture"
+        
+        let headers: HTTPHeaders = [
+            "Authorization" : UserDefaults.standard.string(forKey: "token") ?? ""
+        ]
+        
+        Alamofire.upload(multipartFormData: { (multipart) in
+            multipart.append(picture.jpegData(compressionQuality: 0.5)!, withName: "picture", fileName: "image.jpeg", mimeType: "image/jpeg")
+        }, to: putURL, method: .put,
+           headers: headers) { (result) in
+            
+            //멀티파트로 성공적으로 인코딩 되었다면 success, 아니라면 failure 입니다.
+            switch result {
+            case .success(let upload, _, _):
+                
+                // 성공 하였다면 아래의 과정으로 응답 리스폰스에 대한 처리를 합니다.
+                // 여기부터는 request 함수와 동일합니다.
+                upload.responseObject { (res: DataResponse<ResponseArray<CommonResponse>>) in
+                    switch res.result {
+                    case .success:
+                        print(res)
+                        completion()
+                    case .failure(let err):
+                        print(err)
+                    }
+                }
+                
+            case .failure(let err):
+                print(err)
+            }
+        }
+    }
+    //회원 정보 변경
+    func editUsersInfo(nickname : String, password: String, newPassword : String, completion : @escaping() -> Void) {
+        let putURL = signupURL + "/edit"
+        let headers: HTTPHeaders = [
+            "Content-Type" : "application/json",
+            "Authorization" : UserDefaults.standard.string(forKey: "token") ?? ""
+        ]
+        let body = [
+            "nickname" : nickname,
+            "password" : password,
+            "newPassword" : newPassword
+        ]
+        
+        puttable(putURL, body: body, header: headers){(res)in
+            switch res {
+            case .success(let value):
+                print(value)
+                completion()
+            case .error(let error):
+                print(error)
+            }
+        }
+    }
+    func leaveThisAppCompletely(completion: @escaping() -> Void) {
+        let headers: HTTPHeaders = [
+            "Authorization" : UserDefaults.standard.string(forKey: "token") ?? ""
+        ]
+        
+        deletable(signupURL, body: nil, header: headers) { (res) in
+            switch res {
+            case .success(let value):
+                print(value)
+                completion()
+            case .error(let error):
+                print(error)
+            
+            }
+            
+        }
+        
+    }
 }

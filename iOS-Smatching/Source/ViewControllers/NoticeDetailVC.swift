@@ -52,5 +52,9 @@ class NoticeDetailVC: UIViewController {
             
         }
     }
+    @IBAction func clickBackBtn(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
+    }
     
 }

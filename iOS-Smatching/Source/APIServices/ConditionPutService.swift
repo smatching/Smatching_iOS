@@ -22,8 +22,8 @@ struct ConditionPutService : APIManager, Requestable {
         "Client" : "iOS"
     ]
     
-    func putFitConditionInfo(condName : String, location: Location, age : Age, period : Period ,field : Field, advantage: Advantage, busiType : BusiType, excCategory : ExcCategory, completion: @escaping(CommonResponse) -> Void) {
-        //       let body = FitConditionResponse(condName: condName, location: location, age: age, period: period, field: field, advantage: advantage, busiType: busiType, excCategory: excCategory) as [String : Any]
+    func postFitConditionInfo(condName : String, location: Location, age : Age, period : Period ,field : Field, advantage: Advantage, busiType : BusiType, excCategory : ExcCategory, completion: @escaping(CommonResponse) -> Void) {
+    
         let body: [String : Any] = [
             "condName" : condName,
             "location" : location.getLocationDic(location: location),
@@ -38,8 +38,49 @@ struct ConditionPutService : APIManager, Requestable {
         postableObj(conditionURL, body: body, header: headers) {(res) in
             switch res {
             case .success(let value):
+                print(value)
                 guard let condIdx = value.data else {return}
                 completion(condIdx)
+            case .error(let error):
+                print(error)
+            }
+            
+        }
+    }
+    func putFitConditionInfo(condIdx : Int, condName : String, location: Location, age : Age, period : Period ,field : Field, advantage: Advantage, busiType : BusiType, excCategory : ExcCategory, completion: @escaping(CommonResponse) -> Void) {
+        let putURL = conditionURL + "/\(condIdx)"
+        
+        let body: [String : Any] = [
+            "condName" : condName,
+            "location" : location.getLocationDic(location: location),
+            "age" : age.getAgeDic(age: age),
+            "period" : period.getPeriodDic(period : period),
+            "field" : field.getFieldDic(field : field),
+            "advantage" : advantage.getAdvantageDic(advantage: advantage),
+            "busiType" : busiType.getBusiTypeDic(busiType : busiType),
+            "excCategory" : excCategory.getExcCategoryDic(excCategory: excCategory)
+        ]
+        
+        puttable(putURL, body: body, header: headers) {(res) in
+            switch res {
+            case .success(let value):
+                print(value)
+                guard let condIdx = value.data else {return}
+                completion(condIdx)
+            case .error(let error):
+                print(error)
+            }
+            
+        }
+    }
+    
+    func deleteFitConditionInfo(cond_idx : Int, completion: @escaping()-> Void) {
+        let deleteURL = conditionURL + "/\(cond_idx)"
+        
+        deletable(deleteURL, body: nil, header: headers) { (res) in
+            switch res {
+            case .success(let value):
+                completion()
             case .error(let error):
                 print(error)
             }
