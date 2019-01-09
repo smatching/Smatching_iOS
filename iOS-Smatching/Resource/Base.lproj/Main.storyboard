@@ -1802,7 +1802,7 @@
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D-7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QFK-Zj-SDc">
-                                                                            <rect key="frame" x="258.5" y="13" width="17.5" height="11.5"/>
+                                                                            <rect key="frame" x="258.5" y="13" width="17.5" height="12"/>
                                                                             <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="10"/>
                                                                             <color key="textColor" red="0.74901960784313726" green="0.45490196078431372" blue="0.45490196078431372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <nil key="highlightedColor"/>
@@ -4088,7 +4088,7 @@
         <image name="btnBack" width="48" height="48"/>
         <image name="btnCreateaccountCanclick" width="266" height="47"/>
         <image name="btnExperience" width="266" height="47"/>
-        <image name="btnLogin" width="119" height="19"/>
+        <image name="btnLogin" width="266" height="47"/>
         <image name="btnLoginCanclick" width="266" height="47"/>
         <image name="btnLogin_1" width="266" height="47"/>
         <image name="btn_addsmatching_canclick" width="87" height="87"/>
@@ -4132,7 +4132,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="aa2-3K-Glj"/>
-        <segue reference="LJP-4N-WlQ"/>
-        <segue reference="qzU-bA-t8u"/>
+        <segue reference="AX4-mH-1YY"/>
+        <segue reference="ACH-Ba-gGw"/>
     </inferredMetricsTieBreakers>
 </document>

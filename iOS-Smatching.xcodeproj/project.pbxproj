@@ -64,6 +64,7 @@
 		B6A3F4AE21C4983B000497BF /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A3F4AD21C4983B000497BF /* UserService.swift */; };
 		B6A3F4B221C499FB000497BF /* UIImage+imageFromURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A3F4B121C499FB000497BF /* UIImage+imageFromURL.swift */; };
 		B6A3F4B421C49A0D000497BF /* UIViewController+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A3F4B321C49A0D000497BF /* UIViewController+extensions.swift */; };
+		B6A7D7C621E5532B00075B4A /* UIImage+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A7D7C521E5532B00075B4A /* UIImage+extension.swift */; };
 		B6AFE59821DF470A0001FA55 /* ConditionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AFE59721DF470A0001FA55 /* ConditionButton.swift */; };
 		B6AFE59A21DF70050001FA55 /* AlertCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AFE59921DF70050001FA55 /* AlertCheckBox.swift */; };
 		B6B74B5921D9EA5D001482BF /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B74B5821D9EA5D001482BF /* Checkbox.swift */; };
@@ -147,6 +148,7 @@
 		B6A3F4AD21C4983B000497BF /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		B6A3F4B121C499FB000497BF /* UIImage+imageFromURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+imageFromURL.swift"; sourceTree = "<group>"; };
 		B6A3F4B321C49A0D000497BF /* UIViewController+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extensions.swift"; sourceTree = "<group>"; };
+		B6A7D7C521E5532B00075B4A /* UIImage+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+extension.swift"; sourceTree = "<group>"; };
 		B6AFE59721DF470A0001FA55 /* ConditionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ConditionButton.swift; path = ../../../ConditionButton.swift; sourceTree = "<group>"; };
 		B6AFE59921DF70050001FA55 /* AlertCheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertCheckBox.swift; sourceTree = "<group>"; };
 		B6B74B5821D9EA5D001482BF /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 				B67F2A9721DC4CD700452579 /* String+extensions.swift */,
 				B67F2A9921DC4D0800452579 /* UIView+extension.swift */,
 				B67F2A9B21DC4D5800452579 /* UINavigationBar+extension.swift */,
+				B6A7D7C521E5532B00075B4A /* UIImage+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -547,6 +550,7 @@
 				B61674F121DD2F3A006D67A4 /* CommonResponse.swift in Sources */,
 				B67AC95221E28CFA00690DD7 /* MypageService.swift in Sources */,
 				B6A3F4A621C49785000497BF /* NetworkResult.swift in Sources */,
+				B6A7D7C621E5532B00075B4A /* UIImage+extension.swift in Sources */,
 				B632123A21D3CE9300087FA2 /* SignupVC.swift in Sources */,
 				B6A3F4A221C4974C000497BF /* Requestable.swift in Sources */,
 				B6A3F48921C49070000497BF /* ViewController.swift in Sources */,

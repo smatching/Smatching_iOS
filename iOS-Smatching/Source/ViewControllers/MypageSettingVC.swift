@@ -83,8 +83,11 @@ extension MypageSettingVC :  UIImagePickerControllerDelegate, UINavigationContro
         else {
             return
         }
-        profileImg.image = cropToBounds(image: newImg, width: Double(self.profileImg.frame.width), height: Double(self.profileImg.frame.height))
         
+        let size = CGSize(width: 65, height: 65)
+        profileImg.image = newImg.crop(to: size)
+        
+//        let image = UIImage(named: "my_great_photo")?.crop(size)
         UserService.shared.putUserProfilImg(picture: profileImg.image!){
             self.simpleAlert("", "프로필 사진이 변경되었습니다.", completion: nil)
         }
