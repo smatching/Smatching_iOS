@@ -252,6 +252,9 @@
                                             <constraint firstAttribute="height" constant="18" id="kI2-xX-Yle"/>
                                         </constraints>
                                         <state key="normal" image="icnDetailpageCalll"/>
+                                        <connections>
+                                            <action selector="clickCallBtn:" destination="ryh-fp-MFs" eventType="touchUpInside" id="glZ-9h-oQt"/>
+                                        </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BEQ-NS-yJl">
                                         <rect key="frame" x="38" y="0.0" width="0.5" height="18"/>
@@ -268,6 +271,9 @@
                                             <constraint firstAttribute="width" constant="19" id="yom-o4-iqb"/>
                                         </constraints>
                                         <state key="normal" image="icnDetailpageLink"/>
+                                        <connections>
+                                            <action selector="urlLinkToSafari:" destination="ryh-fp-MFs" eventType="touchUpInside" id="0ll-6T-OUd"/>
+                                        </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bk0-rx-NRf">
                                         <rect key="frame" x="97.5" y="0.0" width="0.5" height="18"/>
@@ -284,6 +290,9 @@
                                             <constraint firstAttribute="width" constant="16" id="FqY-KV-3Ab"/>
                                         </constraints>
                                         <state key="normal" title="Button" image="icnDetailpageScrapUnclick"/>
+                                        <connections>
+                                            <action selector="clickScrapBtn:" destination="ryh-fp-MFs" eventType="touchUpInside" id="pvo-87-n3O"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -319,6 +328,7 @@
                         <outlet property="noticeSummary" destination="0Kr-Pl-wBO" id="69u-lF-a4E"/>
                         <outlet property="noticeTarget" destination="8As-3g-hHp" id="Mkb-Dj-SmX"/>
                         <outlet property="noticeTitle" destination="3MZ-8J-fab" id="lsU-nD-is8"/>
+                        <outlet property="partLabel" destination="2po-82-6ZL" id="H96-5w-9NS"/>
                         <outlet property="phoneBtn" destination="mwu-RA-c3F" id="2Ce-NF-xq0"/>
                         <outlet property="registDate" destination="0Ah-dj-2ef" id="3BY-lb-3zh"/>
                         <outlet property="scrapBtn" destination="boK-dp-YJR" id="WQv-6o-yP2"/>

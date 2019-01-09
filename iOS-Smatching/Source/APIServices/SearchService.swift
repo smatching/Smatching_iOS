@@ -90,4 +90,21 @@ struct SearchService: APIManager, Requestable {
         }
         
     }
+    
+    func getSearchResultAtMyConditionScrap(query : String, request_num : Int? = 2, exist_num : Int? = 0, completion: @escaping([Notice]) ->Void){
+        let queryURL = searchURL + "/notices/scrap?query=\(query)&request_num=\(request_num ?? 2)&exist_num=\(exist_num ?? 0)"
+        guard let encodingURL = queryURL.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else { return }
+        gettable(encodingURL, body: nil, header: headers) {(res) in
+            switch res {
+            case .success(let value):
+                print(value)
+                guard let result = value.data else
+                {return}
+                completion(result)
+            case .error(let error):
+                print(error)
+            }
+            
+        }
+    }
 }
