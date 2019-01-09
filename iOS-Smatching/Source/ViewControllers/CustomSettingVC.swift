@@ -9,6 +9,7 @@ import UIKit
 
 class CustomSettingVC: UIViewController, UITextFieldDelegate{
     
+    
     @IBOutlet weak var showDetail: UILabel!
     @IBOutlet weak var titleTxtField: UITextField!
     @IBOutlet weak var periodLabelChange: UILabel!
@@ -297,7 +298,7 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
     func startAlert()
     {
         // 사용자정의 팝업
-        let popup: SelectRegionDialog = UINib(nibName: SelectRegionDialog.identifier, bundle: nil).instantiate(withOwner: self, options: nil)[0] as! SelectRegionDialog
+        let popup: SelectRegionDialog = UINib(nibName: "SelectRegionDialog", bundle: nil).instantiate(withOwner: self, options: nil)[0] as! SelectRegionDialog
         popup.backgroundColor = UIColor.gray.withAlphaComponent(1)
         popup.center = CGPoint(x: self.view.frame.width / 2, y: self.view.frame.height / 2)
         popup.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
@@ -306,7 +307,29 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
         self.view.addSubview(popup);
         //        self.local.delegate = self
     }
-    
+    @IBAction func selectBusiType(_ sender: Any) {
+        startAlert1()
+    }
+    func startAlert1 () {
+        if let busiType = Bundle.main.loadNibNamed("BusiTypeBox", owner: self, options: nil)?.first as? SelectBusiType {
+            busiType.okBtn.addTarget(self, action: #selector(btnOkClick), for: .touchUpInside)
+            busiType.cancelBtn.addTarget(self, action: #selector(btnCancelClick), for: .touchUpInside)
+            self.view.addSubview(busiType)
+        }
+    }
+
+    @IBAction func selectUselessField(_ sender: Any) {
+        startAlert2()
+    }
+    func startAlert2 () {
+        if let uselessField = Bundle.main.loadNibNamed("UselessField", owner: self, options: nil)?.first as? SelectUselessField {
+            
+        
+            uselessField.okBtn.addTarget(self, action: #selector(btnOkClick), for: .touchUpInside)
+            uselessField.cancelBtn.addTarget(self, action: #selector(btnCancelClick), for: .touchUpInside)
+            self.view.addSubview(uselessField)
+        }
+    }
     @objc func btnCancelClick() -> Void
     {
         

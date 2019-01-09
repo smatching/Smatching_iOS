@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -38,7 +38,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kio-SD-RJd">
-                    <rect key="frame" x="32.5" y="191" width="310" height="400"/>
+                    <rect key="frame" x="32.5" y="143.5" width="310" height="400"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="검색 희망 지역" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nui-56-hxm">
                             <rect key="frame" x="80" y="25" width="91.5" height="21"/>
@@ -727,7 +727,6 @@
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="Jcw-IA-qZp" secondAttribute="trailing" constant="233" id="1GN-kK-gk6"/>
                         <constraint firstItem="3PS-AI-GZP" firstAttribute="top" secondItem="9BD-Yg-dEN" secondAttribute="bottom" constant="43" id="2ai-Rm-ziF"/>
-                        <constraint firstAttribute="width" constant="310" id="3ZG-N5-l4o"/>
                         <constraint firstItem="3PS-AI-GZP" firstAttribute="top" secondItem="Eu9-gT-AOp" secondAttribute="bottom" constant="8" id="54Q-mj-g8D"/>
                         <constraint firstItem="Ap4-Or-Om0" firstAttribute="leading" secondItem="6HI-5l-O3q" secondAttribute="trailing" id="7sP-J1-5Ud"/>
                         <constraint firstItem="dZY-fy-qoX" firstAttribute="top" secondItem="vcG-bZ-0Oi" secondAttribute="bottom" constant="9.5" id="8bh-Jl-1f9"/>
@@ -780,7 +779,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kio-SD-RJd" secondAttribute="trailing" constant="32.5" id="dmv-Pq-Zbf"/>
                 <constraint firstItem="kio-SD-RJd" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="f0D-s3-nUp"/>
                 <constraint firstItem="kio-SD-RJd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32.5" id="gFK-4i-bX0"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="kio-SD-RJd" secondAttribute="bottom" constant="76" id="x9q-QL-JNf"/>
+                <constraint firstItem="kio-SD-RJd" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="zgS-qk-yMr"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <connections>

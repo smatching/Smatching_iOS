@@ -14,12 +14,12 @@ class SelectRegionDialog: UIView {
     @IBOutlet weak var okBtn: UIButton!
     @IBOutlet weak var cancelBtn: UIButton!
     @IBOutlet weak var selectCntLabel: UILabel!
-    // identifier
+//     identifier
     class var identifier: String
     {
         return "SelectRegionDialog"
     }
-    
+
     class func instanceFromNib() -> UIView {
         return UINib(nibName: self.identifier, bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UIView
     }

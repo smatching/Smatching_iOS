@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -936,29 +936,29 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="닉네임최대일때야" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z61-2i-kaZ">
-                                        <rect key="frame" x="118.5" y="167" width="138.5" height="23.5"/>
+                                        <rect key="frame" x="114.5" y="167" width="146" height="22.5"/>
                                         <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_mypage_scrapbox-1" translatesAutoresizingMaskIntoConstraints="NO" id="oZh-Ag-rfd">
-                                        <rect key="frame" x="277" y="190.5" width="60" height="30"/>
+                                        <rect key="frame" x="277" y="189.5" width="60" height="30"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I9q-3U-auN">
-                                        <rect key="frame" x="18" y="220.5" width="339" height="333.5"/>
+                                        <rect key="frame" x="18" y="219.5" width="339" height="334.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="i2I-ec-j4T">
-                                                <rect key="frame" x="48" y="24" width="243" height="33"/>
+                                                <rect key="frame" x="42" y="24" width="255" height="32"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vCv-t2-aif">
-                                                        <rect key="frame" x="0.0" y="0.0" width="114" height="33"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="120" height="32"/>
                                                         <fontDescription key="fontDescription" name="NanumSquareEB" family="NanumSquare" pointSize="18"/>
                                                         <state key="normal" title="맞춤지원 스크랩">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1G-Nx-15w">
-                                                        <rect key="frame" x="129" y="0.0" width="114" height="33"/>
+                                                        <rect key="frame" x="135" y="0.0" width="120" height="32"/>
                                                         <fontDescription key="fontDescription" name="NanumSquareEB" family="NanumSquare" pointSize="18"/>
                                                         <state key="normal" title="창업토크 스크랩">
                                                             <color key="titleColor" red="0.83921568627450982" green="0.83921568627450982" blue="0.83921568627450982" alpha="1" colorSpace="calibratedRGB"/>
@@ -967,7 +967,7 @@
                                                 </subviews>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zhf-SQ-uCR">
-                                                <rect key="frame" x="27" y="77" width="285" height="30"/>
+                                                <rect key="frame" x="27" y="76" width="285" height="30"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" 스크랩을 검색하세요." textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iy1-WO-cQT">
                                                         <rect key="frame" x="0.0" y="4" width="285" height="22"/>
@@ -989,7 +989,7 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="총 000건" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="diO-Xr-YK8">
-                                                <rect key="frame" x="31" y="122" width="44.5" height="13"/>
+                                                <rect key="frame" x="31" y="121" width="46.5" height="13"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="13" id="wqE-LN-fmH"/>
                                                 </constraints>
@@ -998,7 +998,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CCm-E8-cLs">
-                                                <rect key="frame" x="26" y="148" width="287" height="185.5"/>
+                                                <rect key="frame" x="26" y="147" width="287" height="187.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="NoticeCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NoticeCell" rowHeight="73" id="gfq-RW-9DN" customClass="NoticeCell" customModule="iOS_Smatching" customModuleProvider="target">
@@ -1012,13 +1012,13 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="287" height="71.5"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="대한무역투자진흥공사" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w6D-xO-wSd">
-                                                                            <rect key="frame" x="5" y="13" width="95.5" height="13"/>
+                                                                            <rect key="frame" x="5" y="13" width="100.5" height="13"/>
                                                                             <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="11"/>
                                                                             <color key="textColor" red="0.40392156862745099" green="0.40392156862745099" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F5Y-Xh-oUq">
-                                                                            <rect key="frame" x="111" y="10" width="39.5" height="16.5"/>
+                                                                            <rect key="frame" x="116" y="10" width="39.5" height="16.5"/>
                                                                             <subviews>
                                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="box_dday_gray" translatesAutoresizingMaskIntoConstraints="NO" id="uXC-79-wez">
                                                                                     <rect key="frame" x="0.0" y="0.5" width="40" height="16"/>
@@ -1027,7 +1027,7 @@
                                                                                     </constraints>
                                                                                 </imageView>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D-21" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QuH-cR-aQx">
-                                                                                    <rect key="frame" x="8.5" y="2.5" width="22.5" height="12"/>
+                                                                                    <rect key="frame" x="8" y="2.5" width="23.5" height="12"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="height" constant="12" id="HnW-si-C4h"/>
                                                                                     </constraints>
@@ -1802,7 +1802,7 @@
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D-7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QFK-Zj-SDc">
-                                                                            <rect key="frame" x="259.5" y="13" width="16.5" height="12"/>
+                                                                            <rect key="frame" x="258.5" y="13" width="17.5" height="12"/>
                                                                             <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="10"/>
                                                                             <color key="textColor" red="0.74901960784313726" green="0.45490196078431372" blue="0.45490196078431372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <nil key="highlightedColor"/>
@@ -3403,6 +3403,9 @@
                                                             <constraint firstAttribute="width" constant="10" id="ltK-h0-wjd"/>
                                                         </constraints>
                                                         <state key="normal" image="btn_align_Triangle_747474"/>
+                                                        <connections>
+                                                            <action selector="selectBusiType:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="Qbd-JF-fEQ"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="업종을 선택해 주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28E-xy-hse">
                                                         <rect key="frame" x="10" y="10" width="121" height="16"/>
@@ -3470,6 +3473,9 @@
                                                             <constraint firstAttribute="height" constant="10" id="k7o-K8-Thr"/>
                                                         </constraints>
                                                         <state key="normal" image="btn_align_Triangle_747474"/>
+                                                        <connections>
+                                                            <action selector="selectUselessField:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="F0f-ed-4eC"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="필요 없는 지원사업분야를 선택해 주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="umn-rY-GKA">
                                                         <rect key="frame" x="10" y="10" width="225.5" height="17"/>
@@ -4088,7 +4094,7 @@
         <image name="btnBack" width="48" height="48"/>
         <image name="btnCreateaccountCanclick" width="266" height="47"/>
         <image name="btnExperience" width="266" height="47"/>
-        <image name="btnLogin" width="119" height="19"/>
+        <image name="btnLogin" width="266" height="47"/>
         <image name="btnLoginCanclick" width="266" height="47"/>
         <image name="btnLogin_1" width="266" height="47"/>
         <image name="btn_addsmatching_canclick" width="87" height="87"/>

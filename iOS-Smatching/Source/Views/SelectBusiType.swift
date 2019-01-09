@@ -9,13 +9,18 @@
 import UIKit
 
 class SelectBusiType: UIView {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    
+    
+    
+    @IBOutlet weak var okBtn: UIButton!
+    @IBOutlet weak var cancelBtn: UIButton!
+    
+    
+   
+    @IBAction func okBtnPressed(_ sender: Any) {
+        removeFromSuperview()
     }
-    */
-
+    @IBAction func cancelBtnPressed(_ sender: Any) {
+        removeFromSuperview()
+    }
 }
