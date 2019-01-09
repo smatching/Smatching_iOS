@@ -15,9 +15,12 @@ class MyPageVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var settingBtn: UIButton!
     @IBOutlet weak var profileImg: UIImageView!
     @IBOutlet weak var nicknameLabel: UILabel!
+    @IBOutlet weak var noticeCnt: UILabel!
     
     @IBOutlet weak var searchScrapTxtField: UITextField!
     var noticeList = [Notice]()
+    
+    var email : String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,13 +31,15 @@ class MyPageVC: UIViewController, UITextFieldDelegate {
         searchScrapTxtField.delegate = self
         
         initGestureRecognizer()
+        
         MypageService.shared.getUserInfo() {[weak self] (data) in guard let `self` = self else {return}
             
             print(data)
             self.nicknameLabel.text = self.gsno(data.nickname)
             self.profileImg.imageFromUrl(self.gsno(data.profileUrl), defaultImgPath: "")
+            self.noticeCnt.text = "총 \(self.gino(data.noticeScrapCnt))건"
+            
         }
-        
         // Do any additional setup after loading the view.
     }
     
@@ -42,10 +47,19 @@ class MyPageVC: UIViewController, UITextFieldDelegate {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
         
+        MypageService.shared.getUserInfo() {[weak self] (data) in guard let `self` = self else {return}
+            
+            print(data)
+            self.nicknameLabel.text = self.gsno(data.nickname)
+            self.profileImg.imageFromUrl(self.gsno(data.profileUrl), defaultImgPath: "")
+            self.noticeCnt.text = "총 \(self.gino(data.noticeScrapCnt))건"
+            
+        }
         MypageService.shared.getScrappedNotices(request_num: 3, exist_num: 0) {[weak self] (data) in guard let `self` = self else {return}
             print(data)
             self.noticeList = data
             self.scrapedNoticeTableView.reloadData()
+            
         }
     }
      
@@ -57,7 +71,6 @@ class MyPageVC: UIViewController, UITextFieldDelegate {
     @IBAction func updateProfile(_ sender: Any) {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Setting", bundle:nil)
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MypageSettingVC") as! MypageSettingVC
-    
         self.present(nextViewController, animated: true, completion: nil)
 
     }

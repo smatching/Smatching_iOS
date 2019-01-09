@@ -16,6 +16,7 @@ class CustomVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.shouldRemoveShadow(true)
         
         //swipe 처리
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))

@@ -5,7 +5,6 @@
 //  Created by shineeseo on 2018. 12. 31..
 //  Copyright © 2018년 shineeseo. All rights reserved.
 //
-
 import UIKit
 
 class CustomSettingVC: UIViewController, UITextFieldDelegate{
@@ -95,14 +94,24 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
     
     var fitConditionRes : FitConditionResponse?
     
+    var flag = 0
+    
+    var cur_cond_idx : Int?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         initGestureRecognizer()
+        self.navigationController?.navigationBar.shouldRemoveShadow(true)
         
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        if fitConditionRes == nil {
+            flag = 0
+        } else {
+            flag = 1
+        }
         
         titleTxtField.text = fitConditionRes?.condName ?? "맞춤조건1"
+        
         self.age = fitConditionRes?.age ?? self.age
         self.advantage = fitConditionRes?.advantage ?? self.advantage
         self.location = fitConditionRes?.location ?? self.location
@@ -110,6 +119,92 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
         self.busitype = fitConditionRes?.busiType ?? self.busitype
         self.field = fitConditionRes?.field ?? self.field
         self.excCategory = fitConditionRes?.excCategory ?? self.excCategory
+        
+        print(age)
+        print(period)
+        print(advantage)
+        
+        if age.twenty_less == true {
+            initialSetting(recognizer: twenty_less)
+        }
+        if age.forty_more == true {
+            initialSetting(recognizer: forty_more)
+        }
+        if age.twenty_forty == true {
+            initialSetting(recognizer: twenty_forty)
+        }
+        
+        if period.zero_one == true {
+            initialSetting(recognizer: zero_one)
+        }
+        if period.one_two == true {
+            initialSetting(recognizer: one_two)
+        }
+        if period.two_three == true {
+            initialSetting(recognizer: two_three)
+        }
+        if period.three_four == true {
+            initialSetting(recognizer: three_four)
+        }
+        if period.four_five == true {
+            initialSetting(recognizer: four_five)
+        }
+        if period.five_six == true {
+            initialSetting(recognizer: five_six)
+        }
+        if period.six_seven == true {
+            initialSetting(recognizer: six_seven)
+        }
+        if busitype.midsmall == true {
+            initialSetting(recognizer: midsmall)
+        }
+        if busitype.midbig == true {
+            initialSetting(recognizer: midbig)
+        }
+        
+        if busitype.big == true {
+            initialSetting(recognizer: big)
+        }
+        
+        if busitype.sole == true {
+            initialSetting(recognizer: sole)
+        }
+        
+        if busitype.small == true {
+            initialSetting(recognizer: small)
+        }
+        
+        if busitype.tradi == true {
+            initialSetting(recognizer: tradi)
+        }
+        
+        if busitype.pre == true {
+            initialSetting(recognizer: pre)
+        }
+        if advantage.retry == true{
+            initialSetting(recognizer: retry)
+        }
+        if advantage.woman == true{
+            initialSetting(recognizer: woman)
+        }
+        if advantage.disabled == true{
+            initialSetting(recognizer: disabled)
+        }
+        if advantage.social == true{
+            initialSetting(recognizer: social)
+        }
+        if advantage.sole == true{
+            initialSetting(recognizer: sole_create)
+        }
+        if advantage.fourth == true{
+            initialSetting(recognizer: fourth)
+        }
+        if advantage.univ == true{
+            initialSetting(recognizer: univ)
+        }
+        if advantage.togather == true{
+            initialSetting(recognizer: together)
+        }
         
         locationSettingSeoul.isHidden = true
         locationSettingBusan.isHidden = true
@@ -127,10 +222,19 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
         initView()
     }
     
-    @IBAction func DeleteLocation(_ sender: UIButton) {
+    func initialSetting(recognizer : ConditionButton) {
+        if  recognizer.layer.borderColor == UIColor(displayP3Red: 76/255, green: 130/255, blue: 216/255, alpha: 1.0).cgColor {
+            recognizer.layer.borderColor = UIColor(displayP3Red: 216/255, green: 216/255, blue: 216/255, alpha: 1.0).cgColor
+            
+            
+        } else {
+            //선택을 할 경우
+            recognizer.layer.borderColor = UIColor(displayP3Red: 76/255, green: 130/255, blue: 216/255, alpha: 1.0).cgColor
+            
+        }
     }
     @IBAction func dismissAction(_ sender: Any) {
-         dismiss(animated: true, completion: nil )
+        dismiss(animated: true, completion: nil )
     }
     func showView() {
         
@@ -144,13 +248,13 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
             }
             count += 1
         }
+        
         if self.location.busan == true {
             self.locationSettingBusan.isHidden = !self.locationSettingBusan.isHidden
             if count == 0 {
                 self.locationSettingBusan.transform = CGAffineTransform.identity
             }
             else {
-                
                 self.locationSettingBusan.transform = CGAffineTransform(translationX: self.locationSettingBusan.frame.width, y: 0)
             }
             count += 1
@@ -198,9 +302,9 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
         popup.center = CGPoint(x: self.view.frame.width / 2, y: self.view.frame.height / 2)
         popup.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
         popup.cancelBtn.addTarget(self, action: #selector(btnCancelClick), for: .touchUpInside) // 버튼 이벤트 등록
-         popup.okBtn.addTarget(self, action: #selector(btnOkClick), for: .touchUpInside) // 버튼 이벤트 등록
+        popup.okBtn.addTarget(self, action: #selector(btnOkClick), for: .touchUpInside) // 버튼 이벤트 등록
         self.view.addSubview(popup);
-//        self.local.delegate = self
+        //        self.local.delegate = self
     }
     
     @objc func btnCancelClick() -> Void
@@ -242,7 +346,7 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
             break
         case ulsan:
             self.location.ulsan = !self.location.ulsan!
-           sender.isChecked = self.location.ulsan!
+            sender.isChecked = self.location.ulsan!
             break
         case sejong:
             self.location.sejong = !self.location.sejong!
@@ -349,9 +453,6 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
     }
     
     @IBAction func conditionBtnClick(_ sender: ConditionButton) {
-        //        if sender == twenty_less {
-        //            print("twenty_less")
-        //        }
         
         if  sender.layer.borderColor == UIColor(displayP3Red: 76/255, green: 130/255, blue: 216/255, alpha: 1.0).cgColor {
             sender.layer.borderColor = UIColor(displayP3Red: 216/255, green: 216/255, blue: 216/255, alpha: 1.0).cgColor
@@ -454,42 +555,45 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
         default:
             break
         }
-      
     }
-    
-    
+    @IBAction func deleteAllConditions(_ sender: Any) {
+        ConditionPutService.shared.deleteFitConditionInfo(cond_idx: self.gino(self.cur_cond_idx)) {[weak self] () in guard let `self` = self else {return}
+            print("delete!!")
+            self.navigationController?.popViewController(animated: true)
+            self.dismiss(animated: true, completion: nil)
+        }
+        
+    }
     
     @IBAction func submitCondition(_ sender: Any) {
-        print(self.advantage)
-        print(self.busitype
-        )
-        print(self.age)
-        print(self.period); ConditionPutService.shared.putFitConditionInfo(condName: self.titleTxtField.text!, location: self.location, age: self.age, period: self.period, field: self.field, advantage: self.advantage, busiType: self.busitype, excCategory: self.excCategory){[weak self] (data) in guard let `self` = self else {return}
-            print(data)
-            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SmatchingListVC") as! SmatchingListVC
-           nextViewController.cond_idx = data.condIdx
-           self.present(nextViewController, animated: true, completion: nil)
+        print(flag)
+        if flag == 0 {
+            ConditionPutService.shared.postFitConditionInfo(condName: self.titleTxtField.text!, location: self.location, age: self.age, period: self.period, field: self.field, advantage: self.advantage, busiType: self.busitype, excCategory: self.excCategory){[weak self] (data) in guard let `self` = self else {return}
+                
+                self.cur_cond_idx = self.gino(data.condIdx)
+            }
         }
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SmatchingListVC") as! SmatchingListVC
-    self.navigationController?.popViewController(animated: true)
-        
+        else {
+            ConditionPutService.shared.putFitConditionInfo(condIdx: self.gino(self.cur_cond_idx!), condName: self.titleTxtField.text!, location: self.location, age: self.age, period: self.period, field: self.field, advantage: self.advantage, busiType: self.busitype, excCategory: self.excCategory) {[weak self] (data) in guard let `self` = self else {return}
+                
+                self.cur_cond_idx = self.gino(data.condIdx)
+            }
+        }
+        self.navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil)
     }
+    
 }
 extension CustomSettingVC: UIGestureRecognizerDelegate {
     func initGestureRecognizer() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleTabMainView(_:)))
         tap.delegate = self
         view.addGestureRecognizer(tap)
-        
-        
     }
+    
     @objc func handleTabMainView(_ sender: UITapGestureRecognizer){
         //입력할 수 있는 기능을 없앰
         self.titleTxtField.resignFirstResponder()
-        
     }
     
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
@@ -527,4 +631,3 @@ extension CustomSettingVC: UIGestureRecognizerDelegate {
     }
     
 }
-

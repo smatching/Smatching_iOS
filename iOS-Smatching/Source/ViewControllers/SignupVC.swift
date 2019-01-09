@@ -151,12 +151,6 @@ class SignupVC: UIViewController, UITextFieldDelegate {
         textField.layer.borderColor = UIColor.lightGray.cgColor
     }
     
-    
-    
-    
-    
-    
-    
 }
 extension SignupVC : UIGestureRecognizerDelegate {
     func initGestureRecognizer() {

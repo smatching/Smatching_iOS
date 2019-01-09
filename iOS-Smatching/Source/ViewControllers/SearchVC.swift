@@ -17,6 +17,8 @@ class SearchVC: UIViewController, UITextFieldDelegate {
     @IBOutlet var UnderlineOfText: UIView!
     @IBOutlet weak var noSearchResult: UIView!
     
+    var noticeCnt : Int?
+    
     var noticeList = [Notice]()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +26,7 @@ class SearchVC: UIViewController, UITextFieldDelegate {
         
 //        searchResultView.isHidden = true
         noSearchResult.isHidden = true
+        searchResultView.isHidden = true
         
         SearchTxtField.delegate = self
         
@@ -44,6 +47,11 @@ class SearchVC: UIViewController, UITextFieldDelegate {
         self.navigationController?.navigationBar.shouldRemoveShadow(true)
     }
     
+    
+    @IBAction func clickBackBtn(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
+    }
     @objc func whenTxtFieldTapped () {
         UnderlineOfText.backgroundColor = UIColor(red: 64/255, green: 178/255, blue: 204/255, alpha: 1)
         SearchImg.isHidden = true
@@ -54,10 +62,24 @@ class SearchVC: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         guard SearchTxtField.text?.isEmpty != true else {return false}
+        SearchService.shared.getSearchResultCount(query: self.SearchTxtField.text!){[weak self] (res) in guard let `self` = self else {return}
+            
+            
+            self.noticeCnt = self.gino(res.num)
+        
+        }
+        if self.gino(self.noticeCnt) == 0{
+            self.noSearchResult.isHidden = false
+            self.searchResultView.isHidden = true
+        }
         
         SearchService.shared.getSearchResult(query: self.SearchTxtField.text!, request_num: 4, exist_num: 0 ) { [weak self] (res) in guard let `self` = self else {return}
             self.noticeList = res
             self.searchTableView.reloadData()
+        }
+        if self.noticeList.isEmpty == false{
+            self.noSearchResult.isHidden = true
+            self.searchResultView.isHidden = false
         }
         return true
     }
