@@ -5,7 +5,6 @@
 //  Created by shineeseo on 2018. 12. 31..
 //  Copyright © 2018년 shineeseo. All rights reserved.
 //
-
 import UIKit
 
 class CustomSettingVC: UIViewController, UITextFieldDelegate{
@@ -235,7 +234,7 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
         }
     }
     @IBAction func dismissAction(_ sender: Any) {
-         dismiss(animated: true, completion: nil )
+        dismiss(animated: true, completion: nil )
     }
     func showView() {
         
@@ -303,9 +302,9 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
         popup.center = CGPoint(x: self.view.frame.width / 2, y: self.view.frame.height / 2)
         popup.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
         popup.cancelBtn.addTarget(self, action: #selector(btnCancelClick), for: .touchUpInside) // 버튼 이벤트 등록
-         popup.okBtn.addTarget(self, action: #selector(btnOkClick), for: .touchUpInside) // 버튼 이벤트 등록
+        popup.okBtn.addTarget(self, action: #selector(btnOkClick), for: .touchUpInside) // 버튼 이벤트 등록
         self.view.addSubview(popup);
-//        self.local.delegate = self
+        //        self.local.delegate = self
     }
     
     @objc func btnCancelClick() -> Void
@@ -347,7 +346,7 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
             break
         case ulsan:
             self.location.ulsan = !self.location.ulsan!
-           sender.isChecked = self.location.ulsan!
+            sender.isChecked = self.location.ulsan!
             break
         case sejong:
             self.location.sejong = !self.location.sejong!
@@ -632,4 +631,3 @@ extension CustomSettingVC: UIGestureRecognizerDelegate {
     }
     
 }
-

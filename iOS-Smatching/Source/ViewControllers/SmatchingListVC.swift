@@ -102,6 +102,12 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate, U
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.shouldRemoveShadow(true); self.navigationController?.setNavigationBarHidden(false, animated: true)
+
+        NoticeService.shared.getAllNotice(request_num: 20, exist_num: self.noticeList.count) {[weak self] (data) in guard let `self` = self else {return}
+            
+            self.noticeList = data
+            self.noticeTableView.reloadData()
+        }
     }
     
     @objc func handleGesture(gesture: UISwipeGestureRecognizer) -> Void {
@@ -137,8 +143,8 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate, U
             if self.gbno(data.alert) == true {
                 self.checkBoxDidChange(checkbox: self.settingAlarmBtn)
             }
-            self.inputTextMatchingInfo()
             
+            self.inputTextMatchingInfo()
         }
         NoticeService.shared.getFitNotice(cond_idx: self.gino(self.cur_cond_idx), request_num: 3, exist_num: self.noticeList.count ) {[weak self] (data) in guard let `self` = self else {return}
             self.noticeList = data
@@ -266,6 +272,8 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate, U
             [weak self] (data) in guard let `self` = self else {return}
             print(data.scrap)
         }
+        self.clearTheLabels(locationLabel)
+        self.clearTheLabels(ageLabel)
         self.noticeTableView.reloadData()
     }
     
@@ -371,7 +379,9 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate, U
         text = String(text.dropLast(2))
         return text
     }
-    
+    func clearTheLabels (_ label: UILabel) {
+        label.text! = ""
+    }
 }
 extension SmatchingListVC : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
