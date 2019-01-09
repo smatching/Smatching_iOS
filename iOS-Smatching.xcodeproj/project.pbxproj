@@ -84,6 +84,10 @@
 		C0EE1D5E21DE422B005B114E /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0EE1D5D21DE422B005B114E /* Search.storyboard */; };
 		C0F7C0B021E4033500A450A3 /* AcceptTerms.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0F7C0AF21E4033400A450A3 /* AcceptTerms.storyboard */; };
 		C0F7C0B221E438B200A450A3 /* AcceptTermsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F7C0B121E438B100A450A3 /* AcceptTermsVC.swift */; };
+		C0FB18BA21E57B3800621629 /* BusiTypeBox.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0FB18B921E57B3800621629 /* BusiTypeBox.xib */; };
+		C0FB18BC21E58ECC00621629 /* SelectBusiType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FB18BB21E58ECC00621629 /* SelectBusiType.swift */; };
+		C0FB18BE21E5903A00621629 /* UselessField.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0FB18BD21E5903A00621629 /* UselessField.xib */; };
+		C0FB18C021E5932400621629 /* SelectUselessField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FB18BF21E5932400621629 /* SelectUselessField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -168,6 +172,10 @@
 		C0EE1D5D21DE422B005B114E /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		C0F7C0AF21E4033400A450A3 /* AcceptTerms.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AcceptTerms.storyboard; sourceTree = "<group>"; };
 		C0F7C0B121E438B100A450A3 /* AcceptTermsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptTermsVC.swift; sourceTree = "<group>"; };
+		C0FB18B921E57B3800621629 /* BusiTypeBox.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusiTypeBox.xib; sourceTree = "<group>"; };
+		C0FB18BB21E58ECC00621629 /* SelectBusiType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBusiType.swift; sourceTree = "<group>"; };
+		C0FB18BD21E5903A00621629 /* UselessField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UselessField.xib; sourceTree = "<group>"; };
+		C0FB18BF21E5932400621629 /* SelectUselessField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectUselessField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -341,9 +349,13 @@
 				B6B74B5821D9EA5D001482BF /* Checkbox.swift */,
 				B6BAFCE421DBB6B2004C8743 /* CustomViewBorder.swift */,
 				B6BAFCE621DBD3FA004C8743 /* CustomDialog.swift */,
-				B6BAFCE821DBE865004C8743 /* SelectRegionDialog.swift */,
-				B6BAFCE921DBE865004C8743 /* SelectRegionDialog.xib */,
 				B6AFE59921DF70050001FA55 /* AlertCheckBox.swift */,
+				B6BAFCE921DBE865004C8743 /* SelectRegionDialog.xib */,
+				B6BAFCE821DBE865004C8743 /* SelectRegionDialog.swift */,
+				C0FB18B921E57B3800621629 /* BusiTypeBox.xib */,
+				C0FB18BB21E58ECC00621629 /* SelectBusiType.swift */,
+				C0FB18BD21E5903A00621629 /* UselessField.xib */,
+				C0FB18BF21E5932400621629 /* SelectUselessField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -433,6 +445,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0FB18BA21E57B3800621629 /* BusiTypeBox.xib in Resources */,
 				B6A3F49121C49071000497BF /* LaunchScreen.storyboard in Resources */,
 				B67AC95721E2A13E00690DD7 /* NanumSquareBold.ttf in Resources */,
 				B67AC95921E2A14300690DD7 /* NanumSquareLight.ttf in Resources */,
@@ -442,6 +455,7 @@
 				B67AC95821E2A14100690DD7 /* NanumSquareExtraBold.ttf in Resources */,
 				C0376D2321DCF79600D845EB /* DetailContent.storyboard in Resources */,
 				B67AC95A21E2A14600690DD7 /* NanumSquareRegular.ttf in Resources */,
+				C0FB18BE21E5903A00621629 /* UselessField.xib in Resources */,
 				C0EE1D5E21DE422B005B114E /* Search.storyboard in Resources */,
 				B6BAFCEB21DBE866004C8743 /* SelectRegionDialog.xib in Resources */,
 				C0F7C0B021E4033500A450A3 /* AcceptTerms.storyboard in Resources */,
@@ -515,6 +529,7 @@
 				B68AA6F821D4E2D0000E5549 /* CustomVC.swift in Sources */,
 				B67F2A9A21DC4D0800452579 /* UIView+extension.swift in Sources */,
 				B68742EA21D74EDA0094D5E7 /* ConditionResponse.swift in Sources */,
+				C0FB18BC21E58ECC00621629 /* SelectBusiType.swift in Sources */,
 				B67F2A9021DC45E700452579 /* Field.swift in Sources */,
 				B67F2A8C21DC451000452579 /* Age.swift in Sources */,
 				B6BB462021D39815003DB754 /* LoginService.swift in Sources */,
@@ -535,6 +550,7 @@
 				B68AA6FA21D4E2DD000E5549 /* TalkVC.swift in Sources */,
 				B68AA6F621D4E2C1000E5549 /* HomeVC.swift in Sources */,
 				B6A3F4AE21C4983B000497BF /* UserService.swift in Sources */,
+				C0FB18C021E5932400621629 /* SelectUselessField.swift in Sources */,
 				B6BAD20F21DC842300A4B4BD /* Period.swift in Sources */,
 				B696AE9D21DFC10300ABFBDB /* NoticeDetailVC.swift in Sources */,
 				B6A3F4A821C497A5000497BF /* ResponseObject.swift in Sources */,
