@@ -8,16 +8,18 @@
 
 import UIKit
 
-class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate, UIScrollViewDelegate {
+class SmatchingListVC: UIViewController, CheckBoxDelegate {
     
     @IBOutlet weak var contentViewHeightConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var noConditionView: UIView!
     
     @IBOutlet var showStatusArrowImg: UIImageView!
+    
     var flag = true
     
     var cond_idx : Int?
+    var checked : Bool?
     
     var cur_cond_idx : Int?
     var conditionList = [Condition]()
@@ -63,6 +65,8 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate, U
         
         self.navigationController?.navigationBar.shouldRemoveShadow(true); self.navigationController?.setNavigationBarHidden(false, animated: true)
         
+        setupView()
+        
         initView()
         //조건이 없을 경우 나오는 뷰
         self.noConditionView.isHidden = false
@@ -101,10 +105,45 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate, U
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.navigationBar.shouldRemoveShadow(true); self.navigationController?.setNavigationBarHidden(false, animated: true)
 
-        NoticeService.shared.getAllNotice(request_num: 20, exist_num: self.noticeList.count) {[weak self] (data) in guard let `self` = self else {return}
+        self.navigationController?.navigationBar.shouldRemoveShadow(true)
+        
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        
+        print("받은 인덱스 =\(cur_cond_idx)")
+        UserService.shared.getUserCondition() {[weak self] (data) in guard let `self` = self else {return}
+            print("유저맞춤현황 다시 로드!!")
+            self.conditionList = data.condSummaryList!
             
+            if self.pageControl.currentPage == 0 && self.conditionList.isEmpty == false {
+                self.noConditionView.isHidden = true
+                self.cur_cond_idx = self.gino(self.conditionList[0].condIdx)
+                self.noticesCount.text = "총 \(self.gino(self.conditionList[0].noticeCnt))건"
+            }
+            else {
+                self.noConditionView.isHidden = false
+            }
+            if self.pageControl.currentPage == 1 && self.conditionList.count > 1{
+                self.noConditionView.isHidden = true
+                self.cur_cond_idx = self.gino(self.conditionList[1].condIdx)
+                self.noticesCount.text = "총 \(self.gino(self.conditionList[1].noticeCnt))건"
+            }
+            else {
+                self.noConditionView.isHidden = false
+            }
+            ConditionSettingSerive.shared.getFitConditionInfo(cond_idx: self.gino(self.cur_cond_idx)) {[weak self] (data) in guard let `self` = self else {return}
+                print(data)
+                self.fitConditionRes = data
+                self.conditionTitle.text = self.gsno(data.condName)
+                if self.gbno(data.alert) == true {
+                    self.checkBoxDidChange(checkbox: self.settingAlarmBtn)
+                }
+                self.inputTextMatchingInfo()
+                
+            }
+        }
+        
+        NoticeService.shared.getFitNotice(cond_idx: self.gino(self.cur_cond_idx), request_num: 999, exist_num: 0 ) {[weak self] (data) in guard let `self` = self else {return}
             self.noticeList = data
             self.noticeTableView.reloadData()
         }
@@ -128,7 +167,7 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate, U
             print("Swipe Left")
             pageControl.currentPage = 1
             if self.conditionList.count > 1 {
-                  self.noConditionView.isHidden = true
+                self.noConditionView.isHidden = true
                 self.cur_cond_idx = self.gino(self.conditionList[1].condIdx)
                 self.noticesCount.text = "총 \(self.gino(self.conditionList[1].noticeCnt))건"
             }
@@ -146,10 +185,18 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate, U
             
             self.inputTextMatchingInfo()
         }
-        NoticeService.shared.getFitNotice(cond_idx: self.gino(self.cur_cond_idx), request_num: 3, exist_num: self.noticeList.count ) {[weak self] (data) in guard let `self` = self else {return}
+        NoticeService.shared.getFitNotice(cond_idx: self.gino(self.cur_cond_idx), request_num: 999, exist_num: 0 ) {[weak self] (data) in guard let `self` = self else {return}
             self.noticeList = data
             self.noticeTableView.reloadData()
         }
+    }
+    
+    func setupView() {
+        contentView.layer.shadowColor = UIColor.black.cgColor
+        contentView.layer.shadowOpacity = 0.1
+        contentView.layer.shadowRadius = 5
+        contentView.layer.shadowOffset = CGSize(width: 0, height: 0)
+        contentView.layer.masksToBounds = false
     }
     
     func checkBoxDidChange(checkbox: Checkbox) {
@@ -265,6 +312,17 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate, U
         self.toolbar.removeFromSuperview()
     }
     
+    @IBAction func clickScrapBtn(_ sender: UIButton) {
+        if checked ?? true {
+            sender.setImage( UIImage(named:"icn_scrap_yellow"), for: .normal)
+            checked = false
+            //스크랩 버튼 클릭시 동작
+        } else {
+            sender.setImage(UIImage(named:"icn_scrap_grey"), for: .normal)
+            checked = true
+        }
+      
+    }
     //스크랩 버튼 클릭시 동작
     func doScrapNotice(noticeIdx: Int) {
         print(noticeIdx)
@@ -277,35 +335,35 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate, NoticeCellDelegate, U
         self.noticeTableView.reloadData()
     }
     
-    //무한 스크롤링
-    var pageIndex: Int = 1
+//    //무한 스크롤링
+//    var pageIndex: Int = 1
+//
+//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        let offsetY = scrollView.contentOffset.y
+//        let contentHeight = scrollView.contentSize.height
+//
+//        if offsetY > contentHeight - scrollView.frame.size.height {
+//            /* increment page index to load new data set from */
+//            pageIndex += 1
+//
+//            /* call API to load data from next page or just add dummy data to your datasource */
+//            /* Needs to be implemented */
+//            loadNewItemsFrom(pageIndex)
+//
+//            /* reload tableview with new data */
+//            noticeTableView.reloadData()
+//        }
+//    }
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let offsetY = scrollView.contentOffset.y
-        let contentHeight = scrollView.contentSize.height
-        
-        if offsetY > contentHeight - scrollView.frame.size.height {
-            /* increment page index to load new data set from */
-            pageIndex += 1
-            
-            /* call API to load data from next page or just add dummy data to your datasource */
-            /* Needs to be implemented */
-            loadNewItemsFrom(pageIndex)
-            
-            /* reload tableview with new data */
-            noticeTableView.reloadData()
-        }
-    }
-    
-    func loadNewItemsFrom(_: Int) {
-        NoticeService.shared.getAllNotice(request_num: 20, exist_num: self.noticeList.count) {[weak self] (data) in guard let `self` = self else {return}
-            
-            self.noticeList += data
-            print(self.noticeList.count)
-            self.noticeTableView.reloadData()
-            
-        }
-    }
+//    func loadNewItemsFrom(_: Int) {
+//        NoticeService.shared.getAllNotice(request_num: 999, exist_num: 0) {[weak self] (data) in guard let `self` = self else {return}
+//
+//            self.noticeList = data
+//            print(self.noticeList.count)
+//            self.noticeTableView.reloadData()
+//
+//        }
+//    }
     
     // 맞춤조건 설정페이지와 정보 연결
     func inputTextMatchingInfo () {
@@ -389,7 +447,6 @@ extension SmatchingListVC : UITableViewDelegate {
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "NoticeDetailVC") as! NoticeDetailVC
         
         let notice = self.noticeList[indexPath.row]
-        print(notice.noticeIdx)
         nextViewController.notice_idx = gino(notice.noticeIdx)
         
         self.navigationController?.pushViewController(nextViewController, animated: true)
@@ -407,9 +464,9 @@ extension SmatchingListVC : UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NoticeCell", for: indexPath) as! NoticeCell
         let notice = noticeList[indexPath.row]
         
-        cell.delegate = self
+//        cell.delegate = self
         
-        cell.noticeIdx = gino(notice.noticeIdx)
+//        cell.noticeIdx = gino(notice.noticeIdx)
         cell.titleLabel.text = gsno(notice.title)
         cell.institutionLabel.text = gsno(notice.institution)
         if gino(notice.dday) > 1000 {
