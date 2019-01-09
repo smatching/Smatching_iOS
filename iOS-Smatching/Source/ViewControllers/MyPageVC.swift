@@ -52,6 +52,8 @@ class MyPageVC: UIViewController, UITextFieldDelegate {
             print(data)
             self.nicknameLabel.text = self.gsno(data.nickname)
             self.profileImg.imageFromUrl(self.gsno(data.profileUrl), defaultImgPath: "")
+            self.profileImg.layer.cornerRadius = self.profileImg.frame.height / 2
+            self.profileImg.layer.masksToBounds = true
             self.noticeCnt.text = "총 \(self.gino(data.noticeScrapCnt))건"
             
         }

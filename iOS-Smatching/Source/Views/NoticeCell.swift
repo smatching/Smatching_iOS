@@ -8,7 +8,7 @@
 
 import UIKit
 protocol NoticeCellDelegate {
-    func doScrapNotice(noticeIdx : Int)
+    func doScrapNotice(noticeIdx : IndexPath)
 }
 class NoticeCell: UITableViewCell {
    
@@ -19,7 +19,7 @@ class NoticeCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     
     var delegate : NoticeCellDelegate!
-    var noticeIdx : Int!
+    var noticeIdx : IndexPath!
     
     @IBAction func doScrap(_ sender: Any) {
         self.delegate?.doScrapNotice(noticeIdx: noticeIdx)

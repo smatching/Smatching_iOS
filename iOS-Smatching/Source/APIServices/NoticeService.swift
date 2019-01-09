@@ -135,6 +135,7 @@ struct NoticeService : APIManager, Requestable {
         puttable(queryURL, body: nil, header: headers){(res) in
             switch res {
             case .success(let value):
+                print(value)
                 guard let scrap = value.data else {return}
                 completion(scrap)
             case .error(let error):

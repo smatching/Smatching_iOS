@@ -580,6 +580,9 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
                 self.cur_cond_idx = self.gino(data.condIdx)
             }
         }
+        if let presenter = CustomSettingVC() as? SmatchingListVC {
+            presenter.cur_cond_idx = self.gino(self.cur_cond_idx)
+        }
         self.navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil)
     }
