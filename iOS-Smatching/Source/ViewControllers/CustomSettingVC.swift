@@ -12,29 +12,12 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
     
     @IBOutlet weak var showDetail: UILabel!
     @IBOutlet weak var titleTxtField: UITextField!
-    @IBOutlet weak var periodLabelChange: UILabel!
-
+    @IBOutlet weak var periodCountLabel: UILabel!
+    @IBOutlet weak var busiCountLabel: UILabel!
+    @IBOutlet weak var excCountLabel: UILabel!
+    @IBOutlet weak var fieldCountLabel: UILabel!
+    @IBOutlet weak var advantabeCountLabel: UILabel!
     //조건 설정 버튼들
-    //지역
-    @IBOutlet weak var abroad: AlertCheckBox!
-    @IBOutlet weak var local: AlertCheckBox!
-    @IBOutlet weak var seoul: AlertCheckBox!
-    @IBOutlet weak var jeju: AlertCheckBox!
-    @IBOutlet weak var chungbuk: AlertCheckBox!
-    @IBOutlet weak var chungnam: AlertCheckBox!
-    @IBOutlet weak var jeonbuk: AlertCheckBox!
-    @IBOutlet weak var jeonnam: AlertCheckBox!
-    @IBOutlet weak var kyungbuk: AlertCheckBox!
-    @IBOutlet weak var kyungnam: AlertCheckBox!
-    @IBOutlet weak var kyunggi: AlertCheckBox!
-    @IBOutlet weak var gangwon: AlertCheckBox!
-    @IBOutlet weak var sejong: AlertCheckBox!
-    @IBOutlet weak var ulsan: AlertCheckBox!
-    @IBOutlet weak var daejeon: AlertCheckBox!
-    @IBOutlet weak var gwangju: AlertCheckBox!
-    @IBOutlet weak var incheon: AlertCheckBox!
-    @IBOutlet weak var daegu: AlertCheckBox!
-    @IBOutlet weak var busan: AlertCheckBox!
     
     //나이
     @IBOutlet weak var twenty_less: ConditionButton!
@@ -110,6 +93,10 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var woman: ConditionButton!
     @IBOutlet weak var retry: ConditionButton!
     
+    @IBOutlet weak var busiTypeButton: UIButton!
+    
+    @IBOutlet weak var submitBtn: UIButton!
+    
     var excCategory = ExcCategory(loan: false, edu: false, know: false, global: false, place: false, make: false, local: false, gov: false)
     var field = Field(a: false, b: false, c: false, d: false, e: false, f: false, g:false , h: false, i: false, j: false, k: false, l: false, m: false, n: false, o: false, p: false, q: false, r: false, s: false, t: false, u: false, v: false)
     var location = Location(jeonbuk: false, gangwon: false, gwangju: false, ulsan: false, kyungbuk: false, sejong: false, chungbuk: false, kyungnam: false, seoul: false, chungnam: false, daejeon: false, busan: false, jeju: false, daegu: false, aborad: false, kyunggi: false, incheon: false, jeonnam: false)
@@ -131,6 +118,12 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
     var fieldCountNum = 0
     
     var UselessFieldCount = 0
+    
+    var periodCountNum = 0
+    
+    var busiTypeCountNum = 0
+    
+    var advantageCountNum = 0
     //조건 제목 길이 제한
     let limitLength = 8
     
@@ -138,7 +131,6 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
         super.viewDidLoad()
         
         setupView()
-            
     }
     
     func setupView() {
@@ -164,82 +156,116 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
         if age.twenty_less == true {
             initialSetting(recognizer: twenty_less)
         }
-        if age.forty_more == true {
+        else if age.forty_more == true {
             initialSetting(recognizer: forty_more)
         }
-        if age.twenty_forty == true {
+        else if age.twenty_forty == true {
             initialSetting(recognizer: twenty_forty)
         }
         if period.zero_one == true {
             initialSetting(recognizer: zero_one)
+             periodCountNum += CountTheCheckedBox(self.period.zero_one!)
         }
         if period.one_two == true {
             initialSetting(recognizer: one_two)
+            periodCountNum += CountTheCheckedBox(self.period.one_two!)
         }
         if period.two_three == true {
             initialSetting(recognizer: two_three)
+            periodCountNum += CountTheCheckedBox(self.period.two_three!)
         }
         if period.three_four == true {
             initialSetting(recognizer: three_four)
+            periodCountNum += CountTheCheckedBox(self.period.three_four!)
         }
         if period.four_five == true {
             initialSetting(recognizer: four_five)
+            periodCountNum += CountTheCheckedBox(self.period.four_five!)
         }
         if period.five_six == true {
             initialSetting(recognizer: five_six)
+            periodCountNum += CountTheCheckedBox(self.period.five_six!)
         }
         if period.six_seven == true {
             initialSetting(recognizer: six_seven)
+            periodCountNum += CountTheCheckedBox(self.period.six_seven!)
+        }
+        if period.seven_more == true {
+            initialSetting(recognizer: seven_more)
+            periodCountNum += CountTheCheckedBox(self.period.seven_more!)
         }
         if busitype.midsmall == true {
             initialSetting(recognizer: midsmall)
+            busiTypeCountNum += CountTheCheckedBox(self.busitype.midsmall!)
         }
         if busitype.midbig == true {
             initialSetting(recognizer: midbig)
+            busiTypeCountNum += CountTheCheckedBox(self.busitype.midbig!)
         }
         
         if busitype.big == true {
             initialSetting(recognizer: big)
+            busiTypeCountNum += CountTheCheckedBox(self.busitype.big!)
         }
         
         if busitype.sole == true {
             initialSetting(recognizer: sole)
+            busiTypeCountNum += CountTheCheckedBox(self.busitype.sole!)
         }
         
         if busitype.small == true {
             initialSetting(recognizer: small)
+            busiTypeCountNum += CountTheCheckedBox(self.busitype.small!)
         }
         
         if busitype.tradi == true {
             initialSetting(recognizer: tradi)
+            busiTypeCountNum += CountTheCheckedBox(self.busitype.tradi!)
         }
         
         if busitype.pre == true {
             initialSetting(recognizer: pre)
+            busiTypeCountNum += CountTheCheckedBox(self.busitype.pre!)
         }
         if advantage.retry == true{
             initialSetting(recognizer: retry)
+            advantageCountNum += CountTheCheckedBox(self.advantage.retry!)
         }
         if advantage.woman == true{
             initialSetting(recognizer: woman)
+            advantageCountNum += CountTheCheckedBox(self.advantage.woman!)
         }
         if advantage.disabled == true{
             initialSetting(recognizer: disabled)
+            advantageCountNum += CountTheCheckedBox(self.advantage.disabled!)
         }
         if advantage.social == true{
             initialSetting(recognizer: social)
+            advantageCountNum += CountTheCheckedBox(self.advantage.social!)
         }
         if advantage.sole == true{
             initialSetting(recognizer: sole_create)
+            advantageCountNum += CountTheCheckedBox(self.advantage.sole!)
         }
         if advantage.fourth == true{
             initialSetting(recognizer: fourth)
+            advantageCountNum += CountTheCheckedBox(self.advantage.fourth!)
         }
         if advantage.univ == true{
             initialSetting(recognizer: univ)
+            advantageCountNum += CountTheCheckedBox(self.advantage.univ!)
         }
         if advantage.togather == true{
             initialSetting(recognizer: together)
+            advantageCountNum += CountTheCheckedBox(self.advantage.togather!)
+        }
+
+        periodCountLabel.text = "\(periodCountNum)/3"
+        busiCountLabel.text = "\(busiTypeCountNum)/7"
+        advantabeCountLabel.text = "\(advantageCountNum)/8"
+        
+        if periodCountNum != 0 && busiTypeCountNum != 0 && fieldCountNum != 0 && UselessFieldCount != 0 {
+            submitBtn.backgroundColor = UIColor(displayP3Red: 216/255, green: 216/255, blue: 216/255, alpha: 1.0)
         }
         
         //uilabel에 tapgesture 추가
@@ -260,7 +286,6 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
         } else {
             //선택을 할 경우
             recognizer.layer.borderColor = UIColor(displayP3Red: 76/255, green: 130/255, blue: 216/255, alpha: 1.0).cgColor
-            
         }
     }
     @IBAction func dismissAction(_ sender: Any) {
@@ -291,96 +316,109 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
         return newLength <= limitLength
     }
 
-    @IBAction func selectRegionBtn(_ sender: Any) {
-        startAlert()
-    }
-    
-    func startAlert()
-    {
-        // 사용자정의 팝업
-        let popup: SelectRegionDialog = UINib(nibName: "SelectRegionDialog", bundle: nil).instantiate(withOwner: self, options: nil)[0] as! SelectRegionDialog
-        popup.backgroundColor = UIColor(red: 71/255, green: 71/255, blue: 71/255, alpha: 1)
-        popup.center = CGPoint(x: self.view.frame.width / 2, y: self.view.frame.height / 2)
-        popup.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
-        popup.cancelBtn.addTarget(self, action: #selector(btnCancelClick), for: .touchUpInside) // 버튼 이벤트 등록
-        popup.okBtn.addTarget(self, action: #selector(btnOkClick), for: .touchUpInside) // 버튼 이벤트 등록
-        self.view.addSubview(popup);
-        //        self.local.delegate = self
-    }
-    @IBAction func selectBusiType(_ sender: Any) {
+    @IBAction func selectBusiType(_ sender: UIButton) {
+        sender.layer.borderColor = UIColor(displayP3Red: 76/255, green: 130/255, blue: 216/255, alpha: 1.0).cgColor
+       
+        
         startAlert1()
+       
     }
     func startAlert1 () {
         if let busiType = Bundle.main.loadNibNamed("BusiTypeBox", owner: self, options: nil)?.first as? SelectBusiType {
             
 //            busiType.backgroundColor = UIColor(red: 71/255, green: 71/255, blue: 71/255, alpha: 1)
             
+            fieldCountNum = 0
             if field.a == true {
                 A.isChecked = true
+                fieldCountNum += CountTheCheckedBox(self.field.a!)
             }
             if field.b == true {
                 B.isChecked = true
+                fieldCountNum += CountTheCheckedBox(self.field.b!)
             }
             if field.c == true {
                 C.isChecked = true
+                fieldCountNum += CountTheCheckedBox(self.field.c!)
             }
             if field.d == true {
                 D.isChecked = true
+                fieldCountNum += CountTheCheckedBox(self.field.d!)
             }
             if field.e == true {
                 E.isChecked = true
+                fieldCountNum += CountTheCheckedBox(self.field.e!)
             }
             if field.f == true {
                 F.isChecked = true
+                fieldCountNum += CountTheCheckedBox(self.field.f!)
             }
             if field.g == true {
                 H.isChecked = true
+                fieldCountNum += CountTheCheckedBox(self.field.g!)
             }
             if field.h == true {
                 H.isChecked = true
+                fieldCountNum += CountTheCheckedBox(self.field.h!)
             }
             if field.i == true {
                 I.isChecked = true
+                fieldCountNum += CountTheCheckedBox(self.field.i!)
             }
             if field.j == true {
                 J.isChecked = true
+                fieldCountNum += CountTheCheckedBox(self.field.j!)
             }
             if field.k == true {
                 K.isChecked = true
+                fieldCountNum += CountTheCheckedBox(self.field.k!)
             }
             if field.l == true {
                 L.isChecked = true
+                fieldCountNum += CountTheCheckedBox(self.field.l!)
             }
             if field.m == true {
                 M.isChecked = true
+                fieldCountNum += CountTheCheckedBox(self.field.m!)
             }
             if field.n == true {
                 N.isChecked = true
+                fieldCountNum += CountTheCheckedBox(self.field.n!)
             }
             if field.o == true {
                 O.isChecked = true
+                fieldCountNum += CountTheCheckedBox(self.field.o!)
             }
             if field.p == true {
                 P.isChecked = true
+                fieldCountNum += CountTheCheckedBox(self.field.p!)
             }
             if field.q == true {
                 Q.isChecked = true
+                fieldCountNum += CountTheCheckedBox(self.field.q!)
             }
             if field.r == true {
                 R.isChecked = true
+                fieldCountNum += CountTheCheckedBox(self.field.r!)
             }
             if field.s == true {
                 S.isChecked = true
+                fieldCountNum += CountTheCheckedBox(self.field.s!)
             }
             if field.t == true {
                 T.isChecked = true
+                fieldCountNum += CountTheCheckedBox(self.field.t!)
             }
             if field.u == true {
                 U.isChecked = true
+                fieldCountNum += CountTheCheckedBox(self.field.u!)
             }
             if field.v == true {
                 V.isChecked = true
+                fieldCountNum += CountTheCheckedBox(self.field.v!)
             }
+            
+            self.fieldCountLabel.text = "\(fieldCountNum)/6"
             busiType.center = CGPoint(x: self.view.frame.width / 2, y: self.view.frame.height / 2)
             busiType.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
 
@@ -391,15 +429,51 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
         }
     }
 
-    @IBAction func selectUselessField(_ sender: Any) {
+    @IBAction func selectUselessField(_ sender: UIButton) {
+        self.busiTypeButton.layer.borderColor = UIColor(displayP3Red: 76/255, green: 130/255, blue: 216/255, alpha: 1.0).cgColor
+        
         startAlert2()
+        
     }
     func startAlert2 () {
         if let uselessField = Bundle.main.loadNibNamed("UselessField", owner: self, options: nil)?.first as? SelectUselessField {
             
+            UselessFieldCount = 0
             if excCategory.edu == true {
-                V.isChecked = true
+                edu.isChecked = true
+                UselessFieldCount += CountTheCheckedBox(self.excCategory.edu!)
             }
+            if excCategory.global == true {
+                global.isChecked = true
+                UselessFieldCount += CountTheCheckedBox(self.excCategory.global!)
+            }
+            if excCategory.gov == true {
+                gov.isChecked = true
+                UselessFieldCount += CountTheCheckedBox(self.excCategory.gov!)
+            }
+            if excCategory.know == true {
+                know.isChecked = true
+                UselessFieldCount += CountTheCheckedBox(self.excCategory.know!)
+            }
+            if excCategory.loan == true {
+                loan.isChecked = true
+                UselessFieldCount += CountTheCheckedBox(self.excCategory.loan!)
+            }
+            if excCategory.make == true {
+                make.isChecked = true
+                UselessFieldCount += CountTheCheckedBox(self.excCategory.make!)
+            }
+            if excCategory.place == true {
+                place.isChecked = true
+                UselessFieldCount += CountTheCheckedBox(self.excCategory.place!)
+            }
+            if excCategory.local == true
+            {
+                domestic.isChecked = true
+                UselessFieldCount += CountTheCheckedBox(self.excCategory.local!)
+            }
+            
+            self.excCountLabel.text = "\(UselessFieldCount)/5"
             uselessField.backgroundColor = UIColor(red: 71/255, green: 71/255, blue: 71/255, alpha: 1)
             
             uselessField.center = CGPoint(x: self.view.frame.width / 2, y: self.view.frame.height / 2)
@@ -430,202 +504,6 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
     // CheckedBox 개수 담을 변수 선언
     
      // Pop up view Check Box 이미지 변경
-    @IBAction func conditionCheckboxClick(_ sender: AlertCheckBox) {
-        switch sender {
-        case seoul:
-            self.location.seoul = !self.location.seoul!
-            sender.isChecked = self.location.seoul!
-            break
-        case busan:
-            self.location.busan = !self.location.busan!
-            sender.isChecked = self.location.busan!
-            break
-        case daegu:
-            self.location.daegu = !self.location.daegu!
-            sender.isChecked = self.location.daegu!
-            break
-        case incheon:
-            self.location.incheon = !self.location.incheon!
-            sender.isChecked = self.location.incheon!
-            break
-        case gwangju:
-            self.location.gwangju = !self.location.gwangju!
-            sender.isChecked = self.location.gwangju!
-            break
-        case daejeon:
-            self.location.daejeon = !self.location.daejeon!
-            sender.isChecked = self.location.daejeon!
-            break
-        case ulsan:
-            self.location.ulsan = !self.location.ulsan!
-            sender.isChecked = self.location.ulsan!
-            break
-        case sejong:
-            self.location.sejong = !self.location.sejong!
-            sender.isChecked = self.location.sejong!
-            break
-        case gangwon:
-            self.location.gangwon = !self.location.gangwon!
-            sender.isChecked = self.location.gangwon!
-            break
-        case kyunggi:
-            self.location.kyunggi = !self.location.kyunggi!
-            sender.isChecked = self.location.kyunggi!
-            break
-        case kyungnam:
-            self.location.kyungnam = !self.location.kyungnam!
-            sender.isChecked = self.location.kyungnam!
-            break
-        case kyungbuk:
-            self.location.kyungbuk = !self.location.kyungbuk!
-            sender.isChecked = self.location.kyungbuk!
-            break
-        case jeonbuk:
-            self.location.jeonbuk = !self.location.jeonbuk!
-            sender.isChecked = self.location.jeonbuk!
-            break
-        case jeonnam:
-            self.location.jeonnam = !self.location.jeonnam!
-            sender.isChecked = self.location.jeonnam!
-            break
-        case chungnam:
-            self.location.chungnam = !self.location.chungnam!
-            sender.isChecked = self.location.chungnam!
-            break
-        case chungbuk:
-            self.location.chungbuk = !self.location.chungbuk!
-            sender.isChecked = self.location.chungbuk!
-            break
-        case jeju:
-            self.location.jeju = !self.location.jeju!
-            sender.isChecked = self.location.jeju!
-            break
-        case local:
-            sender.isChecked = !sender.isChecked
-            if sender.isChecked == true {
-                self.local.setImage(UIImage(named: "icn_checkbox_blue"), for: UIControl.State.normal)
-            }
-            else {
-                self.local.setImage(UIImage(named: "icn_emptybox"), for: UIControl.State.normal)
-            }
-            self.location.seoul = !self.location.seoul!
-            self.seoul.isChecked = self.location.seoul!
-            
-            self.location.busan = !self.location.busan!
-            self.busan.isChecked = self.location.busan!
-
-            self.location.daegu = !self.location.daegu!
-            self.daegu.isChecked = self.location.daegu!
-
-            self.location.incheon = !self.location.incheon!
-            self.incheon.isChecked = self.location.incheon!
-            
-            self.location.gwangju = !self.location.gwangju!
-            self.gwangju.isChecked = self.location.gwangju!
-            
-            self.location.daejeon = !self.location.daejeon!
-            self.daejeon.isChecked = self.location.daejeon!
-            
-            self.location.ulsan = !self.location.ulsan!
-            self.ulsan.isChecked = self.location.ulsan!
-            
-            self.location.sejong = !self.location.sejong!
-            self.sejong.isChecked = self.location.sejong!
-
-            self.location.gangwon = !self.location.gangwon!
-            self.gangwon.isChecked = self.location.gangwon!
-
-            self.location.kyunggi = !self.location.kyunggi!
-            self.kyunggi.isChecked = self.location.kyunggi!
-            
-            self.location.kyungnam = !self.location.kyungnam!
-            self.kyungnam.isChecked = self.location.kyungnam!
-
-            self.location.kyungbuk = !self.location.kyungbuk!
-            self.kyungbuk.isChecked = self.location.kyungbuk!
-
-            self.location.jeonbuk = !self.location.jeonbuk!
-            self.jeonbuk.isChecked = self.location.jeonbuk!
-
-            self.location.jeonnam = !self.location.jeonnam!
-            self.jeonnam.isChecked = self.location.jeonnam!
-
-            self.location.chungnam = !self.location.chungnam!
-            self.chungnam.isChecked = self.location.chungnam!
-
-            self.location.chungbuk = !self.location.chungbuk!
-            self.chungbuk.isChecked = self.location.chungbuk!
-
-            self.location.jeju = !self.location.jeju!
-            self.jeju.isChecked = self.location.jeju!
-            break
-        case abroad:
-            sender.isChecked = !sender.isChecked
-            
-            if sender.isChecked == true {
-                self.abroad.setImage(UIImage(named: "icn_checkbox_blue"), for: UIControl.State.normal)
-                self.local.setImage(UIImage(named: "icn_emptybox"), for: UIControl.State.normal)
-            }
-            else {
-                self.abroad.setImage(UIImage(named: "icn_emptybox"), for: UIControl.State.normal)
-            }
-            self.location.seoul = !self.location.seoul!
-            self.seoul.isChecked = self.location.seoul!
-            
-            self.location.busan = !self.location.busan!
-            self.busan.isChecked = self.location.busan!
-            
-            self.location.daegu = !self.location.daegu!
-            self.daegu.isChecked = self.location.daegu!
-            
-            self.location.incheon = !self.location.incheon!
-            self.incheon.isChecked = self.location.incheon!
-            
-            self.location.gwangju = !self.location.gwangju!
-            self.gwangju.isChecked = self.location.gwangju!
-            
-            self.location.daejeon = !self.location.daejeon!
-            self.daejeon.isChecked = self.location.daejeon!
-            
-            self.location.ulsan = !self.location.ulsan!
-            self.ulsan.isChecked = self.location.ulsan!
-            
-            self.location.sejong = !self.location.sejong!
-            self.sejong.isChecked = self.location.sejong!
-            
-            self.location.gangwon = !self.location.gangwon!
-            self.gangwon.isChecked = self.location.gangwon!
-            
-            self.location.kyunggi = !self.location.kyunggi!
-            self.kyunggi.isChecked = self.location.kyunggi!
-            
-            self.location.kyungnam = !self.location.kyungnam!
-            self.kyungnam.isChecked = self.location.kyungnam!
-            
-            self.location.kyungbuk = !self.location.kyungbuk!
-            self.kyungbuk.isChecked = self.location.kyungbuk!
-            
-            self.location.jeonbuk = !self.location.jeonbuk!
-            self.jeonbuk.isChecked = self.location.jeonbuk!
-            
-            self.location.jeonnam = !self.location.jeonnam!
-            self.jeonnam.isChecked = self.location.jeonnam!
-            
-            self.location.chungnam = !self.location.chungnam!
-            self.chungnam.isChecked = self.location.chungnam!
-            
-            self.location.chungbuk = !self.location.chungbuk!
-            self.chungbuk.isChecked = self.location.chungbuk!
-            
-            self.location.jeju = !self.location.jeju!
-            self.jeju.isChecked = self.location.jeju!
-            break
-            
-        default:
-            break
-        }
-        print(location)
-    }
     
     
     
@@ -653,162 +531,7 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
         print(excCategory)
     }
     
-    func initCheckbox(_ sender : AlertCheckBox) {
-        switch (sender) {
-        case edu:
-           
-            sender.isChecked = self.excCategory.edu!
-            
-            break
-        case know:
-            
-            sender.isChecked = self.excCategory.know!
-           
-            break
-        case place:
-            self.excCategory.place = !self.excCategory.place!
-            sender.isChecked = self.excCategory.place!
-            UselessFieldCount += CountTheCheckedBox(self.excCategory.place!)
-            break
-        case domestic:
-            self.excCategory.local = !self.excCategory.local!
-            sender.isChecked = self.excCategory.local!
-            UselessFieldCount += CountTheCheckedBox(self.excCategory.local!)
-            break
-        case global:
-            self.excCategory.global = !self.excCategory.global!
-            sender.isChecked = self.excCategory.global!
-            UselessFieldCount += CountTheCheckedBox(self.excCategory.global!)
-            break
-        case make:
-            self.excCategory.make = !self.excCategory.make!
-            sender.isChecked = self.excCategory.make!
-            UselessFieldCount += CountTheCheckedBox(self.excCategory.make!)
-            break
-        case gov:
-            self.excCategory.gov = !self.excCategory.gov!
-            sender.isChecked = self.excCategory.gov!
-            UselessFieldCount += CountTheCheckedBox(self.excCategory.gov!)
-            break
-        case loan:
-            self.excCategory.loan = !self.excCategory.loan!
-            sender.isChecked = self.excCategory.loan!
-            UselessFieldCount += CountTheCheckedBox(self.excCategory.loan!)
-            break
-        case A:
-            self.field.a = !self.field.a!
-            sender.isChecked = self.field.a!
-            fieldCountNum += CountTheCheckedBox(self.field.a!)
-            break
-        case B:
-            self.field.b = !self.field.b!
-            sender.isChecked = self.field.b!
-            fieldCountNum += CountTheCheckedBox(self.field.b!)
-            break
-        case C:
-            self.field.c = !self.field.c!
-            sender.isChecked = self.field.c!
-            fieldCountNum += CountTheCheckedBox(self.field.c!)
-            break
-        case D:
-            self.field.d = !self.field.d!
-            sender.isChecked = self.field.d!
-            fieldCountNum += CountTheCheckedBox(self.field.d!)
-            break
-        case E:
-            self.field.e = !self.field.e!
-            sender.isChecked = self.field.e!
-            fieldCountNum += CountTheCheckedBox(self.field.e!)
-            break
-        case F:
-            self.field.f = !self.field.f!
-            sender.isChecked = self.field.f!
-            fieldCountNum += CountTheCheckedBox(self.field.f!)
-            break
-        case G:
-            self.field.g = !self.field.g!
-            sender.isChecked = self.field.g!
-            fieldCountNum += CountTheCheckedBox(self.field.g!)
-            break
-        case H:
-            self.field.h = !self.field.h!
-            sender.isChecked = self.field.h!
-            fieldCountNum += CountTheCheckedBox(self.field.h!)
-            break
-        case I:
-            self.field.i = !self.field.i!
-            sender.isChecked = self.field.i!
-            fieldCountNum += CountTheCheckedBox(self.field.i!)
-            break
-        case J:
-            self.field.j = !self.field.j!
-            sender.isChecked = self.field.j!
-            fieldCountNum += CountTheCheckedBox(self.field.j!)
-            break
-        case K:
-            self.field.k = !self.field.k!
-            sender.isChecked = self.field.k!
-            fieldCountNum += CountTheCheckedBox(self.field.k!)
-            break
-        case L:
-            self.field.l = !self.field.l!
-            sender.isChecked = self.field.l!
-            fieldCountNum += CountTheCheckedBox(self.field.l!)
-            break
-        case M:
-            self.field.m = !self.field.m!
-            sender.isChecked = self.field.m!
-            fieldCountNum += CountTheCheckedBox(self.field.m!)
-            break
-        case N:
-            self.field.n = !self.field.n!
-            sender.isChecked = self.field.n!
-            fieldCountNum += CountTheCheckedBox(self.field.n!)
-            break
-        case O:
-            self.field.o = !self.field.o!
-            sender.isChecked = self.field.o!
-            fieldCountNum += CountTheCheckedBox(self.field.o!)
-            break
-        case P:
-            self.field.p = !self.field.p!
-            sender.isChecked = self.field.p!
-            fieldCountNum += CountTheCheckedBox(self.field.p!)
-            break
-        case Q:
-            self.field.q = !self.field.q!
-            sender.isChecked = self.field.q!
-            fieldCountNum += CountTheCheckedBox(self.field.q!)
-            break
-        case R:
-            self.field.r = !self.field.r!
-            sender.isChecked = self.field.r!
-            fieldCountNum += CountTheCheckedBox(self.field.r!)
-            break
-        case S:
-            self.field.s = !self.field.s!
-            sender.isChecked = self.field.s!
-            fieldCountNum += CountTheCheckedBox(self.field.s!)
-            break
-        case T:
-            self.field.t = !self.field.t!
-            sender.isChecked = self.field.t!
-            fieldCountNum += CountTheCheckedBox(self.field.t!)
-            break
-        case U:
-            self.field.u = !self.field.u!
-            sender.isChecked = self.field.u!
-            fieldCountNum += CountTheCheckedBox(self.field.u!)
-            break
-        case V:
-            self.field.v = !self.field.v!
-            sender.isChecked = self.field.v!
-            fieldCountNum += CountTheCheckedBox(self.field.v!)
-            break
-        default:
-            break
-        }
-    }
+ 
     func checkboxBtnClickEvent(_ sender : AlertCheckBox) {
         switch (sender) {
         case edu:
@@ -990,75 +713,100 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
             break
         case zero_one:
             self.period.zero_one = !self.period.zero_one!
+            periodCountNum += CountTheCheckedBox(self.period.zero_one!)
             break
         case one_two:
             self.period.one_two = !self.period.one_two!
+            periodCountNum += CountTheCheckedBox(self.period.one_two!)
             break
         case two_three:
             self.period.two_three = !self.period.two_three!
+            periodCountNum += CountTheCheckedBox(self.period.two_three!)
             break
         case three_four:
             self.period.three_four = !self.period.three_four!
+            periodCountNum += CountTheCheckedBox(self.period.three_four!)
             break
         case four_five:
             self.period.four_five = !self.period.four_five!
+            periodCountNum += CountTheCheckedBox(self.period.four_five!)
             break
         case five_six:
             self.period.five_six = !self.period.five_six!
+            periodCountNum += CountTheCheckedBox(self.period.five_six!)
             break
         case six_seven:
             self.period.six_seven = !self.period.six_seven!
+            periodCountNum += CountTheCheckedBox(self.period.six_seven!)
             break
         case seven_more:
             self.period.seven_more = !self.period.seven_more!
+            periodCountNum += CountTheCheckedBox(self.period.seven_more!)
             break
         case yet:
             self.period.yet = !self.period.yet!
+            periodCountNum += CountTheCheckedBox(self.period.yet!)
             break
         case midsmall:
             self.busitype.midsmall = !self.busitype.midsmall!
+             busiTypeCountNum += CountTheCheckedBox(self.busitype.midsmall!)
             break
         case midbig:
             self.busitype.midbig = !self.busitype.midbig!
+            busiTypeCountNum += CountTheCheckedBox(self.busitype.midbig!)
             break
         case big:
             self.busitype.big = !self.busitype.big!
+            busiTypeCountNum += CountTheCheckedBox(self.busitype.big!)
             break
         case sole:
             self.busitype.sole = !self.busitype.sole!
+            busiTypeCountNum += CountTheCheckedBox(self.busitype.sole!)
+            
             break
         case small:
             self.busitype.small = !self.busitype.small!
+            busiTypeCountNum += CountTheCheckedBox(self.busitype.small!)
             break
         case tradi:
             self.busitype.tradi = !self.busitype.tradi!
+            busiTypeCountNum += CountTheCheckedBox(self.busitype.tradi!)
             break
         case pre:
             self.busitype.pre = !self.busitype.pre!
+            busiTypeCountNum += CountTheCheckedBox(self.busitype.pre!)
             break
         case retry:
             self.advantage.retry = !self.advantage.retry!
+            advantageCountNum += CountTheCheckedBox(self.advantage.retry!)
             break
         case woman:
             self.advantage.woman = !self.advantage.woman!
+            advantageCountNum += CountTheCheckedBox(self.advantage.woman!)
             break
         case disabled:
             self.advantage.disabled = !self.advantage.disabled!
+            advantageCountNum += CountTheCheckedBox(self.advantage.disabled!)
             break
         case social:
             self.advantage.social = !self.advantage.social!
+            advantageCountNum += CountTheCheckedBox(self.advantage.social!)
             break
         case sole_create:
             self.advantage.sole = !self.advantage.sole!
+            advantageCountNum += CountTheCheckedBox(self.advantage.sole!)
             break
         case fourth:
             self.advantage.fourth = !self.advantage.fourth!
+            advantageCountNum += CountTheCheckedBox(self.advantage.fourth!)
             break
         case univ:
             self.advantage.univ = !self.advantage.univ!
+            advantageCountNum += CountTheCheckedBox(self.advantage.univ!)
             break
         case together:
             self.advantage.togather = !self.advantage.togather!
+            advantageCountNum += CountTheCheckedBox(self.advantage.togather!)
             break
             
         default:
@@ -1078,7 +826,8 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
         })
     }
     
-    @IBAction func submitCondition(_ sender: Any) {
+    @IBAction func submitCondition(_ sender: UIButton) {
+        
         print(flag)
         if flag == 0 {
             ConditionPutService.shared.postFitConditionInfo(condName: self.titleTxtField.text!, location: self.location, age: self.age, period: self.period, field: self.field, advantage: self.advantage, busiType: self.busitype, excCategory: self.excCategory){[weak self] (data) in guard let `self` = self else {return}

@@ -73,8 +73,6 @@
 		B6BAD20F21DC842300A4B4BD /* Period.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BAD20E21DC842300A4B4BD /* Period.swift */; };
 		B6BAFCE521DBB6B2004C8743 /* CustomViewBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BAFCE421DBB6B2004C8743 /* CustomViewBorder.swift */; };
 		B6BAFCE721DBD3FA004C8743 /* CustomDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BAFCE621DBD3FA004C8743 /* CustomDialog.swift */; };
-		B6BAFCEA21DBE865004C8743 /* SelectRegionDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BAFCE821DBE865004C8743 /* SelectRegionDialog.swift */; };
-		B6BAFCEB21DBE866004C8743 /* SelectRegionDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6BAFCE921DBE865004C8743 /* SelectRegionDialog.xib */; };
 		B6BB462021D39815003DB754 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BB461F21D39815003DB754 /* LoginService.swift */; };
 		C0376D2321DCF79600D845EB /* DetailContent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0376D2221DCF79600D845EB /* DetailContent.storyboard */; };
 		C0376D2521DD1E3C00D845EB /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0376D2421DD1E3C00D845EB /* Setting.storyboard */; };
@@ -162,8 +160,6 @@
 		B6BAD20E21DC842300A4B4BD /* Period.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Period.swift; sourceTree = "<group>"; };
 		B6BAFCE421DBB6B2004C8743 /* CustomViewBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewBorder.swift; sourceTree = "<group>"; };
 		B6BAFCE621DBD3FA004C8743 /* CustomDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDialog.swift; sourceTree = "<group>"; };
-		B6BAFCE821DBE865004C8743 /* SelectRegionDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRegionDialog.swift; sourceTree = "<group>"; };
-		B6BAFCE921DBE865004C8743 /* SelectRegionDialog.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectRegionDialog.xib; sourceTree = "<group>"; };
 		B6BB461F21D39815003DB754 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		C0376D2221DCF79600D845EB /* DetailContent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailContent.storyboard; sourceTree = "<group>"; };
 		C0376D2421DD1E3C00D845EB /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
@@ -353,8 +349,6 @@
 				B6BAFCE421DBB6B2004C8743 /* CustomViewBorder.swift */,
 				B6BAFCE621DBD3FA004C8743 /* CustomDialog.swift */,
 				B6AFE59921DF70050001FA55 /* AlertCheckBox.swift */,
-				B6BAFCE921DBE865004C8743 /* SelectRegionDialog.xib */,
-				B6BAFCE821DBE865004C8743 /* SelectRegionDialog.swift */,
 				C0FB18B921E57B3800621629 /* BusiTypeBox.xib */,
 				C0FB18BB21E58ECC00621629 /* SelectBusiType.swift */,
 				C0FB18BD21E5903A00621629 /* UselessField.xib */,
@@ -460,7 +454,6 @@
 				B67AC95A21E2A14600690DD7 /* NanumSquareRegular.ttf in Resources */,
 				C0FB18BE21E5903A00621629 /* UselessField.xib in Resources */,
 				C0EE1D5E21DE422B005B114E /* Search.storyboard in Resources */,
-				B6BAFCEB21DBE866004C8743 /* SelectRegionDialog.xib in Resources */,
 				C0F7C0B021E4033500A450A3 /* AcceptTerms.storyboard in Resources */,
 				C0376D2521DD1E3C00D845EB /* Setting.storyboard in Resources */,
 			);
@@ -592,7 +585,6 @@
 				C0F7C0B221E438B200A450A3 /* AcceptTermsVC.swift in Sources */,
 				B696AE9B21DFB17400ABFBDB /* ConditionPutService.swift in Sources */,
 				B6248D4921E0E8B80058BAC4 /* SearchService.swift in Sources */,
-				B6BAFCEA21DBE865004C8743 /* SelectRegionDialog.swift in Sources */,
 				B6AFE59821DF470A0001FA55 /* ConditionButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -741,13 +733,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 38HL58Q2DM;
+				DEVELOPMENT_TEAM = 325VLH85CK;
 				INFOPLIST_FILE = "$(SRCROOT)/iOS-Smatching/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "shyn22.iOS-Smatching";
+				PRODUCT_BUNDLE_IDENTIFIER = "shyn22.iOS-Smatching-1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -760,13 +752,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 38HL58Q2DM;
+				DEVELOPMENT_TEAM = 325VLH85CK;
 				INFOPLIST_FILE = "$(SRCROOT)/iOS-Smatching/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "shyn22.iOS-Smatching";
+				PRODUCT_BUNDLE_IDENTIFIER = "shyn22.iOS-Smatching-1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
