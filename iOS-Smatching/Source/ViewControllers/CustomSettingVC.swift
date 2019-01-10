@@ -26,25 +26,25 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
     
     //조건 설정 버튼들
     //지역
-    @IBOutlet weak var abroad: AlertCheckBox!
-    @IBOutlet weak var local: AlertCheckBox!
-    @IBOutlet weak var seoul: AlertCheckBox!
-    @IBOutlet weak var jeju: AlertCheckBox!
-    @IBOutlet weak var chungbuk: AlertCheckBox!
-    @IBOutlet weak var chungnam: AlertCheckBox!
-    @IBOutlet weak var jeonbuk: AlertCheckBox!
-    @IBOutlet weak var jeonnam: AlertCheckBox!
-    @IBOutlet weak var kyungbuk: AlertCheckBox!
-    @IBOutlet weak var kyungnam: AlertCheckBox!
-    @IBOutlet weak var kyunggi: AlertCheckBox!
-    @IBOutlet weak var gangwon: AlertCheckBox!
-    @IBOutlet weak var sejong: AlertCheckBox!
-    @IBOutlet weak var ulsan: AlertCheckBox!
-    @IBOutlet weak var daejeon: AlertCheckBox!
-    @IBOutlet weak var gwangju: AlertCheckBox!
-    @IBOutlet weak var incheon: AlertCheckBox!
-    @IBOutlet weak var daegu: AlertCheckBox!
-    @IBOutlet weak var busan: AlertCheckBox!
+//    @IBOutlet weak var abroad: AlertCheckBox!
+//    @IBOutlet weak var local: AlertCheckBox!
+//    @IBOutlet weak var seoul: AlertCheckBox!
+//    @IBOutlet weak var jeju: AlertCheckBox!
+//    @IBOutlet weak var chungbuk: AlertCheckBox!
+//    @IBOutlet weak var chungnam: AlertCheckBox!
+//    @IBOutlet weak var jeonbuk: AlertCheckBox!
+//    @IBOutlet weak var jeonnam: AlertCheckBox!
+//    @IBOutlet weak var kyungbuk: AlertCheckBox!
+//    @IBOutlet weak var kyungnam: AlertCheckBox!
+//    @IBOutlet weak var kyunggi: AlertCheckBox!
+//    @IBOutlet weak var gangwon: AlertCheckBox!
+//    @IBOutlet weak var sejong: AlertCheckBox!
+//    @IBOutlet weak var ulsan: AlertCheckBox!
+//    @IBOutlet weak var daejeon: AlertCheckBox!
+//    @IBOutlet weak var gwangju: AlertCheckBox!
+//    @IBOutlet weak var incheon: AlertCheckBox!
+//    @IBOutlet weak var daegu: AlertCheckBox!
+//    @IBOutlet weak var busan: AlertCheckBox!
     
     //나이
     @IBOutlet weak var twenty_less: ConditionButton!
@@ -145,7 +145,6 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
         
         setupView()
         
-        initView()
         
     }
     
@@ -250,10 +249,6 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
             initialSetting(recognizer: together)
         }
         
-        locationSettingSeoul.isHidden = true
-        locationSettingBusan.isHidden = true
-        locationSettingDaegu.isHidden = true
-        locationSettingIncheon.isHidden = true
         
         //uilabel에 tapgesture 추가
         let gestureRec = UITapGestureRecognizer(target: self, action:  #selector (self.someAction (_:)))
@@ -328,15 +323,6 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
             self.locationBorderConst.constant = 43
         }))
     }
-    func initView() {
-        
-        self.locationSettingSeoul.isHidden = true
-        self.locationSettingKorea.isHidden = true
-        self.locationSettingDaegu.isHidden = true
-        self.locationSettingKorea.isHidden = true
-        self.locationSettingBusan.isHidden = true
-        
-    }
     
     //기업정보 vc로 이동
     @objc func someAction(_ sender:UITapGestureRecognizer){
@@ -358,22 +344,6 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
         return newLength <= limitLength
     }
 
-    @IBAction func selectRegionBtn(_ sender: Any) {
-        startAlert()
-    }
-    
-    func startAlert()
-    {
-        // 사용자정의 팝업
-        let popup: SelectRegionDialog = UINib(nibName: "SelectRegionDialog", bundle: nil).instantiate(withOwner: self, options: nil)[0] as! SelectRegionDialog
-        popup.backgroundColor = UIColor(red: 71/255, green: 71/255, blue: 71/255, alpha: 1)
-        popup.center = CGPoint(x: self.view.frame.width / 2, y: self.view.frame.height / 2)
-        popup.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
-        popup.cancelBtn.addTarget(self, action: #selector(btnCancelClick), for: .touchUpInside) // 버튼 이벤트 등록
-        popup.okBtn.addTarget(self, action: #selector(btnOkClick), for: .touchUpInside) // 버튼 이벤트 등록
-        self.view.addSubview(popup);
-        //        self.local.delegate = self
-    }
     @IBAction func selectBusiType(_ sender: Any) {
         startAlert1()
     }
@@ -428,202 +398,6 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
     // CheckedBox 개수 담을 변수 선언
     
      // Pop up view Check Box 이미지 변경
-    @IBAction func conditionCheckboxClick(_ sender: AlertCheckBox) {
-        switch sender {
-        case seoul:
-            self.location.seoul = !self.location.seoul!
-            sender.isChecked = self.location.seoul!
-            break
-        case busan:
-            self.location.busan = !self.location.busan!
-            sender.isChecked = self.location.busan!
-            break
-        case daegu:
-            self.location.daegu = !self.location.daegu!
-            sender.isChecked = self.location.daegu!
-            break
-        case incheon:
-            self.location.incheon = !self.location.incheon!
-            sender.isChecked = self.location.incheon!
-            break
-        case gwangju:
-            self.location.gwangju = !self.location.gwangju!
-            sender.isChecked = self.location.gwangju!
-            break
-        case daejeon:
-            self.location.daejeon = !self.location.daejeon!
-            sender.isChecked = self.location.daejeon!
-            break
-        case ulsan:
-            self.location.ulsan = !self.location.ulsan!
-            sender.isChecked = self.location.ulsan!
-            break
-        case sejong:
-            self.location.sejong = !self.location.sejong!
-            sender.isChecked = self.location.sejong!
-            break
-        case gangwon:
-            self.location.gangwon = !self.location.gangwon!
-            sender.isChecked = self.location.gangwon!
-            break
-        case kyunggi:
-            self.location.kyunggi = !self.location.kyunggi!
-            sender.isChecked = self.location.kyunggi!
-            break
-        case kyungnam:
-            self.location.kyungnam = !self.location.kyungnam!
-            sender.isChecked = self.location.kyungnam!
-            break
-        case kyungbuk:
-            self.location.kyungbuk = !self.location.kyungbuk!
-            sender.isChecked = self.location.kyungbuk!
-            break
-        case jeonbuk:
-            self.location.jeonbuk = !self.location.jeonbuk!
-            sender.isChecked = self.location.jeonbuk!
-            break
-        case jeonnam:
-            self.location.jeonnam = !self.location.jeonnam!
-            sender.isChecked = self.location.jeonnam!
-            break
-        case chungnam:
-            self.location.chungnam = !self.location.chungnam!
-            sender.isChecked = self.location.chungnam!
-            break
-        case chungbuk:
-            self.location.chungbuk = !self.location.chungbuk!
-            sender.isChecked = self.location.chungbuk!
-            break
-        case jeju:
-            self.location.jeju = !self.location.jeju!
-            sender.isChecked = self.location.jeju!
-            break
-        case local:
-            sender.isChecked = !sender.isChecked
-            if sender.isChecked == true {
-                self.local.setImage(UIImage(named: "icn_checkbox_blue"), for: UIControl.State.normal)
-            }
-            else {
-                self.local.setImage(UIImage(named: "icn_emptybox"), for: UIControl.State.normal)
-            }
-            self.location.seoul = !self.location.seoul!
-            self.seoul.isChecked = self.location.seoul!
-            
-            self.location.busan = !self.location.busan!
-            self.busan.isChecked = self.location.busan!
-
-            self.location.daegu = !self.location.daegu!
-            self.daegu.isChecked = self.location.daegu!
-
-            self.location.incheon = !self.location.incheon!
-            self.incheon.isChecked = self.location.incheon!
-            
-            self.location.gwangju = !self.location.gwangju!
-            self.gwangju.isChecked = self.location.gwangju!
-            
-            self.location.daejeon = !self.location.daejeon!
-            self.daejeon.isChecked = self.location.daejeon!
-            
-            self.location.ulsan = !self.location.ulsan!
-            self.ulsan.isChecked = self.location.ulsan!
-            
-            self.location.sejong = !self.location.sejong!
-            self.sejong.isChecked = self.location.sejong!
-
-            self.location.gangwon = !self.location.gangwon!
-            self.gangwon.isChecked = self.location.gangwon!
-
-            self.location.kyunggi = !self.location.kyunggi!
-            self.kyunggi.isChecked = self.location.kyunggi!
-            
-            self.location.kyungnam = !self.location.kyungnam!
-            self.kyungnam.isChecked = self.location.kyungnam!
-
-            self.location.kyungbuk = !self.location.kyungbuk!
-            self.kyungbuk.isChecked = self.location.kyungbuk!
-
-            self.location.jeonbuk = !self.location.jeonbuk!
-            self.jeonbuk.isChecked = self.location.jeonbuk!
-
-            self.location.jeonnam = !self.location.jeonnam!
-            self.jeonnam.isChecked = self.location.jeonnam!
-
-            self.location.chungnam = !self.location.chungnam!
-            self.chungnam.isChecked = self.location.chungnam!
-
-            self.location.chungbuk = !self.location.chungbuk!
-            self.chungbuk.isChecked = self.location.chungbuk!
-
-            self.location.jeju = !self.location.jeju!
-            self.jeju.isChecked = self.location.jeju!
-            break
-        case abroad:
-            sender.isChecked = !sender.isChecked
-            
-            if sender.isChecked == true {
-                self.abroad.setImage(UIImage(named: "icn_checkbox_blue"), for: UIControl.State.normal)
-                self.local.setImage(UIImage(named: "icn_emptybox"), for: UIControl.State.normal)
-            }
-            else {
-                self.abroad.setImage(UIImage(named: "icn_emptybox"), for: UIControl.State.normal)
-            }
-            self.location.seoul = !self.location.seoul!
-            self.seoul.isChecked = self.location.seoul!
-            
-            self.location.busan = !self.location.busan!
-            self.busan.isChecked = self.location.busan!
-            
-            self.location.daegu = !self.location.daegu!
-            self.daegu.isChecked = self.location.daegu!
-            
-            self.location.incheon = !self.location.incheon!
-            self.incheon.isChecked = self.location.incheon!
-            
-            self.location.gwangju = !self.location.gwangju!
-            self.gwangju.isChecked = self.location.gwangju!
-            
-            self.location.daejeon = !self.location.daejeon!
-            self.daejeon.isChecked = self.location.daejeon!
-            
-            self.location.ulsan = !self.location.ulsan!
-            self.ulsan.isChecked = self.location.ulsan!
-            
-            self.location.sejong = !self.location.sejong!
-            self.sejong.isChecked = self.location.sejong!
-            
-            self.location.gangwon = !self.location.gangwon!
-            self.gangwon.isChecked = self.location.gangwon!
-            
-            self.location.kyunggi = !self.location.kyunggi!
-            self.kyunggi.isChecked = self.location.kyunggi!
-            
-            self.location.kyungnam = !self.location.kyungnam!
-            self.kyungnam.isChecked = self.location.kyungnam!
-            
-            self.location.kyungbuk = !self.location.kyungbuk!
-            self.kyungbuk.isChecked = self.location.kyungbuk!
-            
-            self.location.jeonbuk = !self.location.jeonbuk!
-            self.jeonbuk.isChecked = self.location.jeonbuk!
-            
-            self.location.jeonnam = !self.location.jeonnam!
-            self.jeonnam.isChecked = self.location.jeonnam!
-            
-            self.location.chungnam = !self.location.chungnam!
-            self.chungnam.isChecked = self.location.chungnam!
-            
-            self.location.chungbuk = !self.location.chungbuk!
-            self.chungbuk.isChecked = self.location.chungbuk!
-            
-            self.location.jeju = !self.location.jeju!
-            self.jeju.isChecked = self.location.jeju!
-            break
-            
-        default:
-            break
-        }
-        print(location)
-    }
     
     var BusiTypeCountNum = 0
     

@@ -18,7 +18,6 @@ class NoticeDetailVC: UIViewController {
     @IBOutlet weak var noticeTarget: UILabel!
     @IBOutlet weak var noticeDescription: UILabel!
     @IBOutlet weak var dueDate: UILabel!
-    @IBOutlet weak var endDate: UILabel!
     @IBOutlet weak var insititution: UILabel!
     @IBOutlet weak var noticeTitle: UILabel!
     @IBOutlet weak var partLabel: UILabel!
@@ -42,8 +41,6 @@ class NoticeDetailVC: UIViewController {
             self.insititution.text = self.gsno(self.noticeDetail?.institution)
             
             self.registDate.text = self.gsno(self.noticeDetail?.reg_date)
-            
-            self.endDate.text = "\(self.gsno(self.noticeDetail!.start_date))  ~ \(self.gsno(self.noticeDetail!.end_date))"
             
             self.noticeDescription.text = self.gsno(self.noticeDetail!.content)
             
