@@ -24,6 +24,11 @@ class ConditionButton: UIButton {
             layer.borderColor = newValue?.cgColor
         }
     }
+    var isClicked = false
+    
+    func buttonClicked(sender: UIButton) {
+        isClicked = !isClicked
+    }
     
     
 

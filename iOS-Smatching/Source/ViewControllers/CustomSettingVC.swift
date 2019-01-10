@@ -688,19 +688,8 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
             break
         }
     }
-    // 선택사항 클릭시 박스 border 색 변경
-    @IBAction func conditionBtnClick(_ sender: ConditionButton) {
-        
-        if  sender.layer.borderColor == UIColor(displayP3Red: 76/255, green: 130/255, blue: 216/255, alpha: 1.0).cgColor {
-            sender.layer.borderColor = UIColor(displayP3Red: 216/255, green: 216/255, blue: 216/255, alpha: 1.0).cgColor
-            
-            
-        } else {
-            //선택을 할 경우
-            sender.layer.borderColor = UIColor(displayP3Red: 76/255, green: 130/255, blue: 216/255, alpha: 1.0).cgColor
-            
-        }
-        
+    
+    func clickConditionButton(_ sender : ConditionButton) {
         switch(sender){
         case twenty_less:
             self.age.twenty_less = !self.age.twenty_less!
@@ -749,7 +738,7 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
             break
         case midsmall:
             self.busitype.midsmall = !self.busitype.midsmall!
-             busiTypeCountNum += CountTheCheckedBox(self.busitype.midsmall!)
+            busiTypeCountNum += CountTheCheckedBox(self.busitype.midsmall!)
             break
         case midbig:
             self.busitype.midbig = !self.busitype.midbig!
@@ -812,6 +801,28 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
         default:
             break
         }
+    }
+    // 선택사항 클릭시 박스 border 색 변경
+    @IBAction func conditionBtnClick(_ sender: ConditionButton) {
+        
+        if  sender.layer.borderColor == UIColor(displayP3Red: 76/255, green: 130/255, blue: 216/255, alpha: 1.0).cgColor {
+            sender.layer.borderColor = UIColor(displayP3Red: 216/255, green: 216/255, blue: 216/255, alpha: 1.0).cgColor
+            isClicked = true
+            
+        } else {
+            //선택을 할 경우
+            sender.layer.borderColor = UIColor(displayP3Red: 76/255, green: 130/255, blue: 216/255, alpha: 1.0).cgColor
+            
+        }
+        
+        if periodCountNum < 3 {
+            clickConditionButton(sender)
+        }
+        else {
+            guard sender.isChecked else {return}
+            clickConditionButton(sender)
+        }
+        
     }
     
     
