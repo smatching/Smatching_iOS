@@ -9,7 +9,9 @@
 import UIKit
 
 class AlertCheckBox: UIButton {
-
+    
+    
+    
     let checkedImage = UIImage(named: "icn_checkbox_white")! as UIImage
     let uncheckedImage = UIImage(named: "icn_emptybox")! as UIImage
 
@@ -22,17 +24,18 @@ class AlertCheckBox: UIButton {
             }
         }
     }
-    
     override func awakeFromNib() {
 //        self.addTarget(self, action:#selector(buttonClicked(sender:)), for: UIControl.Event.touchUpInside)
 //        self.isChecked = false
     }
     
-    @objc func buttonClicked(sender: UIButton) {
-        if sender == self {
-            isChecked = !isChecked
-        }
-        
-    }
+//    @objc func buttonClicked(sender: UIButton) {
+//        if sender == self {
+//            isChecked = !isChecked
+//        }
+//
+//    }
     
+  
+
 }

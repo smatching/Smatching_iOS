@@ -1707,13 +1707,13 @@
                                                 <rect key="frame" x="32" y="135" width="310" height="307"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="나에게 딱 맞는 지원사업" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aSA-2y-RQ3">
-                                                        <rect key="frame" x="76" y="178" width="158" height="18"/>
+                                                        <rect key="frame" x="79" y="178" width="152" height="19"/>
                                                         <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ogy-HP-sAs">
-                                                        <rect key="frame" x="94" y="207.5" width="122.5" height="27"/>
+                                                        <rect key="frame" x="96.5" y="208.5" width="117.5" height="28"/>
                                                         <string key="text">맞춤조건을 최대 7개까지
 설정하실 수 있습니다.</string>
                                                         <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
@@ -1815,7 +1815,7 @@
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D-7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QFK-Zj-SDc">
-                                                                            <rect key="frame" x="258.5" y="13" width="17.5" height="12"/>
+                                                                            <rect key="frame" x="259.5" y="13" width="16.5" height="12"/>
                                                                             <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="10"/>
                                                                             <color key="textColor" red="0.74901960784313726" green="0.45490196078431372" blue="0.45490196078431372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <nil key="highlightedColor"/>
@@ -3152,7 +3152,7 @@
                                                                 <rect key="frame" x="206" y="0.0" width="94" height="36"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="대기업" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Af7-Kt-426">
-                                                                        <rect key="frame" x="25" y="12" width="32" height="15"/>
+                                                                        <rect key="frame" x="31" y="11" width="32" height="15"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                         <nil key="textColor"/>
@@ -3267,7 +3267,7 @@
                                                                 <rect key="frame" x="206" y="0.0" width="94" height="36"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="전통시장" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nCK-62-3sv">
-                                                                        <rect key="frame" x="25" y="12" width="42" height="15"/>
+                                                                        <rect key="frame" x="26" y="11" width="42" height="15"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                         <nil key="textColor"/>
@@ -3735,7 +3735,7 @@
                                                                 <rect key="frame" x="206" y="0.0" width="94" height="36"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4차산업관련기업" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDp-vo-d20">
-                                                                        <rect key="frame" x="25" y="12" width="81" height="15"/>
+                                                                        <rect key="frame" x="6" y="11" width="81" height="15"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                         <nil key="textColor"/>

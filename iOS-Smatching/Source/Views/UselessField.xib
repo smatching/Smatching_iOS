@@ -14,7 +14,18 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomSettingVC" customModule="iOS_Smatching" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomSettingVC" customModule="iOS_Smatching" customModuleProvider="target">
+            <connections>
+                <outlet property="domestic" destination="l4q-VJ-Ky8" id="zsY-Tc-TIk"/>
+                <outlet property="edu" destination="IFG-Un-4vP" id="6fF-NT-fYC"/>
+                <outlet property="global" destination="saH-Gm-1ll" id="CMO-9F-vnU"/>
+                <outlet property="gov" destination="SvB-N0-Vne" id="7uu-mR-yMU"/>
+                <outlet property="know" destination="vp4-Wg-fmV" id="jvT-Wr-NL2"/>
+                <outlet property="loan" destination="dUr-3I-3uQ" id="JvE-3b-ahC"/>
+                <outlet property="make" destination="ZcK-Eb-zQc" id="VMp-ZQ-qdz"/>
+                <outlet property="place" destination="8wB-cM-BJE" id="lyh-uI-VhF"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SelectUselessField" customModule="iOS_Smatching" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -36,6 +47,9 @@
                                                 <constraint firstAttribute="height" constant="18" id="dHr-hM-iDu"/>
                                             </constraints>
                                             <state key="normal" image="icn_emptybox"/>
+                                            <connections>
+                                                <action selector="UselessCheckBoxClicked:" destination="-1" eventType="touchUpInside" id="Pia-yo-3w5"/>
+                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="창업교육, 창업 멘토링" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1MF-jV-LU5">
                                             <rect key="frame" x="26" y="0.0" width="127" height="18"/>
@@ -55,6 +69,9 @@
                                                 <constraint firstAttribute="width" constant="18" id="vGP-ob-GYw"/>
                                             </constraints>
                                             <state key="normal" image="icn_emptybox"/>
+                                            <connections>
+                                                <action selector="UselessCheckBoxClicked:" destination="-1" eventType="touchUpInside" id="Kj7-NV-lJC"/>
+                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="지식재산권(특허, 저작권 등)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5aM-Di-WbA">
                                             <rect key="frame" x="26" y="0.0" width="127" height="18"/>
@@ -74,6 +91,9 @@
                                                 <constraint firstAttribute="height" constant="18" id="ZFM-cF-sQ0"/>
                                             </constraints>
                                             <state key="normal" image="icn_emptybox"/>
+                                            <connections>
+                                                <action selector="UselessCheckBoxClicked:" destination="-1" eventType="touchUpInside" id="CuJ-Yk-jlu"/>
+                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="시설, 공간" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hzd-Qa-Tbi">
                                             <rect key="frame" x="26" y="0.0" width="127" height="18"/>
@@ -93,6 +113,9 @@
                                                 <constraint firstAttribute="width" constant="18" id="SWe-nZ-R1V"/>
                                             </constraints>
                                             <state key="normal" image="icn_emptybox"/>
+                                            <connections>
+                                                <action selector="UselessCheckBoxClicked:" destination="-1" eventType="touchUpInside" id="B6f-WV-hC9"/>
+                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="국내판로 확대" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPs-Kz-Hpe">
                                             <rect key="frame" x="26" y="0.0" width="127" height="18"/>
@@ -112,6 +135,9 @@
                                                 <constraint firstAttribute="height" constant="18" id="HXY-5v-uMk"/>
                                             </constraints>
                                             <state key="normal" image="icn_emptybox"/>
+                                            <connections>
+                                                <action selector="UselessCheckBoxClicked:" destination="-1" eventType="touchUpInside" id="k4u-Cx-O7K"/>
+                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="해외판로 확대" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWt-ZO-q7u">
                                             <rect key="frame" x="26" y="0.0" width="127" height="18"/>
@@ -131,6 +157,9 @@
                                                 <constraint firstAttribute="height" constant="18" id="xyR-CH-IHh"/>
                                             </constraints>
                                             <state key="normal" image="icn_emptybox"/>
+                                            <connections>
+                                                <action selector="UselessCheckBoxClicked:" destination="-1" eventType="touchUpInside" id="vwa-9A-Lnw"/>
+                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="시제품 제작, 제조양산" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MLm-Xd-lIY">
                                             <rect key="frame" x="26" y="0.0" width="127" height="18"/>
@@ -150,6 +179,9 @@
                                                 <constraint firstAttribute="width" constant="18" id="npz-6E-UMd"/>
                                             </constraints>
                                             <state key="normal" image="icn_emptybox"/>
+                                            <connections>
+                                                <action selector="UselessCheckBoxClicked:" destination="-1" eventType="touchUpInside" id="Fv9-s9-LFH"/>
+                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="정부 대출 지원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PMJ-Xt-unY">
                                             <rect key="frame" x="26" y="0.0" width="127" height="18"/>
@@ -169,6 +201,9 @@
                                                 <constraint firstAttribute="height" constant="18" id="tA4-na-eKg"/>
                                             </constraints>
                                             <state key="normal" image="icn_emptybox"/>
+                                            <connections>
+                                                <action selector="UselessCheckBoxClicked:" destination="-1" eventType="touchUpInside" id="UXP-Ds-1oz"/>
+                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="무대출 자금 지원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ap-eb-PSa">
                                             <rect key="frame" x="26" y="0.0" width="127" height="18"/>
@@ -286,7 +321,7 @@
                     </userDefinedRuntimeAttributes>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
             <constraints>
                 <constraint firstItem="Lg9-8O-GR7" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="Hpo-7E-cAF"/>
                 <constraint firstItem="Lg9-8O-GR7" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="qkx-4o-M3l"/>
