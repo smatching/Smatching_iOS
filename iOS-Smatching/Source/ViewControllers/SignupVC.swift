@@ -182,7 +182,7 @@ extension SignupVC : UIGestureRecognizerDelegate {
         guard let duration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double else {return}
         guard let curve = notification.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? UInt else {return}
         UIView.animate(withDuration: duration, delay: 0.0, options: .init(rawValue: curve), animations: {
-            self.stackViewConst.constant = -120
+            self.stackViewConst.constant = -80
             
         })
         

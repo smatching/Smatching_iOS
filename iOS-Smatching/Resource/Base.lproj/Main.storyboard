@@ -3888,7 +3888,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R9M-ez-qH9" customClass="UIButton">
                                                 <rect key="frame" x="0.0" y="1200" width="375" height="48.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="1,742건의 결과보기" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FyD-1g-HTO">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,742건의 결과보기" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FyD-1g-HTO">
                                                         <rect key="frame" x="117" y="13.5" width="141" height="21.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="21.5" id="WL5-yd-93R"/>
@@ -3901,6 +3901,7 @@
                                                 <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="48.5" id="1ph-ZS-A3c"/>
+                                                    <constraint firstItem="FyD-1g-HTO" firstAttribute="centerY" secondItem="R9M-ez-qH9" secondAttribute="centerY" id="2MX-fD-Bk3"/>
                                                     <constraint firstAttribute="width" constant="375" id="4y2-bx-U43"/>
                                                     <constraint firstItem="FyD-1g-HTO" firstAttribute="centerX" secondItem="R9M-ez-qH9" secondAttribute="centerX" id="zMH-dM-RqO"/>
                                                 </constraints>
@@ -4004,7 +4005,9 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="RC9-H1-WKJ" firstAttribute="width" secondItem="2uE-HY-KVz" secondAttribute="width" id="3OO-QW-jcI"/>
+                                    <constraint firstAttribute="height" constant="1249" id="EgN-iz-nYM"/>
                                     <constraint firstAttribute="trailing" secondItem="RC9-H1-WKJ" secondAttribute="trailing" id="Exh-kU-cUa"/>
+                                    <constraint firstAttribute="width" constant="375" id="S0F-eW-dj1"/>
                                     <constraint firstItem="RC9-H1-WKJ" firstAttribute="top" secondItem="2uE-HY-KVz" secondAttribute="top" id="a2x-v6-R2j"/>
                                     <constraint firstItem="RC9-H1-WKJ" firstAttribute="leading" secondItem="2uE-HY-KVz" secondAttribute="leading" id="lXF-gF-XlU"/>
                                     <constraint firstAttribute="bottom" secondItem="RC9-H1-WKJ" secondAttribute="bottom" id="vaW-1M-UH6"/>
@@ -4289,8 +4292,7 @@ AAAAAAAAAAAAAAAAAB0BA
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="r53-ws-zKk"/>
-        <segue reference="LJP-4N-WlQ"/>
-        <segue reference="qzU-bA-t8u"/>
-
+        <segue reference="AX4-mH-1YY"/>
+        <segue reference="ACH-Ba-gGw"/>
     </inferredMetricsTieBreakers>
 </document>

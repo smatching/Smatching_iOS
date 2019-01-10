@@ -17,421 +17,460 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomSettingVC" customModule="iOS_Smatching" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" restorationIdentifier="SelectBusiType" id="iN0-l3-epB" customClass="SelectBusiType" customModule="iOS_Smatching" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="1152"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="1010"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pbN-fx-fS9">
-                    <rect key="frame" x="32" y="109" width="310" height="954"/>
+                    <rect key="frame" x="32" y="117" width="310" height="434"/>
                     <subviews>
-                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YLh-7i-KlB">
-                            <rect key="frame" x="2" y="51" width="303" height="843"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W2u-p6-Cjv">
+                            <rect key="frame" x="10" y="-123" width="303" height="1018"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xsc-tf-orI">
-                                    <rect key="frame" x="0.0" y="0.0" width="303" height="843"/>
+                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YLh-7i-KlB">
+                                    <rect key="frame" x="0.0" y="2" width="303" height="1013"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="sp1-eB-Q39">
-                                            <rect key="frame" x="0.0" y="0.0" width="243" height="815"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xsc-tf-orI">
+                                            <rect key="frame" x="0.0" y="0.0" width="303" height="1013"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="225" translatesAutoresizingMaskIntoConstraints="NO" id="OWS-5z-Pfe">
-                                                    <rect key="frame" x="0.0" y="0.0" width="243" height="18"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="sp1-eB-Q39">
+                                                    <rect key="frame" x="0.0" y="0.0" width="239" height="815"/>
                                                     <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPJ-nU-l3a" customClass="AlertCheckBox" customModule="iOS_Smatching" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="18" height="18"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="18" id="9pa-dd-P9J"/>
-                                                                <constraint firstAttribute="width" constant="18" id="Rlq-qn-AhQ"/>
-                                                            </constraints>
-                                                            <state key="normal" image="icn_emptybox"/>
-                                                        </button>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A 농업, 임업 및 어업 (01~03)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XBW-o1-LAV">
-                                                            <rect key="frame" x="243" y="0.0" width="0.0" height="18"/>
-                                                            <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
-                                                            <color key="textColor" red="0.4549019608" green="0.4549019608" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </stackView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="g9w-zX-fAQ">
-                                                    <rect key="frame" x="0.0" y="38" width="243" height="18"/>
-                                                    <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TfT-0v-hI6" customClass="AlertCheckBox" customModule="iOS_Smatching" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="18" height="18"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="18" id="cdI-jm-bVa"/>
-                                                                <constraint firstAttribute="width" constant="18" id="cgG-3e-VsG"/>
-                                                            </constraints>
-                                                            <state key="normal" image="icn_emptybox"/>
-                                                        </button>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B 광업 (05~08)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qei-lm-uIi">
-                                                            <rect key="frame" x="26" y="0.0" width="217" height="18"/>
-                                                            <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
-                                                            <color key="textColor" red="0.45490196078431372" green="0.45490196078431372" blue="0.45490196078431372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </stackView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="SIj-ct-4HW">
-                                                    <rect key="frame" x="0.0" y="76" width="243" height="18"/>
-                                                    <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DYL-8t-pZ4" customClass="AlertCheckBox" customModule="iOS_Smatching" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="18" height="18"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="18" id="9Av-ii-8JT"/>
-                                                                <constraint firstAttribute="height" constant="18" id="hxc-HO-yjF"/>
-                                                            </constraints>
-                                                            <state key="normal" image="icn_emptybox"/>
-                                                        </button>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C 제조업 (10~34)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQI-pA-i4I">
-                                                            <rect key="frame" x="26" y="0.0" width="217" height="18"/>
-                                                            <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
-                                                            <color key="textColor" red="0.4549019608" green="0.4549019608" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </stackView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ID6-zV-hov">
-                                                    <rect key="frame" x="0.0" y="114" width="243" height="18"/>
-                                                    <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bVe-la-aph" customClass="AlertCheckBox" customModule="iOS_Smatching" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="18" height="18"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="18" id="5OZ-uw-TsF"/>
-                                                                <constraint firstAttribute="width" constant="18" id="vcm-JK-lDm"/>
-                                                            </constraints>
-                                                            <state key="normal" image="icn_emptybox"/>
-                                                        </button>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D 전기, 가스, 증기 및 공기 조절 공급업 (35)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fki-Z8-1Ih">
-                                                            <rect key="frame" x="26" y="0.0" width="217" height="18"/>
-                                                            <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
-                                                            <color key="textColor" red="0.4549019608" green="0.4549019608" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </stackView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GWb-RN-vDn" userLabel="Stack2t">
-                                                    <rect key="frame" x="0.0" y="152" width="243" height="59"/>
-                                                    <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="KVP-fz-owE">
-                                                            <rect key="frame" x="0.0" y="0.0" width="243" height="27"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="OWS-5z-Pfe">
+                                                            <rect key="frame" x="0.0" y="0.0" width="172" height="18"/>
                                                             <subviews>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RgT-ea-cwM" customClass="AlertCheckBox" customModule="iOS_Smatching" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="18" height="27"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="width" constant="18" id="WP2-fD-rXd"/>
-                                                                    </constraints>
-                                                                    <state key="normal" image="icn_emptybox"/>
-                                                                </button>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E 수도, 하수 및 폐기물 처리, 원료 재생업 (36~39)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B0S-Il-Tmz">
-                                                                    <rect key="frame" x="26" y="0.0" width="217" height="27"/>
-                                                                    <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
-                                                                    <color key="textColor" red="0.4549019608" green="0.4549019608" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                        </stackView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="i63-T6-3hA">
-                                                            <rect key="frame" x="0.0" y="37" width="243" height="22"/>
-                                                            <subviews>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8iB-9b-G9T" customClass="AlertCheckBox" customModule="iOS_Smatching" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="18" height="22"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="width" constant="18" id="Cox-Wo-sZm"/>
-                                                                    </constraints>
-                                                                    <state key="normal" image="icn_emptybox"/>
-                                                                </button>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="F 건설업 (41~42)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gwe-gj-Tnt">
-                                                                    <rect key="frame" x="26" y="0.0" width="217" height="22"/>
-                                                                    <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
-                                                                    <color key="textColor" red="0.4549019608" green="0.4549019608" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                        </stackView>
-                                                    </subviews>
-                                                </stackView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Q0K-Vh-U51">
-                                                    <rect key="frame" x="0.0" y="231" width="243" height="18"/>
-                                                    <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zcQ-Aw-r6b" customClass="AlertCheckBox" customModule="iOS_Smatching" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="18" height="18"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="18" id="0Ib-Wr-3Bz"/>
-                                                                <constraint firstAttribute="height" constant="18" id="iFA-IC-RGu"/>
-                                                            </constraints>
-                                                            <state key="normal" image="icn_emptybox"/>
-                                                        </button>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="G 도매 및 소매업 (45~47)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gut-R9-iR3">
-                                                            <rect key="frame" x="26" y="0.0" width="217" height="18"/>
-                                                            <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
-                                                            <color key="textColor" red="0.4549019608" green="0.4549019608" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </stackView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="OoL-ga-ayO">
-                                                    <rect key="frame" x="0.0" y="269" width="243" height="18"/>
-                                                    <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zap-w3-ejw" customClass="AlertCheckBox" customModule="iOS_Smatching" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="18" height="18"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="18" id="Db7-Tn-3i7"/>
-                                                                <constraint firstAttribute="height" constant="18" id="oFx-re-zhq"/>
-                                                            </constraints>
-                                                            <state key="normal" image="icn_emptybox"/>
-                                                        </button>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="H 운수 및 창고업 (49~52)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yW-mx-1PB">
-                                                            <rect key="frame" x="26" y="0.0" width="217" height="18"/>
-                                                            <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
-                                                            <color key="textColor" red="0.4549019608" green="0.4549019608" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </stackView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="d1R-TB-bE3">
-                                                    <rect key="frame" x="0.0" y="307" width="243" height="18"/>
-                                                    <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwy-WZ-kRI" customClass="AlertCheckBox" customModule="iOS_Smatching" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="18" height="18"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="18" id="vEF-Xs-gsg"/>
-                                                                <constraint firstAttribute="width" constant="18" id="xO2-km-0b8"/>
-                                                            </constraints>
-                                                            <state key="normal" image="icn_emptybox"/>
-                                                        </button>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I 숙박 및 음식창업 (55~56)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IdX-9r-wng">
-                                                            <rect key="frame" x="26" y="0.0" width="217" height="18"/>
-                                                            <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
-                                                            <color key="textColor" red="0.4549019608" green="0.4549019608" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </stackView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rXl-Lg-SgP">
-                                                    <rect key="frame" x="0.0" y="345" width="243" height="18"/>
-                                                    <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TRh-6l-sdl" customClass="AlertCheckBox" customModule="iOS_Smatching" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="18" height="18"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="18" id="3aQ-8C-kRl"/>
-                                                                <constraint firstAttribute="width" constant="18" id="OPt-Ve-4ch"/>
-                                                            </constraints>
-                                                            <state key="normal" image="icn_emptybox"/>
-                                                        </button>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="J 정보통신업 (58~63)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4JF-Wh-D6Q">
-                                                            <rect key="frame" x="26" y="0.0" width="217" height="18"/>
-                                                            <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
-                                                            <color key="textColor" red="0.4549019608" green="0.4549019608" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </stackView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="iQy-SK-IJE">
-                                                    <rect key="frame" x="0.0" y="383" width="243" height="18"/>
-                                                    <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NtV-W6-FrF" customClass="AlertCheckBox" customModule="iOS_Smatching" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="18" height="18"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="18" id="2W4-gD-2sj"/>
-                                                                <constraint firstAttribute="width" constant="18" id="FcJ-JF-eG6"/>
-                                                            </constraints>
-                                                            <state key="normal" image="icn_emptybox"/>
-                                                        </button>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="K 금융 및 보험업 (64~66)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAk-WC-cif">
-                                                            <rect key="frame" x="26" y="0.0" width="217" height="18"/>
-                                                            <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
-                                                            <color key="textColor" red="0.4549019608" green="0.4549019608" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </stackView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jUK-7e-8HM">
-                                                    <rect key="frame" x="0.0" y="421" width="243" height="18"/>
-                                                    <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcy-UY-tkM" customClass="AlertCheckBox" customModule="iOS_Smatching" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="18" height="18"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="18" id="cMh-zt-sR1"/>
-                                                                <constraint firstAttribute="height" constant="18" id="jeu-ah-jIi"/>
-                                                            </constraints>
-                                                            <state key="normal" image="icn_emptybox"/>
-                                                        </button>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L 부동산업 (68)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cvo-P6-Vgr">
-                                                            <rect key="frame" x="26" y="0.0" width="217" height="18"/>
-                                                            <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
-                                                            <color key="textColor" red="0.4549019608" green="0.4549019608" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </stackView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="h33-rg-iM1">
-                                                    <rect key="frame" x="0.0" y="459" width="243" height="18"/>
-                                                    <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ej-Lj-pqZ" customClass="AlertCheckBox" customModule="iOS_Smatching" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="18" height="18"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="18" id="C0o-6X-EMK"/>
-                                                                <constraint firstAttribute="width" constant="18" id="EUa-tA-ASG"/>
-                                                            </constraints>
-                                                            <state key="normal" image="icn_emptybox"/>
-                                                        </button>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="M 전문, 과학 및 기술 서비스업 (70~73)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5Y-GY-oQY">
-                                                            <rect key="frame" x="26" y="0.0" width="217" height="18"/>
-                                                            <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
-                                                            <color key="textColor" red="0.4549019608" green="0.4549019608" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </stackView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="b3j-UJ-igV">
-                                                    <rect key="frame" x="0.0" y="497" width="243" height="55"/>
-                                                    <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9Hq-Tv-C92">
-                                                            <rect key="frame" x="0.0" y="0.0" width="243" height="27"/>
-                                                            <subviews>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XKm-ex-T2N" customClass="AlertCheckBox" customModule="iOS_Smatching" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="18" height="27"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="width" constant="18" id="HBI-a8-Hj1"/>
-                                                                    </constraints>
-                                                                    <state key="normal" image="icn_emptybox"/>
-                                                                </button>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N 사업시설 관리, 사업지원 및 임대서비스업 (74~76)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tkL-DP-bqC">
-                                                                    <rect key="frame" x="26" y="0.0" width="217" height="27"/>
-                                                                    <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
-                                                                    <color key="textColor" red="0.4549019608" green="0.4549019608" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                        </stackView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aLo-Yn-J6Q">
-                                                            <rect key="frame" x="0.0" y="37" width="243" height="18"/>
-                                                            <subviews>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZWg-ve-4eq" customClass="AlertCheckBox" customModule="iOS_Smatching" customModuleProvider="target">
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPJ-nU-l3a" customClass="AlertCheckBox" customModule="iOS_Smatching" customModuleProvider="target">
                                                                     <rect key="frame" x="0.0" y="0.0" width="18" height="18"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="height" constant="18" id="L5f-gI-L4C"/>
-                                                                        <constraint firstAttribute="width" constant="18" id="bVW-DP-Cif"/>
+                                                                        <constraint firstAttribute="height" constant="18" id="9pa-dd-P9J"/>
+                                                                        <constraint firstAttribute="width" constant="18" id="Rlq-qn-AhQ"/>
                                                                     </constraints>
                                                                     <state key="normal" image="icn_emptybox"/>
                                                                 </button>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O 공공 행정, 국방 및 사회보장 행정 (84)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wTQ-Rg-loU">
-                                                                    <rect key="frame" x="26" y="0.0" width="217" height="18"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A 농업, 임업 및 어업 (01~03)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XBW-o1-LAV">
+                                                                    <rect key="frame" x="26" y="0.0" width="146" height="18"/>
                                                                     <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
                                                                     <color key="textColor" red="0.4549019608" green="0.4549019608" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
                                                         </stackView>
-                                                    </subviews>
-                                                </stackView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Zbx-SA-zFe">
-                                                    <rect key="frame" x="0.0" y="572" width="243" height="18"/>
-                                                    <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="avW-Ut-lBq" customClass="AlertCheckBox" customModule="iOS_Smatching" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="18" height="18"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="18" id="juI-cA-cxx"/>
-                                                                <constraint firstAttribute="width" constant="18" id="lfG-tq-uRZ"/>
-                                                            </constraints>
-                                                            <state key="normal" image="icn_emptybox"/>
-                                                        </button>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="P 교육 서비스업 (85)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Avh-rr-Ixx">
-                                                            <rect key="frame" x="26" y="0.0" width="217" height="18"/>
-                                                            <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
-                                                            <color key="textColor" red="0.4549019608" green="0.4549019608" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </stackView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WYT-9h-Vbq">
-                                                    <rect key="frame" x="0.0" y="610" width="243" height="18"/>
-                                                    <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qw8-y3-kbS" customClass="AlertCheckBox" customModule="iOS_Smatching" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="18" height="18"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="18" id="0K5-eI-ACZ"/>
-                                                                <constraint firstAttribute="height" constant="18" id="igE-hF-ezJ"/>
-                                                            </constraints>
-                                                            <state key="normal" image="icn_emptybox"/>
-                                                        </button>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Q 보건업 및 사회복지 서비스업 (86~87)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVr-ZJ-1Jv">
-                                                            <rect key="frame" x="26" y="0.0" width="217" height="18"/>
-                                                            <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
-                                                            <color key="textColor" red="0.4549019608" green="0.4549019608" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </stackView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hPw-4H-AER">
-                                                    <rect key="frame" x="0.0" y="648" width="243" height="129"/>
-                                                    <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nZb-Ho-3lp">
-                                                            <rect key="frame" x="0.0" y="0.0" width="243" height="27"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="g9w-zX-fAQ">
+                                                            <rect key="frame" x="0.0" y="38" width="105" height="18"/>
                                                             <subviews>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ih5-39-ZnK" customClass="AlertCheckBox" customModule="iOS_Smatching" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="18" height="27"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="width" constant="18" id="b2y-Hi-ciY"/>
-                                                                    </constraints>
-                                                                    <state key="normal" image="icn_emptybox"/>
-                                                                </button>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R 예술, 스포츠 및 여가관련 서비스업 (90~91)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HBx-Uo-vdl">
-                                                                    <rect key="frame" x="26" y="0.0" width="217" height="27"/>
-                                                                    <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
-                                                                    <color key="textColor" red="0.4549019608" green="0.4549019608" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                        </stackView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GUe-0c-s2N">
-                                                            <rect key="frame" x="0.0" y="37" width="243" height="27"/>
-                                                            <subviews>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QaK-dj-Yhs" customClass="AlertCheckBox" customModule="iOS_Smatching" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="18" height="27"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="width" constant="18" id="euI-16-Yk8"/>
-                                                                    </constraints>
-                                                                    <state key="normal" image="icn_emptybox"/>
-                                                                </button>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S 협회 및 단체, 수리 및 기타 개인 서비스업 (94~96)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XmJ-13-vhd">
-                                                                    <rect key="frame" x="26" y="0.0" width="217" height="27"/>
-                                                                    <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
-                                                                    <color key="textColor" red="0.4549019608" green="0.4549019608" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                        </stackView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7m5-oW-BC2">
-                                                            <rect key="frame" x="0.0" y="74" width="243" height="27"/>
-                                                            <subviews>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJy-Tc-x6J" customClass="AlertCheckBox" customModule="iOS_Smatching" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="18" height="27"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="width" constant="18" id="8Dh-Ys-NP8"/>
-                                                                    </constraints>
-                                                                    <state key="normal" image="icn_emptybox"/>
-                                                                </button>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T 가구 내 고용활동 및 달리 분류되지 않은 자가 소비 생산활동 (97~98)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0FB-5c-zv8">
-                                                                    <rect key="frame" x="26" y="0.0" width="217" height="27"/>
-                                                                    <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
-                                                                    <color key="textColor" red="0.4549019608" green="0.4549019608" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                        </stackView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZVh-0f-64P">
-                                                            <rect key="frame" x="0.0" y="111" width="243" height="18"/>
-                                                            <subviews>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zwl-LT-MqB" customClass="AlertCheckBox" customModule="iOS_Smatching" customModuleProvider="target">
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TfT-0v-hI6" customClass="AlertCheckBox" customModule="iOS_Smatching" customModuleProvider="target">
                                                                     <rect key="frame" x="0.0" y="0.0" width="18" height="18"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" constant="18" id="1sF-5K-hdd"/>
-                                                                        <constraint firstAttribute="height" constant="18" id="kSe-ug-LvD"/>
+                                                                        <constraint firstAttribute="height" constant="18" id="cdI-jm-bVa"/>
+                                                                        <constraint firstAttribute="width" constant="18" id="cgG-3e-VsG"/>
                                                                     </constraints>
                                                                     <state key="normal" image="icn_emptybox"/>
                                                                 </button>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="U 국제 및 외국기관" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gon-L6-3uF">
-                                                                    <rect key="frame" x="26" y="0.0" width="217" height="18"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B 광업 (05~08)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qei-lm-uIi">
+                                                                    <rect key="frame" x="26" y="0.0" width="79" height="18"/>
+                                                                    <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
+                                                                    <color key="textColor" red="0.45490196078431372" green="0.45490196078431372" blue="0.45490196078431372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="SIj-ct-4HW">
+                                                            <rect key="frame" x="0.0" y="76" width="116" height="18"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DYL-8t-pZ4" customClass="AlertCheckBox" customModule="iOS_Smatching" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="18" height="18"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="18" id="9Av-ii-8JT"/>
+                                                                        <constraint firstAttribute="height" constant="18" id="hxc-HO-yjF"/>
+                                                                    </constraints>
+                                                                    <state key="normal" image="icn_emptybox"/>
+                                                                </button>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C 제조업 (10~34)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQI-pA-i4I">
+                                                                    <rect key="frame" x="26" y="0.0" width="90" height="18"/>
+                                                                    <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
+                                                                    <color key="textColor" red="0.4549019608" green="0.4549019608" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ID6-zV-hov">
+                                                            <rect key="frame" x="0.0" y="114" width="239" height="18"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bVe-la-aph" customClass="AlertCheckBox" customModule="iOS_Smatching" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="18" height="18"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="18" id="5OZ-uw-TsF"/>
+                                                                        <constraint firstAttribute="width" constant="18" id="vcm-JK-lDm"/>
+                                                                    </constraints>
+                                                                    <state key="normal" image="icn_emptybox"/>
+                                                                </button>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D 전기, 가스, 증기 및 공기 조절 공급업 (35)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fki-Z8-1Ih">
+                                                                    <rect key="frame" x="26" y="0.0" width="213" height="18"/>
+                                                                    <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
+                                                                    <color key="textColor" red="0.4549019608" green="0.4549019608" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GWb-RN-vDn" userLabel="Stack2t">
+                                                            <rect key="frame" x="0.0" y="152" width="239" height="59"/>
+                                                            <subviews>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="KVP-fz-owE">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="239" height="27"/>
+                                                                    <subviews>
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RgT-ea-cwM" customClass="AlertCheckBox" customModule="iOS_Smatching" customModuleProvider="target">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="18" height="27"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="18" id="WP2-fD-rXd"/>
+                                                                            </constraints>
+                                                                            <state key="normal" image="icn_emptybox"/>
+                                                                        </button>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E 수도, 하수 및 폐기물 처리, 원료 재생업 (36~39)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B0S-Il-Tmz">
+                                                                            <rect key="frame" x="26" y="0.0" width="213" height="27"/>
+                                                                            <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
+                                                                            <color key="textColor" red="0.4549019608" green="0.4549019608" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </stackView>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="i63-T6-3hA">
+                                                                    <rect key="frame" x="0.0" y="37" width="239" height="22"/>
+                                                                    <subviews>
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8iB-9b-G9T" customClass="AlertCheckBox" customModule="iOS_Smatching" customModuleProvider="target">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="18" height="22"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="18" id="Cox-Wo-sZm"/>
+                                                                            </constraints>
+                                                                            <state key="normal" image="icn_emptybox"/>
+                                                                        </button>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="F 건설업 (41~42)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gwe-gj-Tnt">
+                                                                            <rect key="frame" x="26" y="0.0" width="213" height="22"/>
+                                                                            <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
+                                                                            <color key="textColor" red="0.4549019608" green="0.4549019608" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </stackView>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="239" id="PRx-VO-NBx"/>
+                                                            </constraints>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Q0K-Vh-U51">
+                                                            <rect key="frame" x="0.0" y="231" width="155" height="18"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zcQ-Aw-r6b" customClass="AlertCheckBox" customModule="iOS_Smatching" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="18" height="18"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="18" id="0Ib-Wr-3Bz"/>
+                                                                        <constraint firstAttribute="height" constant="18" id="iFA-IC-RGu"/>
+                                                                    </constraints>
+                                                                    <state key="normal" image="icn_emptybox"/>
+                                                                </button>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="G 도매 및 소매업 (45~47)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gut-R9-iR3">
+                                                                    <rect key="frame" x="26" y="0.0" width="129" height="18"/>
+                                                                    <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
+                                                                    <color key="textColor" red="0.4549019608" green="0.4549019608" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="OoL-ga-ayO">
+                                                            <rect key="frame" x="0.0" y="269" width="155.5" height="18"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zap-w3-ejw" customClass="AlertCheckBox" customModule="iOS_Smatching" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="18" height="18"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="18" id="Db7-Tn-3i7"/>
+                                                                        <constraint firstAttribute="height" constant="18" id="oFx-re-zhq"/>
+                                                                    </constraints>
+                                                                    <state key="normal" image="icn_emptybox"/>
+                                                                </button>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="H 운수 및 창고업 (49~52)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yW-mx-1PB">
+                                                                    <rect key="frame" x="26" y="0.0" width="129.5" height="18"/>
+                                                                    <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
+                                                                    <color key="textColor" red="0.4549019608" green="0.4549019608" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="d1R-TB-bE3">
+                                                            <rect key="frame" x="0.0" y="307" width="161" height="18"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwy-WZ-kRI" customClass="AlertCheckBox" customModule="iOS_Smatching" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="18" height="18"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="18" id="vEF-Xs-gsg"/>
+                                                                        <constraint firstAttribute="width" constant="18" id="xO2-km-0b8"/>
+                                                                    </constraints>
+                                                                    <state key="normal" image="icn_emptybox"/>
+                                                                </button>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I 숙박 및 음식창업 (55~56)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IdX-9r-wng">
+                                                                    <rect key="frame" x="26" y="0.0" width="135" height="18"/>
+                                                                    <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
+                                                                    <color key="textColor" red="0.4549019608" green="0.4549019608" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rXl-Lg-SgP">
+                                                            <rect key="frame" x="0.0" y="345" width="136" height="18"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TRh-6l-sdl" customClass="AlertCheckBox" customModule="iOS_Smatching" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="18" height="18"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="18" id="3aQ-8C-kRl"/>
+                                                                        <constraint firstAttribute="width" constant="18" id="OPt-Ve-4ch"/>
+                                                                    </constraints>
+                                                                    <state key="normal" image="icn_emptybox"/>
+                                                                </button>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="J 정보통신업 (58~63)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4JF-Wh-D6Q">
+                                                                    <rect key="frame" x="26" y="0.0" width="110" height="18"/>
+                                                                    <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
+                                                                    <color key="textColor" red="0.4549019608" green="0.4549019608" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="iQy-SK-IJE">
+                                                            <rect key="frame" x="0.0" y="383" width="155" height="18"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NtV-W6-FrF" customClass="AlertCheckBox" customModule="iOS_Smatching" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="18" height="18"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="18" id="2W4-gD-2sj"/>
+                                                                        <constraint firstAttribute="width" constant="18" id="FcJ-JF-eG6"/>
+                                                                    </constraints>
+                                                                    <state key="normal" image="icn_emptybox"/>
+                                                                </button>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="K 금융 및 보험업 (64~66)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAk-WC-cif">
+                                                                    <rect key="frame" x="26" y="0.0" width="129" height="18"/>
+                                                                    <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
+                                                                    <color key="textColor" red="0.4549019608" green="0.4549019608" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jUK-7e-8HM">
+                                                            <rect key="frame" x="0.0" y="421" width="239" height="18"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcy-UY-tkM" customClass="AlertCheckBox" customModule="iOS_Smatching" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="18" height="18"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="18" id="cMh-zt-sR1"/>
+                                                                        <constraint firstAttribute="height" constant="18" id="jeu-ah-jIi"/>
+                                                                    </constraints>
+                                                                    <state key="normal" image="icn_emptybox"/>
+                                                                </button>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L 부동산업 (68)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cvo-P6-Vgr">
+                                                                    <rect key="frame" x="26" y="0.0" width="213" height="18"/>
+                                                                    <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
+                                                                    <color key="textColor" red="0.4549019608" green="0.4549019608" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="239" id="d7g-Tn-T2Q"/>
+                                                            </constraints>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="h33-rg-iM1">
+                                                            <rect key="frame" x="0.0" y="459" width="220.5" height="18"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ej-Lj-pqZ" customClass="AlertCheckBox" customModule="iOS_Smatching" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="18" height="18"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="18" id="C0o-6X-EMK"/>
+                                                                        <constraint firstAttribute="width" constant="18" id="EUa-tA-ASG"/>
+                                                                    </constraints>
+                                                                    <state key="normal" image="icn_emptybox"/>
+                                                                </button>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="M 전문, 과학 및 기술 서비스업 (70~73)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5Y-GY-oQY">
+                                                                    <rect key="frame" x="26" y="0.0" width="194.5" height="18"/>
+                                                                    <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
+                                                                    <color key="textColor" red="0.4549019608" green="0.4549019608" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="b3j-UJ-igV">
+                                                            <rect key="frame" x="0.0" y="497" width="239" height="55"/>
+                                                            <subviews>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9Hq-Tv-C92">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="239" height="27"/>
+                                                                    <subviews>
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XKm-ex-T2N" customClass="AlertCheckBox" customModule="iOS_Smatching" customModuleProvider="target">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="18" height="27"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="18" id="HBI-a8-Hj1"/>
+                                                                            </constraints>
+                                                                            <state key="normal" image="icn_emptybox"/>
+                                                                        </button>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N 사업시설 관리, 사업지원 및 임대서비스업 (74~76)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tkL-DP-bqC">
+                                                                            <rect key="frame" x="26" y="0.0" width="213" height="27"/>
+                                                                            <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
+                                                                            <color key="textColor" red="0.4549019608" green="0.4549019608" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </stackView>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aLo-Yn-J6Q">
+                                                                    <rect key="frame" x="0.0" y="37" width="239" height="18"/>
+                                                                    <subviews>
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZWg-ve-4eq" customClass="AlertCheckBox" customModule="iOS_Smatching" customModuleProvider="target">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="18" height="18"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="18" id="L5f-gI-L4C"/>
+                                                                                <constraint firstAttribute="width" constant="18" id="bVW-DP-Cif"/>
+                                                                            </constraints>
+                                                                            <state key="normal" image="icn_emptybox"/>
+                                                                        </button>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O 공공 행정, 국방 및 사회보장 행정 (84)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wTQ-Rg-loU">
+                                                                            <rect key="frame" x="26" y="0.0" width="213" height="18"/>
+                                                                            <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
+                                                                            <color key="textColor" red="0.4549019608" green="0.4549019608" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </stackView>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="239" id="may-Kl-3Qf"/>
+                                                            </constraints>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Zbx-SA-zFe">
+                                                            <rect key="frame" x="0.0" y="572" width="130" height="18"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="avW-Ut-lBq" customClass="AlertCheckBox" customModule="iOS_Smatching" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="18" height="18"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="18" id="juI-cA-cxx"/>
+                                                                        <constraint firstAttribute="width" constant="18" id="lfG-tq-uRZ"/>
+                                                                    </constraints>
+                                                                    <state key="normal" image="icn_emptybox"/>
+                                                                </button>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="P 교육 서비스업 (85)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Avh-rr-Ixx">
+                                                                    <rect key="frame" x="26" y="0.0" width="104" height="18"/>
+                                                                    <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
+                                                                    <color key="textColor" red="0.4549019608" green="0.4549019608" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WYT-9h-Vbq">
+                                                            <rect key="frame" x="0.0" y="610" width="239" height="18"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qw8-y3-kbS" customClass="AlertCheckBox" customModule="iOS_Smatching" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="18" height="18"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="18" id="0K5-eI-ACZ"/>
+                                                                        <constraint firstAttribute="height" constant="18" id="igE-hF-ezJ"/>
+                                                                    </constraints>
+                                                                    <state key="normal" image="icn_emptybox"/>
+                                                                </button>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Q 보건업 및 사회복지 서비스업 (86~87)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVr-ZJ-1Jv">
+                                                                    <rect key="frame" x="26" y="0.0" width="213" height="18"/>
+                                                                    <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
+                                                                    <color key="textColor" red="0.4549019608" green="0.4549019608" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="239" id="Dpc-dH-vTL"/>
+                                                            </constraints>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hPw-4H-AER">
+                                                            <rect key="frame" x="0.0" y="648" width="239" height="129"/>
+                                                            <subviews>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nZb-Ho-3lp">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="239" height="27"/>
+                                                                    <subviews>
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ih5-39-ZnK" customClass="AlertCheckBox" customModule="iOS_Smatching" customModuleProvider="target">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="18" height="27"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="18" id="b2y-Hi-ciY"/>
+                                                                            </constraints>
+                                                                            <state key="normal" image="icn_emptybox"/>
+                                                                        </button>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R 예술, 스포츠 및 여가관련 서비스업 (90~91)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HBx-Uo-vdl">
+                                                                            <rect key="frame" x="26" y="0.0" width="213" height="27"/>
+                                                                            <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
+                                                                            <color key="textColor" red="0.4549019608" green="0.4549019608" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </stackView>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GUe-0c-s2N">
+                                                                    <rect key="frame" x="0.0" y="37" width="239" height="27"/>
+                                                                    <subviews>
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QaK-dj-Yhs" customClass="AlertCheckBox" customModule="iOS_Smatching" customModuleProvider="target">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="18" height="27"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="18" id="euI-16-Yk8"/>
+                                                                            </constraints>
+                                                                            <state key="normal" image="icn_emptybox"/>
+                                                                        </button>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S 협회 및 단체, 수리 및 기타 개인 서비스업 (94~96)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XmJ-13-vhd">
+                                                                            <rect key="frame" x="26" y="0.0" width="213" height="27"/>
+                                                                            <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
+                                                                            <color key="textColor" red="0.4549019608" green="0.4549019608" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </stackView>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7m5-oW-BC2">
+                                                                    <rect key="frame" x="0.0" y="74" width="239" height="27"/>
+                                                                    <subviews>
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJy-Tc-x6J" customClass="AlertCheckBox" customModule="iOS_Smatching" customModuleProvider="target">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="18" height="27"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="18" id="8Dh-Ys-NP8"/>
+                                                                            </constraints>
+                                                                            <state key="normal" image="icn_emptybox"/>
+                                                                        </button>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T 가구 내 고용활동 및 달리 분류되지 않은 자가 소비 생산활동 (97~98)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0FB-5c-zv8">
+                                                                            <rect key="frame" x="26" y="0.0" width="213" height="27"/>
+                                                                            <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
+                                                                            <color key="textColor" red="0.4549019608" green="0.4549019608" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </stackView>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZVh-0f-64P">
+                                                                    <rect key="frame" x="0.0" y="111" width="239" height="18"/>
+                                                                    <subviews>
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zwl-LT-MqB" customClass="AlertCheckBox" customModule="iOS_Smatching" customModuleProvider="target">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="18" height="18"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="18" id="1sF-5K-hdd"/>
+                                                                                <constraint firstAttribute="height" constant="18" id="kSe-ug-LvD"/>
+                                                                            </constraints>
+                                                                            <state key="normal" image="icn_emptybox"/>
+                                                                        </button>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="U 국제 및 외국기관" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gon-L6-3uF">
+                                                                            <rect key="frame" x="26" y="0.0" width="213" height="18"/>
+                                                                            <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
+                                                                            <color key="textColor" red="0.4549019608" green="0.4549019608" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </stackView>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="239" id="YrF-FH-zht"/>
+                                                            </constraints>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lHo-hf-y4e">
+                                                            <rect key="frame" x="0.0" y="797" width="98.5" height="18"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EVp-Sf-sfq" customClass="AlertCheckBox" customModule="iOS_Smatching" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="18" height="18"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="18" id="LZG-wW-umh"/>
+                                                                        <constraint firstAttribute="width" constant="18" id="tF7-g7-VlK"/>
+                                                                    </constraints>
+                                                                    <state key="normal" image="icn_emptybox"/>
+                                                                </button>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="V 4차산업분야" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbc-Hd-YDp">
+                                                                    <rect key="frame" x="26" y="0.0" width="72.5" height="18"/>
                                                                     <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
                                                                     <color key="textColor" red="0.4549019608" green="0.4549019608" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -439,145 +478,133 @@
                                                             </subviews>
                                                         </stackView>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="815" id="U8l-Gs-rpG"/>
+                                                    </constraints>
                                                 </stackView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lHo-hf-y4e">
-                                                    <rect key="frame" x="0.0" y="797" width="243" height="18"/>
-                                                    <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EVp-Sf-sfq" customClass="AlertCheckBox" customModule="iOS_Smatching" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="18" height="18"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="18" id="LZG-wW-umh"/>
-                                                                <constraint firstAttribute="width" constant="18" id="tF7-g7-VlK"/>
-                                                            </constraints>
-                                                            <state key="normal" image="icn_emptybox"/>
-                                                        </button>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="V 4차산업분야" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbc-Hd-YDp">
-                                                            <rect key="frame" x="26" y="0.0" width="217" height="18"/>
-                                                            <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
-                                                            <color key="textColor" red="0.4549019608" green="0.4549019608" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </stackView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="sp1-eB-Q39" firstAttribute="top" secondItem="xsc-tf-orI" secondAttribute="top" id="Hgm-sV-cHc"/>
+                                                <constraint firstItem="sp1-eB-Q39" firstAttribute="leading" secondItem="xsc-tf-orI" secondAttribute="leading" id="Nz8-eK-PUF"/>
+                                                <constraint firstAttribute="height" constant="1013" id="ivU-bL-igR"/>
+                                                <constraint firstAttribute="width" constant="303" id="nnH-fK-ew2"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="sp1-eB-Q39" firstAttribute="top" secondItem="YLh-7i-KlB" secondAttribute="top" id="7mR-H5-Ocj"/>
+                                        <constraint firstAttribute="trailing" secondItem="sp1-eB-Q39" secondAttribute="trailing" constant="64" id="9I1-iP-GGs"/>
+                                        <constraint firstItem="xsc-tf-orI" firstAttribute="top" secondItem="YLh-7i-KlB" secondAttribute="top" id="BeK-k1-wRS"/>
+                                        <constraint firstAttribute="width" constant="303" id="MFI-uf-dMR"/>
+                                        <constraint firstItem="xsc-tf-orI" firstAttribute="leading" secondItem="YLh-7i-KlB" secondAttribute="leading" id="Pdo-Nz-dST"/>
+                                        <constraint firstAttribute="height" constant="1013" id="Sve-m4-m0a"/>
+                                        <constraint firstItem="sp1-eB-Q39" firstAttribute="leading" secondItem="YLh-7i-KlB" secondAttribute="leading" id="jLz-hN-Eie"/>
+                                        <constraint firstAttribute="bottom" secondItem="xsc-tf-orI" secondAttribute="bottom" id="mdJ-nh-PAY"/>
+                                        <constraint firstAttribute="trailing" secondItem="xsc-tf-orI" secondAttribute="trailing" id="s2l-8k-4Xk"/>
+                                    </constraints>
+                                </scrollView>
+                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4iD-jL-6li">
+                                    <rect key="frame" x="119" y="148" width="63.5" height="18"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="업종" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MAl-ak-hUY">
+                                            <rect key="frame" x="0.0" y="0.0" width="29.5" height="18"/>
+                                            <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SVq-jI-Dwh">
+                                            <rect key="frame" x="37.5" y="0.0" width="26" height="18"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qjj-a0-voW">
+                                                    <rect key="frame" x="0.0" y="0.0" width="10" height="18"/>
+                                                    <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rbF-9H-PmD">
+                                                    <rect key="frame" x="10" y="0.0" width="16" height="18"/>
+                                                    <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </stackView>
                                     </subviews>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="843" id="8cy-4U-gFI"/>
-                                        <constraint firstItem="sp1-eB-Q39" firstAttribute="top" secondItem="xsc-tf-orI" secondAttribute="top" id="Hgm-sV-cHc"/>
-                                        <constraint firstItem="sp1-eB-Q39" firstAttribute="leading" secondItem="xsc-tf-orI" secondAttribute="leading" id="Nz8-eK-PUF"/>
-                                        <constraint firstAttribute="width" constant="303" id="doD-vS-ElB"/>
-                                        <constraint firstAttribute="bottom" secondItem="sp1-eB-Q39" secondAttribute="bottom" constant="28" id="kOR-6z-66I"/>
+                                        <constraint firstAttribute="width" constant="63.5" id="9D5-og-LxH"/>
+                                        <constraint firstAttribute="height" constant="18" id="rr6-cr-H6B"/>
                                     </constraints>
-                                </view>
-                            </subviews>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="303" id="09P-sR-B8Q"/>
-                                <constraint firstAttribute="bottom" secondItem="xsc-tf-orI" secondAttribute="bottom" id="EHV-0P-iNp"/>
-                                <constraint firstAttribute="height" constant="843" id="TWH-OC-Vvz"/>
-                                <constraint firstAttribute="trailing" secondItem="xsc-tf-orI" secondAttribute="trailing" id="Y9M-na-P2k"/>
-                                <constraint firstAttribute="width" secondItem="YLh-7i-KlB" secondAttribute="height" multiplier="101:281" id="iKu-ba-fgB"/>
-                                <constraint firstItem="xsc-tf-orI" firstAttribute="top" secondItem="YLh-7i-KlB" secondAttribute="top" id="lYT-f9-NYO"/>
-                                <constraint firstItem="xsc-tf-orI" firstAttribute="leading" secondItem="YLh-7i-KlB" secondAttribute="leading" id="o5l-so-s0s"/>
-                            </constraints>
-                        </scrollView>
-                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4iD-jL-6li">
-                            <rect key="frame" x="123.5" y="25" width="63.5" height="18"/>
-                            <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="업종" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MAl-ak-hUY">
-                                    <rect key="frame" x="0.0" y="0.0" width="29.5" height="18"/>
-                                    <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SVq-jI-Dwh">
-                                    <rect key="frame" x="37.5" y="0.0" width="26" height="18"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qjj-a0-voW">
-                                            <rect key="frame" x="0.0" y="0.0" width="10" height="18"/>
-                                            <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rbF-9H-PmD">
-                                            <rect key="frame" x="10" y="0.0" width="16" height="18"/>
-                                            <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
                                 </stackView>
-                            </subviews>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="18" id="rr6-cr-H6B"/>
-                                <constraint firstAttribute="width" constant="63.5" id="y2p-1B-Eor"/>
-                            </constraints>
-                        </stackView>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UDx-PQ-21D">
-                            <rect key="frame" x="10" y="902" width="290" height="51"/>
-                            <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ziF-Pg-Srl">
-                                    <rect key="frame" x="0.0" y="0.0" width="290" height="1"/>
-                                    <color key="backgroundColor" red="0.55294117647058827" green="0.55294117647058827" blue="0.55294117647058827" alpha="1" colorSpace="calibratedRGB"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="1" id="g9l-9q-JyT"/>
-                                    </constraints>
-                                </view>
-                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cTJ-7j-RNT">
-                                    <rect key="frame" x="0.0" y="1" width="290" height="50"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UDx-PQ-21D">
+                                    <rect key="frame" x="-10" y="506" width="310" height="51"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2m-38-v0s" userLabel="Cancel Btn">
-                                            <rect key="frame" x="0.0" y="0.0" width="144.5" height="50"/>
-                                            <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="18"/>
-                                            <state key="normal" title="닫기">
-                                                <color key="titleColor" red="0.2784313725" green="0.2784313725" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="cancelBtnPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="UJn-9y-yMY"/>
-                                            </connections>
-                                        </button>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uLo-Yu-lOW">
-                                            <rect key="frame" x="144.5" y="0.0" width="1" height="50"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ziF-Pg-Srl">
+                                            <rect key="frame" x="0.0" y="0.0" width="310" height="1"/>
                                             <color key="backgroundColor" red="0.55294117647058827" green="0.55294117647058827" blue="0.55294117647058827" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="1" id="zCF-PZ-Jcd"/>
+                                                <constraint firstAttribute="height" constant="1" id="g9l-9q-JyT"/>
                                             </constraints>
                                         </view>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zNa-Ie-yCn">
-                                            <rect key="frame" x="145.5" y="0.0" width="144.5" height="50"/>
-                                            <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="18"/>
-                                            <state key="normal" title="확인">
-                                                <color key="titleColor" red="0.29803921570000003" green="0.50980392159999999" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="okBtnPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="zK3-Px-2wU"/>
-                                            </connections>
-                                        </button>
+                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cTJ-7j-RNT">
+                                            <rect key="frame" x="0.0" y="1" width="310" height="50"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2m-38-v0s" userLabel="Cancel Btn">
+                                                    <rect key="frame" x="0.0" y="0.0" width="154.5" height="50"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="18"/>
+                                                    <state key="normal" title="닫기">
+                                                        <color key="titleColor" red="0.2784313725" green="0.2784313725" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="cancelBtnPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="UJn-9y-yMY"/>
+                                                    </connections>
+                                                </button>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uLo-Yu-lOW">
+                                                    <rect key="frame" x="154.5" y="0.0" width="1" height="50"/>
+                                                    <color key="backgroundColor" red="0.55294117647058827" green="0.55294117647058827" blue="0.55294117647058827" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="1" id="zCF-PZ-Jcd"/>
+                                                    </constraints>
+                                                </view>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zNa-Ie-yCn">
+                                                    <rect key="frame" x="155.5" y="0.0" width="154.5" height="50"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="18"/>
+                                                    <state key="normal" title="확인">
+                                                        <color key="titleColor" red="0.29803921570000003" green="0.50980392159999999" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="okBtnPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="zK3-Px-2wU"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="uLo-Yu-lOW" firstAttribute="centerX" secondItem="cTJ-7j-RNT" secondAttribute="centerX" id="fFN-dh-iWz"/>
+                                            </constraints>
+                                        </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="uLo-Yu-lOW" firstAttribute="centerX" secondItem="cTJ-7j-RNT" secondAttribute="centerX" id="fFN-dh-iWz"/>
+                                        <constraint firstItem="uLo-Yu-lOW" firstAttribute="top" secondItem="ziF-Pg-Srl" secondAttribute="bottom" id="GWK-dP-Yq9"/>
+                                        <constraint firstAttribute="height" constant="51" id="NhF-zX-JBa"/>
                                     </constraints>
                                 </stackView>
                             </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstItem="uLo-Yu-lOW" firstAttribute="top" secondItem="ziF-Pg-Srl" secondAttribute="bottom" id="GWK-dP-Yq9"/>
-                                <constraint firstAttribute="height" constant="51" id="fXH-LN-3RI"/>
+                                <constraint firstAttribute="bottom" secondItem="YLh-7i-KlB" secondAttribute="bottom" constant="3" id="eiw-Sv-Lea"/>
+                                <constraint firstItem="YLh-7i-KlB" firstAttribute="top" secondItem="W2u-p6-Cjv" secondAttribute="top" constant="2" id="fqn-sm-kyl"/>
+                                <constraint firstItem="YLh-7i-KlB" firstAttribute="leading" secondItem="W2u-p6-Cjv" secondAttribute="leading" id="gZF-3e-QsN"/>
+                                <constraint firstAttribute="trailing" secondItem="YLh-7i-KlB" secondAttribute="trailing" id="pjn-nk-VTj"/>
                             </constraints>
-                        </stackView>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="sp1-eB-Q39" firstAttribute="top" secondItem="4iD-jL-6li" secondAttribute="bottom" constant="8" id="3Ut-eA-zub"/>
-                        <constraint firstItem="YLh-7i-KlB" firstAttribute="top" secondItem="pbN-fx-fS9" secondAttribute="top" constant="51" id="66X-y3-tvw"/>
-                        <constraint firstItem="UDx-PQ-21D" firstAttribute="top" secondItem="YLh-7i-KlB" secondAttribute="bottom" constant="8" id="83G-MO-fPk"/>
-                        <constraint firstItem="4iD-jL-6li" firstAttribute="top" secondItem="pbN-fx-fS9" secondAttribute="top" constant="25" id="8Up-1Q-8WT"/>
-                        <constraint firstItem="UDx-PQ-21D" firstAttribute="leading" secondItem="pbN-fx-fS9" secondAttribute="leading" constant="10" id="DTV-TA-jo4"/>
-                        <constraint firstItem="4iD-jL-6li" firstAttribute="centerX" secondItem="pbN-fx-fS9" secondAttribute="centerX" id="dea-wr-C0f"/>
-                        <constraint firstAttribute="trailing" secondItem="YLh-7i-KlB" secondAttribute="trailing" constant="5" id="e7n-Ti-1HD"/>
-                        <constraint firstAttribute="trailing" secondItem="UDx-PQ-21D" secondAttribute="trailing" constant="10" id="o11-1d-EXM"/>
-                        <constraint firstAttribute="bottom" secondItem="YLh-7i-KlB" secondAttribute="bottom" constant="60" id="w2d-if-LFE"/>
-                        <constraint firstItem="YLh-7i-KlB" firstAttribute="leading" secondItem="pbN-fx-fS9" secondAttribute="leading" constant="2" id="z1U-tP-V9u"/>
+                        <constraint firstAttribute="trailing" secondItem="UDx-PQ-21D" secondAttribute="trailing" id="JxZ-p3-uNT"/>
+                        <constraint firstItem="4iD-jL-6li" firstAttribute="top" secondItem="pbN-fx-fS9" secondAttribute="top" constant="25" id="LHv-2u-fAA"/>
+                        <constraint firstAttribute="bottom" secondItem="UDx-PQ-21D" secondAttribute="bottom" id="hNd-Yv-fhN"/>
+                        <constraint firstItem="UDx-PQ-21D" firstAttribute="leading" secondItem="pbN-fx-fS9" secondAttribute="leading" id="uk4-pm-pk0"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -588,9 +615,14 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="pbN-fx-fS9" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="8Ps-Zd-dkQ"/>
+                <constraint firstItem="pbN-fx-fS9" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="97" id="GQU-la-vLb"/>
                 <constraint firstItem="pbN-fx-fS9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="32" id="LTF-6R-ddX"/>
+                <constraint firstItem="W2u-p6-Cjv" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="2" id="Lg7-b5-lp0"/>
+                <constraint firstItem="W2u-p6-Cjv" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="42" id="Qj8-JI-sEc"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="pbN-fx-fS9" secondAttribute="bottom" constant="459" id="SbM-Lc-rYy"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="pbN-fx-fS9" secondAttribute="trailing" constant="33" id="UXD-Oy-uxy"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="W2u-p6-Cjv" secondAttribute="trailing" constant="30" id="Z5h-8G-xve"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="top" secondItem="W2u-p6-Cjv" secondAttribute="top" constant="26" id="a1t-b8-97Y"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
@@ -598,7 +630,7 @@
                 <outlet property="cancelBtn" destination="V2m-38-v0s" id="Z4p-mh-A8V"/>
                 <outlet property="okBtn" destination="zNa-Ie-yCn" id="J91-U1-8uo"/>
             </connections>
-            <point key="canvasLocation" x="55.200000000000003" y="61.169415292353825"/>
+            <point key="canvasLocation" x="55.200000000000003" y="63.868065967016499"/>
         </view>
     </objects>
     <resources>

@@ -312,6 +312,7 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
     }
     func startAlert1 () {
         if let busiType = Bundle.main.loadNibNamed("BusiTypeBox", owner: self, options: nil)?.first as? SelectBusiType {
+            busiType.backgroundColor = UIColor.gray
             busiType.okBtn.addTarget(self, action: #selector(btnOkClick), for: .touchUpInside)
             busiType.cancelBtn.addTarget(self, action: #selector(btnCancelClick), for: .touchUpInside)
             self.view.addSubview(busiType)
@@ -324,7 +325,7 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
     func startAlert2 () {
         if let uselessField = Bundle.main.loadNibNamed("UselessField", owner: self, options: nil)?.first as? SelectUselessField {
             
-        
+            uselessField.backgroundColor = UIColor.gray
             uselessField.okBtn.addTarget(self, action: #selector(btnOkClick), for: .touchUpInside)
             uselessField.cancelBtn.addTarget(self, action: #selector(btnCancelClick), for: .touchUpInside)
             self.view.addSubview(uselessField)
