@@ -33,7 +33,7 @@ class HomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+        
         setupShadow()
         
         //전체 공고 불러오기
@@ -43,53 +43,61 @@ class HomeVC: UIViewController {
             self.noticeAllTableView.reloadData()
         }
         
-//        let tap = UITapGestureRecognizer(target: self, action: #selector(showEditConditionView(_:)))
-//
-//        goToConditionEdit.addGestureRecognizer(tap)
+        //        let tap = UITapGestureRecognizer(target: self, action: #selector(showEditConditionView(_:)))
+        //
+        //        goToConditionEdit.addGestureRecognizer(tap)
     }
     
-//    @objc func showEditConditionView(_ sender : UITapGestureRecognizer ) {
-//        print("tap")
-//        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-//        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "CustomSettingVC") as! CustomSettingVC
-//        nextViewController.cur_cond_idx = self.gino(self.cur_cond_idx);
-//
-//        self.present(nextViewController, animated: true, completion: nil)
-//    }
+    //    @objc func showEditConditionView(_ sender : UITapGestureRecognizer ) {
+    //        print("tap")
+    //        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+    //        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "CustomSettingVC") as! CustomSettingVC
+    //        nextViewController.cur_cond_idx = self.gino(self.cur_cond_idx);
+    //
+    //        self.present(nextViewController, animated: true, completion: nil)
+    //    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
-      
+        
         
         UserService.shared.getUserCondition() {[weak self] (data) in guard let `self` = self else {return}
             self.animateLoading(self.animationView)
             self.conditionList = data.condSummaryList!
             
-            if self.conditionList.isEmpty == false{
-                self.conditionTitle.text = self.gsno(self.conditionList[self.pageControl.currentPage].condName)
-                if self.gino(self.conditionList[self.pageControl.currentPage].noticeCnt) == 0 {
-                    self.noNoticeList.isHidden = false
-                    self.conditionAdaptView.isHidden = true
-                    self.noConditionView.isHidden = true
-                }
-                else {
-                    self.cur_cond_idx = self.gino(self.conditionList[self.pageControl.currentPage].condIdx)
-                    self.noticeListCnt.text = "\(self.gino(self.conditionList[self.pageControl.currentPage].noticeCnt))개"
-                    NoticeService.shared.getFitNotice(cond_idx: self.gino(self.cur_cond_idx), request_num: 3, exist_num: 0 ) {[weak self] (data) in guard let `self` = self else {return}
-                        self.noticeFitList = data
-                        self.noticeTableView.reloadData()
-                    }
-                    self.noNoticeList.isHidden = true
-                    self.conditionAdaptView.isHidden = false
-                    self.noConditionView.isHidden = true
-                }
-            }
-            else {
+            if self.conditionList.count < 1 && self.pageControl.currentPage == 1 {
                 self.noNoticeList.isHidden = true
                 self.conditionAdaptView.isHidden = true
                 self.noConditionView.isHidden = false
+            }
+                
+            else {
+                if self.conditionList.isEmpty == false {
+                    self.conditionTitle.text = self.gsno(self.conditionList[0].condName)
+                    if self.gino(self.conditionList[0].noticeCnt) == 0 {
+                        self.noNoticeList.isHidden = false
+                        self.conditionAdaptView.isHidden = true
+                        self.noConditionView.isHidden = true
+                    }
+                    else {
+                        self.cur_cond_idx = self.gino(self.conditionList[0].condIdx)
+                        self.noticeListCnt.text = "\(self.gino(self.conditionList[0].noticeCnt))개"
+                        NoticeService.shared.getFitNotice(cond_idx: self.gino(self.cur_cond_idx), request_num: 3, exist_num: 0 ) {[weak self] (data) in guard let `self` = self else {return}
+                            self.noticeFitList = data
+                            self.noticeTableView.reloadData()
+                        }
+                        self.noNoticeList.isHidden = true
+                        self.conditionAdaptView.isHidden = false
+                        self.noConditionView.isHidden = true
+                    }
+                }
+                else {
+                    self.noNoticeList.isHidden = true
+                    self.conditionAdaptView.isHidden = true
+                    self.noConditionView.isHidden = false
+                }
             }
             self.stopLoadingAnimation(self.animationView)
         }
@@ -178,7 +186,7 @@ class HomeVC: UIViewController {
             print("Swipe Left")
             self.pageControl.currentPage = 1
             if self.conditionList.count > 1 {
-           
+                
                 self.noticeListCnt.text = "\(self.gino(self.conditionList[1].noticeCnt))개"
                 self.conditionTitle.text = self.gsno(self.conditionList[1].condName)
                 
@@ -202,7 +210,7 @@ class HomeVC: UIViewController {
                 self.noNoticeList.isHidden = true
                 self.conditionAdaptView.isHidden = true
                 self.noConditionView.isHidden = false
-            
+                
             }
             
         }
@@ -254,7 +262,7 @@ extension HomeVC : UITableViewDataSource {
         if tableView == noticeAllTableView {
             let cell = tableView.dequeueReusableCell(withIdentifier: "NoticeDownCell", for: indexPath) as! NoticeCell
             let notice = noticeList[indexPath.row]
-           
+            
             cell.titleLabel.text = gsno(notice.title)
             cell.institutionLabel.text = gsno(notice.institution)
             if gino(notice.dday) > 1000 {
