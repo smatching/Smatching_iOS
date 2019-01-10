@@ -14,35 +14,37 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var titleTxtField: UITextField!
     @IBOutlet weak var periodLabelChange: UILabel!
     
-    @IBOutlet weak var locationSettingSeoul: UIView!
-    @IBOutlet weak var locationSettingIncheon: UIView!
-    @IBOutlet weak var locationSettingDaegu: UIView!
-    @IBOutlet weak var locationSettingBusan: UIView!
+    @IBOutlet weak var locationSettingKorea: UIButton!
+    @IBOutlet weak var locationSettingIncheon: UIButton!
+    @IBOutlet weak var locationSettingDaegu: UIButton!
+    @IBOutlet weak var locationSettingBusan: UIButton!
+    
+    @IBOutlet weak var locationSettingSeoul: UIButton!
     
     @IBOutlet weak var locationBelowBorder: UIView!
     @IBOutlet weak var locationBorderConst: NSLayoutConstraint!
     
     //조건 설정 버튼들
     //지역
-    @IBOutlet weak var abroad: Checkbox!
-    @IBOutlet weak var local: Checkbox!
-    @IBOutlet weak var seoul: Checkbox!
-    @IBOutlet weak var jeju: Checkbox!
-    @IBOutlet weak var chungbuk: Checkbox!
-    @IBOutlet weak var chungnam: Checkbox!
-    @IBOutlet weak var jeonbuk: Checkbox!
-    @IBOutlet weak var jeonnam: Checkbox!
-    @IBOutlet weak var kyungbuk: Checkbox!
-    @IBOutlet weak var kyungnam: Checkbox!
-    @IBOutlet weak var kyunggi: Checkbox!
-    @IBOutlet weak var gangwon: Checkbox!
-    @IBOutlet weak var sejong: Checkbox!
-    @IBOutlet weak var ulsan: Checkbox!
-    @IBOutlet weak var daejeon: Checkbox!
-    @IBOutlet weak var gwangju: Checkbox!
-    @IBOutlet weak var incheon: Checkbox!
-    @IBOutlet weak var daegu: Checkbox!
-    @IBOutlet weak var busan: Checkbox!
+    @IBOutlet weak var abroad: AlertCheckBox!
+    @IBOutlet weak var local: AlertCheckBox!
+    @IBOutlet weak var seoul: AlertCheckBox!
+    @IBOutlet weak var jeju: AlertCheckBox!
+    @IBOutlet weak var chungbuk: AlertCheckBox!
+    @IBOutlet weak var chungnam: AlertCheckBox!
+    @IBOutlet weak var jeonbuk: AlertCheckBox!
+    @IBOutlet weak var jeonnam: AlertCheckBox!
+    @IBOutlet weak var kyungbuk: AlertCheckBox!
+    @IBOutlet weak var kyungnam: AlertCheckBox!
+    @IBOutlet weak var kyunggi: AlertCheckBox!
+    @IBOutlet weak var gangwon: AlertCheckBox!
+    @IBOutlet weak var sejong: AlertCheckBox!
+    @IBOutlet weak var ulsan: AlertCheckBox!
+    @IBOutlet weak var daejeon: AlertCheckBox!
+    @IBOutlet weak var gwangju: AlertCheckBox!
+    @IBOutlet weak var incheon: AlertCheckBox!
+    @IBOutlet weak var daegu: AlertCheckBox!
+    @IBOutlet weak var busan: AlertCheckBox!
     
     //나이
     @IBOutlet weak var twenty_less: ConditionButton!
@@ -135,9 +137,19 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
     
     var cur_cond_idx : Int?
     
+    //조건 제목 길이 제한
+    let limitLength = 8
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupView()
+        
+        initView()
+        
+    }
+    
+    func setupView() {
         initGestureRecognizer()
         self.navigationController?.navigationBar.shouldRemoveShadow(true)
         
@@ -156,10 +168,6 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
         self.busitype = fitConditionRes?.busiType ?? self.busitype
         self.field = fitConditionRes?.field ?? self.field
         self.excCategory = fitConditionRes?.excCategory ?? self.excCategory
-        
-        print(age)
-        print(period)
-        print(advantage)
         
         if age.twenty_less == true {
             initialSetting(recognizer: twenty_less)
@@ -255,9 +263,8 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
         
         titleTxtField.delegate = self
         
-        initView()
+        
     }
-    
     func initialSetting(recognizer : ConditionButton) {
         if  recognizer.layer.borderColor == UIColor(displayP3Red: 76/255, green: 130/255, blue: 216/255, alpha: 1.0).cgColor {
             recognizer.layer.borderColor = UIColor(displayP3Red: 216/255, green: 216/255, blue: 216/255, alpha: 1.0).cgColor
@@ -274,6 +281,11 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
     }
     
     
+
+    @IBAction func deleteLocationSettingView(_ sender: UIButton) {
+        sender.transform =
+            CGAffineTransform(scaleX: 0, y: 0)
+    }
     func showView() {
         
         if self.location.seoul == true {
@@ -282,7 +294,8 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
                 self.locationSettingSeoul.transform = CGAffineTransform.identity
             }
             else {
-                self.locationSettingSeoul.transform = CGAffineTransform(translationX: self.locationSettingSeoul.frame.width, y: 0)
+                    self.locationSettingSeoul.transform = CGAffineTransform(translationX: self.locationSettingSeoul.frame.width + self.locationSettingSeoul.frame.width, y: self.locationSettingSeoul.frame.height)
+                
             }
             count += 1
         }
@@ -293,27 +306,36 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
                 self.locationSettingBusan.transform = CGAffineTransform.identity
             }
             else {
-                self.locationSettingBusan.transform = CGAffineTransform(translationX: self.locationSettingBusan.frame.width, y: 0)
+                self.locationSettingBusan.transform = CGAffineTransform(translationX: self.locationSettingSeoul.frame.width + self.locationSettingBusan.frame.width, y: 0)
             }
             count += 1
             
         }
         if self.location.daegu == true {
-            self.locationSettingBusan.isHidden = false
-            print(count)
-            
-            self.locationSettingBusan.transform = CGAffineTransform(translationX: self.locationSettingBusan.frame.width, y: 0)
+            self.locationSettingDaegu.isHidden = false
+            if count == 0 {
+                self.locationSettingDaegu.transform = CGAffineTransform.identity
+            }
+            else {
+                
+                self.locationSettingDaegu.transform = CGAffineTransform(translationX: self.locationSettingSeoul.frame.width + self.locationSettingDaegu.frame.width + self.locationSettingBusan.frame.width, y: 0)
+            }
             count += 1
             
         }
+        print(count)
         UIView.animate(withDuration: 1.0, animations: ({
             self.locationBorderConst.constant = 43
         }))
     }
     func initView() {
         
-        self.locationSettingSeoul.transform =
-            CGAffineTransform(scaleX: self.locationSettingSeoul.frame.width, y: 0)
+        self.locationSettingSeoul.isHidden = true
+        self.locationSettingKorea.isHidden = true
+        self.locationSettingDaegu.isHidden = true
+        self.locationSettingKorea.isHidden = true
+        self.locationSettingBusan.isHidden = true
+        
     }
     
     //기업정보 vc로 이동
@@ -328,7 +350,14 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
         return true
     }
     
+
     // 팝업 뷰 3개 Loading (지역, 업종, 필요없는 사업 분야)
+   func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        guard let text = textField.text else { return true }
+        let newLength = text.characters.count + string.characters.count - range.length
+        return newLength <= limitLength
+    }
+
     @IBAction func selectRegionBtn(_ sender: Any) {
         startAlert()
     }
@@ -471,62 +500,125 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
             break
         case local:
             sender.isChecked = !sender.isChecked
+            if sender.isChecked == true {
+                self.local.setImage(UIImage(named: "icn_checkbox_blue"), for: UIControl.State.normal)
+            }
+            else {
+                self.local.setImage(UIImage(named: "icn_emptybox"), for: UIControl.State.normal)
+            }
             self.location.seoul = !self.location.seoul!
-            self.seoul.setImage(UIImage(named: "icn_checkbox_white"), for: UIControl.State.normal)
+            self.seoul.isChecked = self.location.seoul!
             
             self.location.busan = !self.location.busan!
-            self.busan.setImage(UIImage(named: "icn_checkbox_white"), for: UIControl.State.normal)
-            
+            self.busan.isChecked = self.location.busan!
+
             self.location.daegu = !self.location.daegu!
-            self.daegu.setImage(UIImage(named: "icn_checkbox_white"), for: UIControl.State.normal)
-            
+            self.daegu.isChecked = self.location.daegu!
+
             self.location.incheon = !self.location.incheon!
-            self.incheon.setImage(UIImage(named: "icn_checkbox_white"), for: UIControl.State.normal)
+            self.incheon.isChecked = self.location.incheon!
             
             self.location.gwangju = !self.location.gwangju!
-            self.gwangju.setImage(UIImage(named: "icn_checkbox_white"), for: UIControl.State.normal)
+            self.gwangju.isChecked = self.location.gwangju!
             
             self.location.daejeon = !self.location.daejeon!
-            self.daejeon.setImage(UIImage(named: "icn_checkbox_white"), for: UIControl.State.normal)
-            
-            self.location.gwangju = !self.location.gwangju!
-            self.gwangju.setImage(UIImage(named: "icn_checkbox_white"), for: UIControl.State.normal)
+            self.daejeon.isChecked = self.location.daejeon!
             
             self.location.ulsan = !self.location.ulsan!
-            self.ulsan.setImage(UIImage(named: "icn_checkbox_white"), for: UIControl.State.normal)
+            self.ulsan.isChecked = self.location.ulsan!
             
             self.location.sejong = !self.location.sejong!
-            self.sejong.setImage(UIImage(named: "icn_checkbox_white"), for: UIControl.State.normal)
-            
+            self.sejong.isChecked = self.location.sejong!
+
             self.location.gangwon = !self.location.gangwon!
-            self.gangwon.setImage(UIImage(named: "icn_checkbox_white"), for: UIControl.State.normal)
-            
+            self.gangwon.isChecked = self.location.gangwon!
+
             self.location.kyunggi = !self.location.kyunggi!
-            self.kyunggi.setImage(UIImage(named: "icn_checkbox_white"), for: UIControl.State.normal)
+            self.kyunggi.isChecked = self.location.kyunggi!
             
             self.location.kyungnam = !self.location.kyungnam!
-            self.kyungnam.setImage(UIImage(named: "icn_checkbox_white"), for: UIControl.State.normal)
-            
+            self.kyungnam.isChecked = self.location.kyungnam!
+
             self.location.kyungbuk = !self.location.kyungbuk!
-            self.kyungbuk.setImage(UIImage(named: "icn_checkbox_white"), for: UIControl.State.normal)
-            
+            self.kyungbuk.isChecked = self.location.kyungbuk!
+
             self.location.jeonbuk = !self.location.jeonbuk!
-            self.jeonbuk.setImage(UIImage(named: "icn_checkbox_white"), for: UIControl.State.normal)
-            
+            self.jeonbuk.isChecked = self.location.jeonbuk!
+
             self.location.jeonnam = !self.location.jeonnam!
-            self.jeonnam.setImage(UIImage(named: "icn_checkbox_white"), for: UIControl.State.normal)
-            
+            self.jeonnam.isChecked = self.location.jeonnam!
+
             self.location.chungnam = !self.location.chungnam!
-            self.chungnam.setImage(UIImage(named: "icn_checkbox_white"), for: UIControl.State.normal)
-            
+            self.chungnam.isChecked = self.location.chungnam!
+
             self.location.chungbuk = !self.location.chungbuk!
-            self.chungbuk.setImage(UIImage(named: "icn_checkbox_white"), for: UIControl.State.normal)
-            
+            self.chungbuk.isChecked = self.location.chungbuk!
+
             self.location.jeju = !self.location.jeju!
-            self.jeju.setImage(UIImage(named: "icn_checkbox_white"), for: UIControl.State.normal)
+            self.jeju.isChecked = self.location.jeju!
             break
         case abroad:
             sender.isChecked = !sender.isChecked
+            
+            if sender.isChecked == true {
+                self.abroad.setImage(UIImage(named: "icn_checkbox_blue"), for: UIControl.State.normal)
+                self.local.setImage(UIImage(named: "icn_emptybox"), for: UIControl.State.normal)
+            }
+            else {
+                self.abroad.setImage(UIImage(named: "icn_emptybox"), for: UIControl.State.normal)
+            }
+            self.location.seoul = !self.location.seoul!
+            self.seoul.isChecked = self.location.seoul!
+            
+            self.location.busan = !self.location.busan!
+            self.busan.isChecked = self.location.busan!
+            
+            self.location.daegu = !self.location.daegu!
+            self.daegu.isChecked = self.location.daegu!
+            
+            self.location.incheon = !self.location.incheon!
+            self.incheon.isChecked = self.location.incheon!
+            
+            self.location.gwangju = !self.location.gwangju!
+            self.gwangju.isChecked = self.location.gwangju!
+            
+            self.location.daejeon = !self.location.daejeon!
+            self.daejeon.isChecked = self.location.daejeon!
+            
+            self.location.ulsan = !self.location.ulsan!
+            self.ulsan.isChecked = self.location.ulsan!
+            
+            self.location.sejong = !self.location.sejong!
+            self.sejong.isChecked = self.location.sejong!
+            
+            self.location.gangwon = !self.location.gangwon!
+            self.gangwon.isChecked = self.location.gangwon!
+            
+            self.location.kyunggi = !self.location.kyunggi!
+            self.kyunggi.isChecked = self.location.kyunggi!
+            
+            self.location.kyungnam = !self.location.kyungnam!
+            self.kyungnam.isChecked = self.location.kyungnam!
+            
+            self.location.kyungbuk = !self.location.kyungbuk!
+            self.kyungbuk.isChecked = self.location.kyungbuk!
+            
+            self.location.jeonbuk = !self.location.jeonbuk!
+            self.jeonbuk.isChecked = self.location.jeonbuk!
+            
+            self.location.jeonnam = !self.location.jeonnam!
+            self.jeonnam.isChecked = self.location.jeonnam!
+            
+            self.location.chungnam = !self.location.chungnam!
+            self.chungnam.isChecked = self.location.chungnam!
+            
+            self.location.chungbuk = !self.location.chungbuk!
+            self.chungbuk.isChecked = self.location.chungbuk!
+            
+            self.location.jeju = !self.location.jeju!
+            self.jeju.isChecked = self.location.jeju!
+            break
+            
         default:
             break
         }
@@ -747,18 +839,12 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
         
         switch(sender){
         case twenty_less:
-            //One action
-            print("twenty_less")
             self.age.twenty_less = !self.age.twenty_less!
             break
         case twenty_forty:
-            //buttonTwo action
-            print("twenty_forty")
             self.age.twenty_forty = !self.age.twenty_forty!
             break
         case forty_more:
-            //buttonThree action
-            print("twenty_more")
             self.age.forty_more = !self.age.forty_more!
             break
         case zero_one:
@@ -841,12 +927,14 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
     
     
     @IBAction func deleteAllConditions(_ sender: Any) {
-        ConditionPutService.shared.deleteFitConditionInfo(cond_idx: self.gino(self.cur_cond_idx)) {[weak self] () in guard let `self` = self else {return}
-            print("delete!!")
-            self.navigationController?.popViewController(animated: true)
-            self.dismiss(animated: true, completion: nil)
-        }
         
+        simpleAlert("", "삭제하시겠습니까?",  completion: { (action) in
+            ConditionPutService.shared.deleteFitConditionInfo(cond_idx: self.gino(self.cur_cond_idx)) {[weak self] () in guard let `self` = self else {return}
+                print("delete!!")
+                self.navigationController?.popViewController(animated: true)
+                self.dismiss(animated: true, completion: nil)
+            }
+        })
     }
     
     @IBAction func submitCondition(_ sender: Any) {

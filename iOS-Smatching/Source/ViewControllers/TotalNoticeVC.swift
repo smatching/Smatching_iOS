@@ -17,8 +17,7 @@ class TotalNoticeVC: UIViewController, UIScrollViewDelegate, NoticeCellDelegate 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
-        self.navigationController?.navigationBar.shouldRemoveShadow(true)
+      
         totalNoticeTableView.delegate = self
         totalNoticeTableView.dataSource = self
         // Do any additional setup after loading the view.
@@ -28,8 +27,8 @@ class TotalNoticeVC: UIViewController, UIScrollViewDelegate, NoticeCellDelegate 
         super.viewWillAppear(animated)
         
         self.navigationController?.setNavigationBarHidden(false, animated: true)
-       
         self.navigationController?.navigationBar.shouldRemoveShadow(true)
+        
         NoticeService.shared.getAllNotice(request_num: 999, exist_num: 0) {[weak self] (data) in guard let `self` = self else {return}
             print(data)
             self.noticeList = data
@@ -42,6 +41,7 @@ class TotalNoticeVC: UIViewController, UIScrollViewDelegate, NoticeCellDelegate 
     //스크랩 버튼 클릭시 동작
     func doScrapNotice(noticeIdx: IndexPath) {
         let idx = noticeIdx.row
+        print(idx)
         NoticeService.shared.putNoticeScrap(noticeIdx: idx) {
             [weak self] (data) in guard let `self` = self else {return}
             print(data.scrap)
@@ -89,7 +89,7 @@ extension TotalNoticeVC : UITableViewDelegate{
         
         let notice = self.noticeList[indexPath.row]
         nextViewController.notice_idx = gino(notice.noticeIdx)
-        
+        print(notice.noticeIdx)
         self.navigationController?.pushViewController(nextViewController, animated: true)
         
     }
@@ -117,6 +117,8 @@ extension TotalNoticeVC : UITableViewDataSource {
         
         cell.delegate = self
         cell.noticeIdx = indexPath
+        print(cell.noticeIdx)
+        print(notice.noticeIdx)
         if gino(notice.scrap) == 0 {
             cell.scrapActiveBtn.isHidden = true
             cell.scrapDeactiveBtn.isHidden = false

@@ -21,87 +21,22 @@ class HomeVC: UIViewController {
     @IBOutlet weak var goToConditionEdit: UILabel!
     @IBOutlet weak var conditionTitle: UILabel!
     
+    var animationView: LOTAnimationView = LOTAnimationView(name: "loading");
+    
     var noticeList = [Notice]()
     var conditionList = [Condition]()
     var noticeFitList = [Notice]()
     
     var cur_cond_idx : Int?
     var cur_notice_idx : Int?
-    let animationView = LOTAnimationView(name: "loading")
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
+      
         setupShadow()
         
-        self.noNoticeList.isHidden = true
-        self.conditionAdaptView.isHidden = true
-        self.noConditionView.isHidden = false
-        
-        noticeAllTableView.delegate = self
-        noticeTableView.delegate = self
-        noticeAllTableView.dataSource = self
-        noticeTableView.dataSource = self
-        
-        //로딩 화면
-        //        self.view.addSubview(animationView)
-        
-        UserService.shared.getUserCondition() {[weak self] (data) in guard let `self` = self else {return}
-            //                self.animationView.play()
-            self.conditionList = data.condSummaryList!
-            
-            if self.conditionList.isEmpty == false && self.pageControl.currentPage == 0 {
-                self.noticeListCnt.text = "\(self.gino(self.conditionList[0].noticeCnt))개"
-                self.conditionTitle.text = self.gsno(self.conditionList[0].condName)
-                if self.gino(self.conditionList[0].noticeCnt) == 0 {
-                    self.noNoticeList.isHidden = false
-                    self.conditionAdaptView.isHidden = true
-                    self.noConditionView.isHidden = true
-                }
-                else {
-                    self.cur_cond_idx = self.gino(self.conditionList[0].condIdx)
-                    NoticeService.shared.getFitNotice(cond_idx: self.gino(self.cur_cond_idx), request_num: 3, exist_num: 0 ) {[weak self] (data) in guard let `self` = self else {return}
-                        self.noticeFitList = data
-                        self.noticeTableView.reloadData()
-                    }
-                    self.noNoticeList.isHidden = true
-                    self.conditionAdaptView.isHidden = false
-                    self.noConditionView.isHidden = true
-                }
-                
-            }
-            else {
-                self.noNoticeList.isHidden = true
-                self.conditionAdaptView.isHidden = true
-                self.noConditionView.isHidden = false
-            }
-            if self.conditionList.count > 1 && self.pageControl.currentPage == 1 {
-                self.noticeListCnt.text = "\(self.gino(self.conditionList[1].noticeCnt))개"
-                self.conditionTitle.text = self.gsno(self.conditionList[1].condName)
-                
-                if self.gino(self.conditionList[1].noticeCnt) == 0 {
-                    self.noNoticeList.isHidden = false
-                    self.conditionAdaptView.isHidden = true
-                    self.noConditionView.isHidden = true
-                }
-                else {
-                    self.cur_cond_idx = self.gino(self.conditionList[1].condIdx)
-                    NoticeService.shared.getFitNotice(cond_idx: self.gino(self.cur_cond_idx), request_num: 3, exist_num: 0 ) {[weak self] (data) in guard let `self` = self else {return}
-                        self.noticeFitList = data
-                        self.noticeTableView.reloadData()
-                    }
-                    self.noNoticeList.isHidden = true
-                    self.conditionAdaptView.isHidden = false
-                    self.noConditionView.isHidden = true
-                }
-            }
-            else {
-                self.noNoticeList.isHidden = true
-                self.conditionAdaptView.isHidden = true
-                self.noConditionView.isHidden = false
-            }
-        }
-
+        //전체 공고 불러오기
         NoticeService.shared.getAllNotice(request_num: 4, exist_num: self.noticeList.count) {[weak self] (data) in guard let `self` = self else {return}
             
             self.noticeList = data
@@ -124,33 +59,23 @@ class HomeVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
         
-        //swipe 처리
-        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
-        swipeRight.direction = .right
-        self.view.addGestureRecognizer(swipeRight)
-        
-        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
-        swipeLeft.direction = .left
-        self.view.addGestureRecognizer(swipeLeft)
-        
-        print("홈 페이지 유저 맞춤 현황 조회!")
-        
         UserService.shared.getUserCondition() {[weak self] (data) in guard let `self` = self else {return}
-            //                self.animationView.play()
+            self.animateLoading()
             self.conditionList = data.condSummaryList!
-
-            if self.conditionList.isEmpty == false && self.pageControl.currentPage == 0 {
-                self.cur_cond_idx = self.gino(self.conditionList[0].condIdx)
-                self.noticeListCnt.text = "\(self.gino(self.conditionList[0].noticeCnt))개"
-                self.conditionTitle.text = self.gsno(self.conditionList[0].condName)
-                if self.gino(self.conditionList[0].noticeCnt) == 0 {
+            
+            if self.conditionList.isEmpty == false{
+                self.conditionTitle.text = self.gsno(self.conditionList[self.pageControl.currentPage].condName)
+                if self.gino(self.conditionList[self.pageControl.currentPage].noticeCnt) == 0 {
                     self.noNoticeList.isHidden = false
                     self.conditionAdaptView.isHidden = true
                     self.noConditionView.isHidden = true
                 }
                 else {
+                    self.cur_cond_idx = self.gino(self.conditionList[self.pageControl.currentPage].condIdx)
+                    self.noticeListCnt.text = "\(self.gino(self.conditionList[self.pageControl.currentPage].noticeCnt))개"
                     NoticeService.shared.getFitNotice(cond_idx: self.gino(self.cur_cond_idx), request_num: 3, exist_num: 0 ) {[weak self] (data) in guard let `self` = self else {return}
                         self.noticeFitList = data
                         self.noticeTableView.reloadData()
@@ -159,41 +84,34 @@ class HomeVC: UIViewController {
                     self.conditionAdaptView.isHidden = false
                     self.noConditionView.isHidden = true
                 }
-                
             }
             else {
                 self.noNoticeList.isHidden = true
                 self.conditionAdaptView.isHidden = true
                 self.noConditionView.isHidden = false
             }
-            if self.conditionList.count > 1 && self.pageControl.currentPage == 1 {
-                self.cur_cond_idx = self.gino(self.conditionList[1].condIdx)
-                self.noticeListCnt.text = "\(self.gino(self.conditionList[1].noticeCnt))개"
-                self.conditionTitle.text = self.gsno(self.conditionList[1].condName)
-                NoticeService.shared.getFitNotice(cond_idx: self.gino(self.cur_cond_idx), request_num: 3, exist_num: 0 ) {[weak self] (data) in guard let `self` = self else {return}
-                    self.noticeFitList = data
-                    self.noticeTableView.reloadData()
-                }
-                if self.gino(self.conditionList[1].noticeCnt) == 0 {
-                    self.noNoticeList.isHidden = false
-                    self.conditionAdaptView.isHidden = true
-                    self.noConditionView.isHidden = true
-                }
-                else {
-                    self.noNoticeList.isHidden = true
-                    self.conditionAdaptView.isHidden = false
-                    self.noConditionView.isHidden = true
-                }
-            }
-            else {
-                self.noNoticeList.isHidden = true
-                self.conditionAdaptView.isHidden = true
-                self.noConditionView.isHidden = false
-            }
+            self.stopLoadingAnimation()
+            
         }
+        
+    }
+    
+    func animateLoading() {
+        animationView.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
+//        animationView.frame = CGRect(x: 0, y: 0, width: 400, height: 400)
+        animationView.backgroundColor = UIColor.white.withAlphaComponent(0.3)
+        animationView.contentMode = .scaleAspectFill
+        animationView.center = self.view.center
+        self.view.addSubview(animationView)
+        animationView.play()
+    }
+    func stopLoadingAnimation() {
+        animationView.pause()
+        animationView.removeFromSuperview()
     }
     
     func setupShadow() {
+        //뷰 쉐도우 처리
         noConditionView.layer.shadowColor = UIColor.black.cgColor
         noConditionView.layer.shadowOpacity = 0.1
         noConditionView.layer.shadowRadius = 5
@@ -217,17 +135,35 @@ class HomeVC: UIViewController {
         noticeAllTableView.layer.shadowRadius = 5
         noticeAllTableView.layer.shadowOffset = CGSize(width: 0, height: 0)
         noticeAllTableView.layer.masksToBounds = false
+        
+        //초기화면설정
+        self.noNoticeList.isHidden = true
+        self.conditionAdaptView.isHidden = true
+        self.noConditionView.isHidden = false
+        
+        noticeAllTableView.delegate = self
+        noticeTableView.delegate = self
+        noticeAllTableView.dataSource = self
+        noticeTableView.dataSource = self
+        
+        //swipe 처리
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
+        swipeRight.direction = .right
+        self.view.addGestureRecognizer(swipeRight)
+        
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
+        swipeLeft.direction = .left
+        self.view.addGestureRecognizer(swipeLeft)
     }
     
     @objc func handleGesture(gesture: UISwipeGestureRecognizer) -> Void {
         if gesture.direction == UISwipeGestureRecognizer.Direction.right {
             print("Swipe Right")
             self.pageControl.currentPage = 0
-            
             if self.conditionList.isEmpty == false {
                 self.noticeListCnt.text = "\(self.gino(self.conditionList[0].noticeCnt))개"
                 self.conditionTitle.text = self.gsno(self.conditionList[0].condName)
-
+                
                 if self.gino(self.conditionList[0].noticeCnt) == 0 {
                     self.noNoticeList.isHidden = false
                     self.conditionAdaptView.isHidden = true
@@ -255,13 +191,12 @@ class HomeVC: UIViewController {
         else if gesture.direction == UISwipeGestureRecognizer.Direction.left {
             print("Swipe Left")
             self.pageControl.currentPage = 1
-            
-            if self.conditionList.isEmpty == false && self.conditionList.count > 1{
+            if self.conditionList.count > 1 {
+           
                 self.noticeListCnt.text = "\(self.gino(self.conditionList[1].noticeCnt))개"
                 self.conditionTitle.text = self.gsno(self.conditionList[1].condName)
-
                 
-                if self.gino(self.conditionList[0].noticeCnt) == 0 {
+                if self.gino(self.conditionList[1].noticeCnt) == 0 {
                     self.noNoticeList.isHidden = false
                     self.conditionAdaptView.isHidden = true
                     self.noConditionView.isHidden = true
@@ -281,8 +216,11 @@ class HomeVC: UIViewController {
                 self.noNoticeList.isHidden = true
                 self.conditionAdaptView.isHidden = true
                 self.noConditionView.isHidden = false
+            
             }
+            
         }
+        
     }
     
     
@@ -308,11 +246,9 @@ extension HomeVC : UITableViewDelegate {
         
         if tableView == noticeTableView {
             let notice = self.noticeFitList[indexPath.row]
-            print(notice.noticeIdx)
             nextViewController.notice_idx = gino(notice.noticeIdx)
         } else {
             let notice = self.noticeList[indexPath.row]
-            print(notice.noticeIdx)
             nextViewController.notice_idx = gino(notice.noticeIdx)
         }
         self.navigationController?.pushViewController(nextViewController, animated: true)

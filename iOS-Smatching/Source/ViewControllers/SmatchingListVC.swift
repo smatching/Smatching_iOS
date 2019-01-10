@@ -12,6 +12,16 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate {
     
     @IBOutlet weak var contentViewHeightConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var locationHeightConst: NSLayoutConstraint!
+    @IBOutlet weak var periodAgeConst: NSLayoutConstraint!
+    @IBOutlet weak var locationAgeConst: NSLayoutConstraint!
+    @IBOutlet weak var periodVerticalConst: NSLayoutConstraint!
+    @IBOutlet weak var advantageVerticalConst: NSLayoutConstraint!
+    @IBOutlet weak var excCateVerticalConst: NSLayoutConstraint!
+    @IBOutlet weak var fieldVerticalConst: NSLayoutConstraint!
+    @IBOutlet weak var busiTypeVerticalConst: NSLayoutConstraint!
+    @IBOutlet weak var ageVerticalConst: NSLayoutConstraint!
+    @IBOutlet weak var locationVerticalConst: NSLayoutConstraint!
     @IBOutlet weak var noConditionView: UIView!
     
     @IBOutlet var showStatusArrowImg: UIImageView!
@@ -63,45 +73,10 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.navigationBar.shouldRemoveShadow(true); self.navigationController?.setNavigationBarHidden(false, animated: true)
-        
         setupView()
         
         initView()
-        //조건이 없을 경우 나오는 뷰
-        self.noConditionView.isHidden = false
         
-        noticeTableView.delegate = self
-        noticeTableView.dataSource = self
-        
-        self.settingAlarmBtn.delegate = self
-        
-        //조건 뷰 선택하면 접혀지도록 설정하기
-        let tap = UITapGestureRecognizer(target: self, action: #selector(showConditionView(_:)))
-        contentView.addGestureRecognizer(tap)
-        
-        //swipe 처리
-        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
-        swipeRight.direction = .right
-        self.view.addGestureRecognizer(swipeRight)
-        
-        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
-        swipeLeft.direction = .left
-        self.view.addGestureRecognizer(swipeLeft)
-        
-        UserService.shared.getUserCondition() {[weak self] (data) in guard let `self` = self else {return}
-            self.conditionList = data.condSummaryList!
-            print(data)
-            if self.conditionList.isEmpty == false {
-                self.conditionTitle.text = self.gsno(self.conditionList[0].condName)
-                
-                self.cur_cond_idx = self.gino(self.conditionList[0].condIdx)
-                
-                self.noticesCount.text = "총 \(self.gino(self.conditionList[0].noticeCnt))건"
-                self.noConditionView.isHidden = true
-                
-            }
-        }
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -112,34 +87,30 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate {
         
         print("받은 인덱스 =\(cur_cond_idx)")
         UserService.shared.getUserCondition() {[weak self] (data) in guard let `self` = self else {return}
-            print("유저맞춤현황 다시 로드!!")
+
             self.conditionList = data.condSummaryList!
             
-            if self.pageControl.currentPage == 0 && self.conditionList.isEmpty == false {
+            if self.conditionList.isEmpty == false {
                 self.noConditionView.isHidden = true
-                self.cur_cond_idx = self.gino(self.conditionList[0].condIdx)
-                self.noticesCount.text = "총 \(self.gino(self.conditionList[0].noticeCnt))건"
-            }
-            else {
-                self.noConditionView.isHidden = false
-            }
-            if self.pageControl.currentPage == 1 && self.conditionList.count > 1{
-                self.noConditionView.isHidden = true
-                self.cur_cond_idx = self.gino(self.conditionList[1].condIdx)
-                self.noticesCount.text = "총 \(self.gino(self.conditionList[1].noticeCnt))건"
-            }
-            else {
-                self.noConditionView.isHidden = false
-            }
-            ConditionSettingSerive.shared.getFitConditionInfo(cond_idx: self.gino(self.cur_cond_idx)) {[weak self] (data) in guard let `self` = self else {return}
-                print(data)
-                self.fitConditionRes = data
-                self.conditionTitle.text = self.gsno(data.condName)
-                if self.gbno(data.alert) == true {
-                    self.checkBoxDidChange(checkbox: self.settingAlarmBtn)
+                self.cur_cond_idx = self.gino(self.conditionList[self.pageControl.currentPage].condIdx)
+                self.noticesCount.text = "총 \(self.gino(self.conditionList[self.pageControl.currentPage].noticeCnt))건"
+                if self.conditionList.count > 1 {
+                    self.cur_cond_idx = self.gino(self.conditionList[self.pageControl.currentPage].condIdx)
                 }
-                self.inputTextMatchingInfo()
-                
+                ConditionSettingSerive.shared.getFitConditionInfo(cond_idx: self.gino(self.cur_cond_idx)) {[weak self] (data) in guard let `self` = self else {return}
+                    print(data)
+                    self.fitConditionRes = data
+                    self.conditionTitle.text = self.gsno(data.condName)
+                    if self.gbno(data.alert) == true {
+                        self.checkBoxDidChange(checkbox: self.settingAlarmBtn)
+                    }
+                    self.inputTextMatchingInfo()
+                }
+                self.showView()
+            }
+            else {
+                print("설정한 조건없음")
+                self.noConditionView.isHidden = false
             }
         }
         
@@ -183,7 +154,6 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate {
                 self.checkBoxDidChange(checkbox: self.settingAlarmBtn)
             }
             
-            self.inputTextMatchingInfo()
         }
         NoticeService.shared.getFitNotice(cond_idx: self.gino(self.cur_cond_idx), request_num: 999, exist_num: 0 ) {[weak self] (data) in guard let `self` = self else {return}
             self.noticeList = data
@@ -192,11 +162,32 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate {
     }
     
     func setupView() {
+        //뷰 쉐도우 처리
         contentView.layer.shadowColor = UIColor.black.cgColor
         contentView.layer.shadowOpacity = 0.1
         contentView.layer.shadowRadius = 5
         contentView.layer.shadowOffset = CGSize(width: 0, height: 0)
         contentView.layer.masksToBounds = false
+        
+        self.noConditionView.isHidden = false
+        
+        noticeTableView.delegate = self
+        noticeTableView.dataSource = self
+        
+        self.settingAlarmBtn.delegate = self
+        
+        //조건 뷰 선택하면 접혀지도록 설정하기
+        let tap = UITapGestureRecognizer(target: self, action: #selector(showConditionView(_:)))
+        contentView.addGestureRecognizer(tap)
+        
+        //swipe 처리
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
+        swipeRight.direction = .right
+        self.view.addGestureRecognizer(swipeRight)
+        
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
+        swipeLeft.direction = .left
+        self.view.addGestureRecognizer(swipeLeft)
     }
     
     func checkBoxDidChange(checkbox: Checkbox) {
@@ -218,7 +209,7 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate {
     func showView() {
         
         UIView.animate(withDuration: 0.2, animations: ({
-            self.contentViewHeightConstraint.constant = 317
+            self.contentViewHeightConstraint.constant = 229
             self.view.layoutIfNeeded()
         }))
         showStatusArrowImg.image = UIImage(named: "icn_back_white_revers")
@@ -242,7 +233,7 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate {
     
     //초기 화면 설정 -> 조건 뷰가 보여지도록
     func initView() {
-        contentViewHeightConstraint.constant = 317
+        contentViewHeightConstraint.constant = 229
         showStatusArrowImg.image = UIImage(named: "icn_back_white_revers")
     }
     
@@ -330,8 +321,6 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate {
             [weak self] (data) in guard let `self` = self else {return}
             print(data.scrap)
         }
-        self.clearTheLabels(locationLabel)
-        self.clearTheLabels(ageLabel)
         self.noticeTableView.reloadData()
     }
     
@@ -368,6 +357,8 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate {
     // 맞춤조건 설정페이지와 정보 연결
     func inputTextMatchingInfo () {
         //지역
+        self.locationLabel.text = ""
+        self.ageLabel.text = ""
         if self.gbno(fitConditionRes?.location?.seoul) == true {
             self.locationLabel.text? += self.location[0] + ", "
         }
@@ -424,21 +415,19 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate {
         if self.gbno(fitConditionRes?.age?.twenty_less) == true {
             self.ageLabel.text? += self.age[0] + ", "
         }
-        if self.gbno(fitConditionRes?.age?.twenty_forty) == true {
+        else if self.gbno(fitConditionRes?.age?.twenty_forty) == true {
             self.ageLabel.text? += self.age[1] + ", "
         }
-        if self.gbno(fitConditionRes?.age?.forty_more) == true {
+        else if self.gbno(fitConditionRes?.age?.forty_more) == true {
             self.ageLabel.text? += self.age[2] + ", "
         }
         ageLabel.text = DoneListingWords(ageLabel)
     }
+    //마지막 ", " 을 제거
     func DoneListingWords (_ label: UILabel) -> String {
         var text = label.text!
         text = String(text.dropLast(2))
         return text
-    }
-    func clearTheLabels (_ label: UILabel) {
-        label.text! = ""
     }
 }
 extension SmatchingListVC : UITableViewDelegate {
