@@ -21,8 +21,19 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupView()
+        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        registerForKeyboardNotifications()
+    }
+    
+    func setupView() {
         self.navigationController?.navigationBar.backIndicatorImage = UIImage(named: "btnBack")
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = UIImage(named: "btnBack")
+        
         initGestureRecognizer()
         
         textFieldAddTarget(emailTxtField)
@@ -33,17 +44,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         emailTxtField.delegate = self
         passwdTxtField.delegate = self
-    
+        
         // 초기 TextField BorderColor 정하기
         LightGrayTextField(emailTxtField)
         LightGrayTextField(passwdTxtField)
-        
-        
-        
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        registerForKeyboardNotifications()
     }
     
     override func viewWillDisappear(_ animated: Bool) {

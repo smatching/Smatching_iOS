@@ -22,9 +22,17 @@ class SearchVC: UIViewController, UITextFieldDelegate {
     var noticeList = [Notice]()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.shouldRemoveShadow(true)
+    }
+    
+    func setupView() {
         initGestureRecognizer()
         
-//        searchResultView.isHidden = true
         noSearchResult.isHidden = true
         searchResultView.isHidden = true
         
@@ -34,19 +42,7 @@ class SearchVC: UIViewController, UITextFieldDelegate {
         
         searchTableView.delegate = self
         searchTableView.dataSource = self
-        // Do any additional setup after loading the view.
-//        SearchResultView.layer.shadowRadius = 5
-//        SearchResultView.layer.shadowOffset = CGSize(width: 0, height: 3)
-//        SearchResultView.layer.shadowColor = UIColor.black.cgColor
-//        SearchResultView.layer.shadowOpacity = 0.3
-        
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.navigationBar.shouldRemoveShadow(true)
-    }
-    
     
     @IBAction func clickBackBtn(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
@@ -63,7 +59,6 @@ class SearchVC: UIViewController, UITextFieldDelegate {
         
         guard SearchTxtField.text?.isEmpty != true else {return false}
         SearchService.shared.getSearchResultCount(query: self.SearchTxtField.text!){[weak self] (res) in guard let `self` = self else {return}
-            
             
             self.noticeCnt = self.gino(res.num)
         

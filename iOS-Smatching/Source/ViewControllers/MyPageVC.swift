@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Lottie
 class MyPageVC: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var SearchImg: UIImageView!
@@ -16,39 +16,28 @@ class MyPageVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var profileImg: UIImageView!
     @IBOutlet weak var nicknameLabel: UILabel!
     @IBOutlet weak var noticeCnt: UILabel!
-    
     @IBOutlet weak var searchScrapTxtField: UITextField!
+    
+    var animationView: LOTAnimationView = LOTAnimationView(name: "loading");
+    
     var noticeList = [Notice]()
     
     var email : String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
         
-        scrapedNoticeTableView.dataSource = self
+        setupView()
         
-        searchScrapTxtField.delegate = self
         
-        initGestureRecognizer()
-        
-        MypageService.shared.getUserInfo() {[weak self] (data) in guard let `self` = self else {return}
-            
-            print(data)
-            self.nicknameLabel.text = self.gsno(data.nickname)
-            self.profileImg.imageFromUrl(self.gsno(data.profileUrl), defaultImgPath: "")
-            self.noticeCnt.text = "총 \(self.gino(data.noticeScrapCnt))건"
-            
-        }
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        self.animateLoading()
         
         MypageService.shared.getUserInfo() {[weak self] (data) in guard let `self` = self else {return}
-            
             print(data)
             self.nicknameLabel.text = self.gsno(data.nickname)
             self.profileImg.imageFromUrl(self.gsno(data.profileUrl), defaultImgPath: "")
@@ -58,13 +47,43 @@ class MyPageVC: UIViewController, UITextFieldDelegate {
             
         }
         MypageService.shared.getScrappedNotices(request_num: 3, exist_num: 0) {[weak self] (data) in guard let `self` = self else {return}
-            print(data)
             self.noticeList = data
             self.scrapedNoticeTableView.reloadData()
             
+            
+        }
+//        self.stopLoadingAnimation()
+    }
+    
+    func setupView() {
+        
+        scrapedNoticeTableView.dataSource = self
+        
+        searchScrapTxtField.delegate = self
+        
+        initGestureRecognizer()
+    }
+    
+    
+    func animateLoading() {
+        animationView.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
+        //        animationView.frame = CGRect(x: 0, y: 0, width: 400, height: 400)
+        animationView.backgroundColor = UIColor.white.withAlphaComponent(0.3)
+        animationView.contentMode = .scaleAspectFill
+        animationView.center = self.view.center
+        self.view.addSubview(animationView)
+        animationView.play()
+    }
+    func stopLoadingAnimation() {
+        animationView.pause()
+        print(self.view.viewWithTag(100))
+        if let viewWithTag = self.view.viewWithTag(100) {
+            viewWithTag.removeFromSuperview()
+        }else{
+            print("No!")
         }
     }
-     
+    
     @IBAction func showSettingView(_ sender: Any) {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Setting", bundle:nil)
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SettingVC") as! SettingViewController
@@ -79,7 +98,7 @@ class MyPageVC: UIViewController, UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         guard searchScrapTxtField.text?.isEmpty != true else {return false}
-        SearchService.shared.getMyScrapNotices(query: self.searchScrapTxtField.text!, request_num: 2, exist_num: 0) {[weak self] (data) in guard let `self` = self else {return}
+        SearchService.shared.getMyScrapNotices(query: self.searchScrapTxtField.text!, request_num: 999, exist_num: 0) {[weak self] (data) in guard let `self` = self else {return}
             print(data)
             self.noticeList = data
             self.scrapedNoticeTableView.reloadData()

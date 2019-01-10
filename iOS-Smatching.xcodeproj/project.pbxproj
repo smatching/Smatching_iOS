@@ -50,6 +50,7 @@
 		B696AE9D21DFC10300ABFBDB /* NoticeDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B696AE9C21DFC10300ABFBDB /* NoticeDetailVC.swift */; };
 		B696AE9F21DFC36300ABFBDB /* NoticeDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B696AE9E21DFC36300ABFBDB /* NoticeDetailResponse.swift */; };
 		B696AEA121DFC42D00ABFBDB /* NoticeDetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B696AEA021DFC42D00ABFBDB /* NoticeDetailService.swift */; };
+		B6A2D98121E6229C00ACB226 /* UILabel+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A2D98021E6229C00ACB226 /* UILabel+extension.swift */; };
 		B6A3F48721C49070000497BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A3F48621C49070000497BF /* AppDelegate.swift */; };
 		B6A3F48921C49070000497BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A3F48821C49070000497BF /* ViewController.swift */; };
 		B6A3F48C21C49070000497BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6A3F48A21C49070000497BF /* Main.storyboard */; };
@@ -136,6 +137,7 @@
 		B696AE9C21DFC10300ABFBDB /* NoticeDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeDetailVC.swift; sourceTree = "<group>"; };
 		B696AE9E21DFC36300ABFBDB /* NoticeDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeDetailResponse.swift; sourceTree = "<group>"; };
 		B696AEA021DFC42D00ABFBDB /* NoticeDetailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeDetailService.swift; sourceTree = "<group>"; };
+		B6A2D98021E6229C00ACB226 /* UILabel+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+extension.swift"; sourceTree = "<group>"; };
 		B6A3F48321C49070000497BF /* iOS-Smatching.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Smatching.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6A3F48621C49070000497BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6A3F48821C49070000497BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -238,7 +240,6 @@
 		B6A3F49821C490A0000497BF /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				B67AC94B21E2459000690DD7 /* loading.json */,
 				B6A3F4A021C49643000497BF /* ViewControllers */,
 				B6A3F49F21C4963A000497BF /* Views */,
 				B6A3F49E21C49634000497BF /* Models */,
@@ -292,6 +293,7 @@
 				B67F2A9921DC4D0800452579 /* UIView+extension.swift */,
 				B67F2A9B21DC4D5800452579 /* UINavigationBar+extension.swift */,
 				B6A7D7C521E5532B00075B4A /* UIImage+extension.swift */,
+				B6A2D98021E6229C00ACB226 /* UILabel+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -364,6 +366,7 @@
 		B6A3F4A021C49643000497BF /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				B67AC94B21E2459000690DD7 /* loading.json */,
 				B6A3F48821C49070000497BF /* ViewController.swift */,
 				C0EE047021D36D810046E030 /* LoginViewController.swift */,
 				B632123521D3B11000087FA2 /* LoginOrSignupVC.swift */,
@@ -563,6 +566,7 @@
 				B6BAFCE521DBB6B2004C8743 /* CustomViewBorder.swift in Sources */,
 				B6A3F4B421C49A0D000497BF /* UIViewController+extensions.swift in Sources */,
 				B67F2A9621DC462300452579 /* ExcCategory.swift in Sources */,
+				B6A2D98121E6229C00ACB226 /* UILabel+extension.swift in Sources */,
 				B61674F121DD2F3A006D67A4 /* CommonResponse.swift in Sources */,
 				B67AC95221E28CFA00690DD7 /* MypageService.swift in Sources */,
 				B6A3F4A621C49785000497BF /* NetworkResult.swift in Sources */,

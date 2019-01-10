@@ -22,6 +22,17 @@ class SignupVC: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        registerForKeyboardNotifications()
+        
+    }
+    
+    func setupView () {
         initGestureRecognizer()
         
         textFieldAddTarget(nicknameTxtField)
@@ -41,13 +52,6 @@ class SignupVC: UIViewController, UITextFieldDelegate {
         LightGrayTextField(passwdTxtField1)
         LightGrayTextField(passwdTxtField2)
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        registerForKeyboardNotifications()
-        
-    }
-    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         unregisterForKeyboardNotifications()
