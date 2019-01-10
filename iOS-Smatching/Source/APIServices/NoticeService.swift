@@ -131,7 +131,7 @@ struct NoticeService : APIManager, Requestable {
         ]
         
         let queryURL = noticeURL + "/scrap/\(noticeIdx)"
-        
+        print(noticeIdx)
         puttable(queryURL, body: nil, header: headers){(res) in
             switch res {
             case .success(let value):

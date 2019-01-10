@@ -20,7 +20,7 @@
         <!--Accept TermsVC-->
         <scene sceneID="tJP-fl-4eQ">
             <objects>
-                <viewController id="eGm-dR-ijL" customClass="AcceptTermsVC" customModule="iOS_Smatching" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AcceptTermsVC" id="eGm-dR-ijL" customClass="AcceptTermsVC" customModule="iOS_Smatching" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9AG-ln-in3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

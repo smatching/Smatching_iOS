@@ -27,6 +27,7 @@ class NoticeDetailVC: UIViewController {
     var url : String?
     var notice_idx : Int?
     var checked : Bool?
+    var scrapped : Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +35,15 @@ class NoticeDetailVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: true)
+        
+        if scrapped == 0 {
+            scrapBtn.setImage(UIImage(named:"icn_scrap_grey"), for: .normal)
+            checked = true
+        }
+        else {
+            scrapBtn.setImage( UIImage(named:"icn_scrap_yellow"), for: .normal)
+            checked = false
+        }
         NoticeDetailService.shared.getNoticeDetailInfo(notice_idx: gino(notice_idx)){[weak self] (data) in guard let `self` = self else {return}
             print(data)
             self.noticeDetail = data
@@ -41,7 +51,7 @@ class NoticeDetailVC: UIViewController {
             self.insititution.text = self.gsno(self.noticeDetail?.institution)
             
             self.registDate.text = self.gsno(self.noticeDetail?.reg_date)
-            
+
             self.noticeDescription.text = self.gsno(self.noticeDetail!.content)
             
             self.noticeSummary.text = self.gsno(self.noticeDetail?.summary)

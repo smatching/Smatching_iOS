@@ -98,6 +98,9 @@
                                                         <constraint firstAttribute="width" constant="18" id="cgG-3e-VsG"/>
                                                     </constraints>
                                                     <state key="normal" image="icn_emptybox"/>
+                                                    <connections>
+                                                        <action selector="BusiTypeCheckBoxClicked:" destination="-1" eventType="touchUpInside" id="ci0-OB-WtJ"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B 광업 (05~08)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qei-lm-uIi">
                                                     <rect key="frame" x="26" y="0.0" width="79" height="18"/>
@@ -117,6 +120,9 @@
                                                         <constraint firstAttribute="height" constant="18" id="hxc-HO-yjF"/>
                                                     </constraints>
                                                     <state key="normal" image="icn_emptybox"/>
+                                                    <connections>
+                                                        <action selector="BusiTypeCheckBoxClicked:" destination="-1" eventType="touchUpInside" id="PLP-iA-V1o"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C 제조업 (10~34)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQI-pA-i4I">
                                                     <rect key="frame" x="26" y="0.0" width="90" height="18"/>
@@ -136,6 +142,9 @@
                                                         <constraint firstAttribute="width" constant="18" id="vcm-JK-lDm"/>
                                                     </constraints>
                                                     <state key="normal" image="icn_emptybox"/>
+                                                    <connections>
+                                                        <action selector="BusiTypeCheckBoxClicked:" destination="-1" eventType="touchUpInside" id="qLI-Yi-da8"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D 전기, 가스, 증기 및 공기 조절 공급업 (35)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fki-Z8-1Ih">
                                                     <rect key="frame" x="26" y="0.0" width="213" height="18"/>
@@ -157,6 +166,9 @@
                                                                 <constraint firstAttribute="width" constant="18" id="WP2-fD-rXd"/>
                                                             </constraints>
                                                             <state key="normal" image="icn_emptybox"/>
+                                                            <connections>
+                                                                <action selector="BusiTypeCheckBoxClicked:" destination="-1" eventType="touchUpInside" id="4Ei-jk-EZw"/>
+                                                            </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E 수도, 하수 및 폐기물 처리, 원료 재생업 (36~39)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B0S-Il-Tmz">
                                                             <rect key="frame" x="26" y="0.0" width="213" height="27"/>
@@ -175,6 +187,9 @@
                                                                 <constraint firstAttribute="width" constant="18" id="Cox-Wo-sZm"/>
                                                             </constraints>
                                                             <state key="normal" image="icn_emptybox"/>
+                                                            <connections>
+                                                                <action selector="BusiTypeCheckBoxClicked:" destination="-1" eventType="touchUpInside" id="v9g-iy-VSL"/>
+                                                            </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="F 건설업 (41~42)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gwe-gj-Tnt">
                                                             <rect key="frame" x="26" y="0.0" width="213" height="22"/>
@@ -199,6 +214,9 @@
                                                         <constraint firstAttribute="height" constant="18" id="iFA-IC-RGu"/>
                                                     </constraints>
                                                     <state key="normal" image="icn_emptybox"/>
+                                                    <connections>
+                                                        <action selector="BusiTypeCheckBoxClicked:" destination="-1" eventType="touchUpInside" id="doB-5j-bcl"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="G 도매 및 소매업 (45~47)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gut-R9-iR3">
                                                     <rect key="frame" x="26" y="0.0" width="129" height="18"/>
@@ -218,6 +236,9 @@
                                                         <constraint firstAttribute="height" constant="18" id="oFx-re-zhq"/>
                                                     </constraints>
                                                     <state key="normal" image="icn_emptybox"/>
+                                                    <connections>
+                                                        <action selector="BusiTypeCheckBoxClicked:" destination="-1" eventType="touchUpInside" id="kcw-Rt-HM3"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="H 운수 및 창고업 (49~52)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yW-mx-1PB">
                                                     <rect key="frame" x="26" y="0.0" width="129.5" height="18"/>
@@ -237,6 +258,9 @@
                                                         <constraint firstAttribute="width" constant="18" id="xO2-km-0b8"/>
                                                     </constraints>
                                                     <state key="normal" image="icn_emptybox"/>
+                                                    <connections>
+                                                        <action selector="BusiTypeCheckBoxClicked:" destination="-1" eventType="touchUpInside" id="ES4-4d-PxB"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I 숙박 및 음식창업 (55~56)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IdX-9r-wng">
                                                     <rect key="frame" x="26" y="0.0" width="135" height="18"/>
@@ -256,6 +280,9 @@
                                                         <constraint firstAttribute="width" constant="18" id="OPt-Ve-4ch"/>
                                                     </constraints>
                                                     <state key="normal" image="icn_emptybox"/>
+                                                    <connections>
+                                                        <action selector="BusiTypeCheckBoxClicked:" destination="-1" eventType="touchUpInside" id="SW7-w5-imT"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="J 정보통신업 (58~63)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4JF-Wh-D6Q">
                                                     <rect key="frame" x="26" y="0.0" width="110" height="18"/>
@@ -275,6 +302,9 @@
                                                         <constraint firstAttribute="width" constant="18" id="FcJ-JF-eG6"/>
                                                     </constraints>
                                                     <state key="normal" image="icn_emptybox"/>
+                                                    <connections>
+                                                        <action selector="BusiTypeCheckBoxClicked:" destination="-1" eventType="touchUpInside" id="hVh-ue-ip6"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="K 금융 및 보험업 (64~66)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAk-WC-cif">
                                                     <rect key="frame" x="26" y="0.0" width="129" height="18"/>
@@ -294,6 +324,9 @@
                                                         <constraint firstAttribute="height" constant="18" id="jeu-ah-jIi"/>
                                                     </constraints>
                                                     <state key="normal" image="icn_emptybox"/>
+                                                    <connections>
+                                                        <action selector="BusiTypeCheckBoxClicked:" destination="-1" eventType="touchUpInside" id="0iV-Lo-2n8"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L 부동산업 (68)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cvo-P6-Vgr">
                                                     <rect key="frame" x="26" y="0.0" width="213" height="18"/>
@@ -316,6 +349,9 @@
                                                         <constraint firstAttribute="width" constant="18" id="EUa-tA-ASG"/>
                                                     </constraints>
                                                     <state key="normal" image="icn_emptybox"/>
+                                                    <connections>
+                                                        <action selector="BusiTypeCheckBoxClicked:" destination="-1" eventType="touchUpInside" id="MWq-ha-7fo"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="M 전문, 과학 및 기술 서비스업 (70~73)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5Y-GY-oQY">
                                                     <rect key="frame" x="26" y="0.0" width="194.5" height="18"/>
@@ -337,6 +373,9 @@
                                                                 <constraint firstAttribute="width" constant="18" id="HBI-a8-Hj1"/>
                                                             </constraints>
                                                             <state key="normal" image="icn_emptybox"/>
+                                                            <connections>
+                                                                <action selector="BusiTypeCheckBoxClicked:" destination="-1" eventType="touchUpInside" id="1oE-Nj-jyj"/>
+                                                            </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N 사업시설 관리, 사업지원 및 임대서비스업 (74~76)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tkL-DP-bqC">
                                                             <rect key="frame" x="26" y="0.0" width="213" height="27"/>
@@ -356,6 +395,9 @@
                                                                 <constraint firstAttribute="width" constant="18" id="bVW-DP-Cif"/>
                                                             </constraints>
                                                             <state key="normal" image="icn_emptybox"/>
+                                                            <connections>
+                                                                <action selector="BusiTypeCheckBoxClicked:" destination="-1" eventType="touchUpInside" id="X9g-bg-SIH"/>
+                                                            </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O 공공 행정, 국방 및 사회보장 행정 (84)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wTQ-Rg-loU">
                                                             <rect key="frame" x="26" y="0.0" width="213" height="18"/>
@@ -380,6 +422,9 @@
                                                         <constraint firstAttribute="width" constant="18" id="lfG-tq-uRZ"/>
                                                     </constraints>
                                                     <state key="normal" image="icn_emptybox"/>
+                                                    <connections>
+                                                        <action selector="BusiTypeCheckBoxClicked:" destination="-1" eventType="touchUpInside" id="8W4-jR-uU3"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="P 교육 서비스업 (85)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Avh-rr-Ixx">
                                                     <rect key="frame" x="26" y="0.0" width="104" height="18"/>
@@ -399,6 +444,9 @@
                                                         <constraint firstAttribute="height" constant="18" id="igE-hF-ezJ"/>
                                                     </constraints>
                                                     <state key="normal" image="icn_emptybox"/>
+                                                    <connections>
+                                                        <action selector="BusiTypeCheckBoxClicked:" destination="-1" eventType="touchUpInside" id="off-7l-bPt"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Q 보건업 및 사회복지 서비스업 (86~87)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVr-ZJ-1Jv">
                                                     <rect key="frame" x="26" y="0.0" width="213" height="18"/>
@@ -423,6 +471,9 @@
                                                                 <constraint firstAttribute="width" constant="18" id="b2y-Hi-ciY"/>
                                                             </constraints>
                                                             <state key="normal" image="icn_emptybox"/>
+                                                            <connections>
+                                                                <action selector="BusiTypeCheckBoxClicked:" destination="-1" eventType="touchUpInside" id="pzq-fE-cdi"/>
+                                                            </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R 예술, 스포츠 및 여가관련 서비스업 (90~91)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HBx-Uo-vdl">
                                                             <rect key="frame" x="26" y="0.0" width="213" height="27"/>
@@ -441,6 +492,9 @@
                                                                 <constraint firstAttribute="width" constant="18" id="euI-16-Yk8"/>
                                                             </constraints>
                                                             <state key="normal" image="icn_emptybox"/>
+                                                            <connections>
+                                                                <action selector="BusiTypeCheckBoxClicked:" destination="-1" eventType="touchUpInside" id="pMn-lm-x0l"/>
+                                                            </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S 협회 및 단체, 수리 및 기타 개인 서비스업 (94~96)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XmJ-13-vhd">
                                                             <rect key="frame" x="26" y="0.0" width="213" height="27"/>
@@ -459,6 +513,9 @@
                                                                 <constraint firstAttribute="width" constant="18" id="8Dh-Ys-NP8"/>
                                                             </constraints>
                                                             <state key="normal" image="icn_emptybox"/>
+                                                            <connections>
+                                                                <action selector="BusiTypeCheckBoxClicked:" destination="-1" eventType="touchUpInside" id="EvP-fP-zoS"/>
+                                                            </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T 가구 내 고용활동 및 달리 분류되지 않은 자가 소비 생산활동 (97~98)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0FB-5c-zv8">
                                                             <rect key="frame" x="26" y="0.0" width="213" height="27"/>
@@ -478,6 +535,9 @@
                                                                 <constraint firstAttribute="height" constant="18" id="kSe-ug-LvD"/>
                                                             </constraints>
                                                             <state key="normal" image="icn_emptybox"/>
+                                                            <connections>
+                                                                <action selector="BusiTypeCheckBoxClicked:" destination="-1" eventType="touchUpInside" id="Dt3-zK-2V5"/>
+                                                            </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="U 국제 및 외국기관" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gon-L6-3uF">
                                                             <rect key="frame" x="26" y="0.0" width="213" height="18"/>
@@ -502,6 +562,9 @@
                                                         <constraint firstAttribute="width" constant="18" id="tF7-g7-VlK"/>
                                                     </constraints>
                                                     <state key="normal" image="icn_emptybox"/>
+                                                    <connections>
+                                                        <action selector="BusiTypeCheckBoxClicked:" destination="-1" eventType="touchUpInside" id="BWe-eM-Pmp"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="V 4차산업분야" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbc-Hd-YDp">
                                                     <rect key="frame" x="26" y="0.0" width="72.5" height="18"/>

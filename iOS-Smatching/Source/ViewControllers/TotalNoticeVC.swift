@@ -40,11 +40,17 @@ class TotalNoticeVC: UIViewController, UIScrollViewDelegate, NoticeCellDelegate 
 
     //스크랩 버튼 클릭시 동작
     func doScrapNotice(noticeIdx: IndexPath) {
-        let idx = noticeIdx.row
-        print(idx)
-        NoticeService.shared.putNoticeScrap(noticeIdx: idx) {
+        let idx = self.noticeList[noticeIdx.row].noticeIdx
+        print("noticeindexpathind=\(idx)")
+        NoticeService.shared.putNoticeScrap(noticeIdx: idx!) {
             [weak self] (data) in guard let `self` = self else {return}
-            print(data.scrap)
+            NoticeService.shared.getAllNotice(request_num: 999, exist_num: 0) {[weak self] (data) in guard let `self` = self else {return}
+                print(data)
+                self.noticeList = data
+                self.totalCountLabel.text = "총 \(self.noticeList.count)건"
+                self.totalNoticeTableView.reloadData()
+                
+            }
         }
         
     }
@@ -89,7 +95,7 @@ extension TotalNoticeVC : UITableViewDelegate{
         
         let notice = self.noticeList[indexPath.row]
         nextViewController.notice_idx = gino(notice.noticeIdx)
-        print(notice.noticeIdx)
+        nextViewController.scrapped = self.gino(notice.scrap)
         self.navigationController?.pushViewController(nextViewController, animated: true)
         
     }
@@ -114,11 +120,12 @@ extension TotalNoticeVC : UITableViewDataSource {
         else {
             cell.ddayLabel.text = "D - " + "\(gino(notice.dday))"
         }
-        
+        if gino(notice.dday) <= 7 {
+            cell.ddayLabel.textColor = UIColor.red
+        }
         cell.delegate = self
         cell.noticeIdx = indexPath
-        print(cell.noticeIdx)
-        print(notice.noticeIdx)
+        
         if gino(notice.scrap) == 0 {
             cell.scrapActiveBtn.isHidden = true
             cell.scrapDeactiveBtn.isHidden = false

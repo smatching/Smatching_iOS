@@ -18,7 +18,6 @@ struct NoticeDetailResponse : Mappable {
     var origin_url : String?
     var reg_date : String?
     var start_date : String?
-    var end_date : String?
     var summary : String?
     var target : String?
     var content : String?
@@ -33,7 +32,6 @@ struct NoticeDetailResponse : Mappable {
         part <- map["part"]
         phone <- map["phone"]
         reg_date <- map["reg_date"]
-        end_date <- map["end_date"]
         start_date <- map["start_date"]
         summary <- map["summary"]
         target <- map["target"]

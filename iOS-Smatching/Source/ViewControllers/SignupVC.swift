@@ -19,6 +19,8 @@ class SignupVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var createDeactiveBtn: UIButton!
     @IBOutlet weak var createActiveBtn: UIButton!
     
+    //조건 제목 길이 제한
+    let limitLength = 8
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,9 +86,13 @@ class SignupVC: UIViewController, UITextFieldDelegate {
     
     @IBAction func signup(_ sender: Any) {
         UserService.shared.signUp(nickname: nicknameTxtField.text!, email: emailTxtField.text!, password: passwdTxtField1.text!){
-          
+            let storyBoard : UIStoryboard = UIStoryboard(name: "AcceptTerms", bundle:nil)
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "AcceptTermsVC") as! AcceptTermsVC
+            
+            self.present(nextViewController, animated: true, completion: nil)
+            
         }
-        self.performSegue(withIdentifier: "signupSegue", sender: nil)
+       
         
     }
     
@@ -95,6 +101,10 @@ class SignupVC: UIViewController, UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         BlueTextField(textField)
         CheckBothPasswdEqual()
+        
+        guard let text = textField.text else { return true }
+        let newLength = text.characters.count + string.characters.count - range.length
+        return newLength <= limitLength
         return true
     }
     //타이핑이 끝나면 일어나는 TextField Delegate
