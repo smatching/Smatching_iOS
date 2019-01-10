@@ -61,9 +61,10 @@ class HomeVC: UIViewController {
         super.viewWillAppear(animated)
         
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
+      
         
         UserService.shared.getUserCondition() {[weak self] (data) in guard let `self` = self else {return}
-            self.animateLoading()
+            self.animateLoading(self.animationView)
             self.conditionList = data.condSummaryList!
             
             if self.conditionList.isEmpty == false{
@@ -90,24 +91,9 @@ class HomeVC: UIViewController {
                 self.conditionAdaptView.isHidden = true
                 self.noConditionView.isHidden = false
             }
-            self.stopLoadingAnimation()
-            
+            self.stopLoadingAnimation(self.animationView)
         }
         
-    }
-    
-    func animateLoading() {
-        animationView.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
-//        animationView.frame = CGRect(x: 0, y: 0, width: 400, height: 400)
-        animationView.backgroundColor = UIColor.white.withAlphaComponent(0.3)
-        animationView.contentMode = .scaleAspectFill
-        animationView.center = self.view.center
-        self.view.addSubview(animationView)
-        animationView.play()
-    }
-    func stopLoadingAnimation() {
-        animationView.pause()
-        animationView.removeFromSuperview()
     }
     
     func setupShadow() {

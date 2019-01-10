@@ -29,6 +29,7 @@ struct UserService: APIManager, Requestable {
         postableObj(signupURL, body: body, header: headers) { res in
             switch res {
             case .success(let value):
+                print(value)
                 completion()
             case .error(let error):
                 print(error)

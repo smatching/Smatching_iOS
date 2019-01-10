@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-
+import Lottie
 extension UIViewController {
     func isObjectNotNil(object:AnyObject!) -> Bool
     {
@@ -92,4 +92,20 @@ extension UIViewController {
         return value_
     }//func gfno
     
+    func animateLoading(_ animationView : LOTAnimationView) {
+        animationView.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
+        animationView.backgroundColor = UIColor.white.withAlphaComponent(0.3)
+        animationView.contentMode = .scaleAspectFill
+        animationView.center = self.view.center
+        animationView.isUserInteractionEnabled = true
+        self.view.addSubview(animationView)
+        animationView.play()
+    }
+    
+    func stopLoadingAnimation(_ animationView : LOTAnimationView) {
+        animationView.pause()
+        
+        animationView.removeFromSuperview()
+    }
+
 }

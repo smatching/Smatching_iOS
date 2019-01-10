@@ -321,9 +321,6 @@
                                     <constraint firstAttribute="height" constant="47" id="Vfd-nD-zD3"/>
                                 </constraints>
                                 <state key="normal" image="btn_createaccount"/>
-                                <connections>
-                                    <segue destination="waF-lA-qcH" kind="show" identifier="signupSegue" id="ACH-Ba-gGw"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="81r-Ja-0eh">
                                 <rect key="frame" x="27.5" y="453" width="320" height="47"/>
@@ -967,29 +964,29 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="닉네임최대일때야" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z61-2i-kaZ">
-                                        <rect key="frame" x="114.5" y="167" width="146" height="22.5"/>
+                                        <rect key="frame" x="118.5" y="167" width="138.5" height="23.5"/>
                                         <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_mypage_scrapbox-1" translatesAutoresizingMaskIntoConstraints="NO" id="oZh-Ag-rfd">
-                                        <rect key="frame" x="277" y="189.5" width="60" height="30"/>
+                                        <rect key="frame" x="277" y="190.5" width="60" height="30"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I9q-3U-auN">
-                                        <rect key="frame" x="18" y="219.5" width="339" height="334.5"/>
+                                        <rect key="frame" x="18" y="220.5" width="339" height="333.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="i2I-ec-j4T">
-                                                <rect key="frame" x="42" y="24" width="255" height="32"/>
+                                                <rect key="frame" x="48" y="24" width="243" height="33"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vCv-t2-aif">
-                                                        <rect key="frame" x="0.0" y="0.0" width="120" height="32"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="114" height="33"/>
                                                         <fontDescription key="fontDescription" name="NanumSquareEB" family="NanumSquare" pointSize="18"/>
                                                         <state key="normal" title="맞춤지원 스크랩">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1G-Nx-15w">
-                                                        <rect key="frame" x="135" y="0.0" width="120" height="32"/>
+                                                        <rect key="frame" x="129" y="0.0" width="114" height="33"/>
                                                         <fontDescription key="fontDescription" name="NanumSquareEB" family="NanumSquare" pointSize="18"/>
                                                         <state key="normal" title="창업토크 스크랩">
                                                             <color key="titleColor" red="0.83921568627450982" green="0.83921568627450982" blue="0.83921568627450982" alpha="1" colorSpace="calibratedRGB"/>
@@ -998,7 +995,7 @@
                                                 </subviews>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zhf-SQ-uCR">
-                                                <rect key="frame" x="27" y="76" width="285" height="30"/>
+                                                <rect key="frame" x="27" y="77" width="285" height="30"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" 스크랩을 검색하세요." textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iy1-WO-cQT">
                                                         <rect key="frame" x="0.0" y="4" width="285" height="22"/>
@@ -1020,7 +1017,7 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="총 000건" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="diO-Xr-YK8">
-                                                <rect key="frame" x="31" y="121" width="46.5" height="13"/>
+                                                <rect key="frame" x="31" y="122" width="44.5" height="13"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="13" id="wqE-LN-fmH"/>
                                                 </constraints>
@@ -1029,7 +1026,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CCm-E8-cLs">
-                                                <rect key="frame" x="26" y="147" width="287" height="187.5"/>
+                                                <rect key="frame" x="26" y="148" width="287" height="185.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="NoticeCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NoticeCell" rowHeight="73" id="gfq-RW-9DN" customClass="NoticeCell" customModule="iOS_Smatching" customModuleProvider="target">
@@ -1833,7 +1830,7 @@
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D-7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QFK-Zj-SDc">
-                                                                            <rect key="frame" x="259.5" y="13" width="16.5" height="12"/>
+                                                                            <rect key="frame" x="258.5" y="13" width="17.5" height="12"/>
                                                                             <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="10"/>
                                                                             <color key="textColor" red="0.74901960784313726" green="0.45490196078431372" blue="0.45490196078431372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <nil key="highlightedColor"/>
@@ -2055,7 +2052,7 @@
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D-21" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xyf-sg-Cnp">
-                                                                            <rect key="frame" x="282" y="13" width="31" height="10"/>
+                                                                            <rect key="frame" x="282" y="13" width="41" height="10"/>
                                                                             <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="10"/>
                                                                             <color key="textColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <nil key="highlightedColor"/>
@@ -2084,8 +2081,8 @@
                                                                     </subviews>
                                                                     <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="trailing" secondItem="Xyf-sg-Cnp" secondAttribute="trailing" constant="11" id="2xG-el-mFb"/>
                                                                         <constraint firstAttribute="bottom" secondItem="wpF-p1-N9o" secondAttribute="bottom" constant="8" id="4QG-x0-T5X"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="Xyf-sg-Cnp" secondAttribute="trailing" constant="1" id="9d1-gJ-5bh"/>
                                                                         <constraint firstItem="aus-K7-ksC" firstAttribute="top" secondItem="yfe-AD-Hkz" secondAttribute="top" constant="10.67" id="EtJ-id-1oS"/>
                                                                         <constraint firstItem="wpF-p1-N9o" firstAttribute="top" secondItem="aus-K7-ksC" secondAttribute="bottom" constant="6" id="F2d-yy-A6H"/>
                                                                         <constraint firstAttribute="bottom" secondItem="kDQ-Pw-fqa" secondAttribute="bottom" constant="1" id="FU5-yb-DxE"/>
@@ -3801,46 +3798,6 @@
                                                     <action selector="submitCondition:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="AEA-wT-yBK"/>
                                                 </connections>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQi-pk-BU5">
-                                                <rect key="frame" x="37" y="257" width="80" height="32"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="area_seoul"/>
-                                                <connections>
-                                                    <action selector="deleteLocationSettingView:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="M25-1Y-MRu"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQx-1B-qgu">
-                                                <rect key="frame" x="37" y="257" width="80" height="32"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="area_busan"/>
-                                                <connections>
-                                                    <action selector="deleteLocationSettingView:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="Eqa-Ax-kPf"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j8q-cU-zO7">
-                                                <rect key="frame" x="37" y="257" width="80" height="32"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="area_daegu"/>
-                                                <connections>
-                                                    <action selector="deleteLocationSettingView:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="cXc-Nd-OBX"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pss-J1-Oeb">
-                                                <rect key="frame" x="37" y="257" width="80" height="32"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="area_incheon"/>
-                                                <connections>
-                                                    <action selector="deleteLocationSettingView:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="sW7-f8-5UV"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Cf-oL-rhu">
-                                                <rect key="frame" x="37" y="257" width="80" height="32"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="area_korea"/>
-                                                <connections>
-                                                    <action selector="deleteLocationSettingView:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="O0U-D0-hff"/>
-                                                </connections>
-                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <gestureRecognizers/>
@@ -3961,13 +3918,6 @@
                         <outlet property="forty_more" destination="mWi-cI-o4G" id="dvN-A2-sXd"/>
                         <outlet property="four_five" destination="bDR-kE-eho" id="IHn-o1-8JE"/>
                         <outlet property="fourth" destination="UKb-cL-d6Q" id="2Lz-t6-DMF"/>
-                        <outlet property="locationBelowBorder" destination="3NL-Ce-Z7b" id="dgp-Ai-bB3"/>
-                        <outlet property="locationBorderConst" destination="hYG-2h-qZN" id="ljB-4B-sQV"/>
-                        <outlet property="locationSettingBusan" destination="KQx-1B-qgu" id="2BQ-bt-cQy"/>
-                        <outlet property="locationSettingDaegu" destination="j8q-cU-zO7" id="eL0-Tp-pTl"/>
-                        <outlet property="locationSettingIncheon" destination="Pss-J1-Oeb" id="yCH-8t-gv5"/>
-                        <outlet property="locationSettingKorea" destination="0Cf-oL-rhu" id="5va-uC-Cia"/>
-                        <outlet property="locationSettingSeoul" destination="vQi-pk-BU5" id="HgP-zE-wM4"/>
                         <outlet property="midbig" destination="mRd-xT-4B7" id="ab2-8M-hkw"/>
                         <outlet property="midsmall" destination="SDi-Ek-lX6" id="JWE-z1-2kF"/>
                         <outlet property="one_two" destination="FvG-we-yMQ" id="vkq-Z6-ink"/>
@@ -4042,16 +3992,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="area_busan" width="80" height="32"/>
-        <image name="area_daegu" width="80" height="32"/>
-        <image name="area_incheon" width="80" height="32"/>
-        <image name="area_korea" width="80" height="32"/>
-        <image name="area_seoul" width="80" height="32"/>
         <image name="box_dday_gray" width="40" height="16"/>
         <image name="btnBack" width="48" height="48"/>
         <image name="btnCreateaccountCanclick" width="266" height="47"/>
         <image name="btnExperience" width="266" height="47"/>
-        <image name="btnLogin" width="266" height="47"/>
+        <image name="btnLogin" width="119" height="19"/>
         <image name="btnLoginCanclick" width="266" height="47"/>
         <image name="btnLogin_1" width="266" height="47"/>
         <image name="btn_addsmatching_canclick" width="87" height="87"/>
@@ -4222,9 +4167,7 @@ AAAAAAAAAAAAAAAAAB0BA
         <image name="txt_explain" width="164" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-
         <segue reference="qkw-Lb-YsK"/>
-        <segue reference="LJP-4N-WlQ"/>
-        <segue reference="qzU-bA-t8u"/>
-   </inferredMetricsTieBreakers>
+        <segue reference="AX4-mH-1YY"/>
+    </inferredMetricsTieBreakers>
 </document>

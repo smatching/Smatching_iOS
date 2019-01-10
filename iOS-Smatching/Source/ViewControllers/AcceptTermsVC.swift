@@ -36,7 +36,10 @@ class AcceptTermsVC: UIViewController {
     
     @IBAction func CompleteSignUp(_ sender: UIButton) {
         if informIfBoxIsChecked == true {
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "LoginVC") as! LoginViewController
             
+            self.present(nextViewController, animated: true, completion: nil)
         }
     }
     

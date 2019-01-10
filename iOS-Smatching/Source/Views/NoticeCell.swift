@@ -23,6 +23,7 @@ class NoticeCell: UITableViewCell {
     
     @IBAction func doScrap(_ sender: Any) {
         self.delegate?.doScrapNotice(noticeIdx: noticeIdx)
+        print("noticeidx= \(noticeIdx)")
     }
     override func awakeFromNib() {
         super.awakeFromNib()

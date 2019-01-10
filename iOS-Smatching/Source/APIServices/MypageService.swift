@@ -17,11 +17,10 @@ struct MypageService : APIManager, Requestable {
     static let shared = MypageService()
     let userURL = url("/users")//url 상세주소
     let headers: HTTPHeaders = [
-        "Content-Type" : "application/json",
          "Authorization" : UserDefaults.standard.string(forKey: "token") ?? ""
     ]
     
-    //홈탭 유저의 맞춤조건 현황 조회
+    //마이페이지 메인 정보 조회
     func getUserInfo(completion : @escaping(User) -> Void) {
         let getURL = userURL + "/myinfo"
         gettableObj(getURL, body: nil, header: headers) {(res)in

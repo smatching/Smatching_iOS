@@ -35,16 +35,17 @@ class MyPageVC: UIViewController, UITextFieldDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
-        self.animateLoading()
+        
         
         MypageService.shared.getUserInfo() {[weak self] (data) in guard let `self` = self else {return}
+            self.animateLoading(self.animationView)
             print(data)
             self.nicknameLabel.text = self.gsno(data.nickname)
             self.profileImg.imageFromUrl(self.gsno(data.profileUrl), defaultImgPath: "")
             self.profileImg.layer.cornerRadius = self.profileImg.frame.height / 2
             self.profileImg.layer.masksToBounds = true
             self.noticeCnt.text = "총 \(self.gino(data.noticeScrapCnt))건"
-            
+            self.stopLoadingAnimation(self.animationView)
         }
         MypageService.shared.getScrappedNotices(request_num: 3, exist_num: 0) {[weak self] (data) in guard let `self` = self else {return}
             self.noticeList = data
@@ -52,7 +53,7 @@ class MyPageVC: UIViewController, UITextFieldDelegate {
             
             
         }
-//        self.stopLoadingAnimation()
+        
     }
     
     func setupView() {
@@ -65,25 +66,7 @@ class MyPageVC: UIViewController, UITextFieldDelegate {
     }
     
     
-    func animateLoading() {
-        animationView.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
-        //        animationView.frame = CGRect(x: 0, y: 0, width: 400, height: 400)
-        animationView.backgroundColor = UIColor.white.withAlphaComponent(0.3)
-        animationView.contentMode = .scaleAspectFill
-        animationView.center = self.view.center
-        self.view.addSubview(animationView)
-        animationView.play()
-    }
-    func stopLoadingAnimation() {
-        animationView.pause()
-        print(self.view.viewWithTag(100))
-        if let viewWithTag = self.view.viewWithTag(100) {
-            viewWithTag.removeFromSuperview()
-        }else{
-            print("No!")
-        }
-    }
-    
+  
     @IBAction func showSettingView(_ sender: Any) {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Setting", bundle:nil)
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SettingVC") as! SettingViewController
