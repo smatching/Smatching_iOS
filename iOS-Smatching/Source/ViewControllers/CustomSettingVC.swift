@@ -242,9 +242,6 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
             initialSetting(recognizer: together)
         }
         
-        if field.a == true {
-            checkboxBtnClickEvent(A)
-        }
         //uilabel에 tapgesture 추가
         let gestureRec = UITapGestureRecognizer(target: self, action:  #selector (self.someAction (_:)))
         
@@ -318,6 +315,72 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
             
 //            busiType.backgroundColor = UIColor(red: 71/255, green: 71/255, blue: 71/255, alpha: 1)
             
+            if field.a == true {
+                A.isChecked = true
+            }
+            if field.b == true {
+                B.isChecked = true
+            }
+            if field.c == true {
+                C.isChecked = true
+            }
+            if field.d == true {
+                D.isChecked = true
+            }
+            if field.e == true {
+                E.isChecked = true
+            }
+            if field.f == true {
+                F.isChecked = true
+            }
+            if field.g == true {
+                H.isChecked = true
+            }
+            if field.h == true {
+                H.isChecked = true
+            }
+            if field.i == true {
+                I.isChecked = true
+            }
+            if field.j == true {
+                J.isChecked = true
+            }
+            if field.k == true {
+                K.isChecked = true
+            }
+            if field.l == true {
+                L.isChecked = true
+            }
+            if field.m == true {
+                M.isChecked = true
+            }
+            if field.n == true {
+                N.isChecked = true
+            }
+            if field.o == true {
+                O.isChecked = true
+            }
+            if field.p == true {
+                P.isChecked = true
+            }
+            if field.q == true {
+                Q.isChecked = true
+            }
+            if field.r == true {
+                R.isChecked = true
+            }
+            if field.s == true {
+                S.isChecked = true
+            }
+            if field.t == true {
+                T.isChecked = true
+            }
+            if field.u == true {
+                U.isChecked = true
+            }
+            if field.v == true {
+                V.isChecked = true
+            }
             busiType.center = CGPoint(x: self.view.frame.width / 2, y: self.view.frame.height / 2)
             busiType.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
 
@@ -334,6 +397,9 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
     func startAlert2 () {
         if let uselessField = Bundle.main.loadNibNamed("UselessField", owner: self, options: nil)?.first as? SelectUselessField {
             
+            if excCategory.edu == true {
+                V.isChecked = true
+            }
             uselessField.backgroundColor = UIColor(red: 71/255, green: 71/255, blue: 71/255, alpha: 1)
             
             uselessField.center = CGPoint(x: self.view.frame.width / 2, y: self.view.frame.height / 2)
@@ -587,6 +653,162 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
         print(excCategory)
     }
     
+    func initCheckbox(_ sender : AlertCheckBox) {
+        switch (sender) {
+        case edu:
+           
+            sender.isChecked = self.excCategory.edu!
+            
+            break
+        case know:
+            
+            sender.isChecked = self.excCategory.know!
+           
+            break
+        case place:
+            self.excCategory.place = !self.excCategory.place!
+            sender.isChecked = self.excCategory.place!
+            UselessFieldCount += CountTheCheckedBox(self.excCategory.place!)
+            break
+        case domestic:
+            self.excCategory.local = !self.excCategory.local!
+            sender.isChecked = self.excCategory.local!
+            UselessFieldCount += CountTheCheckedBox(self.excCategory.local!)
+            break
+        case global:
+            self.excCategory.global = !self.excCategory.global!
+            sender.isChecked = self.excCategory.global!
+            UselessFieldCount += CountTheCheckedBox(self.excCategory.global!)
+            break
+        case make:
+            self.excCategory.make = !self.excCategory.make!
+            sender.isChecked = self.excCategory.make!
+            UselessFieldCount += CountTheCheckedBox(self.excCategory.make!)
+            break
+        case gov:
+            self.excCategory.gov = !self.excCategory.gov!
+            sender.isChecked = self.excCategory.gov!
+            UselessFieldCount += CountTheCheckedBox(self.excCategory.gov!)
+            break
+        case loan:
+            self.excCategory.loan = !self.excCategory.loan!
+            sender.isChecked = self.excCategory.loan!
+            UselessFieldCount += CountTheCheckedBox(self.excCategory.loan!)
+            break
+        case A:
+            self.field.a = !self.field.a!
+            sender.isChecked = self.field.a!
+            fieldCountNum += CountTheCheckedBox(self.field.a!)
+            break
+        case B:
+            self.field.b = !self.field.b!
+            sender.isChecked = self.field.b!
+            fieldCountNum += CountTheCheckedBox(self.field.b!)
+            break
+        case C:
+            self.field.c = !self.field.c!
+            sender.isChecked = self.field.c!
+            fieldCountNum += CountTheCheckedBox(self.field.c!)
+            break
+        case D:
+            self.field.d = !self.field.d!
+            sender.isChecked = self.field.d!
+            fieldCountNum += CountTheCheckedBox(self.field.d!)
+            break
+        case E:
+            self.field.e = !self.field.e!
+            sender.isChecked = self.field.e!
+            fieldCountNum += CountTheCheckedBox(self.field.e!)
+            break
+        case F:
+            self.field.f = !self.field.f!
+            sender.isChecked = self.field.f!
+            fieldCountNum += CountTheCheckedBox(self.field.f!)
+            break
+        case G:
+            self.field.g = !self.field.g!
+            sender.isChecked = self.field.g!
+            fieldCountNum += CountTheCheckedBox(self.field.g!)
+            break
+        case H:
+            self.field.h = !self.field.h!
+            sender.isChecked = self.field.h!
+            fieldCountNum += CountTheCheckedBox(self.field.h!)
+            break
+        case I:
+            self.field.i = !self.field.i!
+            sender.isChecked = self.field.i!
+            fieldCountNum += CountTheCheckedBox(self.field.i!)
+            break
+        case J:
+            self.field.j = !self.field.j!
+            sender.isChecked = self.field.j!
+            fieldCountNum += CountTheCheckedBox(self.field.j!)
+            break
+        case K:
+            self.field.k = !self.field.k!
+            sender.isChecked = self.field.k!
+            fieldCountNum += CountTheCheckedBox(self.field.k!)
+            break
+        case L:
+            self.field.l = !self.field.l!
+            sender.isChecked = self.field.l!
+            fieldCountNum += CountTheCheckedBox(self.field.l!)
+            break
+        case M:
+            self.field.m = !self.field.m!
+            sender.isChecked = self.field.m!
+            fieldCountNum += CountTheCheckedBox(self.field.m!)
+            break
+        case N:
+            self.field.n = !self.field.n!
+            sender.isChecked = self.field.n!
+            fieldCountNum += CountTheCheckedBox(self.field.n!)
+            break
+        case O:
+            self.field.o = !self.field.o!
+            sender.isChecked = self.field.o!
+            fieldCountNum += CountTheCheckedBox(self.field.o!)
+            break
+        case P:
+            self.field.p = !self.field.p!
+            sender.isChecked = self.field.p!
+            fieldCountNum += CountTheCheckedBox(self.field.p!)
+            break
+        case Q:
+            self.field.q = !self.field.q!
+            sender.isChecked = self.field.q!
+            fieldCountNum += CountTheCheckedBox(self.field.q!)
+            break
+        case R:
+            self.field.r = !self.field.r!
+            sender.isChecked = self.field.r!
+            fieldCountNum += CountTheCheckedBox(self.field.r!)
+            break
+        case S:
+            self.field.s = !self.field.s!
+            sender.isChecked = self.field.s!
+            fieldCountNum += CountTheCheckedBox(self.field.s!)
+            break
+        case T:
+            self.field.t = !self.field.t!
+            sender.isChecked = self.field.t!
+            fieldCountNum += CountTheCheckedBox(self.field.t!)
+            break
+        case U:
+            self.field.u = !self.field.u!
+            sender.isChecked = self.field.u!
+            fieldCountNum += CountTheCheckedBox(self.field.u!)
+            break
+        case V:
+            self.field.v = !self.field.v!
+            sender.isChecked = self.field.v!
+            fieldCountNum += CountTheCheckedBox(self.field.v!)
+            break
+        default:
+            break
+        }
+    }
     func checkboxBtnClickEvent(_ sender : AlertCheckBox) {
         switch (sender) {
         case edu:
