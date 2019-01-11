@@ -16,5 +16,12 @@ class LoginOrSignupVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func goToAcceptTermPage(_ sender: UIButton) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "AcceptTerms", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "AcceptTermsVC") as! AcceptTermsVC
+        
+        self.present(nextViewController, animated: true, completion: nil)
+        
+    }
     
 }

@@ -43,7 +43,7 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="btnCreateaccountCanclick"/>
                                 <connections>
-                                    <segue destination="kg9-rj-98b" kind="show" id="caM-Zc-wet"/>
+                                    <action selector="goToAcceptTermPage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aUC-9X-Jfb"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1UN-C2-50P">
@@ -132,7 +132,6 @@
                                 <state key="normal" image="btnLoginCanclick"/>
                                 <connections>
                                     <action selector="login:" destination="waF-lA-qcH" eventType="touchUpInside" id="gGW-na-vLn"/>
-                                    <segue destination="nPe-NT-nZ4" kind="presentation" identifier="loginSegue" id="AX4-mH-1YY"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uX6-p5-QxQ">
@@ -228,7 +227,7 @@
         <!--SignupVC-->
         <scene sceneID="aea-l5-dNf">
             <objects>
-                <viewController id="kg9-rj-98b" customClass="SignupVC" customModule="iOS_Smatching" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignupVC" id="kg9-rj-98b" customClass="SignupVC" customModule="iOS_Smatching" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hqy-4J-C9S">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -330,6 +329,7 @@
                                 <state key="normal" image="btnCreateaccountCanclick"/>
                                 <connections>
                                     <action selector="signup:" destination="kg9-rj-98b" eventType="touchUpInside" id="ElF-vd-fvB"/>
+                                    <segue destination="waF-lA-qcH" kind="show" id="MGr-Pn-Rwo"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ivLogo" translatesAutoresizingMaskIntoConstraints="NO" id="933-Oq-03F">
@@ -1248,19 +1248,6 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GmK-Dq-VzQ">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="976"/>
                                         <subviews>
-                                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hEi-15-dnq">
-                                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                                                <items>
-                                                    <navigationItem title="기업정보" id="0f8-tE-DqW">
-                                                        <barButtonItem key="leftBarButtonItem" image="btnBack" id="tRl-ms-gQK">
-                                                            <color key="tintColor" red="0.2784313725" green="0.2784313725" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <connections>
-                                                                <action selector="backButton:" destination="uo6-kj-MPn" id="5hj-55-GF6"/>
-                                                            </connections>
-                                                        </barButtonItem>
-                                                    </navigationItem>
-                                                </items>
-                                            </navigationBar>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="중소기업" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcd-8q-pJ9">
                                                 <rect key="frame" x="37.5" y="123" width="59" height="19.5"/>
                                                 <constraints>
@@ -1410,18 +1397,15 @@
                                             <constraint firstItem="lXF-h3-sQN" firstAttribute="leading" secondItem="GmK-Dq-VzQ" secondAttribute="leading" constant="37.5" id="eXg-bM-XUN"/>
                                             <constraint firstAttribute="trailing" secondItem="85J-Kh-i3o" secondAttribute="trailing" constant="278.5" id="fPE-zI-laN"/>
                                             <constraint firstAttribute="trailing" secondItem="kv2-8w-WYa" secondAttribute="trailing" constant="43" id="fTk-GH-ggc"/>
-                                            <constraint firstAttribute="trailing" secondItem="hEi-15-dnq" secondAttribute="trailing" id="hhB-YD-H6t"/>
                                             <constraint firstItem="Vjx-Fr-inq" firstAttribute="top" secondItem="ExD-0X-keP" secondAttribute="bottom" constant="17.5" id="kfo-Xa-ZYm"/>
                                             <constraint firstItem="lXF-h3-sQN" firstAttribute="top" secondItem="wdn-8L-Hwd" secondAttribute="bottom" constant="14.5" id="nHV-tc-JZj"/>
                                             <constraint firstAttribute="trailing" secondItem="42R-fw-Gqo" secondAttribute="trailing" constant="28" id="nlm-8m-dmr"/>
                                             <constraint firstItem="Vjx-Fr-inq" firstAttribute="leading" secondItem="GmK-Dq-VzQ" secondAttribute="leading" constant="37.5" id="nu8-xY-3lu"/>
-                                            <constraint firstItem="hEi-15-dnq" firstAttribute="top" secondItem="GmK-Dq-VzQ" secondAttribute="top" constant="44" id="oM5-Yp-vkP"/>
                                             <constraint firstAttribute="trailing" secondItem="ExD-0X-keP" secondAttribute="trailing" constant="75.5" id="q6a-F8-4G2"/>
                                             <constraint firstAttribute="trailing" secondItem="axQ-rq-mHH" secondAttribute="trailing" constant="263.5" id="qdl-te-022"/>
                                             <constraint firstItem="2fV-YT-0La" firstAttribute="top" secondItem="o5L-uk-tgE" secondAttribute="bottom" constant="34" id="sdd-cY-L0a"/>
-                                            <constraint firstItem="hEi-15-dnq" firstAttribute="leading" secondItem="GmK-Dq-VzQ" secondAttribute="leading" id="sxa-KC-YPh"/>
                                             <constraint firstItem="wdn-8L-Hwd" firstAttribute="leading" secondItem="GmK-Dq-VzQ" secondAttribute="leading" constant="37.5" id="uA8-84-ekQ"/>
-                                            <constraint firstItem="fcd-8q-pJ9" firstAttribute="top" secondItem="hEi-15-dnq" secondAttribute="bottom" constant="35" id="xXy-51-3G2"/>
+                                            <constraint firstItem="fcd-8q-pJ9" firstAttribute="top" secondItem="GmK-Dq-VzQ" secondAttribute="top" constant="123" id="vtn-Ce-GUx"/>
                                             <constraint firstItem="42R-fw-Gqo" firstAttribute="top" secondItem="kv2-8w-WYa" secondAttribute="bottom" constant="25" id="zNn-uM-1Db"/>
                                         </constraints>
                                     </view>
@@ -1434,11 +1418,27 @@
                                     <constraint firstItem="GmK-Dq-VzQ" firstAttribute="top" secondItem="tjj-FZ-BuG" secondAttribute="top" id="tyO-6P-kD3"/>
                                 </constraints>
                             </scrollView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hEi-15-dnq">
+                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="기업정보" id="0f8-tE-DqW">
+                                        <barButtonItem key="leftBarButtonItem" image="btnBack" id="tRl-ms-gQK">
+                                            <color key="tintColor" red="0.2784313725" green="0.2784313725" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="backButton:" destination="uo6-kj-MPn" id="5hj-55-GF6"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="tjj-FZ-BuG" firstAttribute="top" secondItem="Ni0-Rc-5LF" secondAttribute="top" constant="-25" id="CAm-Ip-TA7"/>
+                            <constraint firstItem="hEi-15-dnq" firstAttribute="top" secondItem="Ni0-Rc-5LF" secondAttribute="top" constant="24" id="XBr-6u-FiW"/>
                             <constraint firstItem="tjj-FZ-BuG" firstAttribute="trailing" secondItem="Ni0-Rc-5LF" secondAttribute="trailing" id="Xn3-A0-3Pa"/>
+                            <constraint firstItem="hEi-15-dnq" firstAttribute="trailing" secondItem="Ni0-Rc-5LF" secondAttribute="trailing" id="hfn-V4-bpd"/>
+                            <constraint firstItem="hEi-15-dnq" firstAttribute="leading" secondItem="Ni0-Rc-5LF" secondAttribute="leading" id="j4Y-jv-pIr"/>
                             <constraint firstItem="tjj-FZ-BuG" firstAttribute="leading" secondItem="Ni0-Rc-5LF" secondAttribute="leading" id="uOx-3I-WMJ"/>
                             <constraint firstAttribute="bottom" secondItem="tjj-FZ-BuG" secondAttribute="bottom" id="uw9-Gq-4xO"/>
                         </constraints>
@@ -2207,7 +2207,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="LFH-DZ-YiM">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="nPe-NT-nZ4" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TapBarVC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nPe-NT-nZ4" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="kGe-fJ-0Q1"/>
                     <tabBar key="tabBar" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" id="X0o-2L-XV9">
@@ -2476,7 +2476,7 @@
                                                 </constraints>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btn_custom_must" translatesAutoresizingMaskIntoConstraints="NO" id="hTj-K5-osV">
-                                                <rect key="frame" x="220.5" y="785" width="8" height="8"/>
+                                                <rect key="frame" x="224.5" y="785" width="8" height="8"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="8" id="EHJ-sF-Gfg"/>
                                                     <constraint firstAttribute="height" constant="8" id="awr-qQ-RKU"/>
@@ -3324,7 +3324,7 @@
                                                 <rect key="frame" x="33" y="800.5" width="61" height="10"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="필요 없는 지원사업분야" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Vn-Qz-AOe">
-                                                <rect key="frame" x="32.5" y="789" width="188" height="19.5"/>
+                                                <rect key="frame" x="32.5" y="789" width="192" height="19.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="192" id="eya-c7-Hsd"/>
                                                     <constraint firstAttribute="height" constant="19.5" id="t5O-ft-eBw"/>
@@ -3334,7 +3334,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iho-Xc-qmB">
-                                                <rect key="frame" x="187" y="789" width="25" height="18"/>
+                                                <rect key="frame" x="191" y="789" width="25" height="18"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="25" id="COe-Tm-RSW"/>
                                                     <constraint firstAttribute="height" constant="18" id="im3-cK-ren"/>
@@ -3776,7 +3776,7 @@
                                                 <rect key="frame" x="0.0" y="1072.5" width="375" height="51"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="결과보기" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FyD-1g-HTO">
-                                                        <rect key="frame" x="156.5" y="15" width="62.5" height="21.5"/>
+                                                        <rect key="frame" x="154.5" y="15" width="66" height="21.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="21.5" id="WL5-yd-93R"/>
                                                         </constraints>
@@ -4278,6 +4278,6 @@ AAAAAAAAAAAAAAAAAB0BA
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="qkw-Lb-YsK"/>
-        <segue reference="AX4-mH-1YY"/>
+        <segue reference="MGr-Pn-Rwo"/>
     </inferredMetricsTieBreakers>
 </document>
