@@ -16,6 +16,8 @@ class MypageSettingVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var prevPasswdLabel: UITextField!
     @IBOutlet weak var nicknameLabel: UITextField!
     @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var stackViewConst: NSLayoutConstraint!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -119,6 +121,9 @@ class MypageSettingVC: UIViewController, UITextFieldDelegate {
             self.dismiss(animated: true, completion: nil)
         }
     }
+    @IBAction func goBackToMypage(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
     
 }
 extension MypageSettingVC : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -173,9 +178,9 @@ extension MypageSettingVC : UIGestureRecognizerDelegate {
     @objc func keyboardWillShow(_ notification: NSNotification) {
         guard let duration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double else {return}
         guard let curve = notification.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? UInt else {return}
-//        UIView.animate(withDuration: duration, delay: 0.0, options: .init(rawValue: curve), animations: {
-//            self.stackViewConst.constant = -100
-//        })
+        UIView.animate(withDuration: duration, delay: 0.0, options: .init(rawValue: curve), animations: {
+            self.stackViewConst.constant = -100
+        })
         
         self.view.layoutIfNeeded()
         
@@ -183,17 +188,20 @@ extension MypageSettingVC : UIGestureRecognizerDelegate {
     @objc func keyboardWillHide(_ notification: NSNotification) {
         guard let duration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double else {return}
         guard let curve = notification.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? UInt else {return}
-//        UIView.animate(withDuration: duration, delay: 0.0, options: .init(rawValue: curve), animations: {
-//            self.stackViewConst.constant = 0
-//        })
+        UIView.animate(withDuration: duration, delay: 0.0, options: .init(rawValue: curve), animations: {
+            self.stackViewConst.constant = 43
+        })
         
         self.view.layoutIfNeeded()
     }
     
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
-//        if (touch.view?.isDescendant(of: emailTxtField))! || (touch.view?.isDescendant(of: passwdTxtField))! {
-//            return false
-//        }
+        if (touch.view?.isDescendant(of: newPasswdLabel))! || (touch.view?.isDescendant(of: newPasswdLabel2))! ||
+            (touch.view?.isDescendant(of: prevPasswdLabel))! ||
+            (touch.view?.isDescendant(of: nicknameLabel))! ||
+            (touch.view?.isDescendant(of: emailLabel))! {
+            return false
+        }
         return true
     }
     

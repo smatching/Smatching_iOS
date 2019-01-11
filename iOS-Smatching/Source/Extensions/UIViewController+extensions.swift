@@ -94,7 +94,7 @@ extension UIViewController {
     
     func animateLoading(_ animationView : LOTAnimationView) {
         animationView.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
-        animationView.backgroundColor = UIColor.white.withAlphaComponent(0.3)
+//        animationView.backgroundColor = UIColor.white.withAlphaComponent(0.3)
         animationView.contentMode = .scaleAspectFill
         animationView.center = self.view.center
         animationView.isUserInteractionEnabled = true

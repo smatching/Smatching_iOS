@@ -13,13 +13,13 @@ class AcceptTermsVC: UIViewController {
     @IBOutlet var AcceptTermView: UIView!
     @IBOutlet var GoToNextPage: UIButton!
     @IBOutlet var AcceptCheckBox: UIButton!
+    var informIfBoxIsChecked : Bool?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
        
     }
-    var informIfBoxIsChecked = false
+    
     
     @IBAction func clickAcceptTermsCheckBox(_ sender: UIButton) {
         if informIfBoxIsChecked == false {
@@ -37,11 +37,20 @@ class AcceptTermsVC: UIViewController {
     @IBAction func CompleteSignUp(_ sender: UIButton) {
         if informIfBoxIsChecked == true {
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "LoginVC") as! LoginViewController
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SignupVC") as! SignupVC
             
-            self.present(nextViewController, animated: true, completion: nil)
+            self.show(nextViewController, sender: sender)
         }
     }
     
-
+    @IBAction func dismissActionOfPrivacyPolicy(_ sender: Any) {
+        dismiss(animated: true)
+    }
+    @IBAction func dismissAction(_ sender: Any) {
+        dismiss(animated: true)
+    }
+    @IBAction func popAction(_ sender: UIButton) {
+        dismiss(animated: true)
+    }
+    
 }

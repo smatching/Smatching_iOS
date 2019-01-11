@@ -43,7 +43,7 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="btnCreateaccountCanclick"/>
                                 <connections>
-                                    <segue destination="kg9-rj-98b" kind="show" id="caM-Zc-wet"/>
+                                    <action selector="goToAcceptTermPage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aUC-9X-Jfb"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1UN-C2-50P">
@@ -132,7 +132,6 @@
                                 <state key="normal" image="btnLoginCanclick"/>
                                 <connections>
                                     <action selector="login:" destination="waF-lA-qcH" eventType="touchUpInside" id="gGW-na-vLn"/>
-                                    <segue destination="nPe-NT-nZ4" kind="presentation" identifier="loginSegue" id="AX4-mH-1YY"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uX6-p5-QxQ">
@@ -228,7 +227,7 @@
         <!--SignupVC-->
         <scene sceneID="aea-l5-dNf">
             <objects>
-                <viewController id="kg9-rj-98b" customClass="SignupVC" customModule="iOS_Smatching" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignupVC" id="kg9-rj-98b" customClass="SignupVC" customModule="iOS_Smatching" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hqy-4J-C9S">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -330,6 +329,7 @@
                                 <state key="normal" image="btnCreateaccountCanclick"/>
                                 <connections>
                                     <action selector="signup:" destination="kg9-rj-98b" eventType="touchUpInside" id="ElF-vd-fvB"/>
+                                    <segue destination="waF-lA-qcH" kind="show" id="MGr-Pn-Rwo"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ivLogo" translatesAutoresizingMaskIntoConstraints="NO" id="933-Oq-03F">
@@ -1248,19 +1248,6 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GmK-Dq-VzQ">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="976"/>
                                         <subviews>
-                                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hEi-15-dnq">
-                                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                                                <items>
-                                                    <navigationItem title="기업정보" id="0f8-tE-DqW">
-                                                        <barButtonItem key="leftBarButtonItem" image="btnBack" id="tRl-ms-gQK">
-                                                            <color key="tintColor" red="0.2784313725" green="0.2784313725" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <connections>
-                                                                <action selector="backButton:" destination="uo6-kj-MPn" id="5hj-55-GF6"/>
-                                                            </connections>
-                                                        </barButtonItem>
-                                                    </navigationItem>
-                                                </items>
-                                            </navigationBar>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="중소기업" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcd-8q-pJ9">
                                                 <rect key="frame" x="37.5" y="123" width="59" height="19.5"/>
                                                 <constraints>
@@ -1410,18 +1397,15 @@
                                             <constraint firstItem="lXF-h3-sQN" firstAttribute="leading" secondItem="GmK-Dq-VzQ" secondAttribute="leading" constant="37.5" id="eXg-bM-XUN"/>
                                             <constraint firstAttribute="trailing" secondItem="85J-Kh-i3o" secondAttribute="trailing" constant="278.5" id="fPE-zI-laN"/>
                                             <constraint firstAttribute="trailing" secondItem="kv2-8w-WYa" secondAttribute="trailing" constant="43" id="fTk-GH-ggc"/>
-                                            <constraint firstAttribute="trailing" secondItem="hEi-15-dnq" secondAttribute="trailing" id="hhB-YD-H6t"/>
                                             <constraint firstItem="Vjx-Fr-inq" firstAttribute="top" secondItem="ExD-0X-keP" secondAttribute="bottom" constant="17.5" id="kfo-Xa-ZYm"/>
                                             <constraint firstItem="lXF-h3-sQN" firstAttribute="top" secondItem="wdn-8L-Hwd" secondAttribute="bottom" constant="14.5" id="nHV-tc-JZj"/>
                                             <constraint firstAttribute="trailing" secondItem="42R-fw-Gqo" secondAttribute="trailing" constant="28" id="nlm-8m-dmr"/>
                                             <constraint firstItem="Vjx-Fr-inq" firstAttribute="leading" secondItem="GmK-Dq-VzQ" secondAttribute="leading" constant="37.5" id="nu8-xY-3lu"/>
-                                            <constraint firstItem="hEi-15-dnq" firstAttribute="top" secondItem="GmK-Dq-VzQ" secondAttribute="top" constant="44" id="oM5-Yp-vkP"/>
                                             <constraint firstAttribute="trailing" secondItem="ExD-0X-keP" secondAttribute="trailing" constant="75.5" id="q6a-F8-4G2"/>
                                             <constraint firstAttribute="trailing" secondItem="axQ-rq-mHH" secondAttribute="trailing" constant="263.5" id="qdl-te-022"/>
                                             <constraint firstItem="2fV-YT-0La" firstAttribute="top" secondItem="o5L-uk-tgE" secondAttribute="bottom" constant="34" id="sdd-cY-L0a"/>
-                                            <constraint firstItem="hEi-15-dnq" firstAttribute="leading" secondItem="GmK-Dq-VzQ" secondAttribute="leading" id="sxa-KC-YPh"/>
                                             <constraint firstItem="wdn-8L-Hwd" firstAttribute="leading" secondItem="GmK-Dq-VzQ" secondAttribute="leading" constant="37.5" id="uA8-84-ekQ"/>
-                                            <constraint firstItem="fcd-8q-pJ9" firstAttribute="top" secondItem="hEi-15-dnq" secondAttribute="bottom" constant="35" id="xXy-51-3G2"/>
+                                            <constraint firstItem="fcd-8q-pJ9" firstAttribute="top" secondItem="GmK-Dq-VzQ" secondAttribute="top" constant="123" id="vtn-Ce-GUx"/>
                                             <constraint firstItem="42R-fw-Gqo" firstAttribute="top" secondItem="kv2-8w-WYa" secondAttribute="bottom" constant="25" id="zNn-uM-1Db"/>
                                         </constraints>
                                     </view>
@@ -1434,11 +1418,27 @@
                                     <constraint firstItem="GmK-Dq-VzQ" firstAttribute="top" secondItem="tjj-FZ-BuG" secondAttribute="top" id="tyO-6P-kD3"/>
                                 </constraints>
                             </scrollView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hEi-15-dnq">
+                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="기업정보" id="0f8-tE-DqW">
+                                        <barButtonItem key="leftBarButtonItem" image="btnBack" id="tRl-ms-gQK">
+                                            <color key="tintColor" red="0.2784313725" green="0.2784313725" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="backButton:" destination="uo6-kj-MPn" id="5hj-55-GF6"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="tjj-FZ-BuG" firstAttribute="top" secondItem="Ni0-Rc-5LF" secondAttribute="top" constant="-25" id="CAm-Ip-TA7"/>
+                            <constraint firstItem="hEi-15-dnq" firstAttribute="top" secondItem="Ni0-Rc-5LF" secondAttribute="top" constant="24" id="XBr-6u-FiW"/>
                             <constraint firstItem="tjj-FZ-BuG" firstAttribute="trailing" secondItem="Ni0-Rc-5LF" secondAttribute="trailing" id="Xn3-A0-3Pa"/>
+                            <constraint firstItem="hEi-15-dnq" firstAttribute="trailing" secondItem="Ni0-Rc-5LF" secondAttribute="trailing" id="hfn-V4-bpd"/>
+                            <constraint firstItem="hEi-15-dnq" firstAttribute="leading" secondItem="Ni0-Rc-5LF" secondAttribute="leading" id="j4Y-jv-pIr"/>
                             <constraint firstItem="tjj-FZ-BuG" firstAttribute="leading" secondItem="Ni0-Rc-5LF" secondAttribute="leading" id="uOx-3I-WMJ"/>
                             <constraint firstAttribute="bottom" secondItem="tjj-FZ-BuG" secondAttribute="bottom" id="uw9-Gq-4xO"/>
                         </constraints>
@@ -1487,141 +1487,6 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jzs-Gw-5rr">
-                                                <rect key="frame" x="32" y="155" width="310" height="307"/>
-                                                <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_smatchingbox_blue" translatesAutoresizingMaskIntoConstraints="NO" id="6Nz-m8-QAN">
-                                                        <rect key="frame" x="0.0" y="0.0" width="310" height="87"/>
-                                                    </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="닉네임은모하지이" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qIW-Jk-Z7B">
-                                                        <rect key="frame" x="25" y="23" width="116" height="18"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                        <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="000개" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcd-6a-8Wb">
-                                                        <rect key="frame" x="25" y="47" width="60" height="24"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                        <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kMU-ld-ekP">
-                                                        <rect key="frame" x="26" y="71" width="53" height="2"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </view>
-                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jUn-MG-nsh">
-                                                        <rect key="frame" x="0.0" y="87" width="310" height="218"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <prototypes>
-                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="NoticeUpCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NoticeUpCell" rowHeight="71" id="FcY-CM-rZF" customClass="NoticeCell" customModule="iOS_Smatching" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="28" width="310" height="71"/>
-                                                                <autoresizingMask key="autoresizingMask"/>
-                                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FcY-CM-rZF" id="jDb-Px-mba">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="310" height="70.5"/>
-                                                                    <autoresizingMask key="autoresizingMask"/>
-                                                                    <subviews>
-                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WR1-wO-42E">
-                                                                            <rect key="frame" x="12.5" y="0.0" width="286" height="70"/>
-                                                                            <subviews>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="대한무역투자진흥공사" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccc-Ty-CY9">
-                                                                                    <rect key="frame" x="0.0" y="13" width="95.5" height="13.5"/>
-                                                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                                                    <color key="textColor" red="0.4039215686" green="0.4039215686" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                                    <nil key="highlightedColor"/>
-                                                                                </label>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D-7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0UG-nh-CAk">
-                                                                                    <rect key="frame" x="252.5" y="13" width="19" height="12"/>
-                                                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                                                    <color key="textColor" red="0.74901960779999999" green="0.4549019608" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                                    <nil key="highlightedColor"/>
-                                                                                </label>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0OR-eG-uff">
-                                                                                    <rect key="frame" x="0.0" y="32.5" width="225" height="29"/>
-                                                                                    <string key="text">2019년 말레이시아 쿠알라룸푸르 할랄 전시회
-(MIHAS) 한국관 참가기업 모집 공고</string>
-                                                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                                                    <nil key="textColor"/>
-                                                                                    <nil key="highlightedColor"/>
-                                                                                </label>
-                                                                            </subviews>
-                                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                            <constraints>
-                                                                                <constraint firstItem="0UG-nh-CAk" firstAttribute="top" secondItem="WR1-wO-42E" secondAttribute="top" constant="13" id="6IP-65-L79"/>
-                                                                                <constraint firstAttribute="bottom" secondItem="0OR-eG-uff" secondAttribute="bottom" constant="8.5" id="JHK-3N-oHA"/>
-                                                                                <constraint firstItem="ccc-Ty-CY9" firstAttribute="top" secondItem="WR1-wO-42E" secondAttribute="top" constant="13" id="K1K-6V-dJF"/>
-                                                                                <constraint firstItem="ccc-Ty-CY9" firstAttribute="leading" secondItem="WR1-wO-42E" secondAttribute="leading" id="Swz-MQ-neF"/>
-                                                                                <constraint firstItem="0OR-eG-uff" firstAttribute="top" secondItem="ccc-Ty-CY9" secondAttribute="bottom" constant="6" id="Zbu-77-EMF"/>
-                                                                                <constraint firstAttribute="trailing" secondItem="0OR-eG-uff" secondAttribute="trailing" constant="61" id="ln4-Iw-MPG"/>
-                                                                                <constraint firstItem="0OR-eG-uff" firstAttribute="leading" secondItem="WR1-wO-42E" secondAttribute="leading" id="n0j-t2-TgJ"/>
-                                                                                <constraint firstItem="0UG-nh-CAk" firstAttribute="leading" secondItem="ccc-Ty-CY9" secondAttribute="trailing" constant="157" id="rb2-Fv-Zke"/>
-                                                                                <constraint firstAttribute="trailing" secondItem="0UG-nh-CAk" secondAttribute="trailing" constant="14.5" id="scg-jN-IWX"/>
-                                                                                <constraint firstAttribute="bottom" secondItem="0UG-nh-CAk" secondAttribute="bottom" constant="45" id="wfd-Ph-pVu"/>
-                                                                            </constraints>
-                                                                        </view>
-                                                                    </subviews>
-                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="bottom" secondItem="WR1-wO-42E" secondAttribute="bottom" constant="0.5" id="8Wz-6C-wB0"/>
-                                                                        <constraint firstItem="WR1-wO-42E" firstAttribute="top" secondItem="jDb-Px-mba" secondAttribute="top" id="9xk-5L-c14"/>
-                                                                        <constraint firstItem="WR1-wO-42E" firstAttribute="leading" secondItem="jDb-Px-mba" secondAttribute="leading" constant="12.5" id="BcG-9I-gAp"/>
-                                                                        <constraint firstAttribute="trailing" secondItem="WR1-wO-42E" secondAttribute="trailing" constant="11.5" id="ZfK-eu-VV1"/>
-                                                                    </constraints>
-                                                                </tableViewCellContentView>
-                                                                <connections>
-                                                                    <outlet property="ddayLabel" destination="0UG-nh-CAk" id="jxU-OS-FIo"/>
-                                                                    <outlet property="institutionLabel" destination="ccc-Ty-CY9" id="reC-fL-Ub3"/>
-                                                                    <outlet property="titleLabel" destination="0OR-eG-uff" id="Yho-8w-lcS"/>
-                                                                </connections>
-                                                            </tableViewCell>
-                                                        </prototypes>
-                                                    </tableView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="님을 위한 스매칭" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qZ-mL-eIU">
-                                                        <rect key="frame" x="144" y="23" width="105.5" height="18"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                        <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="를 확인해보세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Umh-Pu-ICA">
-                                                        <rect key="frame" x="85" y="51" width="101.5" height="19.5"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                        <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstItem="jUn-MG-nsh" firstAttribute="top" secondItem="6Nz-m8-QAN" secondAttribute="bottom" id="0ST-w3-58q"/>
-                                                    <constraint firstAttribute="trailing" secondItem="jUn-MG-nsh" secondAttribute="trailing" id="F63-4d-ttD"/>
-                                                    <constraint firstItem="6Nz-m8-QAN" firstAttribute="leading" secondItem="jzs-Gw-5rr" secondAttribute="leading" id="epN-ul-m1r"/>
-                                                    <constraint firstAttribute="trailing" secondItem="6Nz-m8-QAN" secondAttribute="trailing" id="kTv-qs-rT5"/>
-                                                    <constraint firstAttribute="bottom" secondItem="jUn-MG-nsh" secondAttribute="bottom" constant="2" id="lJf-hx-CsG"/>
-                                                    <constraint firstItem="jUn-MG-nsh" firstAttribute="leading" secondItem="jzs-Gw-5rr" secondAttribute="leading" id="vJP-ap-Zvd"/>
-                                                    <constraint firstAttribute="width" secondItem="jzs-Gw-5rr" secondAttribute="height" multiplier="310:307" id="xcs-Qt-lZ1"/>
-                                                    <constraint firstItem="6Nz-m8-QAN" firstAttribute="top" secondItem="jzs-Gw-5rr" secondAttribute="top" id="zIB-aK-dtv"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="10"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                                        <size key="value" width="0.0" height="3"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                                        <real key="value" value="0.29999999999999999"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
                                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E8N-h1-ZIf">
                                                 <rect key="frame" x="32" y="135" width="310" height="307"/>
                                                 <subviews>
@@ -1758,6 +1623,141 @@
                                                     <constraint firstAttribute="width" secondItem="1an-OX-mlw" secondAttribute="height" multiplier="310:307" id="t80-np-THV"/>
                                                     <constraint firstItem="TA9-Cq-bH8" firstAttribute="top" secondItem="hbZ-Kb-Los" secondAttribute="bottom" constant="0.5" id="wIX-xa-eWl"/>
                                                     <constraint firstItem="pNs-Ef-thy" firstAttribute="centerX" secondItem="1an-OX-mlw" secondAttribute="centerX" id="wKQ-Y7-r3C"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                        <size key="value" width="0.0" height="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                        <real key="value" value="0.29999999999999999"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jzs-Gw-5rr">
+                                                <rect key="frame" x="32" y="155" width="310" height="307"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_smatchingbox_blue" translatesAutoresizingMaskIntoConstraints="NO" id="6Nz-m8-QAN">
+                                                        <rect key="frame" x="0.0" y="0.0" width="310" height="87"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="닉네임은모하지이" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qIW-Jk-Z7B">
+                                                        <rect key="frame" x="25" y="23" width="116" height="18"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="000개" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcd-6a-8Wb">
+                                                        <rect key="frame" x="25" y="47" width="60" height="24"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kMU-ld-ekP">
+                                                        <rect key="frame" x="26" y="71" width="53" height="2"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </view>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jUn-MG-nsh">
+                                                        <rect key="frame" x="0.0" y="87" width="310" height="218"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <prototypes>
+                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="NoticeUpCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NoticeUpCell" rowHeight="71" id="FcY-CM-rZF" customClass="NoticeCell" customModule="iOS_Smatching" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="28" width="310" height="71"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FcY-CM-rZF" id="jDb-Px-mba">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="310" height="70.5"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                    <subviews>
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WR1-wO-42E">
+                                                                            <rect key="frame" x="12.5" y="0.0" width="286" height="70"/>
+                                                                            <subviews>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="대한무역투자진흥공사" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccc-Ty-CY9">
+                                                                                    <rect key="frame" x="0.0" y="13" width="95.5" height="13.5"/>
+                                                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                                                    <color key="textColor" red="0.4039215686" green="0.4039215686" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D-7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0UG-nh-CAk">
+                                                                                    <rect key="frame" x="252.5" y="13" width="19" height="12"/>
+                                                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                                                    <color key="textColor" red="0.74901960779999999" green="0.4549019608" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0OR-eG-uff">
+                                                                                    <rect key="frame" x="0.0" y="32.5" width="225" height="29"/>
+                                                                                    <string key="text">2019년 말레이시아 쿠알라룸푸르 할랄 전시회
+(MIHAS) 한국관 참가기업 모집 공고</string>
+                                                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                                    <nil key="textColor"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                            </subviews>
+                                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <constraints>
+                                                                                <constraint firstItem="0UG-nh-CAk" firstAttribute="top" secondItem="WR1-wO-42E" secondAttribute="top" constant="13" id="6IP-65-L79"/>
+                                                                                <constraint firstAttribute="bottom" secondItem="0OR-eG-uff" secondAttribute="bottom" constant="8.5" id="JHK-3N-oHA"/>
+                                                                                <constraint firstItem="ccc-Ty-CY9" firstAttribute="top" secondItem="WR1-wO-42E" secondAttribute="top" constant="13" id="K1K-6V-dJF"/>
+                                                                                <constraint firstItem="ccc-Ty-CY9" firstAttribute="leading" secondItem="WR1-wO-42E" secondAttribute="leading" id="Swz-MQ-neF"/>
+                                                                                <constraint firstItem="0OR-eG-uff" firstAttribute="top" secondItem="ccc-Ty-CY9" secondAttribute="bottom" constant="6" id="Zbu-77-EMF"/>
+                                                                                <constraint firstAttribute="trailing" secondItem="0OR-eG-uff" secondAttribute="trailing" constant="61" id="ln4-Iw-MPG"/>
+                                                                                <constraint firstItem="0OR-eG-uff" firstAttribute="leading" secondItem="WR1-wO-42E" secondAttribute="leading" id="n0j-t2-TgJ"/>
+                                                                                <constraint firstItem="0UG-nh-CAk" firstAttribute="leading" secondItem="ccc-Ty-CY9" secondAttribute="trailing" constant="157" id="rb2-Fv-Zke"/>
+                                                                                <constraint firstAttribute="trailing" secondItem="0UG-nh-CAk" secondAttribute="trailing" constant="14.5" id="scg-jN-IWX"/>
+                                                                                <constraint firstAttribute="bottom" secondItem="0UG-nh-CAk" secondAttribute="bottom" constant="45" id="wfd-Ph-pVu"/>
+                                                                            </constraints>
+                                                                        </view>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="bottom" secondItem="WR1-wO-42E" secondAttribute="bottom" constant="0.5" id="8Wz-6C-wB0"/>
+                                                                        <constraint firstItem="WR1-wO-42E" firstAttribute="top" secondItem="jDb-Px-mba" secondAttribute="top" id="9xk-5L-c14"/>
+                                                                        <constraint firstItem="WR1-wO-42E" firstAttribute="leading" secondItem="jDb-Px-mba" secondAttribute="leading" constant="12.5" id="BcG-9I-gAp"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="WR1-wO-42E" secondAttribute="trailing" constant="11.5" id="ZfK-eu-VV1"/>
+                                                                    </constraints>
+                                                                </tableViewCellContentView>
+                                                                <connections>
+                                                                    <outlet property="ddayLabel" destination="0UG-nh-CAk" id="jxU-OS-FIo"/>
+                                                                    <outlet property="institutionLabel" destination="ccc-Ty-CY9" id="reC-fL-Ub3"/>
+                                                                    <outlet property="titleLabel" destination="0OR-eG-uff" id="Yho-8w-lcS"/>
+                                                                </connections>
+                                                            </tableViewCell>
+                                                        </prototypes>
+                                                    </tableView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="님을 위한 스매칭" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qZ-mL-eIU">
+                                                        <rect key="frame" x="144" y="23" width="105.5" height="18"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="를 확인해보세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Umh-Pu-ICA">
+                                                        <rect key="frame" x="85" y="51" width="101.5" height="19.5"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="jUn-MG-nsh" firstAttribute="top" secondItem="6Nz-m8-QAN" secondAttribute="bottom" id="0ST-w3-58q"/>
+                                                    <constraint firstAttribute="trailing" secondItem="jUn-MG-nsh" secondAttribute="trailing" id="F63-4d-ttD"/>
+                                                    <constraint firstItem="6Nz-m8-QAN" firstAttribute="leading" secondItem="jzs-Gw-5rr" secondAttribute="leading" id="epN-ul-m1r"/>
+                                                    <constraint firstAttribute="trailing" secondItem="6Nz-m8-QAN" secondAttribute="trailing" id="kTv-qs-rT5"/>
+                                                    <constraint firstAttribute="bottom" secondItem="jUn-MG-nsh" secondAttribute="bottom" constant="2" id="lJf-hx-CsG"/>
+                                                    <constraint firstItem="jUn-MG-nsh" firstAttribute="leading" secondItem="jzs-Gw-5rr" secondAttribute="leading" id="vJP-ap-Zvd"/>
+                                                    <constraint firstAttribute="width" secondItem="jzs-Gw-5rr" secondAttribute="height" multiplier="310:307" id="xcs-Qt-lZ1"/>
+                                                    <constraint firstItem="6Nz-m8-QAN" firstAttribute="top" secondItem="jzs-Gw-5rr" secondAttribute="top" id="zIB-aK-dtv"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -2208,7 +2208,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="LFH-DZ-YiM">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="nPe-NT-nZ4" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TapBarVC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nPe-NT-nZ4" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="kGe-fJ-0Q1"/>
                     <tabBar key="tabBar" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" id="X0o-2L-XV9">
@@ -2352,7 +2352,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="conditionBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="r68-Dn-09j"/>
+                                                            <action selector="conditionPeriodBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="X97-Rl-GDK"/>
                                                         </connections>
                                                     </view>
                                                     <view contentMode="scaleToFill" restorationIdentifier="twenty_forty" translatesAutoresizingMaskIntoConstraints="NO" id="xDN-Ai-xxK" customClass="ConditionButton" customModule="iOS_Smatching" customModuleProvider="target">
@@ -2389,7 +2389,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="conditionBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="et1-X4-ZqV"/>
+                                                            <action selector="conditionPeriodBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="1hH-2O-gbb"/>
                                                         </connections>
                                                     </view>
                                                     <view contentMode="scaleToFill" restorationIdentifier="forty_more" translatesAutoresizingMaskIntoConstraints="NO" id="mWi-cI-o4G" customClass="ConditionButton" customModule="iOS_Smatching" customModuleProvider="target">
@@ -2423,7 +2423,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="conditionBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="2qx-U7-zXc"/>
+                                                            <action selector="conditionPeriodBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="IwO-J8-Bby"/>
                                                         </connections>
                                                     </view>
                                                 </subviews>
@@ -2450,7 +2450,7 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="설립 경과 년수" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52G-3J-0BF">
-                                                <rect key="frame" x="41.5" y="299" width="130" height="18"/>
+                                                <rect key="frame" x="32.5" y="299" width="130" height="18"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="130" id="aQg-mw-0an"/>
                                                     <constraint firstAttribute="height" constant="18" id="b8s-kn-nwi"/>
@@ -2460,7 +2460,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0r-Ql-nhb">
-                                                <rect key="frame" x="139" y="299" width="25" height="18"/>
+                                                <rect key="frame" x="130" y="299" width="25" height="18"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="18" id="Rpy-C3-LTq"/>
                                                     <constraint firstAttribute="width" constant="25" id="peK-QV-cPV"/>
@@ -2470,7 +2470,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btn_custom_must" translatesAutoresizingMaskIntoConstraints="NO" id="dWH-TG-4qD">
-                                                <rect key="frame" x="171.5" y="295" width="8" height="8"/>
+                                                <rect key="frame" x="162.5" y="295" width="8" height="8"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="8" id="0bl-Ps-t3a"/>
                                                     <constraint firstAttribute="height" constant="8" id="9cM-wp-tX4"/>
@@ -2532,7 +2532,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
-                                                                    <action selector="conditionBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="hAN-4E-ANq"/>
+                                                                    <action selector="conditionPeriodBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="16i-Oo-VZT"/>
                                                                 </connections>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FvG-we-yMQ" customClass="ConditionButton" customModule="iOS_Smatching" customModuleProvider="target">
@@ -2564,7 +2564,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
-                                                                    <action selector="conditionBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="Q1f-JL-CLm"/>
+                                                                    <action selector="conditionPeriodBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="kPL-ZP-RCr"/>
                                                                 </connections>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7PP-qX-UZK" customClass="ConditionButton" customModule="iOS_Smatching" customModuleProvider="target">
@@ -2595,7 +2595,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
-                                                                    <action selector="conditionBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="62M-vf-IQ7"/>
+                                                                    <action selector="conditionPeriodBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="Px4-8n-I1a"/>
                                                                 </connections>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gh9-T8-GiI" customClass="ConditionButton" customModule="iOS_Smatching" customModuleProvider="target">
@@ -2626,7 +2626,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
-                                                                    <action selector="conditionBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="Vlm-YK-Q5g"/>
+                                                                    <action selector="conditionPeriodBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="SN7-aP-eg8"/>
                                                                 </connections>
                                                             </view>
                                                         </subviews>
@@ -2674,7 +2674,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
-                                                                    <action selector="conditionBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="zoV-re-nUk"/>
+                                                                    <action selector="conditionPeriodBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="tJx-I4-y2c"/>
                                                                 </connections>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u9k-Nv-DO2" customClass="ConditionButton" customModule="iOS_Smatching" customModuleProvider="target">
@@ -2706,7 +2706,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
-                                                                    <action selector="conditionBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="H0O-dZ-PS8"/>
+                                                                    <action selector="conditionPeriodBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="bou-UV-fv3"/>
                                                                 </connections>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vwB-1Y-JTL" customClass="ConditionButton" customModule="iOS_Smatching" customModuleProvider="target">
@@ -2738,7 +2738,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
-                                                                    <action selector="conditionBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="L60-3s-fce"/>
+                                                                    <action selector="conditionPeriodBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="rO2-eI-vvx"/>
                                                                 </connections>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jZm-xo-ryS" customClass="ConditionButton" customModule="iOS_Smatching" customModuleProvider="target">
@@ -2770,7 +2770,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
-                                                                    <action selector="conditionBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="Q1S-sC-Xlm"/>
+                                                                    <action selector="conditionPeriodBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="beC-cj-1eg"/>
                                                                 </connections>
                                                             </view>
                                                         </subviews>
@@ -2824,7 +2824,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
-                                                                    <action selector="conditionBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="vbz-7H-i3d"/>
+                                                                    <action selector="conditionPeriodBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="8R2-A9-tkb"/>
                                                                 </connections>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y0g-Fp-ILt">
@@ -2939,7 +2939,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
-                                                                    <action selector="conditionBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="O19-Vh-b1E"/>
+                                                                    <action selector="conditionElseBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="q15-Qf-S0H"/>
                                                                 </connections>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mRd-xT-4B7" customClass="ConditionButton" customModule="iOS_Smatching" customModuleProvider="target">
@@ -2971,7 +2971,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
-                                                                    <action selector="conditionBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="hOm-4V-hyE"/>
+                                                                    <action selector="conditionElseBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="rbP-nL-jEY"/>
                                                                 </connections>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sjv-Hl-ka6" customClass="ConditionButton" customModule="iOS_Smatching" customModuleProvider="target">
@@ -3003,7 +3003,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
-                                                                    <action selector="conditionBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="Sno-pH-nYH"/>
+                                                                    <action selector="conditionElseBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="y3T-dk-c51"/>
                                                                 </connections>
                                                             </view>
                                                         </subviews>
@@ -3054,7 +3054,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
-                                                                    <action selector="conditionBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="Iai-hp-tOE"/>
+                                                                    <action selector="conditionElseBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="91X-sy-zVr"/>
                                                                 </connections>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Brw-ZT-rYc" customClass="ConditionButton" customModule="iOS_Smatching" customModuleProvider="target">
@@ -3086,7 +3086,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
-                                                                    <action selector="conditionBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="sHC-XC-VUv"/>
+                                                                    <action selector="conditionElseBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="2aw-kc-EQp"/>
                                                                 </connections>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9tb-VW-Cmt" customClass="ConditionButton" customModule="iOS_Smatching" customModuleProvider="target">
@@ -3118,7 +3118,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
-                                                                    <action selector="conditionBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="adC-bM-fn3"/>
+                                                                    <action selector="conditionElseBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="mew-UG-dos"/>
                                                                 </connections>
                                                             </view>
                                                         </subviews>
@@ -3168,7 +3168,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
-                                                                    <action selector="conditionBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="JLI-X5-aIg"/>
+                                                                    <action selector="conditionElseBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="7Av-xv-q1R"/>
                                                                 </connections>
                                                             </view>
                                                             <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w3i-N3-Dqa">
@@ -3272,7 +3272,7 @@
                                                         <color key="textColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TE4-B9-8Rc">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TE4-B9-8Rc" customClass="ConditionButton" customModule="iOS_Smatching" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="300" height="36"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -3364,7 +3364,7 @@
                                                         <color key="textColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pwW-bu-tZg">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pwW-bu-tZg" customClass="ConditionButton" customModule="iOS_Smatching" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="300" height="36"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -3469,7 +3469,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
-                                                                    <action selector="conditionBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="cwW-Oe-geh"/>
+                                                                    <action selector="conditionElseBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="V0d-z9-nqZ"/>
                                                                 </connections>
                                                             </view>
                                                             <view contentMode="scaleToFill" restorationIdentifier="woman" translatesAutoresizingMaskIntoConstraints="NO" id="G8P-Tf-fxK" customClass="ConditionButton" customModule="iOS_Smatching" customModuleProvider="target">
@@ -3501,7 +3501,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
-                                                                    <action selector="conditionBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="bhx-SN-Ug5"/>
+                                                                    <action selector="conditionElseBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="poV-xa-s6R"/>
                                                                 </connections>
                                                             </view>
                                                             <view contentMode="scaleToFill" restorationIdentifier="disabled" translatesAutoresizingMaskIntoConstraints="NO" id="Vqf-I8-Dgv" customClass="ConditionButton" customModule="iOS_Smatching" customModuleProvider="target">
@@ -3533,7 +3533,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
-                                                                    <action selector="conditionBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="Gcj-eU-Soz"/>
+                                                                    <action selector="conditionElseBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="eeZ-cx-ixx"/>
                                                                 </connections>
                                                             </view>
                                                         </subviews>
@@ -3584,7 +3584,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
-                                                                    <action selector="conditionBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="qBL-tO-NJ9"/>
+                                                                    <action selector="conditionElseBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="hCW-GB-7Kt"/>
                                                                 </connections>
                                                             </view>
                                                             <view contentMode="scaleToFill" restorationIdentifier="sole" translatesAutoresizingMaskIntoConstraints="NO" id="eAY-sn-4Ro" customClass="ConditionButton" customModule="iOS_Smatching" customModuleProvider="target">
@@ -3616,7 +3616,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
-                                                                    <action selector="conditionBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="nxf-Ky-0Il"/>
+                                                                    <action selector="conditionElseBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="u55-8L-RvI"/>
                                                                 </connections>
                                                             </view>
                                                             <view contentMode="scaleToFill" restorationIdentifier="fourth" translatesAutoresizingMaskIntoConstraints="NO" id="UKb-cL-d6Q" customClass="ConditionButton" customModule="iOS_Smatching" customModuleProvider="target">
@@ -3648,7 +3648,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
-                                                                    <action selector="conditionBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="qpe-SA-j2l"/>
+                                                                    <action selector="conditionElseBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="DNu-xV-kmL"/>
                                                                 </connections>
                                                             </view>
                                                         </subviews>
@@ -3699,7 +3699,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
-                                                                    <action selector="conditionBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="xS6-Xf-ves"/>
+                                                                    <action selector="conditionElseBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="K82-my-8Yk"/>
                                                                 </connections>
                                                             </view>
                                                             <view contentMode="scaleToFill" restorationIdentifier="togather" translatesAutoresizingMaskIntoConstraints="NO" id="2FA-l4-mbc" customClass="ConditionButton" customModule="iOS_Smatching" customModuleProvider="target">
@@ -3731,7 +3731,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
-                                                                    <action selector="conditionBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="XMH-xL-hGs"/>
+                                                                    <action selector="conditionElseBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="7CK-sF-TKs"/>
                                                                 </connections>
                                                             </view>
                                                             <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k58-ZY-3l3">
@@ -3861,6 +3861,78 @@
                                                     <action selector="deleteLocationSettingView:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="nVl-1y-YtF"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLG-ja-GeE">
+                                                <rect key="frame" x="37.5" y="758" width="209" height="32"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="sector_a"/>
+                                                <connections>
+                                                    <action selector="deleteFieldSettingView:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="Sz5-xp-N8h"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XxN-zf-7LM">
+                                                <rect key="frame" x="37.5" y="758" width="139" height="32"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="sector_b"/>
+                                                <connections>
+                                                    <action selector="deleteFieldSettingView:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="VMe-31-HAt"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nn3-Xo-vDN">
+                                                <rect key="frame" x="37.5" y="758" width="151" height="32"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="sector_c"/>
+                                                <connections>
+                                                    <action selector="deleteFieldSettingView:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="cqe-GT-Z41"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FUg-J0-r8Z">
+                                                <rect key="frame" x="37" y="758" width="277" height="32"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="sector_d"/>
+                                                <connections>
+                                                    <action selector="deleteFieldSettingView:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="W58-gE-gar"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="76s-pX-lTw">
+                                                <rect key="frame" x="37" y="758" width="300" height="32"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="sector_e"/>
+                                                <connections>
+                                                    <action selector="deleteFieldSettingView:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="w7w-g2-Hua"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7y2-tr-0yT">
+                                                <rect key="frame" x="37" y="758" width="148" height="32"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="sector_f"/>
+                                                <connections>
+                                                    <action selector="deleteFieldSettingView:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="SF6-xC-Pqy"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qlv-p4-FyU">
+                                                <rect key="frame" x="37" y="758" width="188" height="32"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="sector_g"/>
+                                                <connections>
+                                                    <action selector="deleteFieldSettingView:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="Kzc-xY-br1"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqH-zF-5LH">
+                                                <rect key="frame" x="37" y="758" width="188" height="32"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="sector_h"/>
+                                                <connections>
+                                                    <action selector="deleteFieldSettingView:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="iMB-s1-Wzv"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ioc-3l-GHS">
+                                                <rect key="frame" x="37" y="758" width="194" height="32"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="sector_i"/>
+                                                <connections>
+                                                    <action selector="deleteFieldSettingView:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="2C6-vA-CD0"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <gestureRecognizers/>
@@ -3876,6 +3948,7 @@
                                             <constraint firstAttribute="bottom" secondItem="R9M-ez-qH9" secondAttribute="bottom" id="5Bl-Tn-CKx"/>
                                             <constraint firstItem="znk-Py-3dz" firstAttribute="centerX" secondItem="RC9-H1-WKJ" secondAttribute="centerX" id="5kr-s9-pEm"/>
                                             <constraint firstItem="Ezx-ym-PgZ" firstAttribute="top" secondItem="taO-ZL-lWP" secondAttribute="bottom" constant="16" id="7Ye-l7-kN8"/>
+                                            <constraint firstItem="52G-3J-0BF" firstAttribute="leading" secondItem="MuL-TI-v5c" secondAttribute="leading" id="8Cu-Aw-nlx"/>
                                             <constraint firstItem="iho-Xc-qmB" firstAttribute="top" secondItem="5Vn-Qz-AOe" secondAttribute="top" id="8po-sf-I1K"/>
                                             <constraint firstItem="1gF-a5-jkO" firstAttribute="top" secondItem="iLg-JK-GB3" secondAttribute="bottom" constant="16" id="9Qy-jH-j5z"/>
                                             <constraint firstAttribute="trailing" secondItem="vzO-LU-XMO" secondAttribute="trailing" constant="26" id="BoA-ii-96V"/>
@@ -3918,7 +3991,6 @@
                                             <constraint firstItem="RfS-jV-q6R" firstAttribute="top" secondItem="RwM-XT-AZS" secondAttribute="top" id="c7T-JI-Rjg"/>
                                             <constraint firstItem="znk-Py-3dz" firstAttribute="top" secondItem="a0r-Ql-nhb" secondAttribute="bottom" constant="17" id="cEL-os-6q8"/>
                                             <constraint firstItem="pcl-y0-nqd" firstAttribute="top" secondItem="2uV-7h-nAN" secondAttribute="bottom" constant="13.5" id="cLr-MN-1xI"/>
-                                            <constraint firstItem="52G-3J-0BF" firstAttribute="leading" secondItem="xat-C5-26U" secondAttribute="leading" id="cbb-aj-wbR"/>
                                             <constraint firstItem="52G-3J-0BF" firstAttribute="top" secondItem="Ezx-ym-PgZ" secondAttribute="bottom" constant="16.5" id="ceX-Cu-6Tv"/>
                                             <constraint firstItem="Sg4-Cn-DHe" firstAttribute="top" secondItem="WCU-Vd-919" secondAttribute="bottom" constant="16.5" id="eL3-YC-cKR"/>
                                             <constraint firstAttribute="trailing" secondItem="Ezx-ym-PgZ" secondAttribute="trailing" constant="25.5" id="fSd-M6-9vO"/>
@@ -4000,22 +4072,32 @@
                     <navigationItem key="navigationItem" id="oi9-yC-f7w"/>
                     <size key="freeformSize" width="375" height="1147"/>
                     <connections>
+                        <outlet property="aSettingBtn" destination="TLG-ja-GeE" id="GWI-wf-36d"/>
                         <outlet property="advantabeCountLabel" destination="RfS-jV-q6R" id="Ji5-pr-9b8"/>
+                        <outlet property="bSettingBtn" destination="XxN-zf-7LM" id="g6i-h6-nlh"/>
                         <outlet property="big" destination="sjv-Hl-ka6" id="cmn-f3-lyp"/>
                         <outlet property="busiCountLabel" destination="nlT-pt-g8e" id="bII-EC-v49"/>
                         <outlet property="busiTypeButton" destination="TE4-B9-8Rc" id="bwf-Sk-4IQ"/>
+                        <outlet property="cSettingBtn" destination="Nn3-Xo-vDN" id="Nu5-fy-doy"/>
+                        <outlet property="dSettingBtn" destination="FUg-J0-r8Z" id="TDm-2N-BGl"/>
                         <outlet property="disabled" destination="Vqf-I8-Dgv" id="cDL-x3-9JR"/>
                         <outlet property="domesticSettingBtn" destination="KTV-H2-Fbw" id="YXm-bq-QS4"/>
+                        <outlet property="eSettingBtn" destination="76s-pX-lTw" id="9o1-w1-94q"/>
                         <outlet property="eduSettingBtn" destination="aXb-aT-DTj" id="xan-2o-ZG6"/>
                         <outlet property="excBottomViewConst" destination="587-oD-56H" id="mDc-Fy-LFZ"/>
                         <outlet property="excCountLabel" destination="iho-Xc-qmB" id="1oh-YE-p1D"/>
+                        <outlet property="fSettingBtn" destination="7y2-tr-0yT" id="4T6-p7-Yxe"/>
+                        <outlet property="fieldBottomViewConst" destination="ErT-4e-dMD" id="mNx-68-f7f"/>
                         <outlet property="fieldCountLabel" destination="5n7-mR-gY7" id="H60-jr-ybX"/>
                         <outlet property="five_six" destination="u9k-Nv-DO2" id="hcX-Ic-SMP"/>
                         <outlet property="forty_more" destination="mWi-cI-o4G" id="dvN-A2-sXd"/>
                         <outlet property="four_five" destination="bDR-kE-eho" id="IHn-o1-8JE"/>
                         <outlet property="fourth" destination="UKb-cL-d6Q" id="2Lz-t6-DMF"/>
+                        <outlet property="gSettingBtn" destination="qlv-p4-FyU" id="a6o-gL-U2K"/>
                         <outlet property="globalSettingBtn" destination="jUS-H3-aTD" id="8jE-CO-gKF"/>
                         <outlet property="govSettingBtn" destination="bVw-rl-BlP" id="gTO-7n-P4R"/>
+                        <outlet property="hSettingBtn" destination="rqH-zF-5LH" id="Mnr-4d-L54"/>
+                        <outlet property="iSettingBtn" destination="Ioc-3l-GHS" id="kQQ-kS-35E"/>
                         <outlet property="knowSettingBtn" destination="01A-yj-tf4" id="fgJ-ZW-CX4"/>
                         <outlet property="loanSettingBtn" destination="4XF-cY-Dy0" id="G5W-CC-r5P"/>
                         <outlet property="makeSettingBtn" destination="VIm-fZ-Pa9" id="EFD-lx-qXu"/>
@@ -4099,7 +4181,7 @@
         <image name="btnBack" width="48" height="48"/>
         <image name="btnCreateaccountCanclick" width="266" height="47"/>
         <image name="btnExperience" width="266" height="47"/>
-        <image name="btnLogin" width="266" height="47"/>
+        <image name="btnLogin" width="119" height="19"/>
         <image name="btnLoginCanclick" width="266" height="47"/>
         <image name="btnLogin_1" width="266" height="47"/>
         <image name="btn_addsmatching_canclick" width="87" height="87"/>
@@ -4274,11 +4356,20 @@ AAAAAAAAAAAAAAAAAB0BA
         <image name="needless_6" width="170" height="32"/>
         <image name="needless_7" width="132" height="32"/>
         <image name="needless_8" width="141" height="32"/>
+        <image name="sector_a" width="209" height="32"/>
+        <image name="sector_b" width="139" height="32"/>
+        <image name="sector_c" width="151" height="32"/>
+        <image name="sector_d" width="277" height="32"/>
+        <image name="sector_e" width="300" height="32"/>
+        <image name="sector_f" width="148" height="32"/>
+        <image name="sector_g" width="188" height="32"/>
+        <image name="sector_h" width="188" height="32"/>
+        <image name="sector_i" width="194" height="32"/>
         <image name="txtSmatching" width="246" height="16"/>
         <image name="txt_explain" width="164" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="aa2-3K-Glj"/>
-        <segue reference="AX4-mH-1YY"/>
+        <segue reference="MGr-Pn-Rwo"/>
     </inferredMetricsTieBreakers>
 </document>

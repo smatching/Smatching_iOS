@@ -26,10 +26,12 @@ class ConditionButton: UIButton {
     }
     var isClicked = false
     
-    func buttonClicked(sender: UIButton) {
-        isClicked = !isClicked
+    //boolean 값을 반전시킴.
+    func buttonClicked(sender: UIButton, _ checked : Bool) {
+        isClicked = !checked
+        
     }
-    
+   
     
 
     

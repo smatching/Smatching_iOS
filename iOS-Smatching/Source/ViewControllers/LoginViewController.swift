@@ -63,7 +63,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         guard emailTxtField.text?.isEmpty != true else {return false}
         guard emailTxtField.text!.validateEmail() == true else {
-            emailTxtField.text = "이메일 형식 틀림"
+            emailTxtField.text = ""
+            emailTxtField.placeholder = "이메일 형식 틀림"
             return false}
         guard passwdTxtField.text?.isEmpty != true else {return false}
         
@@ -75,12 +76,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     //로그인 기능 실행
     @IBAction func login(_ sender: Any) {
         LoginService.shared.login(email : emailTxtField.text!, password : passwdTxtField.text! ) {[weak self] (token) in guard let `self` = self else {return}
-            print(token.token)
-            UserDefaults.standard.set(self.gsno(token.token), forKey: "token")
-                self.performSegue(withIdentifier: "loginSegue", sender: nil)
             
+            UserDefaults.standard.set(self.gsno(token.token), forKey: "token")
+            
+            let storyboard: UIStoryboard = self.storyboard!
+            let nextView = storyboard.instantiateViewController(withIdentifier: "TapBarVC")
+            self.present(nextView, animated: true, completion: nil)
         }
-        
     }
     
     // TextField borderColor 변경

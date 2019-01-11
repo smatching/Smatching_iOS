@@ -23,7 +23,7 @@ class HomeVC: UIViewController {
     @IBOutlet weak var goToConditionEdit: UILabel!
     @IBOutlet weak var conditionTitle: UILabel!
     
-    var animationView: LOTAnimationView = LOTAnimationView(name: "loading");
+    var animationView: LOTAnimationView = LOTAnimationView(name: "splash");
     
     var noticeList = [Notice]()
     var conditionList = [Condition]()
@@ -76,12 +76,11 @@ class HomeVC: UIViewController {
         super.viewWillAppear(animated)
         
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
-        
-        
+
         UserService.shared.getUserCondition() {[weak self] (data) in guard let `self` = self else {return}
-            self.animateLoading(self.animationView)
-            self.conditionList = data.condSummaryList!
             
+            self.conditionList = data.condSummaryList!
+            self.nicknameLabel.text = self.gsno(data.nickname)
             if self.conditionList.count < 1 && self.pageControl.currentPage == 1 {
                 self.noNoticeList.isHidden = true
                 self.conditionAdaptView.isHidden = true
@@ -114,7 +113,7 @@ class HomeVC: UIViewController {
                     self.noConditionView.isHidden = false
                 }
             }
-            self.stopLoadingAnimation(self.animationView)
+            
         }
         
     }
