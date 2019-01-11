@@ -87,4 +87,20 @@ struct ConditionPutService : APIManager, Requestable {
             
         }
     }
+    func putAlarmSetting(condIdx : Int, completion : @escaping(CommonResponse)->Void ) {
+        let putURL = conditionURL + "/alert/\(condIdx))"
+        
+        puttable(putURL, body: nil, header: headers){
+            (res) in
+            switch res {
+            case .success(let value):
+                print(value)
+                guard let result = value.data else {return}
+                completion(result)
+            case .error(let error):
+                print(error)
+            }
+        }
+        
+    }
 }

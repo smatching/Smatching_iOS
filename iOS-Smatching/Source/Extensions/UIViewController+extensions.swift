@@ -108,4 +108,15 @@ extension UIViewController {
         animationView.removeFromSuperview()
     }
 
+    func slideY(y:CGFloat, sender : UIButton) {
+        
+        let xPosition = sender.frame.origin.x
+        
+        let height = sender.frame.height
+        let width = sender.frame.width
+        
+        sender.frame = CGRect(x: xPosition, y: y, width: width, height: height)
+
+    }
+    
 }

@@ -82,6 +82,19 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var gov: AlertCheckBox!
     @IBOutlet weak var loan: AlertCheckBox!
     
+    //필요없는 지원사업 분야 버튼
+    
+    @IBOutlet weak var eduSettingBtn: UIButton!
+    @IBOutlet weak var knowSettingBtn: UIButton!
+    @IBOutlet weak var placeSettingBtn: UIButton!
+    @IBOutlet weak var domesticSettingBtn: UIButton!
+    @IBOutlet weak var globalSettingBtn: UIButton!
+    @IBOutlet weak var loanSettingBtn: UIButton!
+    @IBOutlet weak var govSettingBtn: UIButton!
+    @IBOutlet weak var makeSettingBtn: UIButton!
+    
+    @IBOutlet weak var excBottomViewConst: NSLayoutConstraint!
+    
     //우대사항
     @IBOutlet weak var together: ConditionButton!
     @IBOutlet weak var disabled: ConditionButton!
@@ -124,9 +137,14 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
     var busiTypeCountNum = 0
     
     var advantageCountNum = 0
+    
     //조건 제목 길이 제한
     let limitLength = 8
     
+    var useLessBtnArray = [UIButton]()
+    
+    //필요없는 조건 element : true
+//    var excCategoryMap = [String : Bool]()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -276,6 +294,14 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
         
         titleTxtField.delegate = self
         
+        eduSettingBtn.isHidden = true
+        knowSettingBtn.isHidden = true
+        placeSettingBtn.isHidden = true
+        domesticSettingBtn.isHidden = true
+        globalSettingBtn.isHidden = true
+        makeSettingBtn.isHidden = true
+        govSettingBtn.isHidden = true
+        loanSettingBtn.isHidden = true
         
     }
     func initialSetting(recognizer : ConditionButton) {
@@ -292,10 +318,7 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
         dismiss(animated: true, completion: nil )
     }
 
-    @IBAction func deleteLocationSettingView(_ sender: UIButton) {
-        sender.transform =
-            CGAffineTransform(scaleX: 0, y: 0)
-    }
+   
     //기업정보 vc로 이동
     @objc func someAction(_ sender:UITapGestureRecognizer){
         let controller = storyboard?.instantiateViewController(withIdentifier: "InsititutionClassifyInfo")
@@ -319,7 +342,6 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
     @IBAction func selectBusiType(_ sender: UIButton) {
         sender.layer.borderColor = UIColor(displayP3Red: 76/255, green: 130/255, blue: 216/255, alpha: 1.0).cgColor
        
-        
         startAlert1()
        
     }
@@ -440,38 +462,50 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
             
             UselessFieldCount = 0
             if excCategory.edu == true {
-                edu.isChecked = true
+                edu.isChecked = self.excCategory.edu!
+                conditionButtonSlidingEvent(eduSettingBtn,self.excCategory.edu! )
                 UselessFieldCount += CountTheCheckedBox(self.excCategory.edu!)
             }
             if excCategory.global == true {
-                global.isChecked = true
+                global.isChecked = self.excCategory.global!
+                conditionButtonSlidingEvent(globalSettingBtn, self.excCategory.global!)
                 UselessFieldCount += CountTheCheckedBox(self.excCategory.global!)
             }
             if excCategory.gov == true {
-                gov.isChecked = true
+                gov.isChecked = self.excCategory.gov!
+                conditionButtonSlidingEvent(govSettingBtn, self.excCategory.gov!)
                 UselessFieldCount += CountTheCheckedBox(self.excCategory.gov!)
             }
             if excCategory.know == true {
-                know.isChecked = true
+                know.isChecked = excCategory.know!
+                conditionButtonSlidingEvent(knowSettingBtn, self.excCategory.know!)
                 UselessFieldCount += CountTheCheckedBox(self.excCategory.know!)
             }
             if excCategory.loan == true {
-                loan.isChecked = true
+                loan.isChecked = excCategory.loan!
+                conditionButtonSlidingEvent(loanSettingBtn, self.excCategory.loan!)
                 UselessFieldCount += CountTheCheckedBox(self.excCategory.loan!)
             }
             if excCategory.make == true {
-                make.isChecked = true
+                make.isChecked = excCategory.make!
+                conditionButtonSlidingEvent(makeSettingBtn, self.excCategory.make!)
                 UselessFieldCount += CountTheCheckedBox(self.excCategory.make!)
             }
             if excCategory.place == true {
-                place.isChecked = true
+                place.isChecked = excCategory.place!
+                conditionButtonSlidingEvent(placeSettingBtn, self.excCategory.place!)
                 UselessFieldCount += CountTheCheckedBox(self.excCategory.place!)
             }
-            if excCategory.local == true
-            {
-                domestic.isChecked = true
+            if excCategory.local == true {
+                domestic.isChecked = excCategory.local!
+                conditionButtonSlidingEvent(domesticSettingBtn, self.excCategory.local!)
                 UselessFieldCount += CountTheCheckedBox(self.excCategory.local!)
             }
+            
+            UIView.animate(withDuration: 0.2, animations: ({
+                self.excBottomViewConst.constant = CGFloat(32 * self.UselessFieldCount)
+                self.view.layoutIfNeeded()
+            }))
             
             self.excCountLabel.text = "\(UselessFieldCount)/5"
             uselessField.backgroundColor = UIColor(red: 71/255, green: 71/255, blue: 71/255, alpha: 1)
@@ -531,47 +565,100 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
         print(excCategory)
     }
     
+    @IBAction func deleteLocationSettingView(_ sender: UIButton) {
+        if sender == eduSettingBtn {
+            excCategory.edu = !excCategory.edu!
+        }
+        else if sender == knowSettingBtn{
+            excCategory.know = !excCategory.know!
+        }
+        else if sender == placeSettingBtn {
+            excCategory.place = !excCategory.place!
+        }
+        else if sender == domesticSettingBtn {
+            excCategory.local = !excCategory.local!
+        }
+        else if sender == globalSettingBtn {
+            excCategory.global = !excCategory.global!
+        }
+        else if sender == makeSettingBtn {
+            excCategory.make = !excCategory.make!
+        }
+        else if sender == govSettingBtn {
+            excCategory.gov = !excCategory.gov!
+        }
+        else if sender == loanSettingBtn {
+            excCategory.loan = !excCategory.loan!
+        }
+        else {}
+        sender.isHidden = !sender.isHidden
+        sender.transform =
+            CGAffineTransform(scaleX: 0, y: 0)
+        let index = useLessBtnArray.index(of: sender)!
+        if index != useLessBtnArray.count-1{
+            self.slideY(y: CGFloat(useLessBtnArray[index].frame.origin.y), sender : useLessBtnArray[index+1])
+        }
+        useLessBtnArray.remove(at: index)
+    }
+    
+    func conditionButtonSlidingEvent(_ sender : UIButton, _ checked : Bool) {
+        sender.isHidden = !checked
+        self.slideY(y: CGFloat(863 + 32 * UselessFieldCount), sender : sender)
+        useLessBtnArray.append(sender)
+        
+    }
  
     func checkboxBtnClickEvent(_ sender : AlertCheckBox) {
         switch (sender) {
         case edu:
             self.excCategory.edu = !self.excCategory.edu!
             sender.isChecked = self.excCategory.edu!
+            conditionButtonSlidingEvent(eduSettingBtn,self.excCategory.edu! )
             UselessFieldCount += CountTheCheckedBox(self.excCategory.edu!)
+            
             break
         case know:
             self.excCategory.know = !self.excCategory.know!
             sender.isChecked = self.excCategory.know!
+            conditionButtonSlidingEvent(knowSettingBtn, self.excCategory.know!)
             UselessFieldCount += CountTheCheckedBox(self.excCategory.know!)
+            
             break
         case place:
             self.excCategory.place = !self.excCategory.place!
             sender.isChecked = self.excCategory.place!
+            conditionButtonSlidingEvent(placeSettingBtn,self.excCategory.place!)
             UselessFieldCount += CountTheCheckedBox(self.excCategory.place!)
             break
         case domestic:
             self.excCategory.local = !self.excCategory.local!
             sender.isChecked = self.excCategory.local!
+            conditionButtonSlidingEvent(domesticSettingBtn,self.excCategory.local!)
             UselessFieldCount += CountTheCheckedBox(self.excCategory.local!)
+            
             break
         case global:
             self.excCategory.global = !self.excCategory.global!
             sender.isChecked = self.excCategory.global!
+            conditionButtonSlidingEvent(globalSettingBtn, self.excCategory.global!)
             UselessFieldCount += CountTheCheckedBox(self.excCategory.global!)
             break
         case make:
             self.excCategory.make = !self.excCategory.make!
             sender.isChecked = self.excCategory.make!
+            conditionButtonSlidingEvent(makeSettingBtn, self.excCategory.make!)
             UselessFieldCount += CountTheCheckedBox(self.excCategory.make!)
             break
         case gov:
             self.excCategory.gov = !self.excCategory.gov!
             sender.isChecked = self.excCategory.gov!
+           conditionButtonSlidingEvent(govSettingBtn, self.excCategory.gov!)
             UselessFieldCount += CountTheCheckedBox(self.excCategory.gov!)
             break
         case loan:
             self.excCategory.loan = !self.excCategory.loan!
             sender.isChecked = self.excCategory.loan!
+            conditionButtonSlidingEvent(loanSettingBtn, self.excCategory.loan!)
             UselessFieldCount += CountTheCheckedBox(self.excCategory.loan!)
             break
         case A:
@@ -687,6 +774,11 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
         default:
             break
         }
+        
+        UIView.animate(withDuration: 0.2, animations: ({
+            self.excBottomViewConst.constant = CGFloat(32 * self.UselessFieldCount)
+            self.view.layoutIfNeeded()
+        }))
     }
     
     func clickConditionButton(_ sender : ConditionButton) {
@@ -807,7 +899,7 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
         
         if  sender.layer.borderColor == UIColor(displayP3Red: 76/255, green: 130/255, blue: 216/255, alpha: 1.0).cgColor {
             sender.layer.borderColor = UIColor(displayP3Red: 216/255, green: 216/255, blue: 216/255, alpha: 1.0).cgColor
-            isClicked = true
+            sender.isClicked = true
             
         } else {
             //선택을 할 경우
@@ -819,7 +911,7 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
             clickConditionButton(sender)
         }
         else {
-            guard sender.isChecked else {return}
+            guard sender.isClicked else {return}
             clickConditionButton(sender)
         }
         

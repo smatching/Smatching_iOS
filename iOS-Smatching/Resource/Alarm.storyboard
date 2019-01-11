@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NanumSquareBold.ttf">
+            <string>NanumSquareB</string>
+        </array>
+        <array key="NanumSquareRegular.ttf">
+            <string>NanumSquareR</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--AlarmVC-->
+        <scene sceneID="dQR-hm-GGA">
+            <objects>
+                <viewController storyboardIdentifier="AlarmVC" id="o2h-V5-meh" customClass="AlarmVC" customModule="iOS_Smatching" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" alpha="0.59999999999999998" contentMode="scaleToFill" id="Ip1-H4-WJO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YFK-9Z-Wre">
+                                <rect key="frame" x="75" y="29" width="300" height="638"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZlY-Zi-gln">
+                                        <rect key="frame" x="0.0" y="61" width="300" height="577"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icnIosNotice" translatesAutoresizingMaskIntoConstraints="NO" id="O8v-kY-xuG">
+                                                <rect key="frame" x="124" y="84" width="52" height="53"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="알림이 없습니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVn-qx-rNb">
+                                                <rect key="frame" x="93" y="153" width="111" height="18"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
+                                                <color key="textColor" red="0.76470588235294112" green="0.76470588235294112" blue="0.76470588235294112" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="ZlY-Zi-gln" secondAttribute="height" multiplier="300:577" id="HPK-R5-wZI"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dm8-rQ-6YR">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="66"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="알림" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6C5-bY-kbC">
+                                                <rect key="frame" x="29" y="23" width="33" height="20"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cdd-kS-Fiw">
+                                                <rect key="frame" x="262" y="24" width="17" height="17"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="btn_delete"/>
+                                                <connections>
+                                                    <action selector="clickCloseBtn:" destination="o2h-V5-meh" eventType="touchUpInside" id="iMk-vu-kbr"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Dm8-rQ-6YR" secondAttribute="height" multiplier="50:11" id="OxD-S6-4dF"/>
+                                        </constraints>
+                                    </view>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RfP-j3-OhP">
+                                        <rect key="frame" x="0.0" y="61" width="300" height="577"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="RfP-j3-OhP" secondAttribute="height" multiplier="300:577" id="fPR-HA-FeF"/>
+                                        </constraints>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="AlarmCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="103" id="qPD-D6-A7C" customClass="AlarmCell" customModule="iOS_Smatching" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="300" height="103"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qPD-D6-A7C" id="nsu-El-2hf">
+                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="102.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icn_notice_smatching_1" translatesAutoresizingMaskIntoConstraints="NO" id="fEp-Qr-Pl5">
+                                                            <rect key="frame" x="26" y="20" width="40" height="40"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="맞춤 지원사업 알림" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ipy-Nh-Ojp">
+                                                            <rect key="frame" x="77" y="24" width="208" height="21"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93g-yV-ZpK">
+                                                            <rect key="frame" x="77" y="42" width="208" height="28"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <string key="text">2019년 말레이시아 쿠알라룸푸르 할랄 
+전시회 (MIHAS) 한국관 참가기업 모집 공고</string>
+                                                            <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
+                                                            <color key="textColor" red="0.32549019607843138" green="0.32549019607843138" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12/26 17:35" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ja-Iw-7t8">
+                                                            <rect key="frame" x="77" y="72" width="58" height="12"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="10"/>
+                                                            <color key="textColor" red="0.6588235294117647" green="0.6588235294117647" blue="0.6588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="alarmDateTimeLabel" destination="6Ja-Iw-7t8" id="4b7-fE-vhA"/>
+                                                    <outlet property="alarmDescripLabel" destination="93g-yV-ZpK" id="nf4-Xb-JyO"/>
+                                                    <outlet property="alarmTitleLabel" destination="Ipy-Nh-Ojp" id="RQZ-17-eVL"/>
+                                                    <outlet property="cellContentView" destination="nsu-El-2hf" id="ZPV-Qh-veC"/>
+                                                    <outlet property="noticeValueImg" destination="fEp-Qr-Pl5" id="Tn3-gB-cf6"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="RfP-j3-OhP" firstAttribute="leading" secondItem="YFK-9Z-Wre" secondAttribute="leading" id="3iR-YZ-6L7"/>
+                                    <constraint firstAttribute="trailing" secondItem="RfP-j3-OhP" secondAttribute="trailing" id="5aD-6o-Rnn"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZlY-Zi-gln" secondAttribute="bottom" id="8X1-dG-WOg"/>
+                                    <constraint firstAttribute="bottom" secondItem="RfP-j3-OhP" secondAttribute="bottom" id="L7h-Sy-cQx"/>
+                                    <constraint firstItem="Dm8-rQ-6YR" firstAttribute="top" secondItem="YFK-9Z-Wre" secondAttribute="top" id="OCl-PY-8KL"/>
+                                    <constraint firstItem="ZlY-Zi-gln" firstAttribute="width" secondItem="YFK-9Z-Wre" secondAttribute="width" id="R6j-o4-i7p"/>
+                                    <constraint firstItem="Dm8-rQ-6YR" firstAttribute="width" secondItem="YFK-9Z-Wre" secondAttribute="width" id="VBo-SV-8aJ"/>
+                                    <constraint firstItem="ZlY-Zi-gln" firstAttribute="leading" secondItem="YFK-9Z-Wre" secondAttribute="leading" id="WLJ-5N-Ae5"/>
+                                    <constraint firstAttribute="width" secondItem="YFK-9Z-Wre" secondAttribute="height" multiplier="150:319" id="aLw-JJ-NKf"/>
+                                    <constraint firstItem="Dm8-rQ-6YR" firstAttribute="leading" secondItem="YFK-9Z-Wre" secondAttribute="leading" id="bv3-WQ-bNn"/>
+                                    <constraint firstAttribute="trailing" secondItem="Dm8-rQ-6YR" secondAttribute="trailing" id="lNZ-dI-W0P"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZlY-Zi-gln" secondAttribute="trailing" id="qfL-gc-3h4"/>
+                                    <constraint firstItem="RfP-j3-OhP" firstAttribute="width" secondItem="YFK-9Z-Wre" secondAttribute="width" id="qps-uY-gT2"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YFK-9Z-Wre" firstAttribute="leading" secondItem="Yfq-9v-PYz" secondAttribute="leading" constant="75" id="NhR-jV-ye4"/>
+                            <constraint firstItem="YFK-9Z-Wre" firstAttribute="trailing" secondItem="Yfq-9v-PYz" secondAttribute="trailing" id="PkE-S5-UwI"/>
+                            <constraint firstItem="YFK-9Z-Wre" firstAttribute="bottom" secondItem="Yfq-9v-PYz" secondAttribute="bottom" id="V3M-dG-aYm"/>
+                            <constraint firstItem="Yfq-9v-PYz" firstAttribute="bottom" secondItem="YFK-9Z-Wre" secondAttribute="bottom" id="lfR-US-i5Q"/>
+                            <constraint firstItem="YFK-9Z-Wre" firstAttribute="top" secondItem="Yfq-9v-PYz" secondAttribute="top" constant="9" id="oqO-ES-ENA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Yfq-9v-PYz"/>
+                    </view>
+                    <connections>
+                        <outlet property="alarmTableView" destination="RfP-j3-OhP" id="J68-8h-Kau"/>
+                        <outlet property="noNotificationView" destination="ZlY-Zi-gln" id="fAR-Zm-jlO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8mj-l8-WBZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-904.79999999999995" y="-241.52923538230885"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="btn_delete" width="10" height="10"/>
+        <image name="icnIosNotice" width="20" height="20"/>
+        <image name="icn_notice_smatching_1" width="40" height="40"/>
+    </resources>
+</document>
