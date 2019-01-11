@@ -2276,7 +2276,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="1127"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RC9-H1-WKJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1123"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1123.5"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btn_smatching_click" translatesAutoresizingMaskIntoConstraints="NO" id="iLg-JK-GB3">
                                                 <rect key="frame" x="32.5" y="80" width="310" height="36"/>
@@ -3414,7 +3414,7 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="우대사항" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RwM-XT-AZS">
-                                                <rect key="frame" x="32.5" y="893" width="64" height="19.5"/>
+                                                <rect key="frame" x="32.5" y="893.5" width="64" height="19.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="64" id="ghc-aW-QtN"/>
                                                     <constraint firstAttribute="height" constant="19.5" id="hjc-EV-W7a"/>
@@ -3424,7 +3424,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/8" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RfS-jV-q6R">
-                                                <rect key="frame" x="106.5" y="893" width="25" height="18"/>
+                                                <rect key="frame" x="106.5" y="893.5" width="25" height="18"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="25" id="0yQ-PC-VKe"/>
                                                     <constraint firstAttribute="height" constant="18" id="qk9-hD-lcf"/>
@@ -3434,7 +3434,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="fvl-4s-RHA">
-                                                <rect key="frame" x="37.5" y="928" width="300" height="126"/>
+                                                <rect key="frame" x="37.5" y="928.5" width="300" height="126"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="FED-4O-4P2">
                                                         <rect key="frame" x="0.0" y="0.0" width="300" height="36"/>
@@ -3773,7 +3773,7 @@
                                                 </constraints>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R9M-ez-qH9" customClass="UIButton">
-                                                <rect key="frame" x="0.0" y="1072" width="375" height="51"/>
+                                                <rect key="frame" x="0.0" y="1072.5" width="375" height="51"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="결과보기" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FyD-1g-HTO">
                                                         <rect key="frame" x="154.5" y="15" width="66" height="21.5"/>
@@ -3796,6 +3796,70 @@
                                                     <action selector="submitCondition:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="AEA-wT-yBK"/>
                                                 </connections>
                                             </view>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXb-aT-DTj">
+                                                <rect key="frame" x="37" y="863" width="167" height="32"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="needless_1"/>
+                                                <connections>
+                                                    <action selector="deleteLocationSettingView:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="y6q-2N-ObB"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="01A-yj-tf4">
+                                                <rect key="frame" x="37" y="863" width="198" height="32"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="needless_2"/>
+                                                <connections>
+                                                    <action selector="deleteLocationSettingView:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="gfR-LF-fKH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEU-4Z-ndD">
+                                                <rect key="frame" x="37" y="863" width="108" height="32"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="needless_3"/>
+                                                <connections>
+                                                    <action selector="deleteLocationSettingView:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="TF8-Yx-en7"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTV-H2-Fbw">
+                                                <rect key="frame" x="37" y="863" width="128" height="32"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="needless_4"/>
+                                                <connections>
+                                                    <action selector="deleteLocationSettingView:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="lmR-39-eRI"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jUS-H3-aTD">
+                                                <rect key="frame" x="37" y="863" width="128" height="32"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="needless_5"/>
+                                                <connections>
+                                                    <action selector="deleteLocationSettingView:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="QZ2-Mm-2rl"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VIm-fZ-Pa9">
+                                                <rect key="frame" x="37" y="863" width="170" height="32"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="needless_6"/>
+                                                <connections>
+                                                    <action selector="deleteLocationSettingView:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="hBv-iI-M9s"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bVw-rl-BlP">
+                                                <rect key="frame" x="37" y="863" width="132" height="32"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="needless_7"/>
+                                                <connections>
+                                                    <action selector="deleteLocationSettingView:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="ukB-tk-gxN"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4XF-cY-Dy0">
+                                                <rect key="frame" x="37" y="863" width="141" height="32"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="needless_8"/>
+                                                <connections>
+                                                    <action selector="deleteLocationSettingView:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="nVl-1y-YtF"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <gestureRecognizers/>
@@ -3806,7 +3870,8 @@
                                             <constraint firstItem="WCU-Vd-919" firstAttribute="leading" secondItem="RC9-H1-WKJ" secondAttribute="leading" constant="25" id="42Z-LC-cxQ"/>
                                             <constraint firstItem="znk-Py-3dz" firstAttribute="top" secondItem="52G-3J-0BF" secondAttribute="bottom" constant="17" id="44o-9Q-mOJ"/>
                                             <constraint firstItem="hTj-K5-osV" firstAttribute="leading" secondItem="iho-Xc-qmB" secondAttribute="trailing" constant="8.5" id="4OR-wG-bDp"/>
-                                            <constraint firstItem="RwM-XT-AZS" firstAttribute="top" secondItem="vzO-LU-XMO" secondAttribute="bottom" constant="16.5" id="4Tl-hA-bae"/>
+                                            <constraint firstItem="RwM-XT-AZS" firstAttribute="top" secondItem="vzO-LU-XMO" secondAttribute="bottom" constant="17" id="4Tl-hA-bae"/>
+                                            <constraint firstItem="vzO-LU-XMO" firstAttribute="top" secondItem="pcl-y0-nqd" secondAttribute="bottom" constant="16" id="587-oD-56H"/>
                                             <constraint firstAttribute="bottom" secondItem="R9M-ez-qH9" secondAttribute="bottom" id="5Bl-Tn-CKx"/>
                                             <constraint firstItem="znk-Py-3dz" firstAttribute="centerX" secondItem="RC9-H1-WKJ" secondAttribute="centerX" id="5kr-s9-pEm"/>
                                             <constraint firstItem="Ezx-ym-PgZ" firstAttribute="top" secondItem="taO-ZL-lWP" secondAttribute="bottom" constant="16" id="7Ye-l7-kN8"/>
@@ -3841,7 +3906,6 @@
                                             <constraint firstItem="Icv-Yh-7Mv" firstAttribute="leading" secondItem="RC9-H1-WKJ" secondAttribute="leading" constant="25.5" id="UxP-Us-c3Q"/>
                                             <constraint firstItem="UNq-n0-wrI" firstAttribute="leading" secondItem="DHE-35-N6c" secondAttribute="trailing" id="V5w-Kb-jsl"/>
                                             <constraint firstItem="c8N-On-nV0" firstAttribute="centerX" secondItem="RC9-H1-WKJ" secondAttribute="centerX" id="WvF-pA-xZI"/>
-                                            <constraint firstItem="vzO-LU-XMO" firstAttribute="top" secondItem="pcl-y0-nqd" secondAttribute="bottom" constant="16" id="X2T-5i-1qW"/>
                                             <constraint firstAttribute="trailing" secondItem="pcl-y0-nqd" secondAttribute="trailing" constant="37.5" id="X95-7w-8RM"/>
                                             <constraint firstItem="2uV-7h-nAN" firstAttribute="leading" secondItem="RC9-H1-WKJ" secondAttribute="leading" constant="33" id="Xdd-Eh-1Nq"/>
                                             <constraint firstAttribute="trailing" secondItem="4pY-MB-I6Y" secondAttribute="trailing" constant="37.5" id="Xo7-92-43y"/>
@@ -3940,16 +4004,25 @@
                         <outlet property="busiCountLabel" destination="nlT-pt-g8e" id="bII-EC-v49"/>
                         <outlet property="busiTypeButton" destination="TE4-B9-8Rc" id="bwf-Sk-4IQ"/>
                         <outlet property="disabled" destination="Vqf-I8-Dgv" id="cDL-x3-9JR"/>
+                        <outlet property="domesticSettingBtn" destination="KTV-H2-Fbw" id="YXm-bq-QS4"/>
+                        <outlet property="eduSettingBtn" destination="aXb-aT-DTj" id="xan-2o-ZG6"/>
+                        <outlet property="excBottomViewConst" destination="587-oD-56H" id="mDc-Fy-LFZ"/>
                         <outlet property="excCountLabel" destination="iho-Xc-qmB" id="1oh-YE-p1D"/>
                         <outlet property="fieldCountLabel" destination="5n7-mR-gY7" id="H60-jr-ybX"/>
                         <outlet property="five_six" destination="u9k-Nv-DO2" id="hcX-Ic-SMP"/>
                         <outlet property="forty_more" destination="mWi-cI-o4G" id="dvN-A2-sXd"/>
                         <outlet property="four_five" destination="bDR-kE-eho" id="IHn-o1-8JE"/>
                         <outlet property="fourth" destination="UKb-cL-d6Q" id="2Lz-t6-DMF"/>
+                        <outlet property="globalSettingBtn" destination="jUS-H3-aTD" id="8jE-CO-gKF"/>
+                        <outlet property="govSettingBtn" destination="bVw-rl-BlP" id="gTO-7n-P4R"/>
+                        <outlet property="knowSettingBtn" destination="01A-yj-tf4" id="fgJ-ZW-CX4"/>
+                        <outlet property="loanSettingBtn" destination="4XF-cY-Dy0" id="G5W-CC-r5P"/>
+                        <outlet property="makeSettingBtn" destination="VIm-fZ-Pa9" id="EFD-lx-qXu"/>
                         <outlet property="midbig" destination="mRd-xT-4B7" id="ab2-8M-hkw"/>
                         <outlet property="midsmall" destination="SDi-Ek-lX6" id="JWE-z1-2kF"/>
                         <outlet property="one_two" destination="FvG-we-yMQ" id="vkq-Z6-ink"/>
                         <outlet property="periodCountLabel" destination="a0r-Ql-nhb" id="Em1-mY-Wvq"/>
+                        <outlet property="placeSettingBtn" destination="dEU-4Z-ndD" id="EzA-H0-T7H"/>
                         <outlet property="pre" destination="Dtu-8O-AYj" id="9vm-QM-A7O"/>
                         <outlet property="retry" destination="XXq-cU-BRQ" id="wmB-IQ-h4q"/>
                         <outlet property="seven_more" destination="jZm-xo-ryS" id="uz4-Ou-J6o"/>
@@ -4192,6 +4265,14 @@ AAAAAAAAAAAAAAAAAB0BA
         <image name="img_symbol" width="65" height="20"/>
         <image name="img_talknotyet" width="178" height="133"/>
         <image name="ivLogo" width="152" height="74"/>
+        <image name="needless_1" width="167" height="32"/>
+        <image name="needless_2" width="198" height="32"/>
+        <image name="needless_3" width="108" height="32"/>
+        <image name="needless_4" width="128" height="32"/>
+        <image name="needless_5" width="128" height="32"/>
+        <image name="needless_6" width="170" height="32"/>
+        <image name="needless_7" width="132" height="32"/>
+        <image name="needless_8" width="141" height="32"/>
         <image name="txtSmatching" width="246" height="16"/>
         <image name="txt_explain" width="164" height="60"/>
     </resources>

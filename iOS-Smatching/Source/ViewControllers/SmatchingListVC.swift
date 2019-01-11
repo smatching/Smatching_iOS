@@ -90,12 +90,16 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate {
 
             self.conditionList = data.condSummaryList!
             
-            if self.conditionList.isEmpty == false {
+            if self.conditionList.count < 1 && self.pageControl.currentPage == 1 {
+                self.noConditionView.isHidden = false
+            }
+            else if self.conditionList.isEmpty == false {
                 self.noConditionView.isHidden = true
-                self.cur_cond_idx = self.gino(self.conditionList[self.pageControl.currentPage].condIdx)
-                self.noticesCount.text = "총 \(self.gino(self.conditionList[self.pageControl.currentPage].noticeCnt))건"
+                self.cur_cond_idx = self.gino(self.conditionList[0].condIdx)
+                self.noticesCount.text = "총 \(self.gino(self.conditionList[0].noticeCnt))건"
                 if self.conditionList.count > 1 {
                     self.cur_cond_idx = self.gino(self.conditionList[self.pageControl.currentPage].condIdx)
+                    self.noticesCount.text = "총 \(self.gino(self.conditionList[self.pageControl.currentPage].noticeCnt))건"
                 }
                 ConditionSettingSerive.shared.getFitConditionInfo(cond_idx: self.gino(self.cur_cond_idx)) {[weak self] (data) in guard let `self` = self else {return}
                     print(data)

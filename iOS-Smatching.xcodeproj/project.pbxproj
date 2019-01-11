@@ -37,7 +37,7 @@
 		B67F2A9A21DC4D0800452579 /* UIView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67F2A9921DC4D0800452579 /* UIView+extension.swift */; };
 		B67F2A9C21DC4D5800452579 /* UINavigationBar+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67F2A9B21DC4D5800452579 /* UINavigationBar+extension.swift */; };
 		B68742E621D74D780094D5E7 /* Condition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68742E521D74D780094D5E7 /* Condition.swift */; };
-		B68742E821D74DEB0094D5E7 /* ConditionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68742E721D74DEB0094D5E7 /* ConditionService.swift */; };
+		B68742E821D74DEB0094D5E7 /* NotificationPutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68742E721D74DEB0094D5E7 /* NotificationPutService.swift */; };
 		B68742EA21D74EDA0094D5E7 /* ConditionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68742E921D74EDA0094D5E7 /* ConditionResponse.swift */; };
 		B68742EE21D752A00094D5E7 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68742ED21D752A00094D5E7 /* SearchVC.swift */; };
 		B68AA6F621D4E2C1000E5549 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68AA6F521D4E2C1000E5549 /* HomeVC.swift */; };
@@ -46,6 +46,10 @@
 		B68AA6FE21D4F6C4000E5549 /* SmatchingListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68AA6FD21D4F6C4000E5549 /* SmatchingListVC.swift */; };
 		B68AA70021D4F837000E5549 /* Notice.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68AA6FF21D4F837000E5549 /* Notice.swift */; };
 		B68AA70621D50187000E5549 /* NoticeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68AA70521D50187000E5549 /* NoticeService.swift */; };
+		B68BC5D021E7F632007D1448 /* Alarm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B68BC5CF21E7F632007D1448 /* Alarm.storyboard */; };
+		B68BC5D221E7F94B007D1448 /* AlarmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68BC5D121E7F94B007D1448 /* AlarmCell.swift */; };
+		B68BC5D421E7F9DD007D1448 /* AlarmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68BC5D321E7F9DD007D1448 /* AlarmVC.swift */; };
+		B68BC5D621E7FA7A007D1448 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68BC5D521E7FA7A007D1448 /* Notification.swift */; };
 		B696AE9B21DFB17400ABFBDB /* ConditionPutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B696AE9A21DFB17400ABFBDB /* ConditionPutService.swift */; };
 		B696AE9D21DFC10300ABFBDB /* NoticeDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B696AE9C21DFC10300ABFBDB /* NoticeDetailVC.swift */; };
 		B696AE9F21DFC36300ABFBDB /* NoticeDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B696AE9E21DFC36300ABFBDB /* NoticeDetailResponse.swift */; };
@@ -122,7 +126,7 @@
 		B67F2A9921DC4D0800452579 /* UIView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extension.swift"; sourceTree = "<group>"; };
 		B67F2A9B21DC4D5800452579 /* UINavigationBar+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+extension.swift"; sourceTree = "<group>"; };
 		B68742E521D74D780094D5E7 /* Condition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Condition.swift; sourceTree = "<group>"; };
-		B68742E721D74DEB0094D5E7 /* ConditionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionService.swift; sourceTree = "<group>"; };
+		B68742E721D74DEB0094D5E7 /* NotificationPutService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPutService.swift; sourceTree = "<group>"; };
 		B68742E921D74EDA0094D5E7 /* ConditionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionResponse.swift; sourceTree = "<group>"; };
 		B68742ED21D752A00094D5E7 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		B68AA6F521D4E2C1000E5549 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -131,6 +135,10 @@
 		B68AA6FD21D4F6C4000E5549 /* SmatchingListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmatchingListVC.swift; sourceTree = "<group>"; };
 		B68AA6FF21D4F837000E5549 /* Notice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notice.swift; sourceTree = "<group>"; };
 		B68AA70521D50187000E5549 /* NoticeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeService.swift; sourceTree = "<group>"; };
+		B68BC5CF21E7F632007D1448 /* Alarm.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Alarm.storyboard; sourceTree = "<group>"; };
+		B68BC5D121E7F94B007D1448 /* AlarmCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmCell.swift; sourceTree = "<group>"; };
+		B68BC5D321E7F9DD007D1448 /* AlarmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmVC.swift; sourceTree = "<group>"; };
+		B68BC5D521E7FA7A007D1448 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		B696AE9A21DFB17400ABFBDB /* ConditionPutService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionPutService.swift; sourceTree = "<group>"; };
 		B696AE9C21DFC10300ABFBDB /* NoticeDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeDetailVC.swift; sourceTree = "<group>"; };
 		B696AE9E21DFC36300ABFBDB /* NoticeDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeDetailResponse.swift; sourceTree = "<group>"; };
@@ -261,6 +269,7 @@
 				C0376D2421DD1E3C00D845EB /* Setting.storyboard */,
 				C0EE1D5D21DE422B005B114E /* Search.storyboard */,
 				C0F7C0AF21E4033400A450A3 /* AcceptTerms.storyboard */,
+				B68BC5CF21E7F632007D1448 /* Alarm.storyboard */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -303,7 +312,7 @@
 				B6A3F4A521C49785000497BF /* NetworkResult.swift */,
 				B6BB461F21D39815003DB754 /* LoginService.swift */,
 				B68AA70521D50187000E5549 /* NoticeService.swift */,
-				B68742E721D74DEB0094D5E7 /* ConditionService.swift */,
+				B68742E721D74DEB0094D5E7 /* NotificationPutService.swift */,
 				B67F2A8721DC42E200452579 /* ConditionSettingService.swift */,
 				B696AE9A21DFB17400ABFBDB /* ConditionPutService.swift */,
 				B696AEA021DFC42D00ABFBDB /* NoticeDetailService.swift */,
@@ -335,6 +344,7 @@
 				B6248D4621E0E8260058BAC4 /* SearchResponse.swift */,
 				B67AC94921E2308300690DD7 /* BaseResponse.swift */,
 				B67AC94F21E28C6700690DD7 /* User.swift */,
+				B68BC5D521E7FA7A007D1448 /* Notification.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -353,6 +363,7 @@
 				C0FB18BB21E58ECC00621629 /* SelectBusiType.swift */,
 				C0FB18BD21E5903A00621629 /* UselessField.xib */,
 				C0FB18BF21E5932400621629 /* SelectUselessField.swift */,
+				B68BC5D121E7F94B007D1448 /* AlarmCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -378,6 +389,7 @@
 				B696AE9C21DFC10300ABFBDB /* NoticeDetailVC.swift */,
 				B6248D4421E0DBAD0058BAC4 /* TotalNoticeVC.swift */,
 				C0F7C0B121E438B100A450A3 /* AcceptTermsVC.swift */,
+				B68BC5D321E7F9DD007D1448 /* AlarmVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -445,6 +457,7 @@
 				C0FB18BA21E57B3800621629 /* BusiTypeBox.xib in Resources */,
 				B6A3F49121C49071000497BF /* LaunchScreen.storyboard in Resources */,
 				B67AC95721E2A13E00690DD7 /* NanumSquareBold.ttf in Resources */,
+				B68BC5D021E7F632007D1448 /* Alarm.storyboard in Resources */,
 				B67AC95921E2A14300690DD7 /* NanumSquareLight.ttf in Resources */,
 				B6A3F48E21C49071000497BF /* Assets.xcassets in Resources */,
 				B67AC94C21E2459000690DD7 /* loading.json in Resources */,
@@ -532,10 +545,12 @@
 				B68742E621D74D780094D5E7 /* Condition.swift in Sources */,
 				B6248D4721E0E8260058BAC4 /* SearchResponse.swift in Sources */,
 				B6A3F4AA21C497BA000497BF /* ResponseArray.swift in Sources */,
+				B68BC5D221E7F94B007D1448 /* AlarmCell.swift in Sources */,
 				C0EE1D5A21DD8DC0005B114E /* MypageSettingVC.swift in Sources */,
 				B67F2A9221DC460B00452579 /* Advantage.swift in Sources */,
 				B68AA6FC21D4E2EE000E5549 /* MyPageVC.swift in Sources */,
 				B6248D4521E0DBAD0058BAC4 /* TotalNoticeVC.swift in Sources */,
+				B68BC5D621E7FA7A007D1448 /* Notification.swift in Sources */,
 				B67AC94A21E2308300690DD7 /* BaseResponse.swift in Sources */,
 				C0EE1D5C21DD8DEB005B114E /* MypageAskVC.swift in Sources */,
 				B67F2A9C21DC4D5800452579 /* UINavigationBar+extension.swift in Sources */,
@@ -552,8 +567,9 @@
 				B67F2A8A21DC43E000452579 /* Location.swift in Sources */,
 				C0EE1D5821DD8C00005B114E /* SettingViewController.swift in Sources */,
 				B61674F521DD3437006D67A4 /* FitConditionResponse.swift in Sources */,
+				B68BC5D421E7F9DD007D1448 /* AlarmVC.swift in Sources */,
 				B68AA70621D50187000E5549 /* NoticeService.swift in Sources */,
-				B68742E821D74DEB0094D5E7 /* ConditionService.swift in Sources */,
+				B68742E821D74DEB0094D5E7 /* NotificationPutService.swift in Sources */,
 				B68742EE21D752A00094D5E7 /* SearchVC.swift in Sources */,
 				B6B74B5921D9EA5D001482BF /* Checkbox.swift in Sources */,
 				B6BAFCE521DBB6B2004C8743 /* CustomViewBorder.swift in Sources */,

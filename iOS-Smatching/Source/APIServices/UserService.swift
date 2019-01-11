@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 struct UserService: APIManager, Requestable {
-    typealias NetworkData = ResponseArray<CommonResponse>
+    typealias NetworkData = ResponseArray<Notification>
     typealias NetworkDataObj = ResponseObject<ConditionResponse>
     static let shared = UserService()
     let signupURL = url("/users")//url 상세주소
@@ -125,6 +125,27 @@ struct UserService: APIManager, Requestable {
             case .error(let error):
                 print(error)
             
+            }
+            
+        }
+        
+    }
+    func getNotifications(completion: @escaping([Notification]) ->Void) {
+        let getURL = signupURL + "\notification"
+        let headers: HTTPHeaders = [
+            "Content-Type" : "application/json",
+            "Authorization" : UserDefaults.standard.string(forKey: "token") ?? ""
+        ]
+        
+        gettable(getURL, body: nil, header: headers) {(res) in
+            switch res {
+            case .success(let value):
+                print(value)
+                guard let notification = value.data else {return}
+                completion(notification)
+            case .error(let error):
+                print(error)
+                
             }
             
         }

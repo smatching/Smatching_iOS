@@ -10,8 +10,6 @@ import UIKit
 
 class AlertCheckBox: UIButton {
     
-    
-    
     let checkedImage = UIImage(named: "icn_checkbox_white")! as UIImage
     let uncheckedImage = UIImage(named: "icn_emptybox")! as UIImage
 
