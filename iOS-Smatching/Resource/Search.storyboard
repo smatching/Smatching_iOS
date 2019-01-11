@@ -176,7 +176,6 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="uAX-r5-awL" firstAttribute="top" secondItem="rXd-1g-9N9" secondAttribute="top" id="3XO-8g-8sE"/>
                                     <constraint firstItem="uAX-r5-awL" firstAttribute="leading" secondItem="rXd-1g-9N9" secondAttribute="leading" constant="12.5" id="3jx-oh-hzq"/>

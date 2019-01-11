@@ -6,6 +6,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -48,7 +49,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgProfile" translatesAutoresizingMaskIntoConstraints="NO" id="7m4-4R-az4">
-                                <rect key="frame" x="155.5" y="161" width="64" height="64"/>
+                                <rect key="frame" x="150.5" y="161" width="74" height="74"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgProfileEdgeBlue" translatesAutoresizingMaskIntoConstraints="NO" id="HAz-yg-yJo">
                                 <rect key="frame" x="150.5" y="161" width="74" height="74"/>
@@ -69,13 +70,13 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="sZu-XQ-Flx">
-                                <rect key="frame" x="67.5" y="265" width="240" height="326"/>
+                                <rect key="frame" x="43.5" y="265" width="288" height="326"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="rfI-1s-NYU">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="46.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="46.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9RU-LQ-nhx">
-                                                <rect key="frame" x="0.0" y="0.0" width="240" height="15.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="15.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="닉네임" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecp-gR-2jI">
                                                         <rect key="frame" x="0.0" y="0.0" width="40" height="15.5"/>
@@ -87,7 +88,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(8자 이하)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x8e-Q7-nOK">
-                                                        <rect key="frame" x="40" y="0.0" width="200" height="15.5"/>
+                                                        <rect key="frame" x="40" y="0.0" width="248" height="15.5"/>
                                                         <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="12"/>
                                                         <color key="textColor" red="0.2784313725" green="0.2784313725" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -95,9 +96,8 @@
                                                 </subviews>
                                             </stackView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="nickname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WqZ-tS-4Et">
-                                                <rect key="frame" x="0.0" y="20.5" width="240" height="20"/>
+                                                <rect key="frame" x="0.0" y="20.5" width="288" height="20"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="240" id="5rx-Ep-F8q"/>
                                                     <constraint firstAttribute="height" constant="20" id="gy9-DA-NNM"/>
                                                 </constraints>
                                                 <color key="textColor" red="0.2784313725" green="0.2784313725" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
@@ -105,7 +105,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1du-5x-gpM">
-                                                <rect key="frame" x="0.0" y="45.5" width="240" height="1"/>
+                                                <rect key="frame" x="0.0" y="45.5" width="288" height="1"/>
                                                 <color key="backgroundColor" red="0.73725490199999999" green="0.73725490199999999" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="Rnc-b0-0su"/>
@@ -113,15 +113,15 @@
                                             </view>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="240" id="Wwe-No-6CG"/>
+                                            <constraint firstAttribute="width" constant="288" id="Wwe-No-6CG"/>
                                             <constraint firstAttribute="height" constant="46.5" id="uSd-dS-JXk"/>
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qMr-lI-m5K">
-                                        <rect key="frame" x="0.0" y="73.5" width="240" height="42"/>
+                                        <rect key="frame" x="0.0" y="73.5" width="288" height="42"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Bo-Yd-4fQ">
-                                                <rect key="frame" x="0.0" y="0.0" width="240" height="15.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="15.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이메일 주소" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xcb-Ce-MdL">
                                                         <rect key="frame" x="0.0" y="0.0" width="70" height="15.5"/>
@@ -133,7 +133,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(변경불가)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8KY-pY-df0">
-                                                        <rect key="frame" x="70" y="0.0" width="170" height="15.5"/>
+                                                        <rect key="frame" x="70" y="0.0" width="218" height="15.5"/>
                                                         <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="12"/>
                                                         <color key="textColor" red="0.2784313725" green="0.2784313725" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -141,17 +141,16 @@
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CEs-5b-mup">
-                                                <rect key="frame" x="0.0" y="20.5" width="240" height="15.5"/>
+                                                <rect key="frame" x="0.0" y="20.5" width="288" height="15.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="15.5" id="Zp4-0f-Vls"/>
-                                                    <constraint firstAttribute="width" constant="240" id="u1P-7a-ipY"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="14"/>
                                                 <color key="textColor" red="0.2784313725" green="0.2784313725" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z5g-4t-VKV">
-                                                <rect key="frame" x="0.0" y="41" width="240" height="1"/>
+                                                <rect key="frame" x="0.0" y="41" width="288" height="1"/>
                                                 <color key="backgroundColor" red="0.73725490199999999" green="0.73725490199999999" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="I4n-B0-oXb"/>
@@ -159,17 +158,15 @@
                                             </view>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="240" id="wz5-0f-nks"/>
                                             <constraint firstAttribute="height" constant="42" id="z5z-la-ZcC"/>
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="3bo-Qn-FCa">
-                                        <rect key="frame" x="0.0" y="142.5" width="240" height="42.5"/>
+                                        <rect key="frame" x="0.0" y="142.5" width="288" height="42.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="기존 비밀번호" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZR-Ed-evv">
-                                                <rect key="frame" x="0.0" y="0.0" width="240" height="15.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="15.5"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="240" id="G7L-5T-2Y5"/>
                                                     <constraint firstAttribute="height" constant="15.5" id="lFq-cF-s3w"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="14"/>
@@ -177,9 +174,8 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="current password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X63-k8-Zqq">
-                                                <rect key="frame" x="0.0" y="20.5" width="240" height="16"/>
+                                                <rect key="frame" x="0.0" y="20.5" width="288" height="16"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="240" id="1fX-iC-68I"/>
                                                     <constraint firstAttribute="height" constant="16" id="fxP-Wn-jWG"/>
                                                 </constraints>
                                                 <color key="textColor" red="0.2784313725" green="0.2784313725" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
@@ -187,7 +183,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JHj-YG-Z1o">
-                                                <rect key="frame" x="0.0" y="41.5" width="240" height="1"/>
+                                                <rect key="frame" x="0.0" y="41.5" width="288" height="1"/>
                                                 <color key="backgroundColor" red="0.73725490199999999" green="0.73725490199999999" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="yVL-vz-6op"/>
@@ -195,17 +191,15 @@
                                             </view>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="240" id="d16-ex-gWy"/>
                                             <constraint firstAttribute="height" constant="42.5" id="oNN-5z-61t"/>
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="eAG-WO-R3k">
-                                        <rect key="frame" x="0.0" y="212" width="240" height="42.5"/>
+                                        <rect key="frame" x="0.0" y="212" width="288" height="42.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="새 비밀번호 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="okf-Cy-oP8">
-                                                <rect key="frame" x="0.0" y="0.0" width="240" height="15.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="15.5"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="240" id="0oe-CS-xdm"/>
                                                     <constraint firstAttribute="height" constant="15.5" id="QeS-fS-TSJ"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="14"/>
@@ -213,17 +207,16 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="new password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="egW-BO-ayh">
-                                                <rect key="frame" x="0.0" y="20.5" width="240" height="16"/>
+                                                <rect key="frame" x="0.0" y="20.5" width="288" height="16"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="16" id="Yyu-sT-Gqs"/>
-                                                    <constraint firstAttribute="width" constant="240" id="ZaK-L2-YK4"/>
                                                 </constraints>
                                                 <color key="textColor" red="0.2784313725" green="0.2784313725" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y9n-LO-KhY">
-                                                <rect key="frame" x="0.0" y="41.5" width="240" height="1"/>
+                                                <rect key="frame" x="0.0" y="41.5" width="288" height="1"/>
                                                 <color key="backgroundColor" red="0.73725490199999999" green="0.73725490199999999" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="KG5-XY-z3s"/>
@@ -231,35 +224,32 @@
                                             </view>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="240" id="mvm-75-ccV"/>
                                             <constraint firstAttribute="height" constant="42.5" id="xae-Ek-pLA"/>
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6ST-Qi-cVK">
-                                        <rect key="frame" x="0.0" y="281.5" width="240" height="44.5"/>
+                                        <rect key="frame" x="0.0" y="281.5" width="288" height="44.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="새 비밀번호 재입력" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ca-UR-N87">
-                                                <rect key="frame" x="0.0" y="0.0" width="240" height="15.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="15.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="15.5" id="ERh-FY-O09"/>
-                                                    <constraint firstAttribute="width" constant="240" id="jHX-ph-WRA"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="14"/>
                                                 <color key="textColor" red="0.2784313725" green="0.2784313725" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="new password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2h4-QA-Im5">
-                                                <rect key="frame" x="0.0" y="20.5" width="240" height="18"/>
+                                                <rect key="frame" x="0.0" y="20.5" width="288" height="18"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="18" id="02n-GJ-lq9"/>
-                                                    <constraint firstAttribute="width" constant="240" id="MTu-Gh-dkV"/>
                                                 </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b2q-zV-ezN">
-                                                <rect key="frame" x="0.0" y="43.5" width="240" height="1"/>
+                                                <rect key="frame" x="0.0" y="43.5" width="288" height="1"/>
                                                 <color key="backgroundColor" red="0.73725490196078436" green="0.73725490196078436" blue="0.73725490196078436" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="EsW-bF-fOZ"/>
@@ -267,7 +257,6 @@
                                             </view>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="240" id="bgM-6R-fdB"/>
                                             <constraint firstAttribute="height" constant="44.5" id="ezi-xx-Yko"/>
                                         </constraints>
                                     </stackView>
@@ -277,7 +266,11 @@
                                     <constraint firstItem="eAG-WO-R3k" firstAttribute="top" secondItem="3bo-Qn-FCa" secondAttribute="bottom" constant="27" id="CCl-hZ-Qvu"/>
                                     <constraint firstAttribute="height" constant="326" id="DJi-WQ-W1p"/>
                                     <constraint firstItem="qMr-lI-m5K" firstAttribute="top" secondItem="rfI-1s-NYU" secondAttribute="bottom" constant="27" id="K54-cZ-Hgx"/>
+                                    <constraint firstItem="qMr-lI-m5K" firstAttribute="width" secondItem="rfI-1s-NYU" secondAttribute="width" id="KTn-4p-7w3"/>
+                                    <constraint firstItem="3bo-Qn-FCa" firstAttribute="width" secondItem="rfI-1s-NYU" secondAttribute="width" id="P0g-3U-dge"/>
+                                    <constraint firstItem="eAG-WO-R3k" firstAttribute="width" secondItem="rfI-1s-NYU" secondAttribute="width" id="PbC-ND-ZBl"/>
                                     <constraint firstItem="3bo-Qn-FCa" firstAttribute="top" secondItem="qMr-lI-m5K" secondAttribute="bottom" constant="27" id="W2n-qO-24A"/>
+                                    <constraint firstItem="6ST-Qi-cVK" firstAttribute="width" secondItem="rfI-1s-NYU" secondAttribute="width" id="g71-Qf-S39"/>
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="izb-4o-mgh">
@@ -291,21 +284,23 @@
                         <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="sZu-XQ-Flx" firstAttribute="centerX" secondItem="dew-K3-meb" secondAttribute="centerX" id="Axn-r9-GEh"/>
-                            <constraint firstItem="sZu-XQ-Flx" firstAttribute="top" secondItem="7m4-4R-az4" secondAttribute="bottom" constant="40" id="E56-LC-YZP"/>
                             <constraint firstItem="sZu-XQ-Flx" firstAttribute="top" secondItem="IRp-Y3-OHv" secondAttribute="bottom" constant="29" id="G9c-Zy-3Hz"/>
                             <constraint firstItem="RFv-mb-cj4" firstAttribute="centerY" secondItem="cTJ-Wm-mMt" secondAttribute="centerY" id="GOC-fq-5vA"/>
                             <constraint firstItem="RFv-mb-cj4" firstAttribute="centerX" secondItem="dew-K3-meb" secondAttribute="centerX" id="HkO-KD-85S"/>
                             <constraint firstItem="IRp-Y3-OHv" firstAttribute="top" secondItem="HAz-yg-yJo" secondAttribute="bottom" constant="-24" id="Lgu-Zw-hGW"/>
                             <constraint firstItem="IRp-Y3-OHv" firstAttribute="leading" secondItem="HAz-yg-yJo" secondAttribute="trailing" constant="-25.5" id="O3I-mJ-Giw"/>
                             <constraint firstItem="izb-4o-mgh" firstAttribute="top" secondItem="sZu-XQ-Flx" secondAttribute="bottom" constant="21" id="Op1-Ua-IVM"/>
+                            <constraint firstItem="7m4-4R-az4" firstAttribute="trailing" secondItem="HAz-yg-yJo" secondAttribute="trailing" id="Qak-rI-t0V"/>
                             <constraint firstItem="cTJ-Wm-mMt" firstAttribute="leading" secondItem="dew-K3-meb" secondAttribute="leading" constant="8" id="TOW-61-Xvc"/>
                             <constraint firstItem="sZu-XQ-Flx" firstAttribute="top" secondItem="HAz-yg-yJo" secondAttribute="bottom" constant="30" id="Vaj-c3-AIa"/>
+                            <constraint firstItem="7m4-4R-az4" firstAttribute="bottom" secondItem="HAz-yg-yJo" secondAttribute="bottom" id="iMo-kc-NvO"/>
                             <constraint firstItem="dew-K3-meb" firstAttribute="trailing" secondItem="izb-4o-mgh" secondAttribute="trailing" constant="38" id="liC-qV-wDs"/>
                             <constraint firstItem="izb-4o-mgh" firstAttribute="leading" secondItem="dew-K3-meb" secondAttribute="leading" constant="37" id="mUe-YH-gDJ"/>
                             <constraint firstItem="sZu-XQ-Flx" firstAttribute="centerY" secondItem="dew-K3-meb" secondAttribute="centerY" constant="43" id="rbN-Vu-EoT"/>
+                            <constraint firstItem="7m4-4R-az4" firstAttribute="leading" secondItem="HAz-yg-yJo" secondAttribute="leading" id="sNx-wt-zye"/>
                             <constraint firstItem="HAz-yg-yJo" firstAttribute="centerX" secondItem="dew-K3-meb" secondAttribute="centerX" id="thI-oC-U6D"/>
                             <constraint firstItem="cTJ-Wm-mMt" firstAttribute="top" secondItem="dew-K3-meb" secondAttribute="top" constant="23" id="uH3-Xc-8Ed"/>
-                            <constraint firstItem="7m4-4R-az4" firstAttribute="centerX" secondItem="dew-K3-meb" secondAttribute="centerX" id="zQz-Rz-h7V"/>
+                            <constraint firstItem="7m4-4R-az4" firstAttribute="top" secondItem="HAz-yg-yJo" secondAttribute="top" id="y02-Xw-BBy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dew-K3-meb"/>
                     </view>
@@ -323,21 +318,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VHt-pK-J2D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="128.80000000000001" y="209.14542728635683"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="4SX-6A-86M">
-            <objects>
-                <viewController id="oQS-6L-Q2T" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Pm3-ub-dL7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="D4Q-hj-ruR"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NUi-bm-XFO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="781" y="-50"/>
         </scene>
         <!--Mypage AskVC-->
         <scene sceneID="giQ-6I-QO7">
@@ -567,20 +547,24 @@
                                             <constraint firstAttribute="height" constant="1" id="ugv-LT-CRP"/>
                                         </constraints>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="NxI-7x-td4" userLabel="버전정보">
-                                        <rect key="frame" x="0.0" y="220" width="310" height="19.5"/>
+
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="NxI-7x-td4" userLabel="버전정보">
+                                        <rect key="frame" x="0.0" y="220" width="310" height="21.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="버전정보" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6wb-Eh-30p">
-                                                <rect key="frame" x="0.0" y="0.0" width="80" height="19.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="21.5"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="80" id="nnQ-Hv-k99"/>
+                                                    <constraint firstAttribute="width" constant="100" id="4fC-uf-A1a"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 . 0 . 0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BIa-cT-Kof">
-                                                <rect key="frame" x="150" y="0.0" width="160" height="19.5"/>
+                                                <rect key="frame" x="108" y="0.0" width="202" height="21.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="64" id="74d-Tk-bca"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -639,7 +623,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g6l-V6-Dvk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1102" y="570"/>
+            <point key="canvasLocation" x="-1103.2" y="569.86506746626696"/>
         </scene>
     </scenes>
     <resources>
