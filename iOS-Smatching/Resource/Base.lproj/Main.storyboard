@@ -4011,8 +4011,8 @@
                                     <constraint firstAttribute="bottom" secondItem="RC9-H1-WKJ" secondAttribute="bottom" id="vaW-1M-UH6"/>
                                 </constraints>
                             </scrollView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gby-rf-MiO">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gby-rf-MiO">
+                                <rect key="frame" x="1" y="20" width="375" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="lvs-Oo-27F"/>
                                 </constraints>
@@ -4159,7 +4159,7 @@
         <image name="btnBack" width="48" height="48"/>
         <image name="btnCreateaccountCanclick" width="266" height="47"/>
         <image name="btnExperience" width="266" height="47"/>
-        <image name="btnLogin" width="119" height="19"/>
+        <image name="btnLogin" width="266" height="47"/>
         <image name="btnLoginCanclick" width="266" height="47"/>
         <image name="btnLogin_1" width="266" height="47"/>
         <image name="btn_addsmatching_canclick" width="87" height="87"/>

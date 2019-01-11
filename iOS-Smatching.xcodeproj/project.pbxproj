@@ -82,7 +82,9 @@
 		B6BAFCE521DBB6B2004C8743 /* CustomViewBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BAFCE421DBB6B2004C8743 /* CustomViewBorder.swift */; };
 		B6BAFCE721DBD3FA004C8743 /* CustomDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BAFCE621DBD3FA004C8743 /* CustomDialog.swift */; };
 		B6BB462021D39815003DB754 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BB461F21D39815003DB754 /* LoginService.swift */; };
-		C003C71D21E8BB2B00F8DEB7 /* WorkThrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C003C71C21E8BB2B00F8DEB7 /* WorkThrough.storyboard */; };
+		C003C71D21E8BB2B00F8DEB7 /* walkThrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C003C71C21E8BB2B00F8DEB7 /* walkThrough.storyboard */; };
+		C003C71F21E9225400F8DEB7 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C003C71E21E9225400F8DEB7 /* PageViewController.swift */; };
+		C003C72121E952A900F8DEB7 /* WalkThroughVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C003C72021E952A900F8DEB7 /* WalkThroughVC.swift */; };
 		C0376D2321DCF79600D845EB /* DetailContent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0376D2221DCF79600D845EB /* DetailContent.storyboard */; };
 		C0376D2521DD1E3C00D845EB /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0376D2421DD1E3C00D845EB /* Setting.storyboard */; };
 		C0EE047121D36D810046E030 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EE047021D36D810046E030 /* LoginViewController.swift */; };
@@ -178,7 +180,9 @@
 		B6BAFCE421DBB6B2004C8743 /* CustomViewBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewBorder.swift; sourceTree = "<group>"; };
 		B6BAFCE621DBD3FA004C8743 /* CustomDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDialog.swift; sourceTree = "<group>"; };
 		B6BB461F21D39815003DB754 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
-		C003C71C21E8BB2B00F8DEB7 /* WorkThrough.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WorkThrough.storyboard; sourceTree = "<group>"; };
+		C003C71C21E8BB2B00F8DEB7 /* walkThrough.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = walkThrough.storyboard; sourceTree = "<group>"; };
+		C003C71E21E9225400F8DEB7 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		C003C72021E952A900F8DEB7 /* WalkThroughVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkThroughVC.swift; sourceTree = "<group>"; };
 		C0376D2221DCF79600D845EB /* DetailContent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailContent.storyboard; sourceTree = "<group>"; };
 		C0376D2421DD1E3C00D845EB /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 		C0EE047021D36D810046E030 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -277,7 +281,7 @@
 				B6A3F48D21C49071000497BF /* Assets.xcassets */,
 				B6A3F48F21C49071000497BF /* LaunchScreen.storyboard */,
 				B6A3F48A21C49070000497BF /* Main.storyboard */,
-				C003C71C21E8BB2B00F8DEB7 /* WorkThrough.storyboard */,
+				C003C71C21E8BB2B00F8DEB7 /* walkThrough.storyboard */,
 				C0376D2221DCF79600D845EB /* DetailContent.storyboard */,
 				C0376D2421DD1E3C00D845EB /* Setting.storyboard */,
 				C0EE1D5D21DE422B005B114E /* Search.storyboard */,
@@ -405,6 +409,8 @@
 				C0F7C0B121E438B100A450A3 /* AcceptTermsVC.swift */,
 				B68BC5D321E7F9DD007D1448 /* AlarmVC.swift */,
 				B68BC5D721E86C3B007D1448 /* SplashVC.swift */,
+				C003C71E21E9225400F8DEB7 /* PageViewController.swift */,
+				C003C72021E952A900F8DEB7 /* WalkThroughVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -470,7 +476,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0FB18BA21E57B3800621629 /* BusiTypeBox.xib in Resources */,
-				C003C71D21E8BB2B00F8DEB7 /* WorkThrough.storyboard in Resources */,
+				C003C71D21E8BB2B00F8DEB7 /* walkThrough.storyboard in Resources */,
 				B6A3F49121C49071000497BF /* LaunchScreen.storyboard in Resources */,
 				B68BC5E221E88F06007D1448 /* splash.json in Resources */,
 				B67AC95721E2A13E00690DD7 /* NanumSquareBold.ttf in Resources */,
@@ -575,6 +581,7 @@
 				B67F2A9C21DC4D5800452579 /* UINavigationBar+extension.swift in Sources */,
 				B6AFE59A21DF70050001FA55 /* AlertCheckBox.swift in Sources */,
 				B61148F121DC2204004F1E92 /* InsititutionClassifyInfo.swift in Sources */,
+				C003C72121E952A900F8DEB7 /* WalkThroughVC.swift in Sources */,
 				B68AA70021D4F837000E5549 /* Notice.swift in Sources */,
 				B68AA6FA21D4E2DD000E5549 /* TalkVC.swift in Sources */,
 				B68AA6F621D4E2C1000E5549 /* HomeVC.swift in Sources */,
@@ -602,6 +609,7 @@
 				B632123A21D3CE9300087FA2 /* SignupVC.swift in Sources */,
 				B6A3F4A221C4974C000497BF /* Requestable.swift in Sources */,
 				B6A3F48921C49070000497BF /* ViewController.swift in Sources */,
+				C003C71F21E9225400F8DEB7 /* PageViewController.swift in Sources */,
 				B696AEA121DFC42D00ABFBDB /* NoticeDetailService.swift in Sources */,
 				B6A3F48721C49070000497BF /* AppDelegate.swift in Sources */,
 				B6BAFCE721DBD3FA004C8743 /* CustomDialog.swift in Sources */,
