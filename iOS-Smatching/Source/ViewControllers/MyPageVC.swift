@@ -26,10 +26,8 @@ class MyPageVC: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupView()
-        
-        
+        print(UserDefaults.standard.string(forKey: "token"))
     }
     
     override func viewWillAppear(_ animated: Bool) {

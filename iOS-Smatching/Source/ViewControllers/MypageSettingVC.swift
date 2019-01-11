@@ -116,9 +116,11 @@ class MypageSettingVC: UIViewController, UITextFieldDelegate {
     @IBAction func completeEdit(_ sender: Any) {
         UserService.shared.editUsersInfo(nickname: self.nicknameLabel.text!, password: self.prevPasswdLabel.text!, newPassword: self.newPasswdLabel.text!) { [weak self] () in guard let `self` = self else {return}
             
-            self.simpleAlert("", "사용자 정보가 변경되었습니다.", completion: nil)
-            self.navigationController?.popViewController(animated: true)
-            self.dismiss(animated: true, completion: nil)
+            self.simpleAlert("", "사용자 정보가 변경되었습니다.", completion: { (action) in
+                self.navigationController?.popViewController(animated: true)
+                self.dismiss(animated: true, completion: nil)
+            })
+            
         }
     }
     @IBAction func goBackToMypage(_ sender: UIButton) {

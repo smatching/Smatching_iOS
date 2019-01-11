@@ -54,24 +54,7 @@ struct SearchService: APIManager, Requestable {
             
         }
     }
-    //최근 검색어 조회
-    func getRecentSeachKeyword(completion: @escaping() ->Void) {
-        let getURL = searchURL + "/log"
-        
-        //        gettable(getURL, body: nil, header: headers) {(res) in
-        //            switch res {
-        //            case .success(let value):
-        //                print(value)
-        //                guard let result = value.data else
-        //                {return}
-        //                completion(value.data)
-        //            case .error(let error):
-        //                print(error)
-        //            }
-        //
-        //        }
-    }
-    
+
     func getMyScrapNotices(query: String, request_num: Int? = 2, exist_num: Int? = 0, completion: @escaping([Notice])->Void) {
         let getURL = searchURL + "/notices/scrap?query=\(query)&request_num=\(request_num ?? 2)&exist_num=\(exist_num ?? 0)"
         

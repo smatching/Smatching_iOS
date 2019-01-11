@@ -10,6 +10,7 @@ import UIKit
 
 class SearchVC: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var recentSearchWordView: UIView!
     @IBOutlet weak var searchResultView: UIView!
     @IBOutlet weak var searchTableView: UITableView!
     @IBOutlet var SearchImg: UIImageView!

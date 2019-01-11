@@ -41,15 +41,16 @@ class HomeVC: UIViewController {
         setupShadow()
         
         NotificationPutService.shared.getNotificationCount() {[weak self] (res) in guard let `self` = self else {return}
-            self.badgeCount = res.num!
+            self.badgeCount = self.gino(res.num)
+            let application = UIApplication.shared
+            let center = UNUserNotificationCenter.current()
+            center.requestAuthorization(options:[.badge, .alert, .sound]) { (granted, error) in
+                // Enable or disable features based on authorization.
+            }
+            application.registerForRemoteNotifications()
+            application.applicationIconBadgeNumber = self.gino(self.badgeCount)
         }
-        let application = UIApplication.shared
-        let center = UNUserNotificationCenter.current()
-        center.requestAuthorization(options:[.badge, .alert, .sound]) { (granted, error) in
-            // Enable or disable features based on authorization.
-        }
-        application.registerForRemoteNotifications()
-        application.applicationIconBadgeNumber = self.badgeCount
+        
         
         //전체 공고 불러오기
         NoticeService.shared.getAllNotice(request_num: 4, exist_num: self.noticeList.count) {[weak self] (data) in guard let `self` = self else {return}
