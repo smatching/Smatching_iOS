@@ -792,6 +792,8 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
         case forty_more:
             self.age.forty_more = !self.age.forty_more!
             break
+            
+            
         case zero_one:
             self.period.zero_one = !self.period.zero_one!
             periodCountNum += CountTheCheckedBox(self.period.zero_one!)
