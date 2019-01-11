@@ -53,6 +53,7 @@
 		B68BC5D821E86C3B007D1448 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68BC5D721E86C3B007D1448 /* SplashVC.swift */; };
 		B68BC5DC21E86FDE007D1448 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B68BC5DB21E86FDE007D1448 /* Splash.storyboard */; };
 		B68BC5E221E88F06007D1448 /* splash.json in Resources */ = {isa = PBXBuildFile; fileRef = B68BC5E121E88F05007D1448 /* splash.json */; };
+		B6924AF021E8E1460026E7A2 /* SearchCookieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6924AEF21E8E1460026E7A2 /* SearchCookieService.swift */; };
 		B696AE9B21DFB17400ABFBDB /* ConditionPutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B696AE9A21DFB17400ABFBDB /* ConditionPutService.swift */; };
 		B696AE9D21DFC10300ABFBDB /* NoticeDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B696AE9C21DFC10300ABFBDB /* NoticeDetailVC.swift */; };
 		B696AE9F21DFC36300ABFBDB /* NoticeDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B696AE9E21DFC36300ABFBDB /* NoticeDetailResponse.swift */; };
@@ -146,6 +147,7 @@
 		B68BC5D721E86C3B007D1448 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
 		B68BC5DB21E86FDE007D1448 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 		B68BC5E121E88F05007D1448 /* splash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = splash.json; sourceTree = "<group>"; };
+		B6924AEF21E8E1460026E7A2 /* SearchCookieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCookieService.swift; sourceTree = "<group>"; };
 		B696AE9A21DFB17400ABFBDB /* ConditionPutService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionPutService.swift; sourceTree = "<group>"; };
 		B696AE9C21DFC10300ABFBDB /* NoticeDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeDetailVC.swift; sourceTree = "<group>"; };
 		B696AE9E21DFC36300ABFBDB /* NoticeDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeDetailResponse.swift; sourceTree = "<group>"; };
@@ -330,6 +332,7 @@
 				B696AEA021DFC42D00ABFBDB /* NoticeDetailService.swift */,
 				B6248D4821E0E8B80058BAC4 /* SearchService.swift */,
 				B67AC95121E28CFA00690DD7 /* MypageService.swift */,
+				B6924AEF21E8E1460026E7A2 /* SearchCookieService.swift */,
 			);
 			path = APIServices;
 			sourceTree = "<group>";
@@ -610,6 +613,7 @@
 				B6A3F4B221C499FB000497BF /* UIImage+imageFromURL.swift in Sources */,
 				B670933B21D652DB00472BB2 /* ChangeButton.swift in Sources */,
 				C0EE047121D36D810046E030 /* LoginViewController.swift in Sources */,
+				B6924AF021E8E1460026E7A2 /* SearchCookieService.swift in Sources */,
 				B670933921D6068400472BB2 /* NoticeCell.swift in Sources */,
 				B67F2A9421DC461800452579 /* BusiType.swift in Sources */,
 				B632123621D3B11000087FA2 /* LoginOrSignupVC.swift in Sources */,

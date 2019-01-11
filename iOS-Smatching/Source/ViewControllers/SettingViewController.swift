@@ -23,11 +23,12 @@ class SettingViewController: UIViewController {
     }
     @IBAction func Logout(_ sender: UIButton) {
         simpleAlert("", "로그아웃 하시겠습니까?",  completion: { (action) in
+            UserDefaults.standard.removeObject(forKey: "token")
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "LoginOrSignupVC") as! LoginOrSignupVC
             
             self.present(nextViewController, animated: true, completion: nil)
-            UserDefaults.standard.removeObject(forKey: "token")
+            
         })
         
     }

@@ -46,7 +46,6 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate {
     @IBOutlet weak var busiTypeLabel: UILabel!
     @IBOutlet weak var periodLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
-    @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var conditionTitle: UILabel!
     
     @IBOutlet weak var showListBtn: UIButton!
@@ -69,6 +68,7 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate {
     let field: [String] = ["농업,임업 및 어업", "광업", "전기, 가스, 증기 및 공기 조절 공금업", "수도, 하수 및 폐기물 처리, 원료 재생업", "건설업", "도매 및 소매업", "운수 및 창고업", "숙박 및 음식접업", "정보통신업", "금융 및 보험업", "부동산업", "전문, 과학 및 기술 서비스업", "사업시설 관리, 사업지원 및 임대서비스업", "공공 행정, 국방 및 사회보장 행정", "교육 서비스업", "보건업 및 사회복지 서비스업", "예술, 스포츠 및 여가관련 서비스업", "협회 및 단체, 수리 및 기타 개인 서비스업", "가구 내 고용활동 및 달리 분류되지 않은 자가 소비 생산활동", "국제 및 외국기관", "4차산업분야"]
     let excCate: [String] = ["창업교육, 창업 멘토링", "지식재산권(특허, 저작권 등)", "시설, 공간", "국내판로 확대", "해외판로 확대", "시제품 제작,제조양산", "정부 대출 지원", "무대출 자금 지원"]
     let advantage: [String] = ["재도전기업", "여성기업", "장애인기업", "사회적기업", "1인창조기업", "4차산업관련기업", "대학(원)생", "공동창업"]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -360,62 +360,9 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate {
     
     // 맞춤조건 설정페이지와 정보 연결
     func inputTextMatchingInfo () {
-        //지역
-        self.locationLabel.text = ""
+        //나이
+       
         self.ageLabel.text = ""
-        if self.gbno(fitConditionRes?.location?.seoul) == true {
-            self.locationLabel.text? += self.location[0] + ", "
-        }
-        if self.gbno(fitConditionRes?.location?.busan) == true {
-            self.locationLabel.text? += self.location[1] + ", "
-        }
-        if self.gbno(fitConditionRes?.location?.daegu) == true {
-            self.locationLabel.text? += self.location[2] + ", "
-        }
-        if self.gbno(fitConditionRes?.location?.incheon) == true {
-            self.locationLabel.text? += self.location[3] + ", "
-        }
-        if self.gbno(fitConditionRes?.location?.gwangju) == true {
-            self.locationLabel.text? += self.location[4] + ", "
-        }
-        if self.gbno(fitConditionRes?.location?.daejeon) == true {
-            self.locationLabel.text? += self.location[5] + ", "
-        }
-        if self.gbno(fitConditionRes?.location?.ulsan) == true {
-            self.locationLabel.text? += self.location[6] + ", "
-        }
-        if self.gbno(fitConditionRes?.location?.sejong) == true {
-            self.locationLabel.text? += self.location[7] + ", "
-        }
-        if self.gbno(fitConditionRes?.location?.gangwon) == true {
-            self.locationLabel.text? += self.location[8] + ", "
-        }
-        if self.gbno(fitConditionRes?.location?.kyunggi) == true {
-            self.locationLabel.text? += self.location[9] + ", "
-        }
-        if self.gbno(fitConditionRes?.location?.kyungbuk) == true {
-            self.locationLabel.text? += self.location[10] + ", "
-        }
-        if self.gbno(fitConditionRes?.location?.kyungnam) == true {
-            self.locationLabel.text? += self.location[11] + ", "
-        }
-        if self.gbno(fitConditionRes?.location?.jeonnam) == true {
-            self.locationLabel.text? += self.location[12] + ", "
-        }
-        if self.gbno(fitConditionRes?.location?.jeonbuk) == true {
-            self.locationLabel.text? += self.location[13] + ", "
-        }
-        if self.gbno(fitConditionRes?.location?.chungnam) == true {
-            self.locationLabel.text? += self.location[14] + ", "
-        }
-        if self.gbno(fitConditionRes?.location?.chungbuk) == true {
-            self.locationLabel.text? += self.location[15] + ", "
-        }
-        if self.gbno(fitConditionRes?.location?.jeju) == true {
-            self.locationLabel.text? += self.location[16] + ", "
-        }
-        locationLabel.text = DoneListingWords(locationLabel)
-        // 나이
         if self.gbno(fitConditionRes?.age?.twenty_less) == true {
             self.ageLabel.text? += self.age[0] + ", "
         }
@@ -426,6 +373,148 @@ class SmatchingListVC: UIViewController, CheckBoxDelegate {
             self.ageLabel.text? += self.age[2] + ", "
         }
         ageLabel.text = DoneListingWords(ageLabel)
+        
+        self.periodLabel.text = ""
+        if self.gbno(fitConditionRes?.period?.zero_one) == true {
+            self.periodLabel.text? += self.period[0] + ", "
+        }
+        if self.gbno(fitConditionRes?.period?.one_two) == true {
+            self.periodLabel.text? += self.period[1] + ", "
+        }
+        if self.gbno(fitConditionRes?.period?.two_three) == true {
+            self.periodLabel.text? += self.period[2] + ", "
+        }
+        if self.gbno(fitConditionRes?.period?.three_four) == true {
+            self.periodLabel.text? += self.period[3] + ", "
+        }
+        if self.gbno(fitConditionRes?.period?.four_five) == true {
+            self.periodLabel.text? += self.period[4] + ", "
+        }
+        if self.gbno(fitConditionRes?.period?.five_six) == true {
+            self.periodLabel.text? += self.period[5] + ", "
+        }
+        if self.gbno(fitConditionRes?.period?.six_seven) == true {
+            self.periodLabel.text? += self.period[6] + ", "
+        }
+        if self.gbno(fitConditionRes?.period?.seven_more) == true {
+            self.periodLabel.text? += self.period[7] + ", "
+        }
+        periodLabel.text = DoneListingWords(periodLabel)
+        
+        self.busiTypeLabel.text = ""
+        
+        if self.gbno(fitConditionRes?.busiType?.midsmall) == true {
+            self.busiTypeLabel.text? += self.businessType[0] + ", "
+        } else if self.gbno(fitConditionRes?.busiType?.midbig) == true {
+            self.busiTypeLabel.text? += self.businessType[1] + ", "
+        } else if self.gbno(fitConditionRes?.busiType?.big) == true {
+            self.busiTypeLabel.text? += self.businessType[2] + ", "
+        } else if self.gbno(fitConditionRes?.busiType?.sole) == true {
+            self.busiTypeLabel.text? += self.businessType[3] + ", "
+        } else if self.gbno(fitConditionRes?.busiType?.small) == true {
+            self.busiTypeLabel.text? += self.businessType[4] + ", "
+        } else if self.gbno(fitConditionRes?.busiType?.pre) == true {
+            self.busiTypeLabel.text? += self.businessType[6] + ", "
+        } else if self.gbno(fitConditionRes?.busiType?.tradi) == true {
+            self.busiTypeLabel.text? += self.businessType[5] + ", "
+        }
+        
+        busiTypeLabel.text = DoneListingWords(busiTypeLabel)
+        
+        fieldLabel.text = ""
+        
+        if self.gbno(fitConditionRes?.field?.a) == true {
+            self.fieldLabel.text? += self.field[0] + ", "
+        } else if self.gbno(fitConditionRes?.field?.b) == true {
+            self.fieldLabel.text? += self.field[1] + ", "
+        } else if self.gbno(fitConditionRes?.field?.c) == true {
+            self.fieldLabel.text? += self.field[2] + ", "
+        } else if self.gbno(fitConditionRes?.field?.d) == true {
+            self.fieldLabel.text? += self.field[3] + ", "
+        } else if self.gbno(fitConditionRes?.field?.e) == true {
+            self.fieldLabel.text? += self.field[4] + ", "
+        } else if self.gbno(fitConditionRes?.field?.f) == true {
+            self.fieldLabel.text? += self.field[5] + ", "
+        } else if self.gbno(fitConditionRes?.field?.g) == true {
+            self.fieldLabel.text? += self.field[6] + ", "
+        } else if self.gbno(fitConditionRes?.field?.h) == true {
+            self.fieldLabel.text? += self.field[7] + ", "
+        } else if self.gbno(fitConditionRes?.field?.i) == true {
+            self.fieldLabel.text? += self.field[8] + ", "
+        } else if self.gbno(fitConditionRes?.field?.j) == true {
+            self.fieldLabel.text? += self.field[9] + ", "
+        } else if self.gbno(fitConditionRes?.field?.k) == true {
+            self.fieldLabel.text? += self.field[10] + ", "
+        } else if self.gbno(fitConditionRes?.field?.l) == true {
+            self.fieldLabel.text? += self.field[11] + ", "
+        } else if self.gbno(fitConditionRes?.field?.m) == true {
+            self.fieldLabel.text? += self.field[12] + ", "
+        }else if self.gbno(fitConditionRes?.field?.n) == true {
+            self.fieldLabel.text? += self.field[13] + ", "
+        }else if self.gbno(fitConditionRes?.field?.o) == true {
+            self.fieldLabel.text? += self.field[14] + ", "
+        }else if self.gbno(fitConditionRes?.field?.p) == true {
+            self.fieldLabel.text? += self.field[15] + ", "
+        }else if self.gbno(fitConditionRes?.field?.q) == true {
+            self.fieldLabel.text? += self.field[16] + ", "
+        }else if self.gbno(fitConditionRes?.field?.r) == true {
+            self.fieldLabel.text? += self.field[17] + ", "
+        }else if self.gbno(fitConditionRes?.field?.s) == true {
+            self.fieldLabel.text? += self.field[18] + ", "
+        }else if self.gbno(fitConditionRes?.field?.t) == true {
+            self.fieldLabel.text? += self.field[19] + ", "
+        }else if self.gbno(fitConditionRes?.field?.u) == true {
+            self.fieldLabel.text? += self.field[20] + ", "
+        }else if self.gbno(fitConditionRes?.field?.v) == true {
+            self.fieldLabel.text? += self.field[21] + ", "
+        }
+        
+        fieldLabel.text = DoneListingWords(fieldLabel)
+        
+        excCateLabel.text = ""
+        
+        if self.gbno(fitConditionRes?.excCategory?.edu) == true {
+            self.excCateLabel.text? += self.excCate[0] + ", "
+        } else if self.gbno(fitConditionRes?.excCategory?.know) == true {
+            self.excCateLabel.text? += self.excCate[1] + ", "
+        } else if self.gbno(fitConditionRes?.excCategory?.place) == true {
+            self.excCateLabel.text? += self.excCate[2] + ", "
+        } else if self.gbno(fitConditionRes?.excCategory?.local) == true {
+            self.excCateLabel.text? += self.excCate[3] + ", "
+        } else if self.gbno(fitConditionRes?.excCategory?.global) == true {
+            self.excCateLabel.text? += self.excCate[4] + ", "
+        }else if self.gbno(fitConditionRes?.excCategory?.make) == true {
+            self.excCateLabel.text? += self.excCate[5] + ", "
+        }else if self.gbno(fitConditionRes?.excCategory?.gov) == true {
+            self.excCateLabel.text? += self.excCate[6] + ", "
+        }else if self.gbno(fitConditionRes?.excCategory?.loan) == true {
+            self.excCateLabel.text? += self.excCate[7] + ", "
+        }
+        
+        excCateLabel.text = DoneListingWords(excCateLabel)
+        
+        advantageLabel.text = ""
+        
+        if self.gbno(fitConditionRes?.advantage?.retry) == true {
+            self.advantageLabel.text? += self.advantage[0] + ", "
+        } else if self.gbno(fitConditionRes?.advantage?.woman) == true {
+            self.advantageLabel.text? += self.advantage[1] + ", "
+        } else if self.gbno(fitConditionRes?.advantage?.disabled) == true {
+            self.advantageLabel.text? += self.advantage[2] + ", "
+        }else if self.gbno(fitConditionRes?.advantage?.social) == true {
+            self.advantageLabel.text? += self.advantage[3] + ", "
+        }else if self.gbno(fitConditionRes?.advantage?.sole) == true {
+            self.advantageLabel.text? += self.advantage[4] + ", "
+        }else if self.gbno(fitConditionRes?.advantage?.fourth) == true {
+            self.advantageLabel.text? += self.advantage[5] + ", "
+        }else if self.gbno(fitConditionRes?.advantage?.univ) == true {
+            self.advantageLabel.text? += self.advantage[6] + ", "
+        }else if self.gbno(fitConditionRes?.advantage?.togather) == true {
+            self.advantageLabel.text? += self.advantage[7] + ", "
+        }
+        
+        advantageLabel.text = DoneListingWords(advantageLabel)
+        
     }
     //마지막 ", " 을 제거
     func DoneListingWords (_ label: UILabel) -> String {
