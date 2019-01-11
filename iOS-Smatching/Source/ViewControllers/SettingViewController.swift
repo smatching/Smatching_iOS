@@ -36,7 +36,20 @@ class SettingViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         // Do any additional setup after loading the view.
     }
+    @IBAction func gotoAcceptTermView(_ sender: UIButton) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "AcceptTerms", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "AcceptTermsView")
+        
+        self.present(nextViewController, animated: true, completion: nil)
+    }
     
-
+    @IBAction func gotoPrivatePolicy(_ sender: UIButton) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "AcceptTerms", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "privacyPolicyView")
+        
+        self.present(nextViewController, animated: true, completion: nil)
+        
+    }
+    
 
 }
