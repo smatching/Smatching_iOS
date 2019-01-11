@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="V9M-Qp-Jkv">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -14,10 +14,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Walk ThroughVC-->
         <scene sceneID="Cpx-xR-xIv">
             <objects>
-                <viewController id="GhI-kH-18C" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WalkThrough1" id="GhI-kH-18C" customClass="WalkThroughVC" customModule="iOS_Smatching" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jFK-wB-xkl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,6 +35,9 @@
                                 <state key="normal" title="건너뛰기">
                                     <color key="titleColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="goToFirstPage:" destination="GhI-kH-18C" eventType="touchUpInside" id="SnA-UM-iCR"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Ss-4D-jXl">
                                 <rect key="frame" x="53" y="58" width="49" height="5"/>
@@ -71,10 +74,18 @@
             </objects>
             <point key="canvasLocation" x="-2050.4000000000001" y="73.313343328335833"/>
         </scene>
-        <!--View Controller-->
+        <!--Page View Controller-->
+        <scene sceneID="dMr-DD-Ehj">
+            <objects>
+                <pageViewController storyboardIdentifier="viewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="V9M-Qp-Jkv" customClass="PageViewController" customModule="iOS_Smatching" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2ZM-76-mSe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-692" y="-820"/>
+        </scene>
+        <!--Walk ThroughVC-->
         <scene sceneID="hk1-ns-G75">
             <objects>
-                <viewController id="lj1-9x-Il2" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WalkThrough2" id="lj1-9x-Il2" customClass="WalkThroughVC" customModule="iOS_Smatching" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gXH-cj-tGe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -92,34 +103,17 @@
                                 <state key="normal" title="건너뛰기">
                                     <color key="titleColor" red="0.2784313725" green="0.2784313725" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="goToFirstPage:" destination="lj1-9x-Il2" eventType="touchUpInside" id="1dR-2s-MeP"/>
+                                </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="eM1-Gz-4dL">
-                                <rect key="frame" x="174" y="40" width="27" height="5"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circleGreen" translatesAutoresizingMaskIntoConstraints="NO" id="biR-rg-LP6">
-                                        <rect key="frame" x="0.0" y="0.0" width="5" height="5"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circleGrey" translatesAutoresizingMaskIntoConstraints="NO" id="lXB-qw-ukc">
-                                        <rect key="frame" x="11" y="0.0" width="5" height="5"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circleGrey" translatesAutoresizingMaskIntoConstraints="NO" id="Uk6-35-PDU">
-                                        <rect key="frame" x="22" y="0.0" width="5" height="5"/>
-                                    </imageView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="5" id="0tk-B5-8H9"/>
-                                    <constraint firstAttribute="width" constant="27" id="oW1-8H-4ZT"/>
-                                </constraints>
-                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="FVr-2W-7gn" firstAttribute="top" secondItem="6IA-0p-EnR" secondAttribute="top" id="0Gx-Ai-93u"/>
                             <constraint firstItem="j15-BB-AKB" firstAttribute="trailing" secondItem="6IA-0p-EnR" secondAttribute="trailing" id="DaK-Pj-RpQ"/>
-                            <constraint firstItem="eM1-Gz-4dL" firstAttribute="centerX" secondItem="6IA-0p-EnR" secondAttribute="centerX" id="Ruj-cM-w8T"/>
                             <constraint firstItem="j15-BB-AKB" firstAttribute="bottom" secondItem="6IA-0p-EnR" secondAttribute="bottom" id="WLS-BU-kgV"/>
                             <constraint firstItem="j15-BB-AKB" firstAttribute="top" secondItem="6IA-0p-EnR" secondAttribute="top" id="WuD-fH-0TS"/>
-                            <constraint firstItem="eM1-Gz-4dL" firstAttribute="top" secondItem="6IA-0p-EnR" secondAttribute="top" constant="20" id="au2-Iq-KEK"/>
                             <constraint firstItem="6IA-0p-EnR" firstAttribute="trailing" secondItem="FVr-2W-7gn" secondAttribute="trailing" constant="16" id="fVW-vw-skV"/>
                             <constraint firstItem="j15-BB-AKB" firstAttribute="leading" secondItem="6IA-0p-EnR" secondAttribute="leading" id="gD7-NS-thq"/>
                         </constraints>
@@ -130,10 +124,10 @@
             </objects>
             <point key="canvasLocation" x="-1018.4" y="72.413793103448285"/>
         </scene>
-        <!--View Controller-->
+        <!--Walk ThroughVC-->
         <scene sceneID="VA6-Hh-vKx">
             <objects>
-                <viewController id="Jfy-KR-HGJ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WalkThrough3" id="Jfy-KR-HGJ" customClass="WalkThroughVC" customModule="iOS_Smatching" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JJu-nN-ArJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -151,33 +145,16 @@
                                 <state key="normal" title="건너뛰기">
                                     <color key="titleColor" red="0.2784313725" green="0.2784313725" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="goToFirstPage:" destination="Jfy-KR-HGJ" eventType="touchUpInside" id="cVH-7U-6Yi"/>
+                                </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="HhZ-iH-VhY">
-                                <rect key="frame" x="174" y="40" width="27" height="5"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circleGrey" translatesAutoresizingMaskIntoConstraints="NO" id="OZp-0y-ejK">
-                                        <rect key="frame" x="0.0" y="0.0" width="5" height="5"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circleGreen" translatesAutoresizingMaskIntoConstraints="NO" id="LpU-96-MJa">
-                                        <rect key="frame" x="11" y="0.0" width="5" height="5"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circleGrey" translatesAutoresizingMaskIntoConstraints="NO" id="OEY-E7-4Vk">
-                                        <rect key="frame" x="22" y="0.0" width="5" height="5"/>
-                                    </imageView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="5" id="1d6-hY-2Rg"/>
-                                    <constraint firstAttribute="width" constant="27" id="tof-AR-FJE"/>
-                                </constraints>
-                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="5ya-BD-EXx" firstAttribute="leading" secondItem="E8j-Df-rto" secondAttribute="leading" id="5La-LA-FMN"/>
-                            <constraint firstItem="HhZ-iH-VhY" firstAttribute="top" secondItem="E8j-Df-rto" secondAttribute="top" constant="20" id="UDe-h4-Kft"/>
                             <constraint firstItem="5ya-BD-EXx" firstAttribute="top" secondItem="E8j-Df-rto" secondAttribute="top" id="dFB-wz-Pfg"/>
                             <constraint firstItem="5ya-BD-EXx" firstAttribute="bottom" secondItem="E8j-Df-rto" secondAttribute="bottom" id="kAS-J6-IO7"/>
-                            <constraint firstItem="HhZ-iH-VhY" firstAttribute="centerX" secondItem="E8j-Df-rto" secondAttribute="centerX" id="kh4-yV-3D0"/>
                             <constraint firstItem="5ya-BD-EXx" firstAttribute="trailing" secondItem="E8j-Df-rto" secondAttribute="trailing" id="sGa-nI-xxf"/>
                             <constraint firstItem="E8j-Df-rto" firstAttribute="trailing" secondItem="T9s-eH-5Vz" secondAttribute="trailing" constant="16" id="tHm-VK-LrG"/>
                             <constraint firstItem="T9s-eH-5Vz" firstAttribute="top" secondItem="E8j-Df-rto" secondAttribute="top" id="xjU-lV-HFV"/>
@@ -189,10 +166,10 @@
             </objects>
             <point key="canvasLocation" x="37.600000000000001" y="72.413793103448285"/>
         </scene>
-        <!--View Controller-->
+        <!--Walk ThroughVC-->
         <scene sceneID="SeK-xg-xVm">
             <objects>
-                <viewController id="GLY-GU-as2" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WalkThrough4" id="GLY-GU-as2" customClass="WalkThroughVC" customModule="iOS_Smatching" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="reP-jw-oaW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -209,38 +186,20 @@
                                 <state key="normal" title="시작하기">
                                     <color key="titleColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="goToFirstPage:" destination="GLY-GU-as2" eventType="touchUpInside" id="zC7-Tk-OA0"/>
+                                </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="63b-GI-rAF">
-                                <rect key="frame" x="174" y="40" width="27" height="5"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circleGrey" translatesAutoresizingMaskIntoConstraints="NO" id="GVn-Jj-rHy">
-                                        <rect key="frame" x="0.0" y="0.0" width="5" height="5"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circleGrey" translatesAutoresizingMaskIntoConstraints="NO" id="JNF-8E-C6z">
-                                        <rect key="frame" x="11" y="0.0" width="5" height="5"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circleGreen" translatesAutoresizingMaskIntoConstraints="NO" id="We8-TQ-x2c">
-                                        <rect key="frame" x="22" y="0.0" width="5" height="5"/>
-                                    </imageView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="27" id="1QI-EO-PGa"/>
-                                    <constraint firstAttribute="height" constant="5" id="uu3-XW-mnO"/>
-                                </constraints>
-                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="trE-xM-3hY" firstAttribute="trailing" secondItem="Rt9-y4-86A" secondAttribute="trailing" id="4DH-Xm-ezX"/>
                             <constraint firstItem="c6c-cg-u90" firstAttribute="bottom" secondItem="Rt9-y4-86A" secondAttribute="bottom" id="DjV-HL-kzK"/>
-                            <constraint firstItem="trE-xM-3hY" firstAttribute="leading" secondItem="Rt9-y4-86A" secondAttribute="trailing" id="W32-pX-w02"/>
                             <constraint firstItem="c6c-cg-u90" firstAttribute="trailing" secondItem="Rt9-y4-86A" secondAttribute="trailing" id="Xrh-Y5-cFn"/>
                             <constraint firstItem="trE-xM-3hY" firstAttribute="leading" secondItem="Rt9-y4-86A" secondAttribute="leading" id="auk-XJ-FAd"/>
                             <constraint firstItem="c6c-cg-u90" firstAttribute="leading" secondItem="Rt9-y4-86A" secondAttribute="leading" id="bVL-zq-nQU"/>
                             <constraint firstItem="trE-xM-3hY" firstAttribute="bottom" secondItem="Rt9-y4-86A" secondAttribute="bottom" id="d7f-pj-4Nf"/>
-                            <constraint firstItem="63b-GI-rAF" firstAttribute="top" secondItem="Rt9-y4-86A" secondAttribute="top" constant="20" id="dn2-DF-abf"/>
                             <constraint firstItem="c6c-cg-u90" firstAttribute="top" secondItem="Rt9-y4-86A" secondAttribute="top" id="jm4-Fp-JIg"/>
-                            <constraint firstItem="63b-GI-rAF" firstAttribute="centerX" secondItem="Rt9-y4-86A" secondAttribute="centerX" id="wpE-aQ-kb1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Rt9-y4-86A"/>
                     </view>
