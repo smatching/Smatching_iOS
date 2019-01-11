@@ -126,7 +126,7 @@ class MypageSettingVC: UIViewController, UITextFieldDelegate {
     }
     
 }
-extension MypageSettingVC :  UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension MypageSettingVC : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
@@ -149,7 +149,6 @@ extension MypageSettingVC :  UIImagePickerControllerDelegate, UINavigationContro
         let size = CGSize(width: 65, height: 65)
         profileImg.image = newImg.crop(to: size)
         
-//        let image = UIImage(named: "my_great_photo")?.crop(size)
         UserService.shared.putUserProfilImg(picture: profileImg.image!){
             self.simpleAlert("", "프로필 사진이 변경되었습니다.", completion: nil)
         }

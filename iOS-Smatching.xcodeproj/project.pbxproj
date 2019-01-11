@@ -50,6 +50,9 @@
 		B68BC5D221E7F94B007D1448 /* AlarmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68BC5D121E7F94B007D1448 /* AlarmCell.swift */; };
 		B68BC5D421E7F9DD007D1448 /* AlarmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68BC5D321E7F9DD007D1448 /* AlarmVC.swift */; };
 		B68BC5D621E7FA7A007D1448 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68BC5D521E7FA7A007D1448 /* Notification.swift */; };
+		B68BC5D821E86C3B007D1448 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68BC5D721E86C3B007D1448 /* SplashVC.swift */; };
+		B68BC5DC21E86FDE007D1448 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B68BC5DB21E86FDE007D1448 /* Splash.storyboard */; };
+		B68BC5E221E88F06007D1448 /* splash.json in Resources */ = {isa = PBXBuildFile; fileRef = B68BC5E121E88F05007D1448 /* splash.json */; };
 		B696AE9B21DFB17400ABFBDB /* ConditionPutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B696AE9A21DFB17400ABFBDB /* ConditionPutService.swift */; };
 		B696AE9D21DFC10300ABFBDB /* NoticeDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B696AE9C21DFC10300ABFBDB /* NoticeDetailVC.swift */; };
 		B696AE9F21DFC36300ABFBDB /* NoticeDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B696AE9E21DFC36300ABFBDB /* NoticeDetailResponse.swift */; };
@@ -140,6 +143,9 @@
 		B68BC5D121E7F94B007D1448 /* AlarmCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmCell.swift; sourceTree = "<group>"; };
 		B68BC5D321E7F9DD007D1448 /* AlarmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmVC.swift; sourceTree = "<group>"; };
 		B68BC5D521E7FA7A007D1448 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		B68BC5D721E86C3B007D1448 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
+		B68BC5DB21E86FDE007D1448 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
+		B68BC5E121E88F05007D1448 /* splash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = splash.json; sourceTree = "<group>"; };
 		B696AE9A21DFB17400ABFBDB /* ConditionPutService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionPutService.swift; sourceTree = "<group>"; };
 		B696AE9C21DFC10300ABFBDB /* NoticeDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeDetailVC.swift; sourceTree = "<group>"; };
 		B696AE9E21DFC36300ABFBDB /* NoticeDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeDetailResponse.swift; sourceTree = "<group>"; };
@@ -260,6 +266,8 @@
 		B6A3F49921C490A6000497BF /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				B68BC5E121E88F05007D1448 /* splash.json */,
+				B67AC94B21E2459000690DD7 /* loading.json */,
 				B67AC95421E2A10E00690DD7 /* NanumSquareExtraBold.ttf */,
 				B67AC95621E2A11500690DD7 /* NanumSquareLight.ttf */,
 				B67AC95521E2A11100690DD7 /* NanumSquareRegular.ttf */,
@@ -273,6 +281,7 @@
 				C0EE1D5D21DE422B005B114E /* Search.storyboard */,
 				C0F7C0AF21E4033400A450A3 /* AcceptTerms.storyboard */,
 				B68BC5CF21E7F632007D1448 /* Alarm.storyboard */,
+				B68BC5DB21E86FDE007D1448 /* Splash.storyboard */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -374,7 +383,6 @@
 		B6A3F4A021C49643000497BF /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				B67AC94B21E2459000690DD7 /* loading.json */,
 				B6A3F48821C49070000497BF /* ViewController.swift */,
 				C0EE047021D36D810046E030 /* LoginViewController.swift */,
 				B632123521D3B11000087FA2 /* LoginOrSignupVC.swift */,
@@ -393,6 +401,7 @@
 				B6248D4421E0DBAD0058BAC4 /* TotalNoticeVC.swift */,
 				C0F7C0B121E438B100A450A3 /* AcceptTermsVC.swift */,
 				B68BC5D321E7F9DD007D1448 /* AlarmVC.swift */,
+				B68BC5D721E86C3B007D1448 /* SplashVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -460,11 +469,13 @@
 				C0FB18BA21E57B3800621629 /* BusiTypeBox.xib in Resources */,
 				C003C71D21E8BB2B00F8DEB7 /* WorkThrough.storyboard in Resources */,
 				B6A3F49121C49071000497BF /* LaunchScreen.storyboard in Resources */,
+				B68BC5E221E88F06007D1448 /* splash.json in Resources */,
 				B67AC95721E2A13E00690DD7 /* NanumSquareBold.ttf in Resources */,
 				B68BC5D021E7F632007D1448 /* Alarm.storyboard in Resources */,
 				B67AC95921E2A14300690DD7 /* NanumSquareLight.ttf in Resources */,
 				B6A3F48E21C49071000497BF /* Assets.xcassets in Resources */,
 				B67AC94C21E2459000690DD7 /* loading.json in Resources */,
+				B68BC5DC21E86FDE007D1448 /* Splash.storyboard in Resources */,
 				B6A3F48C21C49070000497BF /* Main.storyboard in Resources */,
 				B67AC95821E2A14100690DD7 /* NanumSquareExtraBold.ttf in Resources */,
 				C0376D2321DCF79600D845EB /* DetailContent.storyboard in Resources */,
@@ -543,6 +554,7 @@
 				B68742EA21D74EDA0094D5E7 /* ConditionResponse.swift in Sources */,
 				C0FB18BC21E58ECC00621629 /* SelectBusiType.swift in Sources */,
 				B67F2A9021DC45E700452579 /* Field.swift in Sources */,
+				B68BC5D821E86C3B007D1448 /* SplashVC.swift in Sources */,
 				B67F2A8C21DC451000452579 /* Age.swift in Sources */,
 				B6BB462021D39815003DB754 /* LoginService.swift in Sources */,
 				B68AA6FE21D4F6C4000E5549 /* SmatchingListVC.swift in Sources */,
@@ -753,13 +765,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 325VLH85CK;
+				DEVELOPMENT_TEAM = 38HL58Q2DM;
 				INFOPLIST_FILE = "$(SRCROOT)/iOS-Smatching/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "shyn22.iOS-Smatching-1";
+				PRODUCT_BUNDLE_IDENTIFIER = "shyn22.iOS-Smatching";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -772,13 +784,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 325VLH85CK;
+				DEVELOPMENT_TEAM = 38HL58Q2DM;
 				INFOPLIST_FILE = "$(SRCROOT)/iOS-Smatching/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "shyn22.iOS-Smatching-1";
+				PRODUCT_BUNDLE_IDENTIFIER = "shyn22.iOS-Smatching";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

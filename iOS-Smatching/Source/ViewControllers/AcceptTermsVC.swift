@@ -13,13 +13,13 @@ class AcceptTermsVC: UIViewController {
     @IBOutlet var AcceptTermView: UIView!
     @IBOutlet var GoToNextPage: UIButton!
     @IBOutlet var AcceptCheckBox: UIButton!
+    var informIfBoxIsChecked : Bool?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
        
     }
-    var informIfBoxIsChecked = false
+    
     
     @IBAction func clickAcceptTermsCheckBox(_ sender: UIButton) {
         if informIfBoxIsChecked == false {

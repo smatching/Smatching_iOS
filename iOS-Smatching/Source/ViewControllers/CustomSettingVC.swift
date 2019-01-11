@@ -95,6 +95,19 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
     
     @IBOutlet weak var excBottomViewConst: NSLayoutConstraint!
     
+    //업종 분야 버튼
+    @IBOutlet weak var aSettingBtn: UIButton!
+    @IBOutlet weak var gSettingBtn: UIButton!
+    @IBOutlet weak var fSettingBtn: UIButton!
+    @IBOutlet weak var eSettingBtn: UIButton!
+    @IBOutlet weak var dSettingBtn: UIButton!
+    @IBOutlet weak var hSettingBtn: UIButton!
+    @IBOutlet weak var iSettingBtn: UIButton!
+    @IBOutlet weak var cSettingBtn: UIButton!
+    @IBOutlet weak var bSettingBtn: UIButton!
+    
+    @IBOutlet weak var fieldBottomViewConst: NSLayoutConstraint!
+    
     //우대사항
     @IBOutlet weak var together: ConditionButton!
     @IBOutlet weak var disabled: ConditionButton!
@@ -143,8 +156,10 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
     
     var useLessBtnArray = [UIButton]()
     
+    var fieldBtnArray = [UIButton]()
     //필요없는 조건 element : true
-//    var excCategoryMap = [String : Bool]()
+    //    var excCategoryMap = [String : Bool]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -182,7 +197,7 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
         }
         if period.zero_one == true {
             initialSetting(recognizer: zero_one)
-             periodCountNum += CountTheCheckedBox(self.period.zero_one!)
+            periodCountNum += CountTheCheckedBox(self.period.zero_one!)
         }
         if period.one_two == true {
             initialSetting(recognizer: one_two)
@@ -277,13 +292,13 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
             initialSetting(recognizer: together)
             advantageCountNum += CountTheCheckedBox(self.advantage.togather!)
         }
-
+        
         periodCountLabel.text = "\(periodCountNum)/3"
         busiCountLabel.text = "\(busiTypeCountNum)/7"
         advantabeCountLabel.text = "\(advantageCountNum)/8"
-        
+    
         if periodCountNum != 0 && busiTypeCountNum != 0 && fieldCountNum != 0 && UselessFieldCount != 0 {
-            submitBtn.backgroundColor = UIColor(displayP3Red: 216/255, green: 216/255, blue: 216/255, alpha: 1.0)
+            submitBtn.backgroundColor = UIColor(displayP3Red: 76/255, green: 130/255, blue: 216/255, alpha: 1.0)
         }
         
         //uilabel에 tapgesture 추가
@@ -303,22 +318,33 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
         govSettingBtn.isHidden = true
         loanSettingBtn.isHidden = true
         
+        aSettingBtn.isHidden = true
+        bSettingBtn.isHidden = true
+        cSettingBtn.isHidden = true
+        dSettingBtn.isHidden = true
+        eSettingBtn.isHidden = true
+        fSettingBtn.isHidden = true
+        gSettingBtn.isHidden = true
+        hSettingBtn.isHidden = true
+        iSettingBtn.isHidden = true
+        
     }
+    
+    //conditionbutton border color setting
     func initialSetting(recognizer : ConditionButton) {
         if  recognizer.layer.borderColor == UIColor(displayP3Red: 76/255, green: 130/255, blue: 216/255, alpha: 1.0).cgColor {
             recognizer.layer.borderColor = UIColor(displayP3Red: 216/255, green: 216/255, blue: 216/255, alpha: 1.0).cgColor
-            
-            
         } else {
             //선택을 할 경우
             recognizer.layer.borderColor = UIColor(displayP3Red: 76/255, green: 130/255, blue: 216/255, alpha: 1.0).cgColor
         }
     }
+    
     @IBAction func dismissAction(_ sender: Any) {
         dismiss(animated: true, completion: nil )
     }
-
-   
+    
+    
     //기업정보 vc로 이동
     @objc func someAction(_ sender:UITapGestureRecognizer){
         let controller = storyboard?.instantiateViewController(withIdentifier: "InsititutionClassifyInfo")
@@ -331,131 +357,174 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
         return true
     }
     
-
-    // 팝업 뷰 3개 Loading (지역, 업종, 필요없는 사업 분야)
-   func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    
+   //조건 제목 8글자 제한
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         guard let text = textField.text else { return true }
         let newLength = text.characters.count + string.characters.count - range.length
         return newLength <= limitLength
     }
-
+    
     @IBAction func selectBusiType(_ sender: UIButton) {
         sender.layer.borderColor = UIColor(displayP3Red: 76/255, green: 130/255, blue: 216/255, alpha: 1.0).cgColor
-       
+        
         startAlert1()
-       
+        
     }
     func startAlert1 () {
         if let busiType = Bundle.main.loadNibNamed("BusiTypeBox", owner: self, options: nil)?.first as? SelectBusiType {
             
-//            busiType.backgroundColor = UIColor(red: 71/255, green: 71/255, blue: 71/255, alpha: 1)
+            //            busiType.backgroundColor = UIColor(red: 71/255, green: 71/255, blue: 71/255, alpha: 1)
             
             fieldCountNum = 0
             if field.a == true {
                 A.isChecked = true
+                conditionFieldButtonSlidingEvent(aSettingBtn,self.field.a! )
+                
                 fieldCountNum += CountTheCheckedBox(self.field.a!)
             }
             if field.b == true {
                 B.isChecked = true
+                conditionFieldButtonSlidingEvent(bSettingBtn,self.field.b! )
+                
                 fieldCountNum += CountTheCheckedBox(self.field.b!)
             }
             if field.c == true {
                 C.isChecked = true
+                conditionFieldButtonSlidingEvent(cSettingBtn,self.field.c! )
+                
                 fieldCountNum += CountTheCheckedBox(self.field.c!)
             }
             if field.d == true {
                 D.isChecked = true
+                conditionFieldButtonSlidingEvent(dSettingBtn,self.field.d! )
+                
                 fieldCountNum += CountTheCheckedBox(self.field.d!)
             }
             if field.e == true {
                 E.isChecked = true
+                conditionFieldButtonSlidingEvent(eSettingBtn,self.field.e! )
+                
                 fieldCountNum += CountTheCheckedBox(self.field.e!)
             }
             if field.f == true {
                 F.isChecked = true
+                conditionFieldButtonSlidingEvent(fSettingBtn,self.field.f! )
+                
                 fieldCountNum += CountTheCheckedBox(self.field.f!)
             }
             if field.g == true {
                 H.isChecked = true
+                conditionFieldButtonSlidingEvent(gSettingBtn,self.field.g! )
+                
                 fieldCountNum += CountTheCheckedBox(self.field.g!)
             }
             if field.h == true {
                 H.isChecked = true
+                conditionFieldButtonSlidingEvent(hSettingBtn,self.field.h! )
+                
                 fieldCountNum += CountTheCheckedBox(self.field.h!)
             }
             if field.i == true {
                 I.isChecked = true
+                conditionFieldButtonSlidingEvent(iSettingBtn,self.field.i! )
+                
                 fieldCountNum += CountTheCheckedBox(self.field.i!)
             }
             if field.j == true {
                 J.isChecked = true
+                conditionFieldButtonSlidingEvent(aSettingBtn,self.field.a! )
+                
                 fieldCountNum += CountTheCheckedBox(self.field.j!)
             }
             if field.k == true {
                 K.isChecked = true
+                conditionFieldButtonSlidingEvent(aSettingBtn,self.field.a! )
+                
                 fieldCountNum += CountTheCheckedBox(self.field.k!)
             }
             if field.l == true {
                 L.isChecked = true
+                conditionFieldButtonSlidingEvent(aSettingBtn,self.field.a! )
+                
                 fieldCountNum += CountTheCheckedBox(self.field.l!)
             }
             if field.m == true {
                 M.isChecked = true
+                conditionFieldButtonSlidingEvent(aSettingBtn,self.field.a! )
+                
                 fieldCountNum += CountTheCheckedBox(self.field.m!)
             }
             if field.n == true {
                 N.isChecked = true
+                conditionFieldButtonSlidingEvent(aSettingBtn,self.field.a! )
+                
                 fieldCountNum += CountTheCheckedBox(self.field.n!)
             }
             if field.o == true {
                 O.isChecked = true
+                conditionFieldButtonSlidingEvent(aSettingBtn,self.field.a! )
                 fieldCountNum += CountTheCheckedBox(self.field.o!)
             }
             if field.p == true {
                 P.isChecked = true
+                conditionFieldButtonSlidingEvent(aSettingBtn,self.field.a! )
                 fieldCountNum += CountTheCheckedBox(self.field.p!)
             }
             if field.q == true {
                 Q.isChecked = true
+                conditionFieldButtonSlidingEvent(aSettingBtn,self.field.a! )
                 fieldCountNum += CountTheCheckedBox(self.field.q!)
             }
             if field.r == true {
                 R.isChecked = true
+                conditionFieldButtonSlidingEvent(aSettingBtn,self.field.a! )
                 fieldCountNum += CountTheCheckedBox(self.field.r!)
             }
             if field.s == true {
                 S.isChecked = true
+                conditionFieldButtonSlidingEvent(aSettingBtn,self.field.a! )
                 fieldCountNum += CountTheCheckedBox(self.field.s!)
             }
             if field.t == true {
                 T.isChecked = true
+                conditionFieldButtonSlidingEvent(aSettingBtn,self.field.a! )
                 fieldCountNum += CountTheCheckedBox(self.field.t!)
             }
             if field.u == true {
                 U.isChecked = true
+                conditionFieldButtonSlidingEvent(aSettingBtn,self.field.a! )
                 fieldCountNum += CountTheCheckedBox(self.field.u!)
             }
             if field.v == true {
                 V.isChecked = true
+                conditionFieldButtonSlidingEvent(aSettingBtn,self.field.a! )
                 fieldCountNum += CountTheCheckedBox(self.field.v!)
             }
             
+            UIView.animate(withDuration: 0.2, animations: ({
+                self.fieldBottomViewConst.constant = CGFloat(32 * self.fieldCountNum)
+                self.view.layoutIfNeeded()
+            }))
+            
             self.fieldCountLabel.text = "\(fieldCountNum)/6"
+            
             busiType.center = CGPoint(x: self.view.frame.width / 2, y: self.view.frame.height / 2)
             busiType.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
-
-            
             busiType.okBtn.addTarget(self, action: #selector(btnOkClick), for: .touchUpInside)
             busiType.cancelBtn.addTarget(self, action: #selector(btnCancelClick), for: .touchUpInside)
             self.view.addSubview(busiType)
+            
+            if periodCountNum != 0 && busiTypeCountNum != 0 && fieldCountNum != 0 && UselessFieldCount != 0 {
+                submitBtn.backgroundColor = UIColor(displayP3Red: 76/255, green: 130/255, blue: 216/255, alpha: 1.0)
+            }
         }
     }
-
+    
     @IBAction func selectUselessField(_ sender: UIButton) {
         self.busiTypeButton.layer.borderColor = UIColor(displayP3Red: 76/255, green: 130/255, blue: 216/255, alpha: 1.0).cgColor
         
         startAlert2()
-        
     }
     func startAlert2 () {
         if let uselessField = Bundle.main.loadNibNamed("UselessField", owner: self, options: nil)?.first as? SelectUselessField {
@@ -517,6 +586,9 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
             uselessField.cancelBtn.addTarget(self, action: #selector(btnCancelClick), for: .touchUpInside)
             self.view.addSubview(uselessField)
         }
+        if periodCountNum != 0 && busiTypeCountNum != 0 && fieldCountNum != 0 && UselessFieldCount != 0 {
+            submitBtn.backgroundColor = UIColor(displayP3Red: 76/255, green: 130/255, blue: 216/255, alpha: 1.0)
+        }
     }
     @objc func btnCancelClick() -> Void
     {
@@ -533,14 +605,17 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
     func CountTheCheckedBox (_ parameters: Bool) -> Int{
         if parameters == true {
             return 1
-        }else {return -1}
+        }else {
+            return -1
+        }
     }
-    // CheckedBox 개수 담을 변수 선언
     
-     // Pop up view Check Box 이미지 변경
-    
-    
-    
+    func CountTheCheckedBoxReverse (_ parameters: Bool) -> Int{
+        if parameters == true {
+            return -1
+        }else {return 1}
+    }
+
     @IBAction func BusiTypeCheckBoxClicked(_ sender: AlertCheckBox) {
         if fieldCountNum < 6 {
             //switch 구문 실행
@@ -551,18 +626,24 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
         }
         print(fieldCountNum)
         print(field)
+        if periodCountNum != 0 && busiTypeCountNum != 0 && fieldCountNum != 0 && UselessFieldCount != 0 {
+            submitBtn.backgroundColor = UIColor(displayP3Red: 76/255, green: 130/255, blue: 216/255, alpha: 1.0)
+        }
     }
     
     
     @IBAction func UselessCheckBoxClicked(_ sender: AlertCheckBox) {
         if UselessFieldCount < 5 {
-          checkboxBtnClickEvent(sender)
+            checkboxBtnClickEvent(sender)
         } else {
             guard sender.isChecked else {return}
             checkboxBtnClickEvent(sender)
         }
         print(UselessFieldCount)
         print(excCategory)
+        if periodCountNum != 0 && busiTypeCountNum != 0 && fieldCountNum != 0 && UselessFieldCount != 0 {
+            submitBtn.backgroundColor = UIColor(displayP3Red: 76/255, green: 130/255, blue: 216/255, alpha: 1.0)
+        }
     }
     
     @IBAction func deleteLocationSettingView(_ sender: UIButton) {
@@ -601,13 +682,60 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
         useLessBtnArray.remove(at: index)
     }
     
+    @IBAction func deleteFieldSettingView(_ sender: UIButton) {
+        if sender == aSettingBtn {
+            field.a = !field.a!
+        }
+        else  if sender == bSettingBtn {
+            field.b = !field.b!
+        }
+        else  if sender == cSettingBtn {
+            field.c = !field.c!
+        }
+        else  if sender == dSettingBtn {
+            field.d = !field.d!
+        }
+        else  if sender == eSettingBtn {
+            field.e = !field.e!
+        }
+        else  if sender == fSettingBtn {
+            field.f = !field.f!
+        }
+        else  if sender == gSettingBtn {
+            field.g = !field.g!
+        }
+        else  if sender == hSettingBtn {
+            field.h = !field.h!
+        }
+        else  if sender == iSettingBtn {
+            field.i = !field.i!
+        }
+        else {}
+        sender.isHidden = !sender.isHidden
+        sender.transform =
+            CGAffineTransform(scaleX: 0, y: 0)
+        let index = fieldBtnArray.index(of: sender)!
+        if index != fieldBtnArray.count-1{
+            self.slideY(y: CGFloat(fieldBtnArray[index].frame.origin.y), sender : fieldBtnArray[index+1])
+        }
+        fieldBtnArray.remove(at: index)
+    }
+    
+    func conditionFieldButtonSlidingEvent(_ sender : UIButton, _ checked : Bool) {
+        sender.isHidden = !checked
+         self.slideY(y: CGFloat(sender.frame.origin.y), sender : sender)
+//        self.slideY(y: CGFloat(758 + 32 * fieldCountNum), sender : sender)
+        fieldBtnArray.append(sender)
+        
+    }
+    
     func conditionButtonSlidingEvent(_ sender : UIButton, _ checked : Bool) {
         sender.isHidden = !checked
         self.slideY(y: CGFloat(863 + 32 * UselessFieldCount), sender : sender)
         useLessBtnArray.append(sender)
         
     }
- 
+    
     func checkboxBtnClickEvent(_ sender : AlertCheckBox) {
         switch (sender) {
         case edu:
@@ -652,7 +780,7 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
         case gov:
             self.excCategory.gov = !self.excCategory.gov!
             sender.isChecked = self.excCategory.gov!
-           conditionButtonSlidingEvent(govSettingBtn, self.excCategory.gov!)
+            conditionButtonSlidingEvent(govSettingBtn, self.excCategory.gov!)
             UselessFieldCount += CountTheCheckedBox(self.excCategory.gov!)
             break
         case loan:
@@ -664,46 +792,55 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
         case A:
             self.field.a = !self.field.a!
             sender.isChecked = self.field.a!
+            conditionFieldButtonSlidingEvent(aSettingBtn, self.field.a!)
             fieldCountNum += CountTheCheckedBox(self.field.a!)
             break
         case B:
             self.field.b = !self.field.b!
             sender.isChecked = self.field.b!
+            conditionFieldButtonSlidingEvent(bSettingBtn, self.field.b!)
             fieldCountNum += CountTheCheckedBox(self.field.b!)
             break
         case C:
             self.field.c = !self.field.c!
             sender.isChecked = self.field.c!
+            conditionFieldButtonSlidingEvent(cSettingBtn, self.field.c!)
             fieldCountNum += CountTheCheckedBox(self.field.c!)
             break
         case D:
             self.field.d = !self.field.d!
             sender.isChecked = self.field.d!
+            conditionFieldButtonSlidingEvent(dSettingBtn, self.field.d!)
             fieldCountNum += CountTheCheckedBox(self.field.d!)
             break
         case E:
             self.field.e = !self.field.e!
             sender.isChecked = self.field.e!
+            conditionFieldButtonSlidingEvent(eSettingBtn, self.field.e!)
             fieldCountNum += CountTheCheckedBox(self.field.e!)
             break
         case F:
             self.field.f = !self.field.f!
             sender.isChecked = self.field.f!
+            conditionFieldButtonSlidingEvent(fSettingBtn, self.field.f!)
             fieldCountNum += CountTheCheckedBox(self.field.f!)
             break
         case G:
             self.field.g = !self.field.g!
             sender.isChecked = self.field.g!
+            conditionFieldButtonSlidingEvent(gSettingBtn, self.field.g!)
             fieldCountNum += CountTheCheckedBox(self.field.g!)
             break
         case H:
             self.field.h = !self.field.h!
             sender.isChecked = self.field.h!
+            conditionFieldButtonSlidingEvent(hSettingBtn, self.field.h!)
             fieldCountNum += CountTheCheckedBox(self.field.h!)
             break
         case I:
             self.field.i = !self.field.i!
             sender.isChecked = self.field.i!
+            conditionFieldButtonSlidingEvent(iSettingBtn, self.field.i!)
             fieldCountNum += CountTheCheckedBox(self.field.i!)
             break
         case J:
@@ -779,57 +916,159 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
             self.excBottomViewConst.constant = CGFloat(32 * self.UselessFieldCount)
             self.view.layoutIfNeeded()
         }))
+        UIView.animate(withDuration: 0.2, animations: ({
+            self.fieldBottomViewConst.constant = CGFloat(32 * self.fieldCountNum)
+            self.view.layoutIfNeeded()
+        }))
+        if periodCountNum != 0 && busiTypeCountNum != 0 && fieldCountNum != 0 && UselessFieldCount != 0 {
+            submitBtn.backgroundColor = UIColor(displayP3Red: 76/255, green: 130/255, blue: 216/255, alpha: 1.0)
+        }
     }
     
-    func clickConditionButton(_ sender : ConditionButton) {
-        switch(sender){
-        case twenty_less:
+    func clickPeriodConditionButton(_ sender : ConditionButton) {
+        if periodCountNum < 3 {
+            switch(sender){
+            case zero_one:
+                self.period.zero_one = !self.period.zero_one!
+                periodCountNum += CountTheCheckedBox(self.period.zero_one!)
+                break
+            case one_two:
+                self.period.one_two = !self.period.one_two!
+                periodCountNum += CountTheCheckedBox(self.period.one_two!)
+                break
+            case two_three:
+                self.period.two_three = !self.period.two_three!
+                periodCountNum += CountTheCheckedBox(self.period.two_three!)
+                break
+            case three_four:
+                self.period.three_four = !self.period.three_four!
+                periodCountNum += CountTheCheckedBox(self.period.three_four!)
+                break
+            case four_five:
+                self.period.four_five = !self.period.four_five!
+                periodCountNum += CountTheCheckedBox(self.period.four_five!)
+                break
+            case five_six:
+                self.period.five_six = !self.period.five_six!
+                periodCountNum += CountTheCheckedBox(self.period.five_six!)
+                break
+            case six_seven:
+                self.period.six_seven = !self.period.six_seven!
+                periodCountNum += CountTheCheckedBox(self.period.six_seven!)
+                break
+            case seven_more:
+                self.period.seven_more = !self.period.seven_more!
+                periodCountNum += CountTheCheckedBox(self.period.seven_more!)
+                break
+            case yet:
+                self.period.yet = !self.period.yet!
+                periodCountNum += CountTheCheckedBox(self.period.yet!)
+                break
+                
+            default:
+                break
+            }
+            
+        } else {
+            switch(sender){
+            
+            case zero_one:
+               
+                periodCountNum += CountTheCheckedBoxReverse(self.period.zero_one!)
+                 self.period.zero_one = !self.period.zero_one!
+                break
+            case one_two:
+                
+                periodCountNum += CountTheCheckedBoxReverse(self.period.one_two!)
+                self.period.one_two = !self.period.one_two!
+                break
+            case two_three:
+                
+                periodCountNum += CountTheCheckedBoxReverse(self.period.two_three!)
+                self.period.two_three = !self.period.two_three!
+                break
+            case three_four:
+                
+                periodCountNum += CountTheCheckedBoxReverse(self.period.three_four!)
+                self.period.three_four = !self.period.three_four!
+                break
+            case four_five:
+                
+                periodCountNum += CountTheCheckedBoxReverse(self.period.four_five!)
+                self.period.four_five = !self.period.four_five!
+                break
+            case five_six:
+                
+                periodCountNum += CountTheCheckedBoxReverse(self.period.five_six!)
+                self.period.five_six = !self.period.five_six!
+                break
+            case six_seven:
+                
+                periodCountNum += CountTheCheckedBoxReverse(self.period.six_seven!)
+                self.period.six_seven = !self.period.six_seven!
+                break
+            case seven_more:
+               
+                periodCountNum += CountTheCheckedBoxReverse(self.period.seven_more!)
+                 self.period.seven_more = !self.period.seven_more!
+                break
+            case yet:
+                
+                periodCountNum += CountTheCheckedBoxReverse(self.period.yet!)
+                self.period.yet = !self.period.yet!
+                break
+                
+            default:
+                break
+            }
+        }
+        if periodCountNum != 0 && busiTypeCountNum != 0 && fieldCountNum != 0 && UselessFieldCount != 0 {
+            submitBtn.backgroundColor = UIColor(displayP3Red: 76/255, green: 130/255, blue: 216/255, alpha: 1.0)
+        }
+    }
+    
+    //버튼 border 색 바꾸기
+    func conditionBorderColorChange(_ sender : ConditionButton) {
+        if  sender.layer.borderColor == UIColor(displayP3Red: 76/255, green: 130/255, blue: 216/255, alpha: 1.0).cgColor {
+            sender.layer.borderColor = UIColor(displayP3Red: 216/255, green: 216/255, blue: 216/255, alpha: 1.0).cgColor
+            //                sender.isClicked = true
+            
+        }
+        else {
+            //선택을 할 경우
+            sender.layer.borderColor = UIColor(displayP3Red: 76/255, green: 130/255, blue: 216/255, alpha: 1.0).cgColor
+            
+        }
+    }
+    // 선택사항 클릭시 박스 border 색 변경
+    @IBAction func conditionPeriodBtnClick(_ sender: ConditionButton) {
+        
+        if sender == twenty_less {
             self.age.twenty_less = !self.age.twenty_less!
-            break
-        case twenty_forty:
+            self.twenty_less.buttonClicked(sender: twenty_less, self.age.twenty_less!)
+            
+        }
+        else if sender == twenty_forty {
             self.age.twenty_forty = !self.age.twenty_forty!
-            break
-        case forty_more:
+            self.twenty_forty.buttonClicked(sender: twenty_forty, self.age.twenty_forty!)
+        }
+        else if sender == forty_more {
             self.age.forty_more = !self.age.forty_more!
-            break
-            
-            
-        case zero_one:
-            self.period.zero_one = !self.period.zero_one!
-            periodCountNum += CountTheCheckedBox(self.period.zero_one!)
-            break
-        case one_two:
-            self.period.one_two = !self.period.one_two!
-            periodCountNum += CountTheCheckedBox(self.period.one_two!)
-            break
-        case two_three:
-            self.period.two_three = !self.period.two_three!
-            periodCountNum += CountTheCheckedBox(self.period.two_three!)
-            break
-        case three_four:
-            self.period.three_four = !self.period.three_four!
-            periodCountNum += CountTheCheckedBox(self.period.three_four!)
-            break
-        case four_five:
-            self.period.four_five = !self.period.four_five!
-            periodCountNum += CountTheCheckedBox(self.period.four_five!)
-            break
-        case five_six:
-            self.period.five_six = !self.period.five_six!
-            periodCountNum += CountTheCheckedBox(self.period.five_six!)
-            break
-        case six_seven:
-            self.period.six_seven = !self.period.six_seven!
-            periodCountNum += CountTheCheckedBox(self.period.six_seven!)
-            break
-        case seven_more:
-            self.period.seven_more = !self.period.seven_more!
-            periodCountNum += CountTheCheckedBox(self.period.seven_more!)
-            break
-        case yet:
-            self.period.yet = !self.period.yet!
-            periodCountNum += CountTheCheckedBox(self.period.yet!)
-            break
+            self.forty_more.buttonClicked(sender: forty_more, self.age.forty_more!)
+        }
+        conditionBorderColorChange(sender)
+        //perIOD 제한 3
+        clickPeriodConditionButton(sender)
+        
+    }
+    
+    @IBAction func conditionElseBtnClick(_ sender: ConditionButton) {
+        clickElseConditionButton(sender)
+    }
+    
+    
+    func clickElseConditionButton(_ sender : ConditionButton){
+        switch sender {
         case midsmall:
             self.busitype.midsmall = !self.busitype.midsmall!
             busiTypeCountNum += CountTheCheckedBox(self.busitype.midsmall!)
@@ -895,30 +1134,13 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
         default:
             break
         }
-    }
-    // 선택사항 클릭시 박스 border 색 변경
-    @IBAction func conditionBtnClick(_ sender: ConditionButton) {
+        conditionBorderColorChange(sender)
         
-        if  sender.layer.borderColor == UIColor(displayP3Red: 76/255, green: 130/255, blue: 216/255, alpha: 1.0).cgColor {
-            sender.layer.borderColor = UIColor(displayP3Red: 216/255, green: 216/255, blue: 216/255, alpha: 1.0).cgColor
-            sender.isClicked = true
-            
-        } else {
-            //선택을 할 경우
-            sender.layer.borderColor = UIColor(displayP3Red: 76/255, green: 130/255, blue: 216/255, alpha: 1.0).cgColor
-            
-        }
-        
-        if periodCountNum < 3 {
-            clickConditionButton(sender)
-        }
-        else {
-            guard sender.isClicked else {return}
-            clickConditionButton(sender)
+        if periodCountNum != 0 && busiTypeCountNum != 0 && fieldCountNum != 0 && UselessFieldCount != 0 {
+            submitBtn.backgroundColor = UIColor(displayP3Red: 76/255, green: 130/255, blue: 216/255, alpha: 1.0)
         }
         
     }
-    
     
     @IBAction func deleteAllConditions(_ sender: Any) {
         

@@ -11,6 +11,14 @@ import UIKit
 @IBDesignable
 class CustomViewBorder: UIView {
     
+    var globalPoint :CGPoint? {
+        return self.superview?.convert(self.frame.origin, to: nil)
+    }
+    
+    var globalFrame :CGRect? {
+        return self.superview?.convert(self.frame, to: nil)
+    }
+    
     @IBInspectable override var borderWidth: CGFloat {
         get {
             return layer.borderWidth

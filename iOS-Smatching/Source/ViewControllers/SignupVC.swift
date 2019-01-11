@@ -85,7 +85,9 @@ class SignupVC: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func signup(_ sender: Any) {
-        UserService.shared.signUp(nickname: nicknameTxtField.text!, email: emailTxtField.text!, password: passwdTxtField1.text!) {  }
+        UserService.shared.signUp(nickname: nicknameTxtField.text!, email: emailTxtField.text!, password: passwdTxtField1.text!) {
+            
+        }
     }
     
     //타이핑 중에 일어나는 TextField Delegate

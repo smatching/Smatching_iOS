@@ -21,10 +21,10 @@ struct NotificationPutService : APIManager, Requestable {
         "Authorization" : UserDefaults.standard.string(forKey: "token") ?? ""
         ]
     
-    func putNotificationSetting(completion: @escaping(CommonResponse) -> Void) {
-            let putURL = notificationURL + "/notification/unchecked"
+    func getNotificationCount(completion: @escaping(CommonResponse) -> Void) {
+            let getURL = notificationURL + "/notification/unchecked"
         
-        puttable(putURL, body: nil, header: headers) {(res) in
+        gettableObj(getURL, body: nil, header: headers) {(res) in
             switch res {
             case .success(let value):
                 print(value)

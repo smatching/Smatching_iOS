@@ -10,7 +10,7 @@ import Foundation
 import ObjectMapper
 
 struct Notification: Mappable {
-    var notificationIdx : Int?
+    var noticeIdx : Int?
     var alertType : String?
     var message : String?
     var checked : Bool?
@@ -21,7 +21,7 @@ struct Notification: Mappable {
     }
     
     mutating func mapping(map: Map) {
-        notificationIdx <- map["notificationIdx"]
+        noticeIdx <- map["noticeIdx"]
         alertType <- map["alertType"]
         message <- map["message"]
         checked <- map["checked"]

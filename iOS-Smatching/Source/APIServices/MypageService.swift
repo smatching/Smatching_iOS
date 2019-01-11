@@ -23,6 +23,7 @@ struct MypageService : APIManager, Requestable {
     //마이페이지 메인 정보 조회
     func getUserInfo(completion : @escaping(User) -> Void) {
         let getURL = userURL + "/myinfo"
+        
         gettableObj(getURL, body: nil, header: headers) {(res)in
             switch res {
             case .success(let value):

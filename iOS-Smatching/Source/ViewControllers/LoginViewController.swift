@@ -76,13 +76,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     //로그인 기능 실행
     @IBAction func login(_ sender: Any) {
         LoginService.shared.login(email : emailTxtField.text!, password : passwdTxtField.text! ) {[weak self] (token) in guard let `self` = self else {return}
-            print(token.token)
+            
             UserDefaults.standard.set(self.gsno(token.token), forKey: "token")
+            
             let storyboard: UIStoryboard = self.storyboard!
             let nextView = storyboard.instantiateViewController(withIdentifier: "TapBarVC")
             self.present(nextView, animated: true, completion: nil)
         }
-        
     }
     
     // TextField borderColor 변경

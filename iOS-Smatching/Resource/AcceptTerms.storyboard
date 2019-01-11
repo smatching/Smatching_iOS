@@ -443,7 +443,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rah-P6-vQ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1250.4000000000001" y="-47.226386806596707"/>
+            <point key="canvasLocation" x="1466" y="573"/>
         </scene>
     </scenes>
     <resources>
@@ -452,6 +452,6 @@
         <image name="btnSettingIn" width="10" height="18"/>
         <image name="icn_emptybox" width="18" height="18"/>
         <image name="img_symbol" width="65" height="20"/>
-        <image name="termofService" width="624.5" height="572.5"/>
+        <image name="termofService" width="624" height="572"/>
     </resources>
 </document>
