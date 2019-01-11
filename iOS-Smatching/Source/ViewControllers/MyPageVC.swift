@@ -18,9 +18,12 @@ class MyPageVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var noticeCnt: UILabel!
     @IBOutlet weak var searchScrapTxtField: UITextField!
     
+    @IBOutlet weak var talknotyetView: UIView!
     @IBOutlet weak var talkBtn: UIButton!
     @IBOutlet weak var conditionBtn: UIButton!
     var animationView: LOTAnimationView = LOTAnimationView(name: "loading");
+    
+    var flag = 0
     
     var noticeList = [Notice]()
     
@@ -49,13 +52,15 @@ class MyPageVC: UIViewController, UITextFieldDelegate {
         MypageService.shared.getScrappedNotices(request_num: 999, exist_num: 0) {[weak self] (data) in guard let `self` = self else {return}
             self.noticeList = data
             self.scrapedNoticeTableView.reloadData()
-            
-            
         }
         
     }
     
     func setupView() {
+        
+        scrapedNoticeTableView.isHidden = false
+        noticeCnt.isHidden = false
+        talknotyetView.isHidden = true
         
         scrapedNoticeTableView.dataSource = self
         
@@ -67,13 +72,21 @@ class MyPageVC: UIViewController, UITextFieldDelegate {
     
     @IBAction func myPageStackBtnClick
         (_ sender: UIButton) {
-        if sender.titleColor(for: .normal) == UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1) {
-            sender.setTitleColor(UIColor(red: 214/255, green: 214/255, blue: 214/255, alpha: 1), for: UIControl.State.normal)
+        if flag == 0{
+            conditionBtn.setTitleColor(UIColor(red: 214/255, green: 214/255, blue: 214/255, alpha: 1), for: UIControl.State.normal)
+            talkBtn.setTitleColor( UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1), for: UIControl.State.normal)
+            
+            flag = 1
         }
-        if  sender.titleColor(for: .normal) == UIColor(red:214/255, green: 214/255, blue: 214/255, alpha: 1) {
-            sender.setTitleColor(UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1), for: .normal)
+        else {
+            talkBtn.setTitleColor(UIColor(red: 214/255, green: 214/255, blue: 214/255, alpha: 1), for: UIControl.State.normal)
+            conditionBtn.setTitleColor( UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1), for: UIControl.State.normal)
+            
+            flag = 0
         }
-        
+        scrapedNoticeTableView.isHidden = !scrapedNoticeTableView.isHidden
+        noticeCnt.isHidden = !noticeCnt.isHidden
+        talknotyetView.isHidden = !talknotyetView.isHidden
     }
     
     @IBAction func showSettingView(_ sender: Any) {
