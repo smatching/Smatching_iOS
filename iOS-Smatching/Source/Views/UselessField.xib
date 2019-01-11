@@ -221,29 +221,12 @@
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PJw-Ql-Ufo">
                             <rect key="frame" x="59" y="25" width="192" height="18"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="필요 없는 지원사업분야" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ezs-jt-94J">
-                                    <rect key="frame" x="0.0" y="0.0" width="157" height="18"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="필요 없는 지원사업분야" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ezs-jt-94J">
+                                    <rect key="frame" x="0.0" y="0.0" width="192" height="18"/>
                                     <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hmz-Iv-3xD">
-                                    <rect key="frame" x="165" y="0.0" width="27" height="18"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RzT-rP-OMQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="10" height="18"/>
-                                            <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="/6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FfI-xA-CXb">
-                                            <rect key="frame" x="10" y="0.0" width="17" height="18"/>
-                                            <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </stackView>
                             </subviews>
                             <constraints>
                                 <constraint firstAttribute="width" constant="192" id="EKo-gh-6e2"/>

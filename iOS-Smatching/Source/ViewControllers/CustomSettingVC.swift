@@ -9,6 +9,8 @@ import UIKit
 
 class CustomSettingVC: UIViewController, UITextFieldDelegate{
     
+
+    @IBOutlet weak var NeedlessFieldBox: UIView!
     
     @IBOutlet weak var showDetail: UILabel!
     @IBOutlet weak var titleTxtField: UITextField!
@@ -186,112 +188,112 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
         self.field = fitConditionRes?.field ?? self.field
         self.excCategory = fitConditionRes?.excCategory ?? self.excCategory
         
-        if age.twenty_less == true {
-            initialSetting(recognizer: twenty_less)
-        }
-        else if age.forty_more == true {
-            initialSetting(recognizer: forty_more)
-        }
-        else if age.twenty_forty == true {
-            initialSetting(recognizer: twenty_forty)
-        }
-        if period.zero_one == true {
-            initialSetting(recognizer: zero_one)
-            periodCountNum += CountTheCheckedBox(self.period.zero_one!)
-        }
-        if period.one_two == true {
-            initialSetting(recognizer: one_two)
-            periodCountNum += CountTheCheckedBox(self.period.one_two!)
-        }
-        if period.two_three == true {
-            initialSetting(recognizer: two_three)
-            periodCountNum += CountTheCheckedBox(self.period.two_three!)
-        }
-        if period.three_four == true {
-            initialSetting(recognizer: three_four)
-            periodCountNum += CountTheCheckedBox(self.period.three_four!)
-        }
-        if period.four_five == true {
-            initialSetting(recognizer: four_five)
-            periodCountNum += CountTheCheckedBox(self.period.four_five!)
-        }
-        if period.five_six == true {
-            initialSetting(recognizer: five_six)
-            periodCountNum += CountTheCheckedBox(self.period.five_six!)
-        }
-        if period.six_seven == true {
-            initialSetting(recognizer: six_seven)
-            periodCountNum += CountTheCheckedBox(self.period.six_seven!)
-        }
-        if period.seven_more == true {
-            initialSetting(recognizer: seven_more)
-            periodCountNum += CountTheCheckedBox(self.period.seven_more!)
-        }
-        if busitype.midsmall == true {
-            initialSetting(recognizer: midsmall)
-            busiTypeCountNum += CountTheCheckedBox(self.busitype.midsmall!)
-        }
-        if busitype.midbig == true {
-            initialSetting(recognizer: midbig)
-            busiTypeCountNum += CountTheCheckedBox(self.busitype.midbig!)
-        }
-        
-        if busitype.big == true {
-            initialSetting(recognizer: big)
-            busiTypeCountNum += CountTheCheckedBox(self.busitype.big!)
-        }
-        
-        if busitype.sole == true {
-            initialSetting(recognizer: sole)
-            busiTypeCountNum += CountTheCheckedBox(self.busitype.sole!)
-        }
-        
-        if busitype.small == true {
-            initialSetting(recognizer: small)
-            busiTypeCountNum += CountTheCheckedBox(self.busitype.small!)
-        }
-        
-        if busitype.tradi == true {
-            initialSetting(recognizer: tradi)
-            busiTypeCountNum += CountTheCheckedBox(self.busitype.tradi!)
-        }
-        
-        if busitype.pre == true {
-            initialSetting(recognizer: pre)
-            busiTypeCountNum += CountTheCheckedBox(self.busitype.pre!)
-        }
-        if advantage.retry == true{
-            initialSetting(recognizer: retry)
-            advantageCountNum += CountTheCheckedBox(self.advantage.retry!)
-        }
-        if advantage.woman == true{
-            initialSetting(recognizer: woman)
-            advantageCountNum += CountTheCheckedBox(self.advantage.woman!)
-        }
-        if advantage.disabled == true{
-            initialSetting(recognizer: disabled)
-            advantageCountNum += CountTheCheckedBox(self.advantage.disabled!)
-        }
-        if advantage.social == true{
-            initialSetting(recognizer: social)
-            advantageCountNum += CountTheCheckedBox(self.advantage.social!)
-        }
-        if advantage.sole == true{
-            initialSetting(recognizer: sole_create)
-            advantageCountNum += CountTheCheckedBox(self.advantage.sole!)
-        }
-        if advantage.fourth == true{
-            initialSetting(recognizer: fourth)
-            advantageCountNum += CountTheCheckedBox(self.advantage.fourth!)
-        }
-        if advantage.univ == true{
-            initialSetting(recognizer: univ)
-            advantageCountNum += CountTheCheckedBox(self.advantage.univ!)
-        }
-        if advantage.togather == true{
-            initialSetting(recognizer: together)
-            advantageCountNum += CountTheCheckedBox(self.advantage.togather!)
-        }
+//        if age.twenty_less == true {
+//            initialSetting(recognizer: twenty_less)
+//        }
+//        else if age.forty_more == true {
+//            initialSetting(recognizer: forty_more)
+//        }
+//        else if age.twenty_forty == true {
+//            initialSetting(recognizer: twenty_forty)
+//        }
+//        if period.zero_one == true {
+//            initialSetting(recognizer: zero_one)
+//            periodCountNum += CountTheCheckedBox(self.period.zero_one!)
+//        }
+//        if period.one_two == true {
+//            initialSetting(recognizer: one_two)
+//            periodCountNum += CountTheCheckedBox(self.period.one_two!)
+//        }
+//        if period.two_three == true {
+//            initialSetting(recognizer: two_three)
+//            periodCountNum += CountTheCheckedBox(self.period.two_three!)
+//        }
+//        if period.three_four == true {
+//            initialSetting(recognizer: three_four)
+//            periodCountNum += CountTheCheckedBox(self.period.three_four!)
+//        }
+//        if period.four_five == true {
+//            initialSetting(recognizer: four_five)
+//            periodCountNum += CountTheCheckedBox(self.period.four_five!)
+//        }
+//        if period.five_six == true {
+//            initialSetting(recognizer: five_six)
+//            periodCountNum += CountTheCheckedBox(self.period.five_six!)
+//        }
+//        if period.six_seven == true {
+//            initialSetting(recognizer: six_seven)
+//            periodCountNum += CountTheCheckedBox(self.period.six_seven!)
+//        }
+//        if period.seven_more == true {
+//            initialSetting(recognizer: seven_more)
+//            periodCountNum += CountTheCheckedBox(self.period.seven_more!)
+//        }
+//        if busitype.midsmall == true {
+//            initialSetting(recognizer: midsmall)
+//            busiTypeCountNum += CountTheCheckedBox(self.busitype.midsmall!)
+//        }
+//        if busitype.midbig == true {
+//            initialSetting(recognizer: midbig)
+//            busiTypeCountNum += CountTheCheckedBox(self.busitype.midbig!)
+//        }
+//
+//        if busitype.big == true {
+//            initialSetting(recognizer: big)
+//            busiTypeCountNum += CountTheCheckedBox(self.busitype.big!)
+//        }
+//
+//        if busitype.sole == true {
+//            initialSetting(recognizer: sole)
+//            busiTypeCountNum += CountTheCheckedBox(self.busitype.sole!)
+//        }
+//
+//        if busitype.small == true {
+//            initialSetting(recognizer: small)
+//            busiTypeCountNum += CountTheCheckedBox(self.busitype.small!)
+//        }
+//
+//        if busitype.tradi == true {
+//            initialSetting(recognizer: tradi)
+//            busiTypeCountNum += CountTheCheckedBox(self.busitype.tradi!)
+//        }
+//
+//        if busitype.pre == true {
+//            initialSetting(recognizer: pre)
+//            busiTypeCountNum += CountTheCheckedBox(self.busitype.pre!)
+//        }
+//        if advantage.retry == true{
+//            initialSetting(recognizer: retry)
+//            advantageCountNum += CountTheCheckedBox(self.advantage.retry!)
+//        }
+//        if advantage.woman == true{
+//            initialSetting(recognizer: woman)
+//            advantageCountNum += CountTheCheckedBox(self.advantage.woman!)
+//        }
+//        if advantage.disabled == true{
+//            initialSetting(recognizer: disabled)
+//            advantageCountNum += CountTheCheckedBox(self.advantage.disabled!)
+//        }
+//        if advantage.social == true{
+//            initialSetting(recognizer: social)
+//            advantageCountNum += CountTheCheckedBox(self.advantage.social!)
+//        }
+//        if advantage.sole == true{
+//            initialSetting(recognizer: sole_create)
+//            advantageCountNum += CountTheCheckedBox(self.advantage.sole!)
+//        }
+//        if advantage.fourth == true{
+//            initialSetting(recognizer: fourth)
+//            advantageCountNum += CountTheCheckedBox(self.advantage.fourth!)
+//        }
+//        if advantage.univ == true{
+//            initialSetting(recognizer: univ)
+//            advantageCountNum += CountTheCheckedBox(self.advantage.univ!)
+//        }
+//        if advantage.togather == true{
+//            initialSetting(recognizer: together)
+//            advantageCountNum += CountTheCheckedBox(self.advantage.togather!)
+//        }
         
         periodCountLabel.text = "\(periodCountNum)/3"
         busiCountLabel.text = "\(busiTypeCountNum)/7"
@@ -724,14 +726,16 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
     func conditionFieldButtonSlidingEvent(_ sender : UIButton, _ checked : Bool) {
         sender.isHidden = !checked
          self.slideY(y: CGFloat(sender.frame.origin.y), sender : sender)
-//        self.slideY(y: CGFloat(758 + 32 * fieldCountNum), sender : sender)
+        self.slideY(y: CGFloat(758 + 32 * fieldCountNum), sender : sender)
         fieldBtnArray.append(sender)
         
     }
     
+    
     func conditionButtonSlidingEvent(_ sender : UIButton, _ checked : Bool) {
+        var yValueOfBox = self.NeedlessFieldBox.frame.origin.y 
         sender.isHidden = !checked
-        self.slideY(y: CGFloat(863 + 32 * UselessFieldCount), sender : sender)
+        self.slideY(y: CGFloat(yValueOfBox + 35 * UselessFieldCount), sender : sender)
         useLessBtnArray.append(sender)
         
     }
@@ -927,6 +931,7 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
     
     func clickPeriodConditionButton(_ sender : ConditionButton) {
         if periodCountNum < 3 {
+            conditionBorderColorChange(sender)
             switch(sender){
             case zero_one:
                 self.period.zero_one = !self.period.zero_one!
@@ -968,52 +973,61 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
             default:
                 break
             }
-            
+            print(periodCountNum)
         } else {
-            switch(sender){
+            switch(sender) {
             
             case zero_one:
-               
+                guard self.period.zero_one! else {return}
+                conditionBorderColorChange(sender)
                 periodCountNum += CountTheCheckedBoxReverse(self.period.zero_one!)
                  self.period.zero_one = !self.period.zero_one!
                 break
             case one_two:
-                
+                guard self.period.one_two! else {return}
+                conditionBorderColorChange(sender)
                 periodCountNum += CountTheCheckedBoxReverse(self.period.one_two!)
                 self.period.one_two = !self.period.one_two!
                 break
             case two_three:
-                
+                guard self.period.two_three! else {return}
+                conditionBorderColorChange(sender)
                 periodCountNum += CountTheCheckedBoxReverse(self.period.two_three!)
                 self.period.two_three = !self.period.two_three!
                 break
             case three_four:
-                
+                guard self.period.three_four! else {return}
+                conditionBorderColorChange(sender)
                 periodCountNum += CountTheCheckedBoxReverse(self.period.three_four!)
                 self.period.three_four = !self.period.three_four!
                 break
             case four_five:
-                
+                guard self.period.four_five! else {return}
+                conditionBorderColorChange(sender)
                 periodCountNum += CountTheCheckedBoxReverse(self.period.four_five!)
                 self.period.four_five = !self.period.four_five!
                 break
             case five_six:
-                
+                guard self.period.five_six! else {return}
+                conditionBorderColorChange(sender)
                 periodCountNum += CountTheCheckedBoxReverse(self.period.five_six!)
                 self.period.five_six = !self.period.five_six!
                 break
             case six_seven:
-                
+                guard self.period.six_seven! else {return}
+                conditionBorderColorChange(sender)
                 periodCountNum += CountTheCheckedBoxReverse(self.period.six_seven!)
                 self.period.six_seven = !self.period.six_seven!
                 break
             case seven_more:
-               
+                guard self.period.seven_more! else {return}
+                conditionBorderColorChange(sender)
                 periodCountNum += CountTheCheckedBoxReverse(self.period.seven_more!)
                  self.period.seven_more = !self.period.seven_more!
                 break
             case yet:
-                
+                guard self.period.yet! else {return}
+                conditionBorderColorChange(sender)
                 periodCountNum += CountTheCheckedBoxReverse(self.period.yet!)
                 self.period.yet = !self.period.yet!
                 break
@@ -1040,27 +1054,71 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
             
         }
     }
-    // 선택사항 클릭시 박스 border 색 변경
-    @IBAction func conditionPeriodBtnClick(_ sender: ConditionButton) {
-        
-        if sender == twenty_less {
-            self.age.twenty_less = !self.age.twenty_less!
-            self.twenty_less.buttonClicked(sender: twenty_less, self.age.twenty_less!)
-            
+    
+    @IBAction func conditionAgeBtnClick(_ sender: ConditionButton) {
+        if self.age.twenty_less == true || self.age.twenty_forty == true || self.age.forty_more == true {
+            switch sender {
+            case twenty_less:
+                if self.age.twenty_less == true {
+                    self.age.twenty_less = !self.age.twenty_less!
+                    conditionBorderColorChange(sender)
+                }
+            case twenty_forty:
+                if self.age.twenty_forty == true {
+                    self.age.twenty_forty = !self.age.twenty_forty!
+                    conditionBorderColorChange(sender)
+                }
+            case forty_more:
+                if self.age.forty_more == true {
+                    self.age.forty_more = !self.age.forty_more!
+                    conditionBorderColorChange(sender)
+                }
+            default:
+                break
+            }
+           
+        } else {
+            switch (sender) {
+            case twenty_less:
+                self.age.twenty_less = true
+            case twenty_forty:
+                self.age.twenty_forty = true
+            case forty_more:
+                self.age.forty_more = true
+            default :
+                break
+            }
+            conditionBorderColorChange(sender)
         }
-        else if sender == twenty_forty {
-            self.age.twenty_forty = !self.age.twenty_forty!
-            self.twenty_forty.buttonClicked(sender: twenty_forty, self.age.twenty_forty!)
-        }
-        else if sender == forty_more {
-            self.age.forty_more = !self.age.forty_more!
-            self.forty_more.buttonClicked(sender: forty_more, self.age.forty_more!)
-        }
-        conditionBorderColorChange(sender)
-        //perIOD 제한 3
-        clickPeriodConditionButton(sender)
         
     }
+    // 선택사항 클릭시 Period 박스 border 색 변경
+    // clickPeriodConditionButton(sender) -> 설립 경관 년 수 개수에 따라서 클릭 제한
+    @IBAction func conditionPeriodBtnClick(_ sender: ConditionButton) {
+        //perIOD 제한 3
+        clickPeriodConditionButton(sender)
+
+//        if sender == twenty_less {
+//            self.age.twenty_less = !self.age.twenty_less!
+//            self.twenty_less.buttonClicked(sender: twenty_less, self.age.twenty_less!)
+//
+//        }
+//        else if sender == twenty_forty {
+//            self.age.twenty_forty = !self.age.twenty_forty!
+//            self.twenty_forty.buttonClicked(sender: twenty_forty, self.age.twenty_forty!)
+//        }
+//        else if sender == forty_more {
+//            self.age.forty_more = !self.age.forty_more!
+//            self.forty_more.buttonClicked(sender: forty_more, self.age.forty_more!)
+//        }
+//        conditionBorderColorChange(sender)
+//        //perIOD 제한 3
+//        clickPeriodConditionButton(sender)
+        
+    }
+    
+    
+    // 기업 형태 / 우대사항 클릭시에 색깔 변경과 개수 세기
     
     @IBAction func conditionElseBtnClick(_ sender: ConditionButton) {
         clickElseConditionButton(sender)

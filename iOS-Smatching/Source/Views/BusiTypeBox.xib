@@ -634,29 +634,12 @@
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4iD-jL-6li">
                     <rect key="frame" x="155.5" y="142" width="63.5" height="18"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="업종" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MAl-ak-hUY">
-                            <rect key="frame" x="0.0" y="0.0" width="29.5" height="18"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="업종" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MAl-ak-hUY">
+                            <rect key="frame" x="0.0" y="0.0" width="63.5" height="18"/>
                             <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SVq-jI-Dwh">
-                            <rect key="frame" x="37.5" y="0.0" width="26" height="18"/>
-                            <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qjj-a0-voW">
-                                    <rect key="frame" x="0.0" y="0.0" width="10" height="18"/>
-                                    <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rbF-9H-PmD">
-                                    <rect key="frame" x="10" y="0.0" width="16" height="18"/>
-                                    <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                        </stackView>
                     </subviews>
                     <constraints>
                         <constraint firstAttribute="width" constant="63.5" id="9D5-og-LxH"/>

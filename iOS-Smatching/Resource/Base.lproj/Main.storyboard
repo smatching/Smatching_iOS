@@ -2352,7 +2352,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="conditionPeriodBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="X97-Rl-GDK"/>
+                                                            <action selector="conditionAgeBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="Vj2-hS-7Vc"/>
                                                         </connections>
                                                     </view>
                                                     <view contentMode="scaleToFill" restorationIdentifier="twenty_forty" translatesAutoresizingMaskIntoConstraints="NO" id="xDN-Ai-xxK" customClass="ConditionButton" customModule="iOS_Smatching" customModuleProvider="target">
@@ -2389,14 +2389,14 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="conditionPeriodBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="1hH-2O-gbb"/>
+                                                            <action selector="conditionAgeBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="v9P-nP-JVR"/>
                                                         </connections>
                                                     </view>
                                                     <view contentMode="scaleToFill" restorationIdentifier="forty_more" translatesAutoresizingMaskIntoConstraints="NO" id="mWi-cI-o4G" customClass="ConditionButton" customModule="iOS_Smatching" customModuleProvider="target">
                                                         <rect key="frame" x="198" y="0.0" width="80" height="70"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="만 20세 미만" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8f8-eW-fcq">
-                                                                <rect key="frame" x="8.5" y="28" width="65" height="14"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="40 세 이상" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8f8-eW-fcq">
+                                                                <rect key="frame" x="13" y="28" width="54" height="14"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
                                                                 <nil key="textColor"/>
@@ -2423,7 +2423,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="conditionPeriodBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="IwO-J8-Bby"/>
+                                                            <action selector="conditionAgeBtnClick:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="RdT-dH-DNY"/>
                                                         </connections>
                                                     </view>
                                                 </subviews>
@@ -4072,6 +4072,7 @@
                     <navigationItem key="navigationItem" id="oi9-yC-f7w"/>
                     <size key="freeformSize" width="375" height="1147"/>
                     <connections>
+                        <outlet property="NeedlessFieldBox" destination="pcl-y0-nqd" id="Jr5-vm-CvX"/>
                         <outlet property="aSettingBtn" destination="TLG-ja-GeE" id="GWI-wf-36d"/>
                         <outlet property="advantabeCountLabel" destination="RfS-jV-q6R" id="Ji5-pr-9b8"/>
                         <outlet property="bSettingBtn" destination="XxN-zf-7LM" id="g6i-h6-nlh"/>
@@ -4181,7 +4182,7 @@
         <image name="btnBack" width="48" height="48"/>
         <image name="btnCreateaccountCanclick" width="266" height="47"/>
         <image name="btnExperience" width="266" height="47"/>
-        <image name="btnLogin" width="119" height="19"/>
+        <image name="btnLogin" width="266" height="47"/>
         <image name="btnLoginCanclick" width="266" height="47"/>
         <image name="btnLogin_1" width="266" height="47"/>
         <image name="btn_addsmatching_canclick" width="87" height="87"/>
