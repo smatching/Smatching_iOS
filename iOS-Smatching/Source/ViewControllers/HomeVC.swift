@@ -8,6 +8,8 @@
 
 import UIKit
 import Lottie
+import UserNotifications
+
 class HomeVC: UIViewController {
     
     @IBOutlet weak var pageControl: UIPageControl!
@@ -30,11 +32,24 @@ class HomeVC: UIViewController {
     var cur_cond_idx : Int?
     var cur_notice_idx : Int?
     
+    //읽지 않은 공고 개수
+    var badgeCount : Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupShadow()
+        
+        NotificationPutService.shared.getNotificationCount() {[weak self] (res) in guard let `self` = self else {return}
+            self.badgeCount = res.num!
+        }
+        let application = UIApplication.shared
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options:[.badge, .alert, .sound]) { (granted, error) in
+            // Enable or disable features based on authorization.
+        }
+        application.registerForRemoteNotifications()
+        application.applicationIconBadgeNumber = self.badgeCount
         
         //전체 공고 불러오기
         NoticeService.shared.getAllNotice(request_num: 4, exist_num: self.noticeList.count) {[weak self] (data) in guard let `self` = self else {return}
@@ -217,6 +232,16 @@ class HomeVC: UIViewController {
         
     }
     
+    @IBAction func clickNotificationBtn(_ sender: Any) {
+        
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Alarm", bundle:nil)
+        let controller = storyBoard.instantiateViewController(withIdentifier: "AlarmVC")
+        addChild(controller)
+        controller.view.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+        controller.view.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
+        view.addSubview(controller.view)
+        controller.didMove(toParent: self)
+    }
     
     @IBAction func searchBtn(_ sender: Any) {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Search", bundle:nil)

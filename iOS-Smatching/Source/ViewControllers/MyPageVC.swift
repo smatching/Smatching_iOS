@@ -36,7 +36,6 @@ class MyPageVC: UIViewController, UITextFieldDelegate {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
         
-        
         MypageService.shared.getUserInfo() {[weak self] (data) in guard let `self` = self else {return}
             self.animateLoading(self.animationView)
             print(data)
@@ -47,7 +46,7 @@ class MyPageVC: UIViewController, UITextFieldDelegate {
             self.noticeCnt.text = "총 \(self.gino(data.noticeScrapCnt))건"
             self.stopLoadingAnimation(self.animationView)
         }
-        MypageService.shared.getScrappedNotices(request_num: 3, exist_num: 0) {[weak self] (data) in guard let `self` = self else {return}
+        MypageService.shared.getScrappedNotices(request_num: 999, exist_num: 0) {[weak self] (data) in guard let `self` = self else {return}
             self.noticeList = data
             self.scrapedNoticeTableView.reloadData()
             
@@ -98,9 +97,10 @@ class MyPageVC: UIViewController, UITextFieldDelegate {
         return true
     }
 }
-extension MyPageVC : UITableViewDelegate{
+extension MyPageVC : UITableViewDelegate {
     
 }
+
 extension MyPageVC : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return noticeList.count

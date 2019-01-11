@@ -17,14 +17,40 @@ class AlarmVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        noNotificationView.isHidden = true
         alarmTableView.dataSource = self
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        UserService.shared.getNotifications() {[weak self] (res) in guard let `self` = self else {return}
+            self.notificationList = res
+            self.alarmTableView.reloadData()
+            
+            if self.notificationList.isEmpty == true {
+                self.noNotificationView.isHidden = false
+            }
+            
+        }
+    }
     @IBAction func clickCloseBtn(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+       self.view.removeFromSuperview()
     }
     
+}
+extension AlarmVC : UITabBarDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "DetailContent", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "NoticeDetailVC") as! NoticeDetailVC
+        
+        let noticeIdx = self.notificationList[indexPath.row].noticeIdx
+        nextViewController.notice_idx = gino(noticeIdx)
+        nextViewController.scrapped = 0
+        self.navigationController?.pushViewController(nextViewController, animated: true)
+        
+    }
 }
 extension AlarmVC : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

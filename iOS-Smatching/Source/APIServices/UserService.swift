@@ -131,7 +131,7 @@ struct UserService: APIManager, Requestable {
         
     }
     func getNotifications(completion: @escaping([Notification]) ->Void) {
-        let getURL = signupURL + "\notification"
+        let getURL = signupURL + "/notification"
         let headers: HTTPHeaders = [
             "Content-Type" : "application/json",
             "Authorization" : UserDefaults.standard.string(forKey: "token") ?? ""
@@ -150,5 +150,27 @@ struct UserService: APIManager, Requestable {
             
         }
         
+    }
+    
+    //프로필 사진 삭제
+    func deleteProfileImg(completion: @escaping() -> Void) {
+        let deleteURL = signupURL + "/picture"
+        
+        let headers: HTTPHeaders = [
+            "Content-Type" : "application/json",
+            "Authorization" : UserDefaults.standard.string(forKey: "token") ?? ""
+        ]
+        
+        puttable(deleteURL, body: nil, header: headers) {(res) in
+            switch res {
+            case .success(let value):
+                print(value)
+                completion()
+            case .error(let error):
+                print(error)
+                
+            }
+            
+        }
     }
 }
