@@ -18,6 +18,8 @@ class MyPageVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var noticeCnt: UILabel!
     @IBOutlet weak var searchScrapTxtField: UITextField!
     
+    @IBOutlet weak var talkBtn: UIButton!
+    @IBOutlet weak var conditionBtn: UIButton!
     var animationView: LOTAnimationView = LOTAnimationView(name: "loading");
     
     var noticeList = [Notice]()
@@ -63,7 +65,17 @@ class MyPageVC: UIViewController, UITextFieldDelegate {
     }
     
     
-  
+    @IBAction func myPageStackBtnClick
+        (_ sender: UIButton) {
+        if sender.titleColor(for: .normal) == UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1) {
+            sender.setTitleColor(UIColor(red: 214/255, green: 214/255, blue: 214/255, alpha: 1), for: UIControl.State.normal)
+        }
+        if  sender.titleColor(for: .normal) == UIColor(red:214/255, green: 214/255, blue: 214/255, alpha: 1) {
+            sender.setTitleColor(UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1), for: .normal)
+        }
+        
+    }
+    
     @IBAction func showSettingView(_ sender: Any) {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Setting", bundle:nil)
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SettingVC") as! SettingViewController

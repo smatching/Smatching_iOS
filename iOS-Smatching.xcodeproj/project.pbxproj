@@ -769,13 +769,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 325VLH85CK;
+				DEVELOPMENT_TEAM = 38HL58Q2DM;
 				INFOPLIST_FILE = "$(SRCROOT)/iOS-Smatching/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "shyn22.iOS-Smatching-1";
+				PRODUCT_BUNDLE_IDENTIFIER = "shyn22.iOS-Smatching";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -788,13 +788,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 325VLH85CK;
+				DEVELOPMENT_TEAM = 38HL58Q2DM;
 				INFOPLIST_FILE = "$(SRCROOT)/iOS-Smatching/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "shyn22.iOS-Smatching-1";
+				PRODUCT_BUNDLE_IDENTIFIER = "shyn22.iOS-Smatching";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
