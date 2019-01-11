@@ -30,7 +30,7 @@ struct SearchCookieService : APIManager, Requestable {
                 print(value)
                 guard let result = value.data else
                 {return}
-                completion(value.data)
+//                completion(value.data)
             case .error(let error):
                 print(error)
             }

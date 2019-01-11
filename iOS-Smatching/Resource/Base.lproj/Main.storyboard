@@ -942,7 +942,7 @@
                                         <rect key="frame" x="277" y="189.5" width="60" height="30"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I9q-3U-auN">
-                                        <rect key="frame" x="18" y="219.5" width="339" height="334.5"/>
+                                        <rect key="frame" x="18" y="220" width="339" height="370"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="i2I-ec-j4T">
                                                 <rect key="frame" x="42" y="24" width="255" height="32"/>
@@ -995,7 +995,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CCm-E8-cLs">
-                                                <rect key="frame" x="26" y="147" width="287" height="187.5"/>
+                                                <rect key="frame" x="26" y="147" width="287" height="223.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="NoticeCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NoticeCell" rowHeight="73" id="gfq-RW-9DN" customClass="NoticeCell" customModule="iOS_Smatching" customModuleProvider="target">
@@ -1159,7 +1159,7 @@
                                     <constraint firstItem="I9q-3U-auN" firstAttribute="leading" secondItem="fOg-rd-bBG" secondAttribute="leading" constant="18" id="36r-sh-eYp"/>
                                     <constraint firstItem="8jL-lZ-GvL" firstAttribute="top" secondItem="Y8D-vE-uQl" secondAttribute="bottom" constant="22" id="6Bl-TD-srB"/>
                                     <constraint firstItem="z61-2i-kaZ" firstAttribute="centerX" secondItem="fOg-rd-bBG" secondAttribute="centerX" id="BoF-Q9-ogu"/>
-                                    <constraint firstAttribute="bottom" secondItem="I9q-3U-auN" secondAttribute="bottom" id="GWP-jd-ui1"/>
+                                    <constraint firstAttribute="bottom" secondItem="I9q-3U-auN" secondAttribute="bottom" constant="-36" id="GWP-jd-ui1"/>
                                     <constraint firstItem="I9q-3U-auN" firstAttribute="top" secondItem="oZh-Ag-rfd" secondAttribute="bottom" id="KWz-Dc-WY8"/>
                                     <constraint firstItem="8jL-lZ-GvL" firstAttribute="centerX" secondItem="fOg-rd-bBG" secondAttribute="centerX" id="Koj-Pm-gaF"/>
                                     <constraint firstItem="I9q-3U-auN" firstAttribute="top" secondItem="z61-2i-kaZ" secondAttribute="bottom" constant="30" id="Mb6-Ma-ytX"/>
@@ -2231,6 +2231,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cdz-CE-vO4">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -4346,7 +4347,7 @@ AAAAAAAAAAAAAAAAAB0BA
         <image name="txt_explain" width="164" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="r53-ws-zKk"/>
+        <segue reference="aa2-3K-Glj"/>
         <segue reference="MGr-Pn-Rwo"/>
     </inferredMetricsTieBreakers>
 </document>

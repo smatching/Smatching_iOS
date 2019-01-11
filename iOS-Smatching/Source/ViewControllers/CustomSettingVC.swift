@@ -735,7 +735,7 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
     func conditionButtonSlidingEvent(_ sender : UIButton, _ checked : Bool) {
         var yValueOfBox = self.NeedlessFieldBox.frame.origin.y 
         sender.isHidden = !checked
-        self.slideY(y: CGFloat(yValueOfBox + 35 * UselessFieldCount), sender : sender)
+        self.slideY(y: CGFloat(895 + 35 * UselessFieldCount), sender : sender)
         useLessBtnArray.append(sender)
         
     }
