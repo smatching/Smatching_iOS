@@ -12,7 +12,9 @@ class WalkThroughVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        print(UserDefaults.standard.string(forKey: "token") )
+        
         // Do any additional setup after loading the view.
     }
     

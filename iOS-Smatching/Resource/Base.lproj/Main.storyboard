@@ -933,22 +933,22 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="닉네임최대일때야" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z61-2i-kaZ">
-                                        <rect key="frame" x="114.5" y="167" width="146" height="22.5"/>
+                                        <rect key="frame" x="118.5" y="167" width="138.5" height="23.5"/>
                                         <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_mypage_scrapbox-1" translatesAutoresizingMaskIntoConstraints="NO" id="oZh-Ag-rfd">
-                                        <rect key="frame" x="277" y="189.5" width="60" height="30"/>
+                                        <rect key="frame" x="277" y="190.5" width="60" height="30"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I9q-3U-auN">
-                                        <rect key="frame" x="18" y="219.5" width="339" height="334.5"/>
+                                        <rect key="frame" x="18" y="220.5" width="339" height="333.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="i2I-ec-j4T">
-                                                <rect key="frame" x="42" y="24" width="255" height="32"/>
+                                                <rect key="frame" x="48" y="24" width="243" height="33"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vCv-t2-aif">
-                                                        <rect key="frame" x="0.0" y="0.0" width="120" height="32"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="114" height="33"/>
                                                         <fontDescription key="fontDescription" name="NanumSquareEB" family="NanumSquare" pointSize="18"/>
                                                         <state key="normal" title="맞춤지원 스크랩">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -958,7 +958,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1G-Nx-15w">
-                                                        <rect key="frame" x="135" y="0.0" width="120" height="32"/>
+                                                        <rect key="frame" x="129" y="0.0" width="114" height="33"/>
                                                         <fontDescription key="fontDescription" name="NanumSquareEB" family="NanumSquare" pointSize="18"/>
                                                         <state key="normal" title="창업토크 스크랩">
                                                             <color key="titleColor" red="0.83921568627450982" green="0.83921568627450982" blue="0.83921568627450982" alpha="1" colorSpace="calibratedRGB"/>
@@ -970,7 +970,7 @@
                                                 </subviews>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zhf-SQ-uCR">
-                                                <rect key="frame" x="27" y="76" width="285" height="30"/>
+                                                <rect key="frame" x="27" y="77" width="285" height="30"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" 스크랩을 검색하세요." textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iy1-WO-cQT">
                                                         <rect key="frame" x="0.0" y="4" width="285" height="22"/>
@@ -992,7 +992,7 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="총 000건" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="diO-Xr-YK8">
-                                                <rect key="frame" x="31" y="121" width="46.5" height="13"/>
+                                                <rect key="frame" x="31" y="122" width="44.5" height="13"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="13" id="wqE-LN-fmH"/>
                                                 </constraints>
@@ -1001,7 +1001,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CCm-E8-cLs">
-                                                <rect key="frame" x="26" y="147" width="287" height="187.5"/>
+                                                <rect key="frame" x="26" y="148" width="287" height="185.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="NoticeCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NoticeCell" rowHeight="73" id="gfq-RW-9DN" customClass="NoticeCell" customModule="iOS_Smatching" customModuleProvider="target">
@@ -1015,13 +1015,13 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="287" height="71.5"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="대한무역투자진흥공사" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w6D-xO-wSd">
-                                                                            <rect key="frame" x="5" y="13" width="100.5" height="13"/>
+                                                                            <rect key="frame" x="5" y="13" width="95.5" height="13"/>
                                                                             <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="11"/>
                                                                             <color key="textColor" red="0.40392156862745099" green="0.40392156862745099" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F5Y-Xh-oUq">
-                                                                            <rect key="frame" x="116" y="10" width="39.5" height="16.5"/>
+                                                                            <rect key="frame" x="111" y="10" width="39.5" height="16.5"/>
                                                                             <subviews>
                                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="box_dday_gray" translatesAutoresizingMaskIntoConstraints="NO" id="uXC-79-wez">
                                                                                     <rect key="frame" x="0.0" y="0.5" width="40" height="16"/>
@@ -1030,7 +1030,7 @@
                                                                                     </constraints>
                                                                                 </imageView>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D-21" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QuH-cR-aQx">
-                                                                                    <rect key="frame" x="8" y="2.5" width="23.5" height="12"/>
+                                                                                    <rect key="frame" x="8.5" y="2.5" width="22.5" height="12"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="height" constant="12" id="HnW-si-C4h"/>
                                                                                     </constraints>
@@ -1118,7 +1118,7 @@
                                                 </prototypes>
                                             </tableView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NiW-Gr-AIf">
-                                                <rect key="frame" x="26" y="147" width="287" height="187.5"/>
+                                                <rect key="frame" x="26" y="148" width="287" height="185.5"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="img_talknotyet" translatesAutoresizingMaskIntoConstraints="NO" id="b1Z-PH-SZ4">
                                                         <rect key="frame" x="50" y="60" width="178" height="133"/>
@@ -1241,7 +1241,7 @@
                                 <rect key="frame" x="0.0" y="-5" width="375" height="916"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GmK-Dq-VzQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="976"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="998"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="중소기업" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcd-8q-pJ9">
                                                 <rect key="frame" x="37.5" y="123" width="59" height="19.5"/>
@@ -1254,7 +1254,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lz7-20-P3M">
-                                                <rect key="frame" x="37.5" y="149" width="290" height="46.5"/>
+                                                <rect key="frame" x="37.5" y="149" width="290" height="49"/>
                                                 <string key="text">중소기업 육성시책의 대상이 되는 기업으로 소유와 
 경영의 독립성을 확보하고 있으며 규모가 상대적으로 
 작은 기업.</string>
@@ -1263,13 +1263,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="중견기업" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="85J-Kh-i3o">
-                                                <rect key="frame" x="37.5" y="210" width="59" height="18"/>
+                                                <rect key="frame" x="37.5" y="212.5" width="59" height="19"/>
                                                 <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
                                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ExD-0X-keP">
-                                                <rect key="frame" x="37.5" y="234.5" width="262" height="46.5"/>
+                                                <rect key="frame" x="37.5" y="238" width="262" height="49"/>
                                                 <string key="text">중소기업기본법상 중소기업이 아니면서 
 대기업 계열사가 아닌 기업으로, 공정거래법상 
 상호출자제한 기업집단군에는 속하지 않는 회사.</string>
@@ -1278,13 +1278,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="대기업" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vjx-Fr-inq">
-                                                <rect key="frame" x="37.5" y="298.5" width="44" height="18"/>
+                                                <rect key="frame" x="37.5" y="304.5" width="44" height="19"/>
                                                 <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
                                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWU-aa-xFf">
-                                                <rect key="frame" x="37.5" y="323" width="290" height="31"/>
+                                                <rect key="frame" x="37.5" y="330" width="290" height="33"/>
                                                 <string key="text">공시대상기업집단 중, 자산총액이 10조 이상인 
 기업집단.</string>
                                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="14"/>
@@ -1292,13 +1292,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1인 창조기업" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3UN-SK-lWt">
-                                                <rect key="frame" x="37.5" y="378.5" width="88" height="18"/>
+                                                <rect key="frame" x="37.5" y="387.5" width="88" height="19"/>
                                                 <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
                                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdn-8L-Hwd">
-                                                <rect key="frame" x="37.5" y="403" width="290" height="46.5"/>
+                                                <rect key="frame" x="37.5" y="413" width="290" height="49"/>
                                                 <string key="text">중소기업기본법상 중소기업이 아니면서 대기업 
 계열사가 아닌 기업으로, 공정거래법상 상호출자제한 
 기업집단군에는 속하지 않는 회사.</string>
@@ -1307,13 +1307,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="소상공인" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXF-h3-sQN">
-                                                <rect key="frame" x="37.5" y="464" width="59" height="18"/>
+                                                <rect key="frame" x="37.5" y="476.5" width="59" height="19"/>
                                                 <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
                                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o5L-uk-tgE">
-                                                <rect key="frame" x="37.5" y="488.5" width="290" height="77.5"/>
+                                                <rect key="frame" x="37.5" y="502" width="290" height="82"/>
                                                 <string key="text">기업 중에서도 규모가 특히 작은 기업이라든지 생업적 
 업종을 영위하는 자영업자들로서 도 · 소매업, 음식업, 
 숙박업, 서비스업의 경우 상시근로자 5인 미만 
@@ -1324,31 +1324,31 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="전통시장" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fV-YT-0La">
-                                                <rect key="frame" x="37.5" y="600" width="59" height="18"/>
+                                                <rect key="frame" x="37.5" y="618" width="59" height="19"/>
                                                 <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
                                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="설명없음" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SxQ-MX-eMP">
-                                                <rect key="frame" x="37.5" y="624.5" width="290" height="15.5"/>
+                                                <rect key="frame" x="37.5" y="643.5" width="290" height="16.5"/>
                                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="예비창업자" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axQ-rq-mHH">
-                                                <rect key="frame" x="37.5" y="665" width="74" height="18"/>
+                                                <rect key="frame" x="37.5" y="685" width="74" height="19"/>
                                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
                                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="설명없음" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kv2-8w-WYa">
-                                                <rect key="frame" x="42" y="689.5" width="290" height="15.5"/>
+                                                <rect key="frame" x="42" y="710.5" width="290" height="16.5"/>
                                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_precautionbox" translatesAutoresizingMaskIntoConstraints="NO" id="42R-fw-Gqo">
-                                                <rect key="frame" x="28" y="730" width="319" height="83"/>
+                                                <rect key="frame" x="28" y="752" width="319" height="83"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="83" id="pge-cI-7nR"/>
                                                 </constraints>
@@ -1459,31 +1459,14 @@
                                     <view contentMode="scaleToFill" placeholderIntrinsicWidth="375" placeholderIntrinsicHeight="906" translatesAutoresizingMaskIntoConstraints="NO" id="9rF-VT-OLR">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="906"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_symbol" translatesAutoresizingMaskIntoConstraints="NO" id="rdP-dG-f50">
-                                                <rect key="frame" x="155" y="36" width="65" height="20"/>
-                                            </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rff-ls-bJX">
-                                                <rect key="frame" x="294" y="36" width="20" height="22"/>
-                                                <state key="normal" image="icn_ios_search"/>
-                                                <connections>
-                                                    <action selector="searchBtn:" destination="Rib-I2-5FU" eventType="touchUpInside" id="RRC-Ag-jTR"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VV7-w5-h7T">
-                                                <rect key="frame" x="337" y="36" width="20" height="22"/>
-                                                <state key="normal" image="icn_ios_notice"/>
-                                                <connections>
-                                                    <action selector="clickNotificationBtn:" destination="Rib-I2-5FU" eventType="touchUpInside" id="dpv-4Z-cJL"/>
-                                                </connections>
-                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="맞춤 지원사업" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Oa-EV-Qbn">
                                                 <rect key="frame" x="37" y="97" width="114.5" height="23"/>
                                                 <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E8N-h1-ZIf">
-                                                <rect key="frame" x="32" y="135" width="310" height="307"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E8N-h1-ZIf">
+                                                <rect key="frame" x="32" y="135.5" width="310" height="307"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="나에게 딱 맞는 지원사업" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aSA-2y-RQ3">
                                                         <rect key="frame" x="79" y="178" width="152" height="19"/>
@@ -1540,7 +1523,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jzs-Gw-5rr">
-                                                <rect key="frame" x="32" y="155" width="310" height="307"/>
+                                                <rect key="frame" x="32" y="135.5" width="310" height="307"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_smatchingbox_blue" translatesAutoresizingMaskIntoConstraints="NO" id="6Nz-m8-QAN">
                                                         <rect key="frame" x="0.0" y="0.0" width="310" height="87"/>
@@ -1675,7 +1658,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1an-OX-mlw">
-                                                <rect key="frame" x="32" y="155" width="310" height="307"/>
+                                                <rect key="frame" x="32" y="135.5" width="310" height="307"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icn_logo_grey" translatesAutoresizingMaskIntoConstraints="NO" id="pNs-Ef-thy">
                                                         <rect key="frame" x="99.5" y="98" width="111" height="34"/>
@@ -1793,14 +1776,14 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="img_allsupportbox_blue" translatesAutoresizingMaskIntoConstraints="NO" id="WV7-nn-pAh">
-                                                <rect key="frame" x="32.5" y="524" width="310" height="11"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_allsupportbox_blue" translatesAutoresizingMaskIntoConstraints="NO" id="WV7-nn-pAh">
+                                                <rect key="frame" x="32.5" y="524.5" width="310" height="11"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="WV7-nn-pAh" secondAttribute="height" multiplier="310:11" id="bsF-6m-hje"/>
                                                 </constraints>
                                             </imageView>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LCJ-Th-yoq">
-                                                <rect key="frame" x="32.5" y="535" width="310" height="286"/>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LCJ-Th-yoq">
+                                                <rect key="frame" x="32.5" y="535.5" width="310" height="286"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="LCJ-Th-yoq" secondAttribute="height" multiplier="155:143" id="o5l-Or-ESZ"/>
@@ -1827,7 +1810,7 @@
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D-7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QFK-Zj-SDc">
-                                                                            <rect key="frame" x="259.5" y="13" width="16.5" height="12"/>
+                                                                            <rect key="frame" x="258.5" y="13" width="17.5" height="12"/>
                                                                             <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="10"/>
                                                                             <color key="textColor" red="0.74901960784313726" green="0.45490196078431372" blue="0.45490196078431372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <nil key="highlightedColor"/>
@@ -1916,7 +1899,6 @@
                                         <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="yRO-9Q-Ugs" secondAttribute="trailing" constant="44.5" id="46j-km-ZqQ"/>
-                                            <constraint firstItem="Rff-ls-bJX" firstAttribute="top" secondItem="9rF-VT-OLR" secondAttribute="top" constant="36" id="4DH-g1-qef"/>
                                             <constraint firstItem="7Oa-EV-Qbn" firstAttribute="top" secondItem="9rF-VT-OLR" secondAttribute="top" constant="97" id="61b-JP-6MB"/>
                                             <constraint firstItem="pwQ-QD-9Yx" firstAttribute="top" secondItem="jzs-Gw-5rr" secondAttribute="bottom" constant="22" id="7Y6-1I-3EI"/>
                                             <constraint firstItem="E8N-h1-ZIf" firstAttribute="leading" secondItem="9rF-VT-OLR" secondAttribute="leading" constant="32" id="7mE-7V-atb"/>
@@ -1930,12 +1912,7 @@
                                             <constraint firstItem="LCJ-Th-yoq" firstAttribute="top" secondItem="WV7-nn-pAh" secondAttribute="bottom" id="LSv-gZ-HmM"/>
                                             <constraint firstItem="pQi-EM-d2c" firstAttribute="top" secondItem="jzs-Gw-5rr" secondAttribute="bottom" constant="18" id="Lf0-IZ-fZq"/>
                                             <constraint firstItem="pQi-EM-d2c" firstAttribute="top" secondItem="E8N-h1-ZIf" secondAttribute="bottom" constant="18" id="Mme-0J-gxp"/>
-                                            <constraint firstItem="rdP-dG-f50" firstAttribute="centerX" secondItem="9rF-VT-OLR" secondAttribute="centerX" id="NMz-gT-cRz"/>
-                                            <constraint firstItem="VV7-w5-h7T" firstAttribute="leading" secondItem="Rff-ls-bJX" secondAttribute="trailing" constant="23" id="NVa-BV-Seq"/>
-                                            <constraint firstItem="rdP-dG-f50" firstAttribute="top" secondItem="9rF-VT-OLR" secondAttribute="top" constant="36" id="PMM-Vg-Zh8"/>
-                                            <constraint firstAttribute="trailing" secondItem="VV7-w5-h7T" secondAttribute="trailing" constant="18" id="Q3d-yi-Eyi"/>
                                             <constraint firstItem="WV7-nn-pAh" firstAttribute="top" secondItem="rAG-ic-b7e" secondAttribute="bottom" constant="14" id="QXK-XX-7Ad"/>
-                                            <constraint firstItem="VV7-w5-h7T" firstAttribute="top" secondItem="9rF-VT-OLR" secondAttribute="top" constant="36" id="Sql-z6-uEC"/>
                                             <constraint firstAttribute="trailing" secondItem="WV7-nn-pAh" secondAttribute="trailing" constant="32.5" id="W9N-Jb-jwr"/>
                                             <constraint firstAttribute="trailing" secondItem="LCJ-Th-yoq" secondAttribute="trailing" constant="32.5" id="WmA-8I-alv"/>
                                             <constraint firstAttribute="trailing" secondItem="pwQ-QD-9Yx" secondAttribute="trailing" constant="44.5" id="dXM-QY-RDi"/>
@@ -1950,13 +1927,33 @@
                                             <constraint firstItem="7Oa-EV-Qbn" firstAttribute="leading" secondItem="1an-OX-mlw" secondAttribute="leading" constant="5" id="uG5-kU-TQ4"/>
                                             <constraint firstAttribute="width" secondItem="9rF-VT-OLR" secondAttribute="height" multiplier="125:302" id="vTP-5W-h3w"/>
                                             <constraint firstItem="E8N-h1-ZIf" firstAttribute="top" secondItem="7Oa-EV-Qbn" secondAttribute="bottom" constant="15" id="w2O-M9-a2R"/>
-                                            <constraint firstItem="jzs-Gw-5rr" firstAttribute="top" secondItem="rdP-dG-f50" secondAttribute="bottom" constant="99" id="xhG-Sz-706"/>
                                             <constraint firstItem="yRO-9Q-Ugs" firstAttribute="top" secondItem="LCJ-Th-yoq" secondAttribute="bottom" constant="16.5" id="yMV-1b-XOt"/>
                                         </constraints>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VV7-w5-h7T">
+                                        <rect key="frame" x="329" y="8" width="20" height="22"/>
+                                        <state key="normal" image="icn_ios_notice"/>
+                                        <connections>
+                                            <action selector="clickNotificationBtn:" destination="Rib-I2-5FU" eventType="touchUpInside" id="dpv-4Z-cJL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rff-ls-bJX">
+                                        <rect key="frame" x="285" y="8" width="20" height="22"/>
+                                        <state key="normal" image="icn_ios_search"/>
+                                        <connections>
+                                            <action selector="searchBtn:" destination="Rib-I2-5FU" eventType="touchUpInside" id="RRC-Ag-jTR"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_symbol" translatesAutoresizingMaskIntoConstraints="NO" id="rdP-dG-f50">
+                                        <rect key="frame" x="155" y="8" width="65" height="20"/>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="VV7-w5-h7T" firstAttribute="centerY" secondItem="Rff-ls-bJX" secondAttribute="centerY" id="5gR-Ed-2gK"/>
+                                    <constraint firstItem="rdP-dG-f50" firstAttribute="centerX" secondItem="njI-N5-Kgn" secondAttribute="centerX" id="9Qs-Dj-ffo"/>
                                     <constraint firstAttribute="trailing" secondItem="9rF-VT-OLR" secondAttribute="trailing" id="ILa-TJ-A76"/>
+                                    <constraint firstItem="Rff-ls-bJX" firstAttribute="leading" secondItem="rdP-dG-f50" secondAttribute="trailing" constant="65" id="Pr9-Yz-5PP"/>
+                                    <constraint firstItem="rdP-dG-f50" firstAttribute="top" secondItem="njI-N5-Kgn" secondAttribute="top" constant="8" id="dIX-mS-yNU"/>
                                     <constraint firstAttribute="bottom" secondItem="9rF-VT-OLR" secondAttribute="bottom" id="dLC-Uc-kqR"/>
                                     <constraint firstItem="9rF-VT-OLR" firstAttribute="width" secondItem="njI-N5-Kgn" secondAttribute="width" id="kkl-Bi-ZIl"/>
                                     <constraint firstItem="9rF-VT-OLR" firstAttribute="top" secondItem="njI-N5-Kgn" secondAttribute="top" id="v8U-yB-N1X"/>
@@ -1968,8 +1965,10 @@
                         <constraints>
                             <constraint firstItem="njI-N5-Kgn" firstAttribute="leading" secondItem="hIo-HX-XZB" secondAttribute="leading" id="4Vm-7I-WDV"/>
                             <constraint firstItem="njI-N5-Kgn" firstAttribute="top" secondItem="MCt-cz-Efl" secondAttribute="top" id="5G7-Vw-E7k"/>
+                            <constraint firstItem="hIo-HX-XZB" firstAttribute="top" secondItem="VV7-w5-h7T" secondAttribute="top" constant="-8" id="AKT-l2-gAo"/>
                             <constraint firstItem="njI-N5-Kgn" firstAttribute="bottom" secondItem="hIo-HX-XZB" secondAttribute="bottom" id="VkD-Vw-7tR"/>
                             <constraint firstItem="njI-N5-Kgn" firstAttribute="trailing" secondItem="hIo-HX-XZB" secondAttribute="trailing" id="qb9-As-PNe"/>
+                            <constraint firstItem="hIo-HX-XZB" firstAttribute="trailing" secondItem="VV7-w5-h7T" secondAttribute="trailing" constant="26" id="zbn-C4-fmO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hIo-HX-XZB"/>
                     </view>
@@ -2272,7 +2271,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="1127"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RC9-H1-WKJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1123.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1124"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btn_smatching_click" translatesAutoresizingMaskIntoConstraints="NO" id="iLg-JK-GB3">
                                                 <rect key="frame" x="32.5" y="80" width="310" height="36"/>
@@ -2281,7 +2280,7 @@
                                                 </constraints>
                                             </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="맞춤조건1" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xat-C5-26U">
-                                                <rect key="frame" x="41.5" y="88" width="292.5" height="20"/>
+                                                <rect key="frame" x="41.5" y="87.5" width="292.5" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="292.5" id="fbX-j9-ef1"/>
                                                 </constraints>
@@ -2297,7 +2296,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="필수조건" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1gF-a5-jkO">
-                                                <rect key="frame" x="43.5" y="132" width="36.5" height="12"/>
+                                                <rect key="frame" x="43.5" y="132" width="35" height="12"/>
                                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="10"/>
                                                 <color key="textColor" red="0.41960784313725491" green="0.41960784313725491" blue="0.41960784313725491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -2502,7 +2501,7 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="69" height="36"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0~1년" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqO-oD-wDn">
-                                                                        <rect key="frame" x="18.5" y="10.5" width="33" height="14"/>
+                                                                        <rect key="frame" x="19" y="11" width="33" height="14"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
                                                                         <color key="textColor" red="0.2784313725" green="0.2784313725" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3701,7 +3700,7 @@
                                                                 <rect key="frame" x="103" y="0.0" width="94" height="36"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="공동창업" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wvS-Is-AVU">
-                                                                        <rect key="frame" x="21.5" y="0.0" width="51" height="36"/>
+                                                                        <rect key="frame" x="22" y="0.0" width="51" height="36"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
                                                                         <nil key="textColor"/>
@@ -3768,30 +3767,6 @@
                                                     <constraint firstAttribute="height" constant="126" id="wKk-0x-1rP"/>
                                                 </constraints>
                                             </stackView>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R9M-ez-qH9" customClass="UIButton">
-                                                <rect key="frame" x="0.0" y="1072.5" width="375" height="51"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="결과보기" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FyD-1g-HTO">
-                                                        <rect key="frame" x="154.5" y="15" width="66" height="21.5"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="21.5" id="WL5-yd-93R"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="18"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="51" id="1ph-ZS-A3c"/>
-                                                    <constraint firstItem="FyD-1g-HTO" firstAttribute="centerY" secondItem="R9M-ez-qH9" secondAttribute="centerY" id="2MX-fD-Bk3"/>
-                                                    <constraint firstAttribute="width" constant="375" id="4y2-bx-U43"/>
-                                                    <constraint firstItem="FyD-1g-HTO" firstAttribute="centerX" secondItem="R9M-ez-qH9" secondAttribute="centerX" id="zMH-dM-RqO"/>
-                                                </constraints>
-                                                <connections>
-                                                    <action selector="submitCondition:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="AEA-wT-yBK"/>
-                                                </connections>
-                                            </view>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXb-aT-DTj">
                                                 <rect key="frame" x="37" y="863" width="167" height="32"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -3857,7 +3832,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLG-ja-GeE">
-                                                <rect key="frame" x="37.5" y="758" width="209" height="32"/>
+                                                <rect key="frame" x="38" y="758" width="209" height="32"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="sector_a"/>
                                                 <connections>
@@ -3865,7 +3840,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XxN-zf-7LM">
-                                                <rect key="frame" x="37.5" y="758" width="139" height="32"/>
+                                                <rect key="frame" x="38" y="758" width="139" height="32"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="sector_b"/>
                                                 <connections>
@@ -3873,7 +3848,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nn3-Xo-vDN">
-                                                <rect key="frame" x="37.5" y="758" width="151" height="32"/>
+                                                <rect key="frame" x="38" y="758" width="151" height="32"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="sector_c"/>
                                                 <connections>
@@ -3934,13 +3909,11 @@
                                         <constraints>
                                             <constraint firstItem="DHE-35-N6c" firstAttribute="leading" secondItem="iLg-JK-GB3" secondAttribute="leading" id="22b-yF-xWG"/>
                                             <constraint firstItem="UNq-n0-wrI" firstAttribute="top" secondItem="Icv-Yh-7Mv" secondAttribute="bottom" constant="12.5" id="2dm-Ju-hHT"/>
-                                            <constraint firstItem="R9M-ez-qH9" firstAttribute="leading" secondItem="RC9-H1-WKJ" secondAttribute="leading" id="3IL-FA-f3r"/>
                                             <constraint firstItem="WCU-Vd-919" firstAttribute="leading" secondItem="RC9-H1-WKJ" secondAttribute="leading" constant="25" id="42Z-LC-cxQ"/>
                                             <constraint firstItem="znk-Py-3dz" firstAttribute="top" secondItem="52G-3J-0BF" secondAttribute="bottom" constant="17" id="44o-9Q-mOJ"/>
                                             <constraint firstItem="hTj-K5-osV" firstAttribute="leading" secondItem="iho-Xc-qmB" secondAttribute="trailing" constant="8.5" id="4OR-wG-bDp"/>
                                             <constraint firstItem="RwM-XT-AZS" firstAttribute="top" secondItem="vzO-LU-XMO" secondAttribute="bottom" constant="17" id="4Tl-hA-bae"/>
                                             <constraint firstItem="vzO-LU-XMO" firstAttribute="top" secondItem="pcl-y0-nqd" secondAttribute="bottom" constant="16" id="587-oD-56H"/>
-                                            <constraint firstAttribute="bottom" secondItem="R9M-ez-qH9" secondAttribute="bottom" id="5Bl-Tn-CKx"/>
                                             <constraint firstItem="znk-Py-3dz" firstAttribute="centerX" secondItem="RC9-H1-WKJ" secondAttribute="centerX" id="5kr-s9-pEm"/>
                                             <constraint firstItem="Ezx-ym-PgZ" firstAttribute="top" secondItem="taO-ZL-lWP" secondAttribute="bottom" constant="16" id="7Ye-l7-kN8"/>
                                             <constraint firstItem="52G-3J-0BF" firstAttribute="leading" secondItem="MuL-TI-v5c" secondAttribute="leading" id="8Cu-Aw-nlx"/>
@@ -3951,7 +3924,6 @@
                                             <constraint firstAttribute="trailing" secondItem="2uV-7h-nAN" secondAttribute="trailing" constant="281" id="D1X-iv-rGC"/>
                                             <constraint firstAttribute="trailing" secondItem="CkR-nJ-aba" secondAttribute="trailing" constant="40.5" id="DLu-L0-Q2x"/>
                                             <constraint firstItem="ThJ-Ah-7Ds" firstAttribute="top" secondItem="4pY-MB-I6Y" secondAttribute="bottom" constant="16" id="ErT-4e-dMD"/>
-                                            <constraint firstItem="R9M-ez-qH9" firstAttribute="top" secondItem="fvl-4s-RHA" secondAttribute="bottom" constant="18" id="Foz-Qg-Opf"/>
                                             <constraint firstAttribute="trailing" secondItem="Icv-Yh-7Mv" secondAttribute="trailing" constant="25.5" id="I7i-0d-fJ6"/>
                                             <constraint firstItem="taO-ZL-lWP" firstAttribute="centerX" secondItem="RC9-H1-WKJ" secondAttribute="centerX" id="J2J-Yz-NSK"/>
                                             <constraint firstItem="pcl-y0-nqd" firstAttribute="top" secondItem="5Vn-Qz-AOe" secondAttribute="bottom" constant="15.5" id="JJU-5r-BUQ"/>
@@ -3967,7 +3939,6 @@
                                             <constraint firstItem="Icv-Yh-7Mv" firstAttribute="top" secondItem="znk-Py-3dz" secondAttribute="bottom" constant="16" id="PMR-li-VyP"/>
                                             <constraint firstItem="nlT-pt-g8e" firstAttribute="top" secondItem="DHE-35-N6c" secondAttribute="top" id="Pcm-NK-YKi"/>
                                             <constraint firstItem="a0r-Ql-nhb" firstAttribute="top" secondItem="Ezx-ym-PgZ" secondAttribute="bottom" constant="16.5" id="Ph7-17-RYz"/>
-                                            <constraint firstAttribute="trailing" secondItem="R9M-ez-qH9" secondAttribute="trailing" id="Pxi-mb-aN0"/>
                                             <constraint firstAttribute="trailing" secondItem="ThJ-Ah-7Ds" secondAttribute="trailing" constant="26" id="Rdv-Em-afr"/>
                                             <constraint firstItem="UNq-n0-wrI" firstAttribute="leading" secondItem="nlT-pt-g8e" secondAttribute="trailing" constant="7" id="RwP-J3-4D5"/>
                                             <constraint firstItem="5n7-mR-gY7" firstAttribute="top" secondItem="Sg4-Cn-DHe" secondAttribute="top" id="Twv-sQ-KA1"/>
@@ -4003,6 +3974,7 @@
                                             <constraint firstItem="Sg4-Cn-DHe" firstAttribute="leading" secondItem="DHE-35-N6c" secondAttribute="leading" id="nGs-3u-CUa"/>
                                             <constraint firstItem="rd6-cU-uzO" firstAttribute="leading" secondItem="5n7-mR-gY7" secondAttribute="trailing" constant="3" id="nIU-U1-gEu"/>
                                             <constraint firstItem="ThJ-Ah-7Ds" firstAttribute="leading" secondItem="RC9-H1-WKJ" secondAttribute="leading" constant="25" id="nL5-Wp-e16"/>
+                                            <constraint firstAttribute="bottom" secondItem="fvl-4s-RHA" secondAttribute="bottom" constant="69.5" id="nMs-eK-tGj"/>
                                             <constraint firstItem="Kbt-kI-eMJ" firstAttribute="top" secondItem="iLg-JK-GB3" secondAttribute="bottom" constant="18" id="ojm-jf-o3g"/>
                                             <constraint firstItem="rd6-cU-uzO" firstAttribute="leading" secondItem="Sg4-Cn-DHe" secondAttribute="trailing" id="orx-Sa-uIU"/>
                                             <constraint firstItem="dWH-TG-4qD" firstAttribute="top" secondItem="Ezx-ym-PgZ" secondAttribute="bottom" constant="12.5" id="qMX-Vb-EWC"/>
@@ -4016,6 +3988,7 @@
                                             <constraint firstItem="fvl-4s-RHA" firstAttribute="top" secondItem="RwM-XT-AZS" secondAttribute="bottom" constant="15.5" id="vji-EA-pox"/>
                                             <constraint firstItem="dWH-TG-4qD" firstAttribute="leading" secondItem="52G-3J-0BF" secondAttribute="trailing" id="wfn-IB-Vae"/>
                                             <constraint firstItem="vzO-LU-XMO" firstAttribute="leading" secondItem="RC9-H1-WKJ" secondAttribute="leading" constant="25" id="xBO-kN-Ysy"/>
+                                            <constraint firstAttribute="height" priority="1" constant="1124" id="xtd-YL-3Og"/>
                                             <constraint firstItem="hTj-K5-osV" firstAttribute="leading" secondItem="5Vn-Qz-AOe" secondAttribute="trailing" id="yyz-Tu-nZQ"/>
                                         </constraints>
                                     </view>
@@ -4029,8 +4002,31 @@
                                     <constraint firstAttribute="bottom" secondItem="RC9-H1-WKJ" secondAttribute="bottom" id="vaW-1M-UH6"/>
                                 </constraints>
                             </scrollView>
-                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gby-rf-MiO">
-                                <rect key="frame" x="1" y="20" width="375" height="44"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R9M-ez-qH9" customClass="UIButton">
+                                <rect key="frame" x="0.0" y="1096" width="375" height="51"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="결과보기" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FyD-1g-HTO">
+                                        <rect key="frame" x="156.5" y="15" width="62.5" height="21.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21.5" id="WL5-yd-93R"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="1ph-ZS-A3c"/>
+                                    <constraint firstItem="FyD-1g-HTO" firstAttribute="centerY" secondItem="R9M-ez-qH9" secondAttribute="centerY" id="2MX-fD-Bk3"/>
+                                    <constraint firstItem="FyD-1g-HTO" firstAttribute="centerX" secondItem="R9M-ez-qH9" secondAttribute="centerX" id="zMH-dM-RqO"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="submitCondition:" destination="9Ch-C8-d7z" eventType="touchUpInside" id="AEA-wT-yBK"/>
+                                </connections>
+                            </view>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gby-rf-MiO">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="lvs-Oo-27F"/>
                                 </constraints>
@@ -4057,9 +4053,12 @@
                             <constraint firstItem="2uE-HY-KVz" firstAttribute="trailing" secondItem="LD6-rR-5e9" secondAttribute="trailing" id="1GL-0C-h9L"/>
                             <constraint firstItem="2uE-HY-KVz" firstAttribute="leading" secondItem="LD6-rR-5e9" secondAttribute="leading" id="CX7-e7-kWr"/>
                             <constraint firstItem="2uE-HY-KVz" firstAttribute="bottom" secondItem="LD6-rR-5e9" secondAttribute="bottom" id="H9e-Eq-bGo"/>
+                            <constraint firstItem="R9M-ez-qH9" firstAttribute="bottom" secondItem="LD6-rR-5e9" secondAttribute="bottom" id="KER-NR-TN0"/>
+                            <constraint firstItem="R9M-ez-qH9" firstAttribute="trailing" secondItem="LD6-rR-5e9" secondAttribute="trailing" id="hZD-ag-iFC"/>
                             <constraint firstItem="Gby-rf-MiO" firstAttribute="leading" secondItem="LD6-rR-5e9" secondAttribute="leading" id="lxy-UB-QBq"/>
                             <constraint firstItem="Gby-rf-MiO" firstAttribute="top" secondItem="LD6-rR-5e9" secondAttribute="top" id="mj5-0u-rSU"/>
                             <constraint firstItem="Gby-rf-MiO" firstAttribute="trailing" secondItem="LD6-rR-5e9" secondAttribute="trailing" id="usb-Wz-rQ3"/>
+                            <constraint firstItem="R9M-ez-qH9" firstAttribute="leading" secondItem="LD6-rR-5e9" secondAttribute="leading" id="yL8-Ac-i0F"/>
                             <constraint firstItem="2uE-HY-KVz" firstAttribute="top" secondItem="byo-Og-1Ll" secondAttribute="top" constant="20" id="yZU-M1-yKx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LD6-rR-5e9"/>

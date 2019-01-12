@@ -371,6 +371,7 @@
 		B6A3F49F21C4963A000497BF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B6B74B5F21DA3BDE001482BF /* CustomSettingVC.swift */,
 				B6AFE59721DF470A0001FA55 /* ConditionButton.swift */,
 				B670933A21D652DB00472BB2 /* ChangeButton.swift */,
 				B670933821D6068400472BB2 /* NoticeCell.swift */,
@@ -399,7 +400,6 @@
 				B68AA6FB21D4E2EE000E5549 /* MyPageVC.swift */,
 				B68AA6FD21D4F6C4000E5549 /* SmatchingListVC.swift */,
 				B68742ED21D752A00094D5E7 /* SearchVC.swift */,
-				B6B74B5F21DA3BDE001482BF /* CustomSettingVC.swift */,
 				B61148F021DC2204004F1E92 /* InsititutionClassifyInfo.swift */,
 				C0EE1D5721DD8C00005B114E /* SettingViewController.swift */,
 				C0EE1D5921DD8DC0005B114E /* MypageSettingVC.swift */,
@@ -777,13 +777,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 38HL58Q2DM;
+				DEVELOPMENT_TEAM = 325VLH85CK;
 				INFOPLIST_FILE = "$(SRCROOT)/iOS-Smatching/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "shyn22.iOS-Smatching";
+				PRODUCT_BUNDLE_IDENTIFIER = "shyn22.iOS-Smatching1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -796,13 +796,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 38HL58Q2DM;
+				DEVELOPMENT_TEAM = 325VLH85CK;
 				INFOPLIST_FILE = "$(SRCROOT)/iOS-Smatching/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "shyn22.iOS-Smatching";
+				PRODUCT_BUNDLE_IDENTIFIER = "shyn22.iOS-Smatching1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

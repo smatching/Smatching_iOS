@@ -167,7 +167,7 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
         
         setupView()
     }
-    
+//    override func viewdidloae
     func setupView() {
         initGestureRecognizer()
         self.navigationController?.navigationBar.shouldRemoveShadow(true)
@@ -188,112 +188,112 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
         self.field = fitConditionRes?.field ?? self.field
         self.excCategory = fitConditionRes?.excCategory ?? self.excCategory
         
-//        if age.twenty_less == true {
-//            initialSetting(recognizer: twenty_less)
-//        }
-//        else if age.forty_more == true {
-//            initialSetting(recognizer: forty_more)
-//        }
-//        else if age.twenty_forty == true {
-//            initialSetting(recognizer: twenty_forty)
-//        }
-//        if period.zero_one == true {
-//            initialSetting(recognizer: zero_one)
-//            periodCountNum += CountTheCheckedBox(self.period.zero_one!)
-//        }
-//        if period.one_two == true {
-//            initialSetting(recognizer: one_two)
-//            periodCountNum += CountTheCheckedBox(self.period.one_two!)
-//        }
-//        if period.two_three == true {
-//            initialSetting(recognizer: two_three)
-//            periodCountNum += CountTheCheckedBox(self.period.two_three!)
-//        }
-//        if period.three_four == true {
-//            initialSetting(recognizer: three_four)
-//            periodCountNum += CountTheCheckedBox(self.period.three_four!)
-//        }
-//        if period.four_five == true {
-//            initialSetting(recognizer: four_five)
-//            periodCountNum += CountTheCheckedBox(self.period.four_five!)
-//        }
-//        if period.five_six == true {
-//            initialSetting(recognizer: five_six)
-//            periodCountNum += CountTheCheckedBox(self.period.five_six!)
-//        }
-//        if period.six_seven == true {
-//            initialSetting(recognizer: six_seven)
-//            periodCountNum += CountTheCheckedBox(self.period.six_seven!)
-//        }
-//        if period.seven_more == true {
-//            initialSetting(recognizer: seven_more)
-//            periodCountNum += CountTheCheckedBox(self.period.seven_more!)
-//        }
-//        if busitype.midsmall == true {
-//            initialSetting(recognizer: midsmall)
-//            busiTypeCountNum += CountTheCheckedBox(self.busitype.midsmall!)
-//        }
-//        if busitype.midbig == true {
-//            initialSetting(recognizer: midbig)
-//            busiTypeCountNum += CountTheCheckedBox(self.busitype.midbig!)
-//        }
-//
-//        if busitype.big == true {
-//            initialSetting(recognizer: big)
-//            busiTypeCountNum += CountTheCheckedBox(self.busitype.big!)
-//        }
-//
-//        if busitype.sole == true {
-//            initialSetting(recognizer: sole)
-//            busiTypeCountNum += CountTheCheckedBox(self.busitype.sole!)
-//        }
-//
-//        if busitype.small == true {
-//            initialSetting(recognizer: small)
-//            busiTypeCountNum += CountTheCheckedBox(self.busitype.small!)
-//        }
-//
-//        if busitype.tradi == true {
-//            initialSetting(recognizer: tradi)
-//            busiTypeCountNum += CountTheCheckedBox(self.busitype.tradi!)
-//        }
-//
-//        if busitype.pre == true {
-//            initialSetting(recognizer: pre)
-//            busiTypeCountNum += CountTheCheckedBox(self.busitype.pre!)
-//        }
-//        if advantage.retry == true{
-//            initialSetting(recognizer: retry)
-//            advantageCountNum += CountTheCheckedBox(self.advantage.retry!)
-//        }
-//        if advantage.woman == true{
-//            initialSetting(recognizer: woman)
-//            advantageCountNum += CountTheCheckedBox(self.advantage.woman!)
-//        }
-//        if advantage.disabled == true{
-//            initialSetting(recognizer: disabled)
-//            advantageCountNum += CountTheCheckedBox(self.advantage.disabled!)
-//        }
-//        if advantage.social == true{
-//            initialSetting(recognizer: social)
-//            advantageCountNum += CountTheCheckedBox(self.advantage.social!)
-//        }
-//        if advantage.sole == true{
-//            initialSetting(recognizer: sole_create)
-//            advantageCountNum += CountTheCheckedBox(self.advantage.sole!)
-//        }
-//        if advantage.fourth == true{
-//            initialSetting(recognizer: fourth)
-//            advantageCountNum += CountTheCheckedBox(self.advantage.fourth!)
-//        }
-//        if advantage.univ == true{
-//            initialSetting(recognizer: univ)
-//            advantageCountNum += CountTheCheckedBox(self.advantage.univ!)
-//        }
-//        if advantage.togather == true{
-//            initialSetting(recognizer: together)
-//            advantageCountNum += CountTheCheckedBox(self.advantage.togather!)
-//        }
+        if age.twenty_less == true {
+            initialSetting(recognizer: twenty_less)
+        }
+        else if age.forty_more == true {
+            initialSetting(recognizer: forty_more)
+        }
+        else if age.twenty_forty == true {
+            initialSetting(recognizer: twenty_forty)
+        }
+        if period.zero_one == true {
+            initialSetting(recognizer: zero_one)
+            periodCountNum += CountTheCheckedBox(self.period.zero_one!)
+        }
+        if period.one_two == true {
+            initialSetting(recognizer: one_two)
+            periodCountNum += CountTheCheckedBox(self.period.one_two!)
+        }
+        if period.two_three == true {
+            initialSetting(recognizer: two_three)
+            periodCountNum += CountTheCheckedBox(self.period.two_three!)
+        }
+        if period.three_four == true {
+            initialSetting(recognizer: three_four)
+            periodCountNum += CountTheCheckedBox(self.period.three_four!)
+        }
+        if period.four_five == true {
+            initialSetting(recognizer: four_five)
+            periodCountNum += CountTheCheckedBox(self.period.four_five!)
+        }
+        if period.five_six == true {
+            initialSetting(recognizer: five_six)
+            periodCountNum += CountTheCheckedBox(self.period.five_six!)
+        }
+        if period.six_seven == true {
+            initialSetting(recognizer: six_seven)
+            periodCountNum += CountTheCheckedBox(self.period.six_seven!)
+        }
+        if period.seven_more == true {
+            initialSetting(recognizer: seven_more)
+            periodCountNum += CountTheCheckedBox(self.period.seven_more!)
+        }
+        if busitype.midsmall == true {
+            initialSetting(recognizer: midsmall)
+            busiTypeCountNum += CountTheCheckedBox(self.busitype.midsmall!)
+        }
+        if busitype.midbig == true {
+            initialSetting(recognizer: midbig)
+            busiTypeCountNum += CountTheCheckedBox(self.busitype.midbig!)
+        }
+
+        if busitype.big == true {
+            initialSetting(recognizer: big)
+            busiTypeCountNum += CountTheCheckedBox(self.busitype.big!)
+        }
+
+        if busitype.sole == true {
+            initialSetting(recognizer: sole)
+            busiTypeCountNum += CountTheCheckedBox(self.busitype.sole!)
+        }
+
+        if busitype.small == true {
+            initialSetting(recognizer: small)
+            busiTypeCountNum += CountTheCheckedBox(self.busitype.small!)
+        }
+
+        if busitype.tradi == true {
+            initialSetting(recognizer: tradi)
+            busiTypeCountNum += CountTheCheckedBox(self.busitype.tradi!)
+        }
+
+        if busitype.pre == true {
+            initialSetting(recognizer: pre)
+            busiTypeCountNum += CountTheCheckedBox(self.busitype.pre!)
+        }
+        if advantage.retry == true{
+            initialSetting(recognizer: retry)
+            advantageCountNum += CountTheCheckedBox(self.advantage.retry!)
+        }
+        if advantage.woman == true{
+            initialSetting(recognizer: woman)
+            advantageCountNum += CountTheCheckedBox(self.advantage.woman!)
+        }
+        if advantage.disabled == true{
+            initialSetting(recognizer: disabled)
+            advantageCountNum += CountTheCheckedBox(self.advantage.disabled!)
+        }
+        if advantage.social == true{
+            initialSetting(recognizer: social)
+            advantageCountNum += CountTheCheckedBox(self.advantage.social!)
+        }
+        if advantage.sole == true{
+            initialSetting(recognizer: sole_create)
+            advantageCountNum += CountTheCheckedBox(self.advantage.sole!)
+        }
+        if advantage.fourth == true{
+            initialSetting(recognizer: fourth)
+            advantageCountNum += CountTheCheckedBox(self.advantage.fourth!)
+        }
+        if advantage.univ == true{
+            initialSetting(recognizer: univ)
+            advantageCountNum += CountTheCheckedBox(self.advantage.univ!)
+        }
+        if advantage.togather == true{
+            initialSetting(recognizer: together)
+            advantageCountNum += CountTheCheckedBox(self.advantage.togather!)
+        }
         
         periodCountLabel.text = "\(periodCountNum)/3"
         busiCountLabel.text = "\(busiTypeCountNum)/7"
@@ -724,18 +724,22 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
     }
     
     func conditionFieldButtonSlidingEvent(_ sender : UIButton, _ checked : Bool) {
+        let yValue: Int
+        yValue = Int(sender.frame.origin.y)
         sender.isHidden = !checked
-         self.slideY(y: CGFloat(sender.frame.origin.y), sender : sender)
-        self.slideY(y: CGFloat(758 + 32 * fieldCountNum), sender : sender)
+//         self.slideY(y: CGFloat(sender.frame.origin.y), sender : sender)÷
+        self.slideY(y: CGFloat(yValue + 35 * fieldCountNum), sender : sender)
         fieldBtnArray.append(sender)
         
     }
     
     
     func conditionButtonSlidingEvent(_ sender : UIButton, _ checked : Bool) {
-        var yValueOfBox = self.NeedlessFieldBox.frame.origin.y 
+//        var yValueOfBox = self.NeedlessFieldBox.frame.origin.y
+        let yValue : Int
+        yValue = Int(NeedlessFieldBox.frame.origin.y) + 35
         sender.isHidden = !checked
-//        self.slideY(y: CGFloat(yValueOfBox + 35 * UselessFieldCount), sender : sender)
+        self.slideY(y: CGFloat( yValue + 35 * UselessFieldCount), sender : sender)
         useLessBtnArray.append(sender)
         
     }
@@ -1098,22 +1102,7 @@ class CustomSettingVC: UIViewController, UITextFieldDelegate{
         //perIOD 제한 3
         clickPeriodConditionButton(sender)
 
-//        if sender == twenty_less {
-//            self.age.twenty_less = !self.age.twenty_less!
-//            self.twenty_less.buttonClicked(sender: twenty_less, self.age.twenty_less!)
-//
-//        }
-//        else if sender == twenty_forty {
-//            self.age.twenty_forty = !self.age.twenty_forty!
-//            self.twenty_forty.buttonClicked(sender: twenty_forty, self.age.twenty_forty!)
-//        }
-//        else if sender == forty_more {
-//            self.age.forty_more = !self.age.forty_more!
-//            self.forty_more.buttonClicked(sender: forty_more, self.age.forty_more!)
-//        }
-//        conditionBorderColorChange(sender)
-//        //perIOD 제한 3
-//        clickPeriodConditionButton(sender)
+
         
     }
     
